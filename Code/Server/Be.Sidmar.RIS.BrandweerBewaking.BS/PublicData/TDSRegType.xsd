@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="TDSRegType" targetNamespace="http://tempuri.org/TDSRegType.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/TDSRegType.xsd" xmlns:mstns="http://tempuri.org/TDSRegType.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="TDSRegType" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="BBREGTY">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ID_TY_REG" type="xs:int" />
+							<xs:element name="SCF_TY_REG" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="TDSRegTypeKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:BBREGTY" />
+			<xs:field xpath="mstns:ID_TY_REG" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

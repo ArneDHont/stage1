@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/TDSBrandweerAfdelingen.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/TDSBrandweerAfdelingen.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/TDSBrandweerAfdelingen.xsd" id="TDSBrandweerAfdelingen" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="TDSBrandweerAfdelingen">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Afdeling">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="AfdelingID" type="xs:int" />
+              <xs:element minOccurs="0" name="AfdelingCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="AfdelingNaam">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Zone">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="LocatieID" type="xs:int" />
+              <xs:element minOccurs="0" name="AfdelingID" type="xs:int" />
+              <xs:element minOccurs="0" name="LocatieZone">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AfdelingUser">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="AfdelingUserID" type="xs:int" />
+              <xs:element minOccurs="0" name="LoginNaam">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="AfdelingID" type="xs:int" />
+              <xs:element minOccurs="0" name="AfdelingOmschr">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="BrandweerYN" type="xs:boolean" />
+              <xs:element minOccurs="0" name="AfdelingID2" type="xs:int" />
+              <xs:element minOccurs="0" name="AfdelingID3" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:Afdeling" />
+      <xs:field xpath="mstns:AfdelingID" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="Zone_Constraint1">
+      <xs:selector xpath=".//mstns:Zone" />
+      <xs:field xpath="mstns:LocatieID" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="AfdelingUser_Constraint1">
+      <xs:selector xpath=".//mstns:AfdelingUser" />
+      <xs:field xpath="mstns:AfdelingUserID" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK_bmLocatie_bmAfdeling" msdata:parent="Afdeling" msdata:child="Zone" msdata:parentkey="AfdelingID" msdata:childkey="AfdelingID" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" />
+      <msdata:Relationship name="FK_bmAfdelingUser_bmAfdeling" msdata:parent="Afdeling" msdata:child="AfdelingUser" msdata:parentkey="AfdelingID" msdata:childkey="AfdelingID" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

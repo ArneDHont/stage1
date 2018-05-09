@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/TDSBrandweerVerzendingLijst.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/TDSBrandweerVerzendingLijst.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/TDSBrandweerVerzendingLijst.xsd" id="TDSBrandweerVerzendingLijst" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="TDSBrandweerVerzendingLijst">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Verzending">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" type="xs:int" />
+              <xs:element minOccurs="0" name="TypeMateriaal" type="xs:string" />
+              <xs:element minOccurs="0" name="SoortMateriaal" type="xs:string" />
+              <xs:element minOccurs="0" name="Afdeling" type="xs:string" />
+              <xs:element minOccurs="0" name="Zone" type="xs:string" />
+              <xs:element minOccurs="0" name="Nr" type="xs:string" />
+              <xs:element name="Volgnr" type="xs:int" />
+              <xs:element minOccurs="0" name="Verstuurd" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="Terug" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="Herkeurd" type="xs:boolean" />
+              <xs:element minOccurs="0" name="FabricatieNr" type="xs:string" />
+              <xs:element minOccurs="0" name="Leverancier" type="xs:string" />
+              <xs:element minOccurs="0" name="Opmerking" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:Verzending" />
+      <xs:field xpath="mstns:Id" />
+      <xs:field xpath="mstns:Volgnr" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

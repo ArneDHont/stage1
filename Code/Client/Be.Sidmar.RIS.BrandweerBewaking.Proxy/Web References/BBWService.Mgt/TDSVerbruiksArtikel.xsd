@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/TDSVerbruiksArtikel.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/TDSVerbruiksArtikel.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/TDSVerbruiksArtikel.xsd" id="TDSVerbruiksArtikel" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="TDSVerbruiksArtikel">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BBBRKART">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:ReadOnly="true" msdata:AutoIncrement="true" name="ID_ART_BRK" type="xs:int" />
+              <xs:element minOccurs="0" name="ID_GR_ART" type="xs:int" />
+              <xs:element minOccurs="0" name="ID_EH" type="xs:string" />
+              <xs:element minOccurs="0" name="NR_ART_BRK_SAP" type="xs:string" />
+              <xs:element minOccurs="0" name="SCF_ART" type="xs:string" />
+              <xs:element minOccurs="0" name="STK_ACT_ART" type="xs:int" />
+              <xs:element minOccurs="0" name="STK_MIN_ART" type="xs:int" />
+              <xs:element minOccurs="0" name="STK_MAX_ART" type="xs:double" />
+              <xs:element minOccurs="0" name="PR_EH_ART_INTV" type="xs:double" />
+              <xs:element minOccurs="0" name="DT_WY_L" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="TDSVerbruiksArtikelKey2">
+      <xs:selector xpath=".//mstns:BBBRKART" />
+      <xs:field xpath="mstns:ID_ART_BRK" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TDSINBRVASOD" targetNamespace="http://tempuri.org/TDSINBRVASOD.xsd" xmlns:mstns="http://tempuri.org/TDSINBRVASOD.xsd" xmlns="http://tempuri.org/TDSINBRVASOD.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TDSINBRVASOD" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="TDSINBRVASOD" msprop:Generator_UserDSName="TDSINBRVASOD">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BBINBRVA" msprop:Generator_TableClassName="BBINBRVADataTable" msprop:Generator_TableVarName="tableBBINBRVA" msprop:Generator_TablePropName="BBINBRVA" msprop:Generator_RowDeletingName="BBINBRVARowDeleting" msprop:Generator_UserTableName="BBINBRVA" msprop:Generator_RowChangingName="BBINBRVARowChanging" msprop:Generator_RowEvHandlerName="BBINBRVARowChangeEventHandler" msprop:Generator_RowDeletedName="BBINBRVARowDeleted" msprop:Generator_RowEvArgName="BBINBRVARowChangeEvent" msprop:Generator_RowChangedName="BBINBRVARowChanged" msprop:Generator_RowClassName="BBINBRVARow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_INBRVA" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID_INBRVA" msprop:Generator_ColumnPropNameInRow="ID_INBRVA" msprop:Generator_ColumnPropNameInTable="ID_INBRVAColumn" msprop:Generator_UserColumnName="ID_INBRVA" type="xs:int" />
+              <xs:element name="ID_REG" msprop:Generator_ColumnVarNameInTable="columnID_REG" msprop:Generator_ColumnPropNameInRow="ID_REG" msprop:Generator_ColumnPropNameInTable="ID_REGColumn" msprop:Generator_UserColumnName="ID_REG" type="xs:int" />
+              <xs:element name="PBH_TMS_PRINT" msprop:Generator_ColumnVarNameInTable="columnPBH_TMS_PRINT" msprop:Generator_ColumnPropNameInRow="PBH_TMS_PRINT" msprop:Generator_ColumnPropNameInTable="PBH_TMS_PRINTColumn" msprop:Generator_UserColumnName="PBH_TMS_PRINT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SODIE_CNT_ID" msprop:Generator_ColumnVarNameInTable="columnSODIE_CNT_ID" msprop:Generator_ColumnPropNameInRow="SODIE_CNT_ID" msprop:Generator_ColumnPropNameInTable="SODIE_CNT_IDColumn" msprop:Generator_UserColumnName="SODIE_CNT_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="SanctionID" msprop:Generator_ColumnVarNameInTable="columnSanctionID" msprop:Generator_ColumnPropNameInRow="SanctionID" msprop:Generator_ColumnPropNameInTable="SanctionIDColumn" msprop:Generator_UserColumnName="SanctionID" type="xs:int" minOccurs="0" />
+              <xs:element name="InbreukKlasseID" msprop:Generator_ColumnVarNameInTable="columnInbreukKlasseID" msprop:Generator_ColumnPropNameInRow="InbreukKlasseID" msprop:Generator_ColumnPropNameInTable="InbreukKlasseIDColumn" msprop:Generator_UserColumnName="InbreukKlasseID" type="xs:string" minOccurs="0" />
+              <xs:element name="NR_ART_INBR" msprop:Generator_ColumnVarNameInTable="columnNR_ART_INBR" msprop:Generator_ColumnPropNameInRow="NR_ART_INBR" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInTable="NR_ART_INBRColumn" msprop:Generator_UserColumnName="NR_ART_INBR" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:BBINBRVA" />
+      <xs:field xpath="mstns:ID_INBRVA" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TDSIntvBr" targetNamespace="http://tempuri.org/TDSIntvBr.xsd" xmlns:mstns="http://tempuri.org/TDSIntvBr.xsd" xmlns="http://tempuri.org/TDSIntvBr.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TDSIntvBr" msdata:IsDataSet="true" msdata:Locale="en-US" msprop:Generator_DataSetName="TDSIntvBr" msprop:Generator_UserDSName="TDSIntvBr">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BBINTVBR" msprop:Generator_TableClassName="BBINTVBRDataTable" msprop:Generator_TableVarName="tableBBINTVBR" msprop:Generator_RowChangedName="BBINTVBRRowChanged" msprop:Generator_TablePropName="BBINTVBR" msprop:Generator_RowDeletingName="BBINTVBRRowDeleting" msprop:Generator_RowChangingName="BBINTVBRRowChanging" msprop:Generator_RowEvHandlerName="BBINTVBRRowChangeEventHandler" msprop:Generator_RowDeletedName="BBINTVBRRowDeleted" msprop:Generator_RowClassName="BBINTVBRRow" msprop:Generator_UserTableName="BBINTVBR" msprop:Generator_RowEvArgName="BBINTVBRRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_INTV_BRDW" msprop:Generator_ColumnVarNameInTable="columnID_INTV_BRDW" msprop:Generator_ColumnPropNameInRow="ID_INTV_BRDW" msprop:Generator_ColumnPropNameInTable="ID_INTV_BRDWColumn" msprop:Generator_UserColumnName="ID_INTV_BRDW" type="xs:int" />
+              <xs:element name="ID_TY_INTV" msprop:Generator_ColumnVarNameInTable="columnID_TY_INTV" msprop:Generator_ColumnPropNameInRow="ID_TY_INTV" msprop:Generator_ColumnPropNameInTable="ID_TY_INTVColumn" msprop:Generator_UserColumnName="ID_TY_INTV" type="xs:int" minOccurs="0" />
+              <xs:element name="SCF_TY_INTV" msprop:Generator_ColumnVarNameInTable="columnSCF_TY_INTV" msprop:Generator_ColumnPropNameInRow="SCF_TY_INTV" msprop:Generator_ColumnPropNameInTable="SCF_TY_INTVColumn" msprop:Generator_UserColumnName="SCF_TY_INTV" type="xs:string" minOccurs="0" />
+              <xs:element name="VLG_TY_INTV_JR" msprop:Generator_ColumnVarNameInTable="columnVLG_TY_INTV_JR" msprop:Generator_ColumnPropNameInRow="VLG_TY_INTV_JR" msprop:Generator_ColumnPropNameInTable="VLG_TY_INTV_JRColumn" msprop:Generator_UserColumnName="VLG_TY_INTV_JR" type="xs:int" minOccurs="0" />
+              <xs:element name="YEAR" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnYEAR" msprop:Generator_ColumnPropNameInRow="YEAR" msprop:Generator_ColumnPropNameInTable="YEARColumn" msprop:Generator_UserColumnName="YEAR" type="xs:int" minOccurs="0" />
+              <xs:element name="TMS_INTV" msprop:Generator_ColumnVarNameInTable="columnTMS_INTV" msprop:Generator_ColumnPropNameInRow="TMS_INTV" msprop:Generator_ColumnPropNameInTable="TMS_INTVColumn" msprop:Generator_UserColumnName="TMS_INTV" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="KRT_AFD" msprop:Generator_ColumnVarNameInTable="columnKRT_AFD" msprop:Generator_ColumnPropNameInRow="KRT_AFD" msprop:Generator_ColumnPropNameInTable="KRT_AFDColumn" msprop:Generator_UserColumnName="KRT_AFD" type="xs:string" minOccurs="0" />
+              <xs:element name="PLA_INTV" msprop:Generator_ColumnVarNameInTable="columnPLA_INTV" msprop:Generator_ColumnPropNameInRow="PLA_INTV" msprop:Generator_ColumnPropNameInTable="PLA_INTVColumn" msprop:Generator_UserColumnName="PLA_INTV" type="xs:string" minOccurs="0" />
+              <xs:element name="SCF_BR_TY_INTV" msprop:Generator_ColumnVarNameInTable="columnSCF_BR_TY_INTV" msprop:Generator_ColumnPropNameInRow="SCF_BR_TY_INTV" msprop:Generator_ColumnPropNameInTable="SCF_BR_TY_INTVColumn" msprop:Generator_UserColumnName="SCF_BR_TY_INTV" type="xs:string" minOccurs="0" />
+              <xs:element name="SCF_BR_RD_INTV" msprop:Generator_ColumnVarNameInTable="columnSCF_BR_RD_INTV" msprop:Generator_ColumnPropNameInRow="SCF_BR_RD_INTV" msprop:Generator_ColumnPropNameInTable="SCF_BR_RD_INTVColumn" msprop:Generator_UserColumnName="SCF_BR_RD_INTV" type="xs:string" minOccurs="0" />
+              <xs:element name="INDI_BRD_BLUS_AFD" msprop:Generator_ColumnVarNameInTable="columnINDI_BRD_BLUS_AFD" msprop:Generator_ColumnPropNameInRow="INDI_BRD_BLUS_AFD" msprop:Generator_ColumnPropNameInTable="INDI_BRD_BLUS_AFDColumn" msprop:Generator_UserColumnName="INDI_BRD_BLUS_AFD" type="xs:boolean" minOccurs="0" />
+              <xs:element name="INDI_BRD_BLUS_SID" msprop:Generator_ColumnVarNameInTable="columnINDI_BRD_BLUS_SID" msprop:Generator_ColumnPropNameInRow="INDI_BRD_BLUS_SID" msprop:Generator_ColumnPropNameInTable="INDI_BRD_BLUS_SIDColumn" msprop:Generator_UserColumnName="INDI_BRD_BLUS_SID" type="xs:boolean" minOccurs="0" />
+              <xs:element name="INDI_BRDW_SID_OPR" msprop:Generator_ColumnVarNameInTable="columnINDI_BRDW_SID_OPR" msprop:Generator_ColumnPropNameInRow="INDI_BRDW_SID_OPR" msprop:Generator_ColumnPropNameInTable="INDI_BRDW_SID_OPRColumn" msprop:Generator_UserColumnName="INDI_BRDW_SID_OPR" type="xs:boolean" minOccurs="0" />
+              <xs:element name="INDI_RAP_INC_OTV" msprop:Generator_ColumnVarNameInTable="columnINDI_RAP_INC_OTV" msprop:Generator_ColumnPropNameInRow="INDI_RAP_INC_OTV" msprop:Generator_ColumnPropNameInTable="INDI_RAP_INC_OTVColumn" msprop:Generator_UserColumnName="INDI_RAP_INC_OTV" type="xs:boolean" minOccurs="0" />
+              <xs:element name="DT_VZ_RAP_NW" msprop:Generator_ColumnVarNameInTable="columnDT_VZ_RAP_NW" msprop:Generator_ColumnPropNameInRow="DT_VZ_RAP_NW" msprop:Generator_ColumnPropNameInTable="DT_VZ_RAP_NWColumn" msprop:Generator_UserColumnName="DT_VZ_RAP_NW" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DT_OK" msprop:Generator_ColumnVarNameInTable="columnDT_OK" msprop:Generator_ColumnPropNameInRow="DT_OK" msprop:Generator_ColumnPropNameInTable="DT_OKColumn" msprop:Generator_UserColumnName="DT_OK" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DT_VZ_BST" msprop:Generator_ColumnVarNameInTable="columnDT_VZ_BST" msprop:Generator_ColumnPropNameInRow="DT_VZ_BST" msprop:Generator_ColumnPropNameInTable="DT_VZ_BSTColumn" msprop:Generator_UserColumnName="DT_VZ_BST" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FireCauseExtraInfoId" msprop:Generator_ColumnVarNameInTable="columnFireCauseExtraInfoId" msprop:Generator_ColumnPropNameInRow="FireCauseExtraInfoId" msprop:Generator_ColumnPropNameInTable="FireCauseExtraInfoIdColumn" msprop:Generator_UserColumnName="FireCauseExtraInfoId" type="xs:int" minOccurs="0" />
+              <xs:element name="FireCauseExtraInfo" msprop:Generator_ColumnVarNameInTable="columnFireCauseExtraInfo" msprop:Generator_ColumnPropNameInRow="FireCauseExtraInfo" msprop:Generator_ColumnPropNameInTable="FireCauseExtraInfoColumn" msprop:Generator_UserColumnName="FireCauseExtraInfo" type="xs:string" minOccurs="0" />
+              <xs:element name="VeraReference" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="VeraReference" msprop:Generator_ColumnVarNameInTable="columnVeraReference" msprop:Generator_ColumnPropNameInTable="VeraReferenceColumn" msprop:Generator_UserColumnName="VeraReference" type="xs:string" minOccurs="0" />
+              <xs:element name="VerslagContractantYN" msprop:Generator_ColumnVarNameInTable="columnVerslagContractantYN" msprop:Generator_ColumnPropNameInRow="VerslagContractantYN" msprop:Generator_ColumnPropNameInTable="VerslagContractantYNColumn" msprop:Generator_UserColumnName="VerslagContractantYN" type="xs:boolean" default="false" minOccurs="0" />
+              <xs:element name="VolgnrAfd" msprop:Generator_ColumnVarNameInTable="columnVolgnrAfd" msprop:Generator_ColumnPropNameInRow="VolgnrAfd" msprop:Generator_ColumnPropNameInTable="VolgnrAfdColumn" msprop:Generator_UserColumnName="VolgnrAfd" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

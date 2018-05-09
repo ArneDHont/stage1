@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/TDSSnelheidsOvertredingen.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/TDSSnelheidsOvertredingen.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/TDSSnelheidsOvertredingen.xsd" id="TDSSnelheidsOvertredingen" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="TDSSnelheidsOvertredingen">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Lijst_Snelheidsovertredingen">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RegistratieID" type="xs:int" />
+              <xs:element minOccurs="0" name="Naam">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Voornaam">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StamnrOvertreder" type="xs:int" />
+              <xs:element minOccurs="0" name="OvertrederType">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Tijdstip" type="xs:dateTime" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="Maand" type="xs:int" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="Jaar" type="xs:int" />
+              <xs:element minOccurs="0" name="Plaats">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ToegelatenSnelheid" type="xs:int" />
+              <xs:element minOccurs="0" name="GeregistreerdeSnelheid" type="xs:int" />
+              <xs:element minOccurs="0" name="Artnr">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Artikel">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="InbreukType">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Volgnr" type="xs:int" />
+              <xs:element minOccurs="0" name="RijverbodVan" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="RijverbodTot" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="AfspraakPBH" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="AfdrukTijdstip" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="SoDieContactId" type="xs:int" />
+              <xs:element minOccurs="0" name="sap_dir" type="xs:string" />
+              <xs:element minOccurs="0" name="sap_afd" type="xs:string" />
+              <xs:element minOccurs="0" name="sap_sect" type="xs:string" />
+              <xs:element minOccurs="0" name="DatumBrief" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="SoortSanctie" type="xs:string" />
+              <xs:element minOccurs="0" name="TaalBrief" type="xs:string" />
+              <xs:element minOccurs="0" name="NaamFirma" type="xs:string" />
+              <xs:element minOccurs="0" name="SanctieOmschrijving" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

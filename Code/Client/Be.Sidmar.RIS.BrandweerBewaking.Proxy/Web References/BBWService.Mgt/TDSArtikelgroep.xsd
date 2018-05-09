@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/TDSArtikelgroep.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/TDSArtikelgroep.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/TDSArtikelgroep.xsd" id="TDSArtikelgroep" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="TDSArtikelgroep">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BBARTGR">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_GR_ART" type="xs:int" />
+              <xs:element minOccurs="0" name="SCF_GR_ART" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="TDSArtikelgroepKey1">
+      <xs:selector xpath=".//mstns:BBARTGR" />
+      <xs:field xpath="mstns:ID_GR_ART" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

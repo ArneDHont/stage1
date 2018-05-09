@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Inspect.FireSafety.Mobile.ControlRound.Views.PictureViewPage"
+             xmlns:local="clr-namespace:Inspect.FireSafety.Mobile.ControlRound.ViewModels;assembly=Inspect.FireSafety.Mobile"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             BackgroundColor="Black"            
+             >
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:PictureViewViewModel x:Key="ViewModel"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.BindingContext>
+        <StaticResource Key="ViewModel"/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <StackLayout Orientation="Horizontal" Margin="0,15,0,0">
+                <Button HorizontalOptions="CenterAndExpand" ContentLayout="left,0" Command="{Binding OkCommand}" Image="ic_done_white_36dp.png" BackgroundColor="Black" BorderColor="Black"></Button>
+                <Button HorizontalOptions="CenterAndExpand" ContentLayout="left,0" Command="{Binding DeleteCommand}" Image="ic_delete_white_36dp.png" BackgroundColor="Black" BorderColor="Black"></Button>
+            </StackLayout> 
+            
+            <ffimageloading:CachedImage  
+							DownsampleToViewSize="True" DownsampleUseDipUnits="True" DownsampleWidth="342" Margin="0,25,0,0"
+							LoadingPlaceholder="loading.png" ErrorPlaceholder="error.png" 
+							Source="{Binding Photo.Path}" />        
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

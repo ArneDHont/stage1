@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/TDSBrandenPerAfdeling.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/TDSBrandenPerAfdeling.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/TDSBrandenPerAfdeling.xsd" id="TDSBrandenPerAfdeling" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="TDSBrandenPerAfdeling">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BBBRRD">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SCF_BR_TY_INTV" type="xs:string" />
+              <xs:element minOccurs="0" name="SCF_BR_RD_INTV" type="xs:string" />
+              <xs:element minOccurs="0" name="KRT_AFD" type="xs:string" />
+              <xs:element minOccurs="0" name="TOTAAL" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

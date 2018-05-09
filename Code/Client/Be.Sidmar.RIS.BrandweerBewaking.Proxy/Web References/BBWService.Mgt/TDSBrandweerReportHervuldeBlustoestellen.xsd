@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/DataSet1.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/DataSet1.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DataSet1.xsd" id="TDSBrandweerReportHervuldeBlustoestellen" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="TDSBrandweerReportHervuldeBlustoestellen">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Report">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Label" type="xs:string" />
+              <xs:element default="-1" name="AantalSchriftelijk" type="xs:int" />
+              <xs:element default="-1" name="PercentageSchriftelijk" type="xs:decimal" />
+              <xs:element default="-1" name="AantalTelefonisch" type="xs:int" />
+              <xs:element default="-1" name="PercentageTelefonisch" type="xs:decimal" />
+              <xs:element default="-1" name="AantalNietGemeld" type="xs:int" />
+              <xs:element default="-1" name="PercentageNietGemeld" type="xs:decimal" />
+              <xs:element default="-1" name="AantalTotaal" type="xs:int" />
+              <xs:element default="-1" name="PercentageTotaal" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:Report" />
+      <xs:field xpath="mstns:Label" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

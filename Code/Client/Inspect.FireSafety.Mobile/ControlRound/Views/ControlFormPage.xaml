@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Inspect.FireSafety.Mobile.ControlRound.Views.ControlFormPage"
+             xmlns:local="clr-namespace:Inspect.FireSafety.Mobile.ControlRound.ViewModels;assembly=Inspect.FireSafety.Mobile"
+             NavigationPage.HasBackButton="True"
+             >
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:ControlFormViewModel x:Key="ViewModel"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.BindingContext>
+        <StaticResource Key="ViewModel"/>
+    </ContentPage.BindingContext>
+    <StackLayout>
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Margin="16,0">
+            <Label Text="Selecteer een afdeling "/>
+            <Picker Title="Selecteer een afdeling " ItemsSource="{Binding OrganisationUnits}" ItemDisplayBinding="{Binding Code}" SelectedItem="{Binding SelectedOrganisationUnit}"  />
+            <Label Text="selecteer een zone"/>
+            <Picker  Title="Selecteer een zone" ItemsSource="{Binding Locations}" ItemDisplayBinding="{Binding Name}" SelectedItem="{Binding SelectedLocation}" />
+            <Label Text="selecteer een datum"/>
+            <DatePicker x:Name="Datepicker" Date="{Binding SelectedDate}" MaximumDate="{Binding MaxDate}" MinimumDate="{Binding MinDate}">
+                <DatePicker.Format>dd-MM-yyyy</DatePicker.Format>                
+            </DatePicker>
+        </StackLayout>
+        <Button Text="Start controle" Command="{Binding StartControl}" IsEnabled="{Binding LocationSelected}" Margin="16,0,16,10" />        
+    </StackLayout>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="ic_refresh_white_48dp.png" Command="{Binding RefreshCommand}"/>
+    </ContentPage.ToolbarItems>
+</ContentPage>

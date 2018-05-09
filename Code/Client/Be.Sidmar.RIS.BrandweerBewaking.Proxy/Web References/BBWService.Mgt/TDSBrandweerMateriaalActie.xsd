@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/TDSBrandweerMateriaalActie.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/TDSBrandweerMateriaalActie.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/TDSBrandweerMateriaalActie.xsd" id="TDSBrandweerMateriaalActie" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="TDSBrandweerMateriaalActie">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="MateriaalActie">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ActieId" type="xs:int" />
+              <xs:element name="TypeMatId" type="xs:int" />
+              <xs:element name="MateriaalVolgnr" type="xs:int" />
+              <xs:element name="Datum" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="ActieCodeId" type="xs:int" />
+              <xs:element minOccurs="0" name="ActieOmschr" type="xs:string" />
+              <xs:element minOccurs="0" name="Gewicht" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:MateriaalActie" />
+      <xs:field xpath="mstns:ActieId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

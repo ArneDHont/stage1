@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="TDSIndividuen" targetNamespace="http://tempuri.org/TDSIndividuen.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/TDSIndividuen.xsd" xmlns:mstns="http://tempuri.org/TDSIndividuen.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="TDSIndividuen" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="BBIND">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ID_IND" type="xs:int" />
+							<xs:element name="ID_TY_IND" type="xs:int" minOccurs="0" />
+							<xs:element name="ID_FRM_IND_TK" type="xs:int" minOccurs="0" />
+							<xs:element name="NM_IND" type="xs:string" minOccurs="0" />
+							<xs:element name="VNM_IND" type="xs:string" minOccurs="0" />
+							<xs:element name="AD_IND" type="xs:string" minOccurs="0" />
+							<xs:element name="PO_COD_WNPL_IND" type="xs:string" minOccurs="0" />
+							<xs:element name="WNPL_IND" type="xs:string" minOccurs="0" />
+							<xs:element name="PLA_GBR_IND" type="xs:string" minOccurs="0" />
+							<xs:element name="DT_GBR_IND" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="AD_EMAL_IND" type="xs:string" minOccurs="0" />
+							<xs:element name="ID_GSL_IND" type="xs:int" minOccurs="0" />
+							<xs:element name="BST_IND" type="xs:boolean" minOccurs="0" />
+							<xs:element name="SAP_DIR" type="xs:string" minOccurs="0" />
+							<xs:element name="SAP_AFD" type="xs:string" minOccurs="0" />
+							<xs:element name="SAP_SECT" type="xs:string" minOccurs="0" />
+							<xs:element name="DT_UIT_DNS" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="SCF_TY_IND" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:key name="TDSIndividuenKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:BBIND" />
+			<xs:field xpath="mstns:ID_IND" />
+		</xs:key>
+	</xs:element>
+</xs:schema>

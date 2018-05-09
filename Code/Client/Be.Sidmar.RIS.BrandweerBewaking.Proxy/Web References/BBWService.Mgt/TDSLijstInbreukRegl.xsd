@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/TDSLijstInbreukRegl.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/TDSLijstInbreukRegl.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/TDSLijstInbreukRegl.xsd" id="TDSLijstInbreukRegl" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="TDSLijstInbreukRegl">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Lijst_InbreukReglementen">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RegistratieID" type="xs:int" />
+              <xs:element minOccurs="0" name="OvertrederType" type="xs:string" />
+              <xs:element minOccurs="0" name="Tijdstip" type="xs:dateTime" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="Maand" type="xs:int" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="Jaar" type="xs:int" />
+              <xs:element minOccurs="0" name="Plaats" type="xs:string" />
+              <xs:element minOccurs="0" name="ToegelatenSnelheid" type="xs:int" />
+              <xs:element minOccurs="0" name="GeregistreerdeSnelheid" type="xs:int" />
+              <xs:element minOccurs="0" name="Artnr" type="xs:string" />
+              <xs:element minOccurs="0" name="Artikel" type="xs:string" />
+              <xs:element minOccurs="0" name="InbreukType" type="xs:string" />
+              <xs:element minOccurs="0" name="Volgnr" type="xs:int" />
+              <xs:element minOccurs="0" name="Naam" type="xs:string" />
+              <xs:element minOccurs="0" name="Voornaam" type="xs:string" />
+              <xs:element minOccurs="0" name="StamnrOvertreder" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

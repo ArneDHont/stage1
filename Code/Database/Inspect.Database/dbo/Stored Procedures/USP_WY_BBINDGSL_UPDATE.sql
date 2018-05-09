@@ -1,0 +1,13 @@
+﻿
+CREATE PROC dbo.[USP_WY_BBINDGSL_UPDATE]
+  @ID_GSL_IND int,
+  @SCF_IND_GSL_RAP varchar(10)=NULL,
+  @Original_ID_GSL_IND int --Primary Key Field
+
+AS
+SET NOCOUNT OFF
+
+UPDATE [BBINDGSL] SET
+  [SCF_IND_GSL_RAP] = @SCF_IND_GSL_RAP
+WHERE [ID_GSL_IND] = @Original_ID_GSL_IND
+

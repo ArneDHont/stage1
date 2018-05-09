@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TDSBrandweerMateriaalControleLijst" targetNamespace="http://tempuri.org/TDSBrandweerMateriaalControleLijst.xsd" xmlns:mstns="http://tempuri.org/TDSBrandweerMateriaalControleLijst.xsd" xmlns="http://tempuri.org/TDSBrandweerMateriaalControleLijst.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TDSBrandweerMateriaalControleLijst" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="TDSBrandweerMateriaalControleLijst" msprop:Generator_UserDSName="TDSBrandweerMateriaalControleLijst">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ControleLijst" msprop:Generator_TableClassName="ControleLijstDataTable" msprop:Generator_TableVarName="tableControleLijst" msprop:Generator_RowChangedName="ControleLijstRowChanged" msprop:Generator_TablePropName="ControleLijst" msprop:Generator_RowDeletingName="ControleLijstRowDeleting" msprop:Generator_RowChangingName="ControleLijstRowChanging" msprop:Generator_RowEvHandlerName="ControleLijstRowChangeEventHandler" msprop:Generator_RowDeletedName="ControleLijstRowDeleted" msprop:Generator_RowClassName="ControleLijstRow" msprop:Generator_UserTableName="ControleLijst" msprop:Generator_RowEvArgName="ControleLijstRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TypeMateriaal" msprop:Generator_ColumnVarNameInTable="columnTypeMateriaal" msprop:Generator_ColumnPropNameInRow="TypeMateriaal" msprop:Generator_ColumnPropNameInTable="TypeMateriaalColumn" msprop:Generator_UserColumnName="TypeMateriaal" type="xs:string" minOccurs="0" />
+              <xs:element name="TypeBlustoestel" msprop:Generator_ColumnVarNameInTable="columnTypeBlustoestel" msprop:Generator_ColumnPropNameInRow="TypeBlustoestel" msprop:Generator_ColumnPropNameInTable="TypeBlustoestelColumn" msprop:Generator_UserColumnName="TypeBlustoestel" type="xs:string" minOccurs="0" />
+              <xs:element name="Afdeling" msprop:Generator_ColumnVarNameInTable="columnAfdeling" msprop:Generator_ColumnPropNameInRow="Afdeling" msprop:Generator_ColumnPropNameInTable="AfdelingColumn" msprop:Generator_UserColumnName="Afdeling" type="xs:string" minOccurs="0" />
+              <xs:element name="Zone" msprop:Generator_ColumnVarNameInTable="columnZone" msprop:Generator_ColumnPropNameInRow="Zone" msprop:Generator_ColumnPropNameInTable="ZoneColumn" msprop:Generator_UserColumnName="Zone" type="xs:string" minOccurs="0" />
+              <xs:element name="Nr" msprop:Generator_ColumnVarNameInTable="columnNr" msprop:Generator_ColumnPropNameInRow="Nr" msprop:Generator_ColumnPropNameInTable="NrColumn" msprop:Generator_UserColumnName="Nr" type="xs:string" minOccurs="0" />
+              <xs:element name="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status" type="xs:string" minOccurs="0" />
+              <xs:element name="NaamBeheerderAfdeling" msprop:Generator_ColumnVarNameInTable="columnNaamBeheerderAfdeling" msprop:Generator_ColumnPropNameInRow="NaamBeheerderAfdeling" msprop:Generator_ColumnPropNameInTable="NaamBeheerderAfdelingColumn" msprop:Generator_UserColumnName="NaamBeheerderAfdeling" type="xs:string" minOccurs="0" />
+              <xs:element name="Gecontroleerd" msprop:Generator_ColumnVarNameInTable="columnGecontroleerd" msprop:Generator_ColumnPropNameInRow="Gecontroleerd" msprop:Generator_ColumnPropNameInTable="GecontroleerdColumn" msprop:Generator_UserColumnName="Gecontroleerd" type="xs:boolean" minOccurs="0" />
+              <xs:element name="DatumControle" msprop:Generator_ColumnVarNameInTable="columnDatumControle" msprop:Generator_ColumnPropNameInRow="DatumControle" msprop:Generator_ColumnPropNameInTable="DatumControleColumn" msprop:Generator_UserColumnName="DatumControle" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="VorigGewicht" msprop:Generator_ColumnVarNameInTable="columnVorigGewicht" msprop:Generator_ColumnPropNameInRow="VorigGewicht" msprop:Generator_ColumnPropNameInTable="VorigGewichtColumn" msprop:Generator_UserColumnName="VorigGewicht" type="xs:float" minOccurs="0" />
+              <xs:element name="NieuwGewicht" msprop:Generator_ColumnVarNameInTable="columnNieuwGewicht" msprop:Generator_ColumnPropNameInRow="NieuwGewicht" msprop:Generator_ColumnPropNameInTable="NieuwGewichtColumn" msprop:Generator_UserColumnName="NieuwGewicht" type="xs:float" minOccurs="0" />
+              <xs:element name="TypeMatID" msprop:Generator_ColumnVarNameInTable="columnTypeMatID" msprop:Generator_ColumnPropNameInRow="TypeMatID" msprop:Generator_ColumnPropNameInTable="TypeMatIDColumn" msprop:Generator_UserColumnName="TypeMatID" type="xs:int" />
+              <xs:element name="MateriaalVolgNr" msprop:Generator_ColumnVarNameInTable="columnMateriaalVolgNr" msprop:Generator_ColumnPropNameInRow="MateriaalVolgNr" msprop:Generator_ColumnPropNameInTable="MateriaalVolgNrColumn" msprop:Generator_UserColumnName="MateriaalVolgNr" type="xs:int" />
+              <xs:element name="DatumVisueleKeuring" msprop:Generator_ColumnVarNameInTable="columnDatumVisueleKeuring" msprop:Generator_ColumnPropNameInRow="DatumVisueleKeuring" msprop:Generator_ColumnPropNameInTable="DatumVisueleKeuringColumn" msprop:Generator_UserColumnName="DatumVisueleKeuring" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DatumPoederControle" msprop:Generator_ColumnVarNameInTable="columnDatumPoederControle" msprop:Generator_ColumnPropNameInRow="DatumPoederControle" msprop:Generator_ColumnPropNameInTable="DatumPoederControleColumn" msprop:Generator_UserColumnName="DatumPoederControle" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DatumVolgendePoederControle" msprop:Generator_ColumnVarNameInTable="columnDatumVolgendePoederControle" msprop:Generator_ColumnPropNameInRow="DatumVolgendePoederControle" msprop:Generator_ColumnPropNameInTable="DatumVolgendePoederControleColumn" msprop:Generator_UserColumnName="DatumVolgendePoederControle" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LocatieOmschr" msprop:Generator_ColumnVarNameInTable="columnLocatieOmschr" msprop:Generator_ColumnPropNameInRow="LocatieOmschr" msprop:Generator_ColumnPropNameInTable="LocatieOmschrColumn" msprop:Generator_UserColumnName="LocatieOmschr" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ControleLijst" />
+      <xs:field xpath="mstns:TypeMatID" />
+      <xs:field xpath="mstns:MateriaalVolgNr" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

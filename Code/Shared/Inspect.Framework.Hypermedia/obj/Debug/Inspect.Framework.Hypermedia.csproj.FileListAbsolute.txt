@@ -1,0 +1,10 @@
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Hypermedia\bin\Debug\Inspect.Framework.Hypermedia.dll
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Hypermedia\bin\Debug\Inspect.Framework.Hypermedia.pdb
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Hypermedia\bin\Debug\Newtonsoft.Json.dll
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Hypermedia\bin\Debug\Newtonsoft.Json.xml
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Hypermedia\obj\Debug\Inspect.Framework.Hypermedia.Resources.Strings.resources
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Hypermedia\obj\Debug\Inspect.Framework.Hypermedia.csproj.GenerateResource.Cache
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Hypermedia\obj\Debug\Inspect.Framework.Hypermedia.csproj.CoreCompileInputs.cache
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Hypermedia\obj\Debug\Inspect.Framework.Hypermedia.dll
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Hypermedia\obj\Debug\Inspect.Framework.Hypermedia.pdb
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Hypermedia\obj\Debug\Inspect.Framework.Hypermedia.csprojResolveAssemblyReference.cache

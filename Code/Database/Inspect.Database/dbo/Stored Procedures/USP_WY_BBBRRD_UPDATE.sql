@@ -1,0 +1,17 @@
+﻿
+CREATE PROC dbo.[USP_WY_BBBRRD_UPDATE]
+  @ID_BR_RD_INTV int,
+  @SCF_BR_RD_INTV varchar(30)=NULL,
+  @INDI_BZ bit=NULL,
+  @ID_TY_INTV int=NULL,
+  @Original_ID_BR_RD_INTV int --Primary Key Field
+
+AS
+SET NOCOUNT OFF
+
+UPDATE [BBBRRD] SET
+  [SCF_BR_RD_INTV] = @SCF_BR_RD_INTV,
+  [INDI_BZ] = @INDI_BZ,
+  [ID_TY_INTV] = @ID_TY_INTV
+WHERE [ID_BR_RD_INTV] = @Original_ID_BR_RD_INTV
+

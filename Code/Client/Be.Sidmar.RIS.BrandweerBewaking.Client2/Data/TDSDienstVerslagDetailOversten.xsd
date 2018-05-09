@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TDSDienstVerslagDetailOversten" targetNamespace="http://tempuri.org/TDSDienstVerslagDetailOversten.xsd" xmlns:mstns="http://tempuri.org/TDSDienstVerslagDetailOversten.xsd" xmlns="http://tempuri.org/TDSDienstVerslagDetailOversten.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TDSDienstVerslagDetailOversten" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="TDSDienstVerslagDetailOversten" msprop:Generator_UserDSName="TDSDienstVerslagDetailOversten">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Oversten" msprop:Generator_TableClassName="OverstenDataTable" msprop:Generator_TableVarName="tableOversten" msprop:Generator_TablePropName="Oversten" msprop:Generator_RowDeletingName="OverstenRowDeleting" msprop:Generator_UserTableName="Oversten" msprop:Generator_RowChangingName="OverstenRowChanging" msprop:Generator_RowEvHandlerName="OverstenRowChangeEventHandler" msprop:Generator_RowDeletedName="OverstenRowDeleted" msprop:Generator_RowEvArgName="OverstenRowChangeEvent" msprop:Generator_RowChangedName="OverstenRowChanged" msprop:Generator_RowClassName="OverstenRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
+              <xs:element name="Naam" msprop:Generator_ColumnVarNameInTable="columnNaam" msprop:Generator_ColumnPropNameInRow="Naam" msprop:Generator_ColumnPropNameInTable="NaamColumn" msprop:Generator_UserColumnName="Naam" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Oversten" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

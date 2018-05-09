@@ -1,0 +1,20 @@
+﻿
+CREATE PROC dbo.[USP_WY_BBAFD_INSERT]
+  @ID_AFD int,
+  @SCF_AFD varchar(200)=NULL,
+  @KRT_AFD varchar(3)=NULL
+
+AS
+SET NOCOUNT OFF
+
+INSERT INTO [BBAFD] (
+  [ID_AFD],
+  [SCF_AFD],
+  [KRT_AFD]
+)
+VALUES (
+  @ID_AFD,
+  @SCF_AFD,
+  @KRT_AFD
+)
+

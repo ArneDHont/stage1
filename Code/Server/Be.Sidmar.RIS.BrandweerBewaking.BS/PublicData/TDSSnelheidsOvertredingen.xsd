@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TDSSnelheidsOvertredingen" targetNamespace="http://tempuri.org/TDSSnelheidsOvertredingen.xsd" xmlns:mstns="http://tempuri.org/TDSSnelheidsOvertredingen.xsd" xmlns="http://tempuri.org/TDSSnelheidsOvertredingen.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="bbwConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="bbwConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Be.Sidmar.RIS.BrandweerBewaking.BS.My.MySettings.GlobalReference.Default.bbwConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TDSSnelheidsOvertredingen" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="TDSSnelheidsOvertredingen" msprop:Generator_UserDSName="TDSSnelheidsOvertredingen">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Lijst_Snelheidsovertredingen" msprop:Generator_TableClassName="Lijst_SnelheidsovertredingenDataTable" msprop:Generator_TableVarName="tableLijst_Snelheidsovertredingen" msprop:Generator_TablePropName="Lijst_Snelheidsovertredingen" msprop:Generator_RowDeletingName="Lijst_SnelheidsovertredingenRowDeleting" msprop:Generator_UserTableName="Lijst_Snelheidsovertredingen" msprop:Generator_RowChangingName="Lijst_SnelheidsovertredingenRowChanging" msprop:Generator_RowEvHandlerName="Lijst_SnelheidsovertredingenRowChangeEventHandler" msprop:Generator_RowDeletedName="Lijst_SnelheidsovertredingenRowDeleted" msprop:Generator_RowEvArgName="Lijst_SnelheidsovertredingenRowChangeEvent" msprop:Generator_RowChangedName="Lijst_SnelheidsovertredingenRowChanged" msprop:Generator_RowClassName="Lijst_SnelheidsovertredingenRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RegistratieID" msprop:Generator_ColumnVarNameInTable="columnRegistratieID" msprop:Generator_ColumnPropNameInRow="RegistratieID" msprop:Generator_ColumnPropNameInTable="RegistratieIDColumn" msprop:Generator_UserColumnName="RegistratieID" type="xs:int" />
+              <xs:element name="Naam" msprop:Generator_ColumnVarNameInTable="columnNaam" msprop:Generator_ColumnPropNameInRow="Naam" msprop:Generator_ColumnPropNameInTable="NaamColumn" msprop:Generator_UserColumnName="Naam" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Voornaam" msprop:Generator_ColumnVarNameInTable="columnVoornaam" msprop:Generator_ColumnPropNameInRow="Voornaam" msprop:Generator_ColumnPropNameInTable="VoornaamColumn" msprop:Generator_UserColumnName="Voornaam" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StamnrOvertreder" msprop:Generator_ColumnVarNameInTable="columnStamnrOvertreder" msprop:Generator_ColumnPropNameInRow="StamnrOvertreder" msprop:Generator_ColumnPropNameInTable="StamnrOvertrederColumn" msprop:Generator_UserColumnName="StamnrOvertreder" type="xs:int" />
+              <xs:element name="OvertrederType" msprop:Generator_ColumnVarNameInTable="columnOvertrederType" msprop:Generator_ColumnPropNameInRow="OvertrederType" msprop:Generator_ColumnPropNameInTable="OvertrederTypeColumn" msprop:Generator_UserColumnName="OvertrederType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Tijdstip" msprop:Generator_ColumnVarNameInTable="columnTijdstip" msprop:Generator_ColumnPropNameInRow="Tijdstip" msprop:Generator_ColumnPropNameInTable="TijdstipColumn" msprop:Generator_UserColumnName="Tijdstip" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Maand" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMaand" msprop:Generator_ColumnPropNameInRow="Maand" msprop:Generator_ColumnPropNameInTable="MaandColumn" msprop:Generator_UserColumnName="Maand" type="xs:int" minOccurs="0" />
+              <xs:element name="Jaar" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnJaar" msprop:Generator_ColumnPropNameInRow="Jaar" msprop:Generator_ColumnPropNameInTable="JaarColumn" msprop:Generator_UserColumnName="Jaar" type="xs:int" minOccurs="0" />
+              <xs:element name="Plaats" msprop:Generator_ColumnVarNameInTable="columnPlaats" msprop:Generator_ColumnPropNameInRow="Plaats" msprop:Generator_ColumnPropNameInTable="PlaatsColumn" msprop:Generator_UserColumnName="Plaats" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ToegelatenSnelheid" msprop:Generator_ColumnVarNameInTable="columnToegelatenSnelheid" msprop:Generator_ColumnPropNameInRow="ToegelatenSnelheid" msprop:Generator_ColumnPropNameInTable="ToegelatenSnelheidColumn" msprop:Generator_UserColumnName="ToegelatenSnelheid" type="xs:int" minOccurs="0" />
+              <xs:element name="GeregistreerdeSnelheid" msprop:Generator_ColumnVarNameInTable="columnGeregistreerdeSnelheid" msprop:Generator_ColumnPropNameInRow="GeregistreerdeSnelheid" msprop:Generator_ColumnPropNameInTable="GeregistreerdeSnelheidColumn" msprop:Generator_UserColumnName="GeregistreerdeSnelheid" type="xs:int" minOccurs="0" />
+              <xs:element name="Artnr" msprop:Generator_ColumnVarNameInTable="columnArtnr" msprop:Generator_ColumnPropNameInRow="Artnr" msprop:Generator_ColumnPropNameInTable="ArtnrColumn" msprop:Generator_UserColumnName="Artnr" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Artikel" msprop:Generator_ColumnVarNameInTable="columnArtikel" msprop:Generator_ColumnPropNameInRow="Artikel" msprop:Generator_ColumnPropNameInTable="ArtikelColumn" msprop:Generator_UserColumnName="Artikel" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InbreukType" msprop:Generator_ColumnVarNameInTable="columnInbreukType" msprop:Generator_ColumnPropNameInRow="InbreukType" msprop:Generator_ColumnPropNameInTable="InbreukTypeColumn" msprop:Generator_UserColumnName="InbreukType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Volgnr" msprop:Generator_ColumnVarNameInTable="columnVolgnr" msprop:Generator_ColumnPropNameInRow="Volgnr" msprop:Generator_ColumnPropNameInTable="VolgnrColumn" msprop:Generator_UserColumnName="Volgnr" type="xs:int" minOccurs="0" />
+              <xs:element name="RijverbodVan" msprop:Generator_ColumnVarNameInTable="columnRijverbodVan" msprop:Generator_ColumnPropNameInRow="RijverbodVan" msprop:Generator_ColumnPropNameInTable="RijverbodVanColumn" msprop:Generator_UserColumnName="RijverbodVan" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="RijverbodTot" msprop:Generator_ColumnVarNameInTable="columnRijverbodTot" msprop:Generator_ColumnPropNameInRow="RijverbodTot" msprop:Generator_ColumnPropNameInTable="RijverbodTotColumn" msprop:Generator_UserColumnName="RijverbodTot" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="AfspraakPBH" msprop:Generator_ColumnVarNameInTable="columnAfspraakPBH" msprop:Generator_ColumnPropNameInRow="AfspraakPBH" msprop:Generator_ColumnPropNameInTable="AfspraakPBHColumn" msprop:Generator_UserColumnName="AfspraakPBH" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="AfdrukTijdstip" msprop:Generator_ColumnVarNameInTable="columnAfdrukTijdstip" msprop:Generator_ColumnPropNameInRow="AfdrukTijdstip" msprop:Generator_ColumnPropNameInTable="AfdrukTijdstipColumn" msprop:Generator_UserColumnName="AfdrukTijdstip" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SoDieContactId" msprop:Generator_ColumnVarNameInTable="columnSoDieContactId" msprop:Generator_ColumnPropNameInRow="SoDieContactId" msprop:Generator_ColumnPropNameInTable="SoDieContactIdColumn" msprop:Generator_UserColumnName="SoDieContactId" type="xs:int" minOccurs="0" />
+              <xs:element name="sap_dir" msprop:Generator_ColumnVarNameInTable="columnsap_dir" msprop:Generator_ColumnPropNameInRow="sap_dir" msprop:Generator_ColumnPropNameInTable="sap_dirColumn" msprop:Generator_UserColumnName="sap_dir" type="xs:string" minOccurs="0" />
+              <xs:element name="sap_afd" msprop:Generator_ColumnVarNameInTable="columnsap_afd" msprop:Generator_ColumnPropNameInRow="sap_afd" msprop:Generator_ColumnPropNameInTable="sap_afdColumn" msprop:Generator_UserColumnName="sap_afd" type="xs:string" minOccurs="0" />
+              <xs:element name="sap_sect" msprop:Generator_ColumnVarNameInTable="columnsap_sect" msprop:Generator_ColumnPropNameInRow="sap_sect" msprop:Generator_ColumnPropNameInTable="sap_sectColumn" msprop:Generator_UserColumnName="sap_sect" type="xs:string" minOccurs="0" />
+              <xs:element name="DatumBrief" msprop:Generator_ColumnVarNameInTable="columnDatumBrief" msprop:Generator_ColumnPropNameInRow="DatumBrief" msprop:Generator_ColumnPropNameInTable="DatumBriefColumn" msprop:Generator_UserColumnName="DatumBrief" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SoortSanctie" msprop:Generator_ColumnVarNameInTable="columnSoortSanctie" msprop:Generator_ColumnPropNameInRow="SoortSanctie" msprop:Generator_ColumnPropNameInTable="SoortSanctieColumn" msprop:Generator_UserColumnName="SoortSanctie" type="xs:string" minOccurs="0" />
+              <xs:element name="TaalBrief" msprop:Generator_ColumnVarNameInTable="columnTaalBrief" msprop:Generator_ColumnPropNameInRow="TaalBrief" msprop:Generator_ColumnPropNameInTable="TaalBriefColumn" msprop:Generator_UserColumnName="TaalBrief" type="xs:string" minOccurs="0" />
+              <xs:element name="NaamFirma" msprop:Generator_ColumnVarNameInTable="columnNaamFirma" msprop:Generator_ColumnPropNameInRow="NaamFirma" msprop:Generator_ColumnPropNameInTable="NaamFirmaColumn" msprop:Generator_UserColumnName="NaamFirma" type="xs:string" minOccurs="0" />
+              <xs:element name="SanctieOmschrijving" msprop:Generator_ColumnVarNameInTable="columnSanctieOmschrijving" msprop:Generator_ColumnPropNameInRow="SanctieOmschrijving" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInTable="SanctieOmschrijvingColumn" msprop:Generator_UserColumnName="SanctieOmschrijving" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

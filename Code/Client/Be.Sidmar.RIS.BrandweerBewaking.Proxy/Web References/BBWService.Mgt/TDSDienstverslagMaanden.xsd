@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/TDSDienstverslagMaanden.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/TDSDienstverslagMaanden.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/TDSDienstverslagMaanden.xsd" id="TDSDienstverslagMaanden" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="TDSDienstverslagMaanden">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Maanden">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Jaar" type="xs:short" />
+              <xs:element name="Maand" type="xs:short" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:Maanden" />
+      <xs:field xpath="mstns:Jaar" />
+      <xs:field xpath="mstns:Maand" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

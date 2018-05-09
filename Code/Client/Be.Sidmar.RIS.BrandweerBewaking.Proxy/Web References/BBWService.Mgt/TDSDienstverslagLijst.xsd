@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/TDSDienstverslagLijst.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/TDSDienstverslagLijst.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/TDSDienstverslagLijst.xsd" id="TDSDienstverslagLijst" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="TDSDienstverslagLijst">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Dienstverslag">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Datum" type="xs:dateTime" />
+              <xs:element name="Ploeg" type="xs:string" />
+              <xs:element minOccurs="0" name="Verantwoordelijke" type="xs:string" />
+              <xs:element minOccurs="0" name="Opmerkingen" type="xs:string" />
+              <xs:element minOccurs="0" name="PloegId" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:Dienstverslag" />
+      <xs:field xpath="mstns:Datum" />
+      <xs:field xpath="mstns:Ploeg" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

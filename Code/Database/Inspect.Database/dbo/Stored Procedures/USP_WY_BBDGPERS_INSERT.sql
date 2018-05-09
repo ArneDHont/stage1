@@ -1,0 +1,24 @@
+﻿
+CREATE PROC dbo.[USP_WY_BBDGPERS_INSERT]
+  @ID_DG_PERS int,
+  @ID_IND int,
+  @TMS_REG_DG_PERS datetime,
+  @ID_DG_PERS_TY_REG int,
+  @OPM varchar(50)
+
+AS
+SET NOCOUNT OFF
+
+INSERT INTO [BBDGPERS] (
+  [ID_IND],
+  [TMS_REG_DG_PERS],
+  [ID_DG_PERS_TY_REG],
+  [OPM]
+)
+VALUES (
+  @ID_IND,
+  @TMS_REG_DG_PERS,
+  @ID_DG_PERS_TY_REG,
+  @OPM
+)
+

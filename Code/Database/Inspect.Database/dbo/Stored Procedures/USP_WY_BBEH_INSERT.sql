@@ -1,0 +1,17 @@
+﻿
+CREATE PROC dbo.[USP_WY_BBEH_INSERT]
+  @ID_EH varchar(10),
+  @SCF_EH varchar(30)=NULL
+
+AS
+SET NOCOUNT OFF
+
+INSERT INTO [BBEH] (
+  [ID_EH],
+  [SCF_EH]
+)
+VALUES (
+  @ID_EH,
+  @SCF_EH
+)
+

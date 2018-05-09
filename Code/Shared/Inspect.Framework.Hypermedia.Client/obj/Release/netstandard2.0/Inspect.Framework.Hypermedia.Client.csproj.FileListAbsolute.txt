@@ -1,0 +1,13 @@
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Hypermedia.Client\bin\Release\netstandard2.0\Inspect.Framework.Hypermedia.Client.deps.json
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Hypermedia.Client\bin\Release\netstandard2.0\Inspect.Framework.Hypermedia.Client.dll
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Hypermedia.Client\bin\Release\netstandard2.0\Inspect.Framework.Hypermedia.Client.pdb
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Hypermedia.Client\bin\Release\netstandard2.0\Inspect.Framework.Hypermedia.dll
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Hypermedia.Client\bin\Release\netstandard2.0\Inspect.Framework.Hypermedia.pdb
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Hypermedia.Client\obj\Release\netstandard2.0\Inspect.Framework.Hypermedia.Client.csprojResolveAssemblyReference.cache
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Hypermedia.Client\obj\Release\netstandard2.0\Inspect.Framework.Hypermedia.Client.Resources.Strings.resources
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Hypermedia.Client\obj\Release\netstandard2.0\Inspect.Framework.Hypermedia.Client.csproj.GenerateResource.Cache
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Hypermedia.Client\obj\Release\netstandard2.0\Inspect.Framework.Hypermedia.Client.csproj.CoreCompileInputs.cache
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Hypermedia.Client\obj\Release\netstandard2.0\Inspect.Framework.Hypermedia.Client.AssemblyInfoInputs.cache
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Hypermedia.Client\obj\Release\netstandard2.0\Inspect.Framework.Hypermedia.Client.AssemblyInfo.cs
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Hypermedia.Client\obj\Release\netstandard2.0\Inspect.Framework.Hypermedia.Client.dll
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Hypermedia.Client\obj\Release\netstandard2.0\Inspect.Framework.Hypermedia.Client.pdb

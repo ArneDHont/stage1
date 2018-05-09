@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TDSBrandweerMateriaalActie" targetNamespace="http://tempuri.org/TDSBrandweerMateriaalActie.xsd" xmlns:mstns="http://tempuri.org/TDSBrandweerMateriaalActie.xsd" xmlns="http://tempuri.org/TDSBrandweerMateriaalActie.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TDSBrandweerMateriaalActie" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="TDSBrandweerMateriaalActie" msprop:Generator_UserDSName="TDSBrandweerMateriaalActie">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="MateriaalActie" msprop:Generator_TableClassName="MateriaalActieDataTable" msprop:Generator_TableVarName="tableMateriaalActie" msprop:Generator_TablePropName="MateriaalActie" msprop:Generator_RowDeletingName="MateriaalActieRowDeleting" msprop:Generator_UserTableName="MateriaalActie" msprop:Generator_RowChangingName="MateriaalActieRowChanging" msprop:Generator_RowEvHandlerName="MateriaalActieRowChangeEventHandler" msprop:Generator_RowDeletedName="MateriaalActieRowDeleted" msprop:Generator_RowEvArgName="MateriaalActieRowChangeEvent" msprop:Generator_RowChangedName="MateriaalActieRowChanged" msprop:Generator_RowClassName="MateriaalActieRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ActieID" msprop:Generator_ColumnVarNameInTable="columnActieID" msprop:Generator_ColumnPropNameInRow="ActieID" msprop:Generator_ColumnPropNameInTable="ActieIDColumn" msprop:Generator_UserColumnName="ActieID" type="xs:int" />
+              <xs:element name="TypeMatID" msprop:Generator_ColumnVarNameInTable="columnTypeMatID" msprop:Generator_ColumnPropNameInRow="TypeMatID" msprop:Generator_ColumnPropNameInTable="TypeMatIDColumn" msprop:Generator_UserColumnName="TypeMatID" type="xs:int" />
+              <xs:element name="MateriaalVolgNr" msprop:Generator_ColumnVarNameInTable="columnMateriaalVolgNr" msprop:Generator_ColumnPropNameInRow="MateriaalVolgNr" msprop:Generator_ColumnPropNameInTable="MateriaalVolgNrColumn" msprop:Generator_UserColumnName="MateriaalVolgNr" type="xs:int" />
+              <xs:element name="Datum" msprop:Generator_ColumnVarNameInTable="columnDatum" msprop:Generator_ColumnPropNameInRow="Datum" msprop:Generator_ColumnPropNameInTable="DatumColumn" msprop:Generator_UserColumnName="Datum" type="xs:dateTime" />
+              <xs:element name="ActieCodeID" msprop:Generator_ColumnVarNameInTable="columnActieCodeID" msprop:Generator_ColumnPropNameInRow="ActieCodeID" msprop:Generator_ColumnPropNameInTable="ActieCodeIDColumn" msprop:Generator_UserColumnName="ActieCodeID" type="xs:int" minOccurs="0" />
+              <xs:element name="ActieOmschr" msprop:Generator_ColumnVarNameInTable="columnActieOmschr" msprop:Generator_ColumnPropNameInRow="ActieOmschr" msprop:Generator_ColumnPropNameInTable="ActieOmschrColumn" msprop:Generator_UserColumnName="ActieOmschr" type="xs:string" minOccurs="0" />
+              <xs:element name="Gewicht" msprop:Generator_ColumnVarNameInTable="columnGewicht" msprop:Generator_ColumnPropNameInRow="Gewicht" msprop:Generator_ColumnPropNameInTable="GewichtColumn" msprop:Generator_UserColumnName="Gewicht" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:MateriaalActie" />
+      <xs:field xpath="mstns:ActieID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,36 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="bbwConnectionString" Type="(Connection string)" Scope="User">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=svsim178\sp3a;Initial Catalog=bbw;User ID=SQLBBW;Password=usr4bbw#&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=svsim178\sp3a;Initial Catalog=bbw;User ID=SQLBBW;Password=usr4bbw#</Value>
+    </Setting>
+    <Setting Name="bbwConnectionString1" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=sql5dvlp4\v04;Initial Catalog=bbw;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=sql5dvlp4\v04;Initial Catalog=bbw;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="hrmConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=svsim178.sidmar.be\sp3a;Initial Catalog=hrm;User ID=sqlhrm;Password=ADI&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=svsim178.sidmar.be\sp3a;Initial Catalog=hrm;User ID=sqlhrm;Password=ADI</Value>
+    </Setting>
+    <Setting Name="Be_Sidmar_RIS_BrandweerBewaking_Client_SappersDataNew_Service_ZHR_BAPI_SAPPERS_P_STANDARD" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://hr-dvlp.sap.sidmar.agn/sap/bc/srt/pm/sap/zhr_bapi_sappers/200/local/p_standard/1/binding_t_http_a_http_zhr_bapi_sappers_p_standard_l</Value>
+    </Setting>
+    <Setting Name="Be_Sidmar_RIS_BrandweerBewaking_Client_FirmaService_Services" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://wffrsprod.sidmar.be/HRMService.Firma/Services.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

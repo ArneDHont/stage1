@@ -1,0 +1,2 @@
+﻿CREATE SCHEMA [db_inspect]
+	AUTHORIZATION [dbo]

@@ -1,0 +1,94 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Be.Sidmar.RIS.BrandweerBewaking.BS", "..\..\..\Server\Be.Sidmar.RIS.BrandweerBewaking.BS\Be.Sidmar.RIS.BrandweerBewaking.BS.vbproj", "{8718D31D-EE90-4B87-94A9-E9260A13A6B1}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Be.Sidmar.RIS.BrandweerBewaking.Services.Management", "..\..\..\Server\Be.Sidmar.RIS.BrandweerBewaking.Services.Management\Be.Sidmar.RIS.BrandweerBewaking.Services.Management.vbproj", "{77600353-33BE-46C1-A8A3-6F584908F963}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Be.Sidmar.RIS.BrandweerBewaking.BS2", "..\..\..\Server\Be.Sidmar.RIS.BrandweerBewaking.BS2\Be.Sidmar.RIS.BrandweerBewaking.BS2.vbproj", "{819BE803-C6B8-4F23-B750-769292B958DE}"
+EndProject
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "Be.Sidmar.RIS.BrandweerBewaking.Services.Management.Setup", "..\..\Be.Sidmar.RIS.BrandweerBewaking.Services.Management.Setup\Be.Sidmar.RIS.BrandweerBewaking.Services.Management.Setup.wixproj", "{4BA6306E-B29E-489B-AC2A-41BB28DFD3B3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8718D31D-EE90-4B87-94A9-E9260A13A6B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8718D31D-EE90-4B87-94A9-E9260A13A6B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8718D31D-EE90-4B87-94A9-E9260A13A6B1}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{8718D31D-EE90-4B87-94A9-E9260A13A6B1}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{8718D31D-EE90-4B87-94A9-E9260A13A6B1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8718D31D-EE90-4B87-94A9-E9260A13A6B1}.Debug|x86.Build.0 = Debug|Any CPU
+		{8718D31D-EE90-4B87-94A9-E9260A13A6B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8718D31D-EE90-4B87-94A9-E9260A13A6B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8718D31D-EE90-4B87-94A9-E9260A13A6B1}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{8718D31D-EE90-4B87-94A9-E9260A13A6B1}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{8718D31D-EE90-4B87-94A9-E9260A13A6B1}.Release|x86.ActiveCfg = Release|Any CPU
+		{8718D31D-EE90-4B87-94A9-E9260A13A6B1}.Release|x86.Build.0 = Release|Any CPU
+		{77600353-33BE-46C1-A8A3-6F584908F963}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77600353-33BE-46C1-A8A3-6F584908F963}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77600353-33BE-46C1-A8A3-6F584908F963}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{77600353-33BE-46C1-A8A3-6F584908F963}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{77600353-33BE-46C1-A8A3-6F584908F963}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{77600353-33BE-46C1-A8A3-6F584908F963}.Debug|x86.Build.0 = Debug|Any CPU
+		{77600353-33BE-46C1-A8A3-6F584908F963}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77600353-33BE-46C1-A8A3-6F584908F963}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77600353-33BE-46C1-A8A3-6F584908F963}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{77600353-33BE-46C1-A8A3-6F584908F963}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{77600353-33BE-46C1-A8A3-6F584908F963}.Release|x86.ActiveCfg = Release|Any CPU
+		{77600353-33BE-46C1-A8A3-6F584908F963}.Release|x86.Build.0 = Release|Any CPU
+		{819BE803-C6B8-4F23-B750-769292B958DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{819BE803-C6B8-4F23-B750-769292B958DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{819BE803-C6B8-4F23-B750-769292B958DE}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{819BE803-C6B8-4F23-B750-769292B958DE}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{819BE803-C6B8-4F23-B750-769292B958DE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{819BE803-C6B8-4F23-B750-769292B958DE}.Debug|x86.Build.0 = Debug|Any CPU
+		{819BE803-C6B8-4F23-B750-769292B958DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{819BE803-C6B8-4F23-B750-769292B958DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{819BE803-C6B8-4F23-B750-769292B958DE}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{819BE803-C6B8-4F23-B750-769292B958DE}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{819BE803-C6B8-4F23-B750-769292B958DE}.Release|x86.ActiveCfg = Release|Any CPU
+		{819BE803-C6B8-4F23-B750-769292B958DE}.Release|x86.Build.0 = Release|Any CPU
+		{4BA6306E-B29E-489B-AC2A-41BB28DFD3B3}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{4BA6306E-B29E-489B-AC2A-41BB28DFD3B3}.Debug|Any CPU.Build.0 = Debug|x86
+		{4BA6306E-B29E-489B-AC2A-41BB28DFD3B3}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{4BA6306E-B29E-489B-AC2A-41BB28DFD3B3}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{4BA6306E-B29E-489B-AC2A-41BB28DFD3B3}.Debug|x86.ActiveCfg = Debug|x86
+		{4BA6306E-B29E-489B-AC2A-41BB28DFD3B3}.Debug|x86.Build.0 = Debug|x86
+		{4BA6306E-B29E-489B-AC2A-41BB28DFD3B3}.Release|Any CPU.ActiveCfg = Release|x86
+		{4BA6306E-B29E-489B-AC2A-41BB28DFD3B3}.Release|Any CPU.Build.0 = Release|x86
+		{4BA6306E-B29E-489B-AC2A-41BB28DFD3B3}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{4BA6306E-B29E-489B-AC2A-41BB28DFD3B3}.Release|Mixed Platforms.Build.0 = Release|x86
+		{4BA6306E-B29E-489B-AC2A-41BB28DFD3B3}.Release|x86.ActiveCfg = Release|x86
+		{4BA6306E-B29E-489B-AC2A-41BB28DFD3B3}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://wftfsprod.sidmar.be:8080/tfs/inf
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ..\\..\\..\\Server\\Be.Sidmar.RIS.BrandweerBewaking.BS\\Be.Sidmar.RIS.BrandweerBewaking.BS.vbproj
+		SccProjectName1 = ../../../Server/Be.Sidmar.RIS.BrandweerBewaking.BS
+		SccLocalPath1 = ..\\..\\..\\Server\\Be.Sidmar.RIS.BrandweerBewaking.BS
+		SccProjectUniqueName2 = ..\\..\\..\\Server\\Be.Sidmar.RIS.BrandweerBewaking.Services.Management\\Be.Sidmar.RIS.BrandweerBewaking.Services.Management.vbproj
+		SccProjectName2 = ../../../Server/Be.Sidmar.RIS.BrandweerBewaking.Services.Management
+		SccLocalPath2 = ..\\..\\..\\Server\\Be.Sidmar.RIS.BrandweerBewaking.Services.Management
+		SccProjectUniqueName3 = ..\\..\\..\\Server\\Be.Sidmar.RIS.BrandweerBewaking.BS2\\Be.Sidmar.RIS.BrandweerBewaking.BS2.vbproj
+		SccProjectName3 = ../../../Server/Be.Sidmar.RIS.BrandweerBewaking.BS2
+		SccLocalPath3 = ..\\..\\..\\Server\\Be.Sidmar.RIS.BrandweerBewaking.BS2
+		SccProjectUniqueName4 = ..\\..\\Be.Sidmar.RIS.BrandweerBewaking.Services.Management.Setup\\Be.Sidmar.RIS.BrandweerBewaking.Services.Management.Setup.wixproj
+		SccProjectName4 = ../../Be.Sidmar.RIS.BrandweerBewaking.Services.Management.Setup
+		SccLocalPath4 = ..\\..\\Be.Sidmar.RIS.BrandweerBewaking.Services.Management.Setup
+	EndGlobalSection
+EndGlobal

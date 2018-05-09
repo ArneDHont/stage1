@@ -1,0 +1,17 @@
+﻿
+CREATE PROC dbo.[USP_WY_BBDIEFDU_UPDATE]
+  @ID_DUP_DIEF varchar(30),
+  @SCF_DUP char(10)=NULL,
+  @INDI_NR_ST_VP bit=NULL,
+  @INDI_NM_FRM_VP bit=NULL,
+  @Original_ID_DUP_DIEF varchar(30) --Primary Key Field
+
+AS
+SET NOCOUNT OFF
+
+UPDATE [BBDIEFDU] SET
+  [SCF_DUP] = @SCF_DUP,
+  [INDI_NR_ST_VP] = @INDI_NR_ST_VP,
+  [INDI_NM_FRM_VP] = @INDI_NM_FRM_VP
+WHERE [ID_DUP_DIEF] = @Original_ID_DUP_DIEF
+

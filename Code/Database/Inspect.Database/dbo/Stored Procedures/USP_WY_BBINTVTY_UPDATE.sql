@@ -1,0 +1,13 @@
+﻿
+CREATE PROC dbo.[USP_WY_BBINTVTY_UPDATE]
+  @ID_TY_INTV int,
+  @SCF_TY_INTV varchar(30)=NULL,
+  @Original_ID_TY_INTV int --Primary Key Field
+
+AS
+SET NOCOUNT OFF
+
+UPDATE [BBINTVTY] SET
+  [SCF_TY_INTV] = @SCF_TY_INTV
+WHERE [ID_TY_INTV] = @Original_ID_TY_INTV
+

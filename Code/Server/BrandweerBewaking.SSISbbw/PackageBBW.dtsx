@@ -1,0 +1,2292 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/4/2009 3:55:47 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="WS22139"
+  DTS:CreatorName="DOSIM000\siddien"
+  DTS:Description="DTS Wizard-generated package"
+  DTS:DTSID="{2F269FE6-2AC1-4645-B83D-9541BE597678}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="12.0.2430.0"
+  DTS:LocaleID="2067"
+  DTS:MaxErrorCount="0"
+  DTS:ObjectName="PackageBBW"
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="84"
+  DTS:VersionGUID="{2792E0D8-7CB9-405A-8C79-C44A596A4D48}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{430F94D8-EA44-410F-9A17-866A3CC4B4CC}"
+      DTS:ObjectName="DestinationConnectionOLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=sql14prod1\v01;Initial Catalog=BBW;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=false;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SourceConnectionOLEDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{11A247F1-F95F-47B1-986A-67ADF8CF2372}"
+      DTS:ObjectName="SourceConnectionOLEDB">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">"Data Source=DB2;User ID=sid#npp;Provider=IBMDADB2.1;Persist Security Info=True;pwd=" + @[User::db2pasw] + ";"</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DB2;User ID=sid#npp;Provider=IBMDADB2.1;Persist Security Info=True;">
+          <DTS:Password
+            DTS:Name="pwd"
+            Sensitive="1"></DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{D6FF9E9F-307F-4955-873F-CF738BDFBEC6}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="db2pasw">
+      <DTS:VariableValue
+        DTS:DataType="8">noodplan</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:DelayValidation="True"
+      DTS:DTSID="{B8BABD1D-49D7-4F52-BB2D-210A21D33F8C}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          BLOBTempStoragePath=""
+          bufferTempStoragePath=""
+          engineThreads="5"
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\Data Conversion - Add Geslacht"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation;Microsoft SqlServer v9; (C) 2005 Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion - Add Geslacht"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Data Conversion - Add Geslacht.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion - Add Geslacht.Inputs[Data Conversion Input].Columns[NR_IND]"
+                      cachedDataType="decimal"
+                      cachedName="NR_IND"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[NR_IND]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion - Add Geslacht.Inputs[Data Conversion Input].Columns[SCF_FIE]"
+                      cachedDataType="wstr"
+                      cachedLength="40"
+                      cachedName="SCF_FIE"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[SCF_FIE]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion - Add Geslacht.Inputs[Data Conversion Input].Columns[VNM]"
+                      cachedDataType="wstr"
+                      cachedLength="40"
+                      cachedName="VNM"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[VNM]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion - Add Geslacht.Inputs[Data Conversion Input].Columns[NM_FAM]"
+                      cachedDataType="wstr"
+                      cachedLength="40"
+                      cachedName="NM_FAM"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[NM_FAM]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion - Add Geslacht.Inputs[Data Conversion Input].Columns[DT_GBR]"
+                      cachedDataType="dbDate"
+                      cachedName="DT_GBR"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[DT_GBR]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion - Add Geslacht.Inputs[Data Conversion Input].Columns[PLA_GBR_WRN]"
+                      cachedDataType="wstr"
+                      cachedLength="40"
+                      cachedName="PLA_GBR_WRN"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[PLA_GBR_WRN]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion - Add Geslacht.Inputs[Data Conversion Input].Columns[AD]"
+                      cachedDataType="wstr"
+                      cachedLength="60"
+                      cachedName="AD"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[AD]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion - Add Geslacht.Inputs[Data Conversion Input].Columns[COD_PO]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="COD_PO"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[COD_PO]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion - Add Geslacht.Inputs[Data Conversion Input].Columns[NM_STAD]"
+                      cachedDataType="wstr"
+                      cachedLength="40"
+                      cachedName="NM_STAD"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[NM_STAD]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion - Add Geslacht.Inputs[Data Conversion Input].Columns[DT_UIT_DNS]"
+                      cachedDataType="dbDate"
+                      cachedName="DT_UIT_DNS"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[DT_UIT_DNS]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion - Add Geslacht.Inputs[Data Conversion Input].Columns[NR_TEL_INT_1]"
+                      cachedDataType="wstr"
+                      cachedLength="5"
+                      cachedName="NR_TEL_INT_1"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[NR_TEL_INT_1]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion - Add Geslacht.Inputs[Data Conversion Input].Columns[COD_EH_ORG_DIR]"
+                      cachedDataType="wstr"
+                      cachedLength="8"
+                      cachedName="COD_EH_ORG_DIR"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[COD_EH_ORG_DIR]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion - Add Geslacht.Inputs[Data Conversion Input].Columns[COD_EH_ORG_AFD]"
+                      cachedDataType="wstr"
+                      cachedLength="8"
+                      cachedName="COD_EH_ORG_AFD"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[COD_EH_ORG_AFD]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion - Add Geslacht.Inputs[Data Conversion Input].Columns[COD_EH_ORG_AFD_ON]"
+                      cachedDataType="wstr"
+                      cachedLength="8"
+                      cachedName="COD_EH_ORG_AFD_ON"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[COD_EH_ORG_AFD_ON]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion - Add Geslacht.Inputs[Data Conversion Input].Columns[Geslacht]"
+                      cachedDataType="i4"
+                      cachedName="Geslacht"
+                      lineageId="Package\Data Flow Task\Derived Column - Geslacht.Outputs[Derived Column Output].Columns[Geslacht]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion - Add Geslacht.Inputs[Data Conversion Input].Columns[NR_IND_WKG]"
+                      cachedDataType="numeric"
+                      cachedName="NR_IND_WKG"
+                      cachedPrecision="7"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[NR_IND_WKG]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion - Add Geslacht.Inputs[Data Conversion Input].Columns[NM_JURI_VENO]"
+                      cachedDataType="wstr"
+                      cachedLength="30"
+                      cachedName="NM_JURI_VENO"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[NM_JURI_VENO]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Data Flow Task\Data Conversion - Add Geslacht.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[NR_IND]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[NR_IND]"
+                      name="NR_IND"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[NR_IND]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[SCF_FIE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[SCF_FIE]"
+                      name="SCF_FIE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[SCF_FIE]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[VNM]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[VNM]"
+                      name="VNM"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[VNM]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[NM_FAM]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[NM_FAM]"
+                      name="NM_FAM"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[NM_FAM]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[DT_GBR]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[DT_GBR]"
+                      name="DT_GBR"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[DT_GBR]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[PLA_GBR_WRN]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="60"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[PLA_GBR_WRN]"
+                      name="PLA_GBR_WRN"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[PLA_GBR_WRN]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[AD]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="150"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[AD]"
+                      name="AD"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[AD]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[COD_PO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[COD_PO]"
+                      name="COD_PO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[COD_PO]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[NM_STAD]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="60"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[NM_STAD]"
+                      name="NM_STAD"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[NM_STAD]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[DT_UIT_DNS]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[DT_UIT_DNS]"
+                      name="DT_UIT_DNS"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[DT_UIT_DNS]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[NR_TEL_INT_1]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[NR_TEL_INT_1]"
+                      name="NR_TEL_INT_1"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[NR_TEL_INT_1]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[COD_EH_ORG_DIR]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="8"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[COD_EH_ORG_DIR]"
+                      name="COD_EH_ORG_DIR"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[COD_EH_ORG_DIR]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[COD_EH_ORG_AFD]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="8"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[COD_EH_ORG_AFD]"
+                      name="COD_EH_ORG_AFD"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[COD_EH_ORG_AFD]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[COD_EH_ORG_AFD_ON]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="8"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[COD_EH_ORG_AFD_ON]"
+                      name="COD_EH_ORG_AFD_ON"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[COD_EH_ORG_AFD_ON]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[Copy of Geslacht]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[Copy of Geslacht]"
+                      name="Copy of Geslacht"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Derived Column - Geslacht.Outputs[Derived Column Output].Columns[Geslacht]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[NR_IND_WKG]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[NR_IND_WKG]"
+                      name="NR_IND_WKG"
+                      precision="7"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[NR_IND_WKG]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[NM_JURI_VENO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="30"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[NM_JURI_VENO]"
+                      name="NM_JURI_VENO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[NM_JURI_VENO]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Data Flow Task\Data Conversion - Add Geslacht.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Derived Column - Geslacht"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation;Microsoft SqlServer v9; (C) 2005 Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Updates column values using expressions"
+              name="Derived Column - Geslacht"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Derived Column - Geslacht.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column - Geslacht.Inputs[Derived Column Input].Columns[GSL]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="GSL"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[GSL]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Derived Column - Geslacht.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Data Flow Task\Derived Column - Geslacht.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column - Geslacht.Outputs[Derived Column Output].Columns[Geslacht]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Derived Column - Geslacht.Outputs[Derived Column Output].Columns[Geslacht]"
+                      name="Geslacht"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(#{Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[GSL]} == "V" ? 2 : 1)</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(GSL == "V" ? 2 : 1)</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Derived Column - Geslacht.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Data Flow Task\Derived Column - Geslacht.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column - Geslacht.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Derived Column - Geslacht.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column - Geslacht.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Derived Column - Geslacht.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Destination insert new stamnrs - BBIND"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation;Microsoft SqlServer v9; (C) 2005 Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Destination insert new stamnrs - BBIND"
+              usesDispositions="true"
+              validateExternalMetadata="False"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[BBW].dbo.[BBIND]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destinaton. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].Columns[NR_IND]"
+                      cachedDataType="decimal"
+                      cachedName="NR_IND"
+                      externalMetadataColumnId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].ExternalColumns[ID_IND]"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[NR_IND]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].Columns[SCF_FIE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="SCF_FIE"
+                      externalMetadataColumnId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].ExternalColumns[SCF_FIE]"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[SCF_FIE]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].Columns[DT_UIT_DNS]"
+                      cachedDataType="dbDate"
+                      cachedName="DT_UIT_DNS"
+                      externalMetadataColumnId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].ExternalColumns[DT_UIT_DNS]"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[DT_UIT_DNS]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].Columns[NM_FAM]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="NM_FAM"
+                      externalMetadataColumnId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].ExternalColumns[NM_IND]"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[NM_FAM]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].Columns[VNM]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="VNM"
+                      externalMetadataColumnId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].ExternalColumns[VNM_IND]"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[VNM]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].Columns[AD]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="150"
+                      cachedName="AD"
+                      externalMetadataColumnId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].ExternalColumns[AD_IND]"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[AD]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].Columns[COD_PO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="COD_PO"
+                      externalMetadataColumnId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].ExternalColumns[PO_COD_WNPL_IND]"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[COD_PO]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].Columns[NM_STAD]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="60"
+                      cachedName="NM_STAD"
+                      externalMetadataColumnId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].ExternalColumns[WNPL_IND]"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[NM_STAD]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].Columns[PLA_GBR_WRN]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="60"
+                      cachedName="PLA_GBR_WRN"
+                      externalMetadataColumnId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].ExternalColumns[PLA_GBR_IND]"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[PLA_GBR_WRN]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].Columns[DT_GBR]"
+                      cachedDataType="dbDate"
+                      cachedName="DT_GBR"
+                      externalMetadataColumnId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].ExternalColumns[DT_GBR_IND]"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[DT_GBR]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].Columns[COD_EH_ORG_DIR]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="COD_EH_ORG_DIR"
+                      externalMetadataColumnId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].ExternalColumns[SAP_DIR]"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[COD_EH_ORG_DIR]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].Columns[COD_EH_ORG_AFD]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="COD_EH_ORG_AFD"
+                      externalMetadataColumnId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].ExternalColumns[SAP_AFD]"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[COD_EH_ORG_AFD]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].Columns[COD_EH_ORG_AFD_ON]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="COD_EH_ORG_AFD_ON"
+                      externalMetadataColumnId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].ExternalColumns[SAP_SECT]"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[COD_EH_ORG_AFD_ON]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].Columns[NR_TEL_INT_1]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="NR_TEL_INT_1"
+                      externalMetadataColumnId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].ExternalColumns[NR_TEL_SID]"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[NR_TEL_INT_1]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].Columns[Geslacht]"
+                      cachedDataType="i4"
+                      cachedName="Geslacht"
+                      externalMetadataColumnId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].ExternalColumns[ID_GSL_IND]"
+                      lineageId="Package\Data Flow Task\Derived Column - Geslacht.Outputs[Derived Column Output].Columns[Geslacht]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].Columns[NR_IND_WKG]"
+                      cachedDataType="numeric"
+                      cachedName="NR_IND_WKG"
+                      cachedPrecision="7"
+                      externalMetadataColumnId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].ExternalColumns[NR_IND_WKG]"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[NR_IND_WKG]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].Columns[NM_JURI_VENO]"
+                      cachedDataType="wstr"
+                      cachedLength="30"
+                      cachedName="NM_JURI_VENO"
+                      externalMetadataColumnId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].ExternalColumns[NM_JUR_VENO]"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[NM_JURI_VENO]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].ExternalColumns[SCF_FIE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="SCF_FIE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].ExternalColumns[DT_UIT_DNS]"
+                      dataType="dbTimeStamp"
+                      name="DT_UIT_DNS" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].ExternalColumns[ID_IND]"
+                      dataType="i4"
+                      name="ID_IND" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].ExternalColumns[NM_IND]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NM_IND" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].ExternalColumns[VNM_IND]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="VNM_IND" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].ExternalColumns[AD_IND]"
+                      codePage="1252"
+                      dataType="str"
+                      length="150"
+                      name="AD_IND" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].ExternalColumns[PO_COD_WNPL_IND]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="PO_COD_WNPL_IND" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].ExternalColumns[WNPL_IND]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      name="WNPL_IND" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].ExternalColumns[PLA_GBR_IND]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      name="PLA_GBR_IND" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].ExternalColumns[DT_GBR_IND]"
+                      dataType="dbTimeStamp"
+                      name="DT_GBR_IND" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].ExternalColumns[SAP_DIR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="SAP_DIR" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].ExternalColumns[SAP_AFD]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="SAP_AFD" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].ExternalColumns[SAP_SECT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="SAP_SECT" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].ExternalColumns[NR_TEL_SID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NR_TEL_SID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].ExternalColumns[ID_GSL_IND]"
+                      dataType="i4"
+                      name="ID_GSL_IND" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].ExternalColumns[ID_TY_IND]"
+                      dataType="i4"
+                      name="ID_TY_IND" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].ExternalColumns[ID_FRM_IND_TK]"
+                      dataType="i4"
+                      name="ID_FRM_IND_TK" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].ExternalColumns[AD_EMAL_IND]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="AD_EMAL_IND" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].ExternalColumns[BST_IND]"
+                      dataType="bool"
+                      name="BST_IND" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].ExternalColumns[NR_IND_WKG]"
+                      dataType="i4"
+                      name="NR_IND_WKG" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].ExternalColumns[NM_JUR_VENO]"
+                      dataType="wstr"
+                      length="40"
+                      name="NM_JUR_VENO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].ExternalColumns[VLG_INT_COD_PO]"
+                      dataType="wstr"
+                      length="12"
+                      name="VLG_INT_COD_PO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input].ExternalColumns[BST_ACTIVE]"
+                      dataType="bool"
+                      name="BST_ACTIVE" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Lookup"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation;Microsoft SqlServer v9; (C) 2005 Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="Looks up values in a reference dataset by using exact matching."
+              name="Lookup"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[BBIND]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[BBIND]) [refTable]
+where [refTable].[ID_IND] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ID_IND" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="NM_IND" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="VNM_IND" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="AD_IND" dataType="DT_STR" length="150" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="PO_COD_WNPL_IND" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="WNPL_IND" dataType="DT_STR" length="60" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="PLA_GBR_IND" dataType="DT_STR" length="60" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="DT_GBR_IND" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SAP_DIR" dataType="DT_STR" length="5" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="SAP_AFD" dataType="DT_STR" length="5" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="SAP_SECT" dataType="DT_STR" length="5" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="DT_UIT_DNS" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="NR_TEL_SID" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="SCF_FIE" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="ID_GSL_IND" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ID_TY_IND" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ID_FRM_IND_TK" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="AD_EMAL_IND" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="BST_IND" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="NR_IND_WKG" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="NM_JUR_VENO" dataType="DT_WSTR" length="40" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="VLG_INT_COD_PO" dataType="DT_WSTR" length="12" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="BST_ACTIVE" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[NR_IND]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Lookup.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Lookup.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Lookup.Inputs[Lookup Input].Columns[Data Conversion.NR_IND]"
+                      cachedDataType="i4"
+                      cachedName="NR_IND"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[NR_IND]"
+                      name="Data Conversion.NR_IND"
+                      truncationRowDisposition="RedirectRow"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">ID_IND</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">ID_IND</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Lookup.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="RedirectRow"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Data Flow Task\Lookup.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Lookup.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Data Flow Task\Lookup.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Lookup.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Data Flow Task\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Source DB2 - PERSONL"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation;Microsoft SqlServer v9; (C) 2005 Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Source DB2 - PERSONL"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">"S"."PERSONL"</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT    cast(NR_IND AS int) as NR_IND, NM_FAM, VNM, AD, COD_PO, NM_STAD, PLA_GBR_WRN, DT_GBR, COD_EH_ORG_DIR, COD_EH_ORG_AFD, 
+                      COD_EH_ORG_AFD_ON, DT_UIT_DNS, NR_TEL_INT_1, SCF_FIE, GSL, NR_IND_WKG, NM_JURI_VENO 
+FROM         S.PERSONEL
+WHERE     (DT_UIT_DNS = '12/31/9999')</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Source DB2 - PERSONL.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SourceConnectionOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[SourceConnectionOLEDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[NR_IND]"
+                      dataType="decimal"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].ExternalColumns[NR_IND]"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[NR_IND]"
+                      name="NR_IND"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[SCF_FIE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].ExternalColumns[SCF_FIE]"
+                      length="40"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[SCF_FIE]"
+                      name="SCF_FIE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[VNM]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].ExternalColumns[VNM]"
+                      length="40"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[VNM]"
+                      name="VNM"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[NM_FAM]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].ExternalColumns[NM_FAM]"
+                      length="40"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[NM_FAM]"
+                      name="NM_FAM"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[GSL]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].ExternalColumns[GSL]"
+                      length="1"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[GSL]"
+                      name="GSL"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[DT_GBR]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].ExternalColumns[DT_GBR]"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[DT_GBR]"
+                      name="DT_GBR"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[PLA_GBR_WRN]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].ExternalColumns[PLA_GBR_WRN]"
+                      length="40"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[PLA_GBR_WRN]"
+                      name="PLA_GBR_WRN"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[AD]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].ExternalColumns[AD]"
+                      length="60"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[AD]"
+                      name="AD"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[COD_PO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].ExternalColumns[COD_PO]"
+                      length="10"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[COD_PO]"
+                      name="COD_PO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[NM_STAD]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].ExternalColumns[NM_STAD]"
+                      length="40"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[NM_STAD]"
+                      name="NM_STAD"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[DT_UIT_DNS]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].ExternalColumns[DT_UIT_DNS]"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[DT_UIT_DNS]"
+                      name="DT_UIT_DNS"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[NR_TEL_INT_1]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].ExternalColumns[NR_TEL_INT_1]"
+                      length="5"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[NR_TEL_INT_1]"
+                      name="NR_TEL_INT_1"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[COD_EH_ORG_DIR]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].ExternalColumns[COD_EH_ORG_DIR]"
+                      length="8"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[COD_EH_ORG_DIR]"
+                      name="COD_EH_ORG_DIR"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[COD_EH_ORG_AFD]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].ExternalColumns[COD_EH_ORG_AFD]"
+                      length="8"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[COD_EH_ORG_AFD]"
+                      name="COD_EH_ORG_AFD"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[COD_EH_ORG_AFD_ON]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].ExternalColumns[COD_EH_ORG_AFD_ON]"
+                      length="8"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[COD_EH_ORG_AFD_ON]"
+                      name="COD_EH_ORG_AFD_ON"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[NR_IND_WKG]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].ExternalColumns[NR_IND_WKG]"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[NR_IND_WKG]"
+                      name="NR_IND_WKG"
+                      precision="7"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[NM_JURI_VENO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].ExternalColumns[NM_JURI_VENO]"
+                      length="30"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].Columns[NM_JURI_VENO]"
+                      name="NM_JURI_VENO"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].ExternalColumns[NR_IND]"
+                      dataType="i4"
+                      name="NR_IND" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].ExternalColumns[SCF_FIE]"
+                      dataType="wstr"
+                      length="40"
+                      name="SCF_FIE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].ExternalColumns[VNM]"
+                      dataType="wstr"
+                      length="40"
+                      name="VNM" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].ExternalColumns[NM_FAM]"
+                      dataType="wstr"
+                      length="40"
+                      name="NM_FAM" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].ExternalColumns[GSL]"
+                      dataType="wstr"
+                      length="1"
+                      name="GSL" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].ExternalColumns[DT_GBR]"
+                      dataType="dbDate"
+                      name="DT_GBR" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].ExternalColumns[PLA_GBR_WRN]"
+                      dataType="wstr"
+                      length="40"
+                      name="PLA_GBR_WRN" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].ExternalColumns[AD]"
+                      dataType="wstr"
+                      length="60"
+                      name="AD" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].ExternalColumns[COD_PO]"
+                      dataType="wstr"
+                      length="10"
+                      name="COD_PO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].ExternalColumns[NM_STAD]"
+                      dataType="wstr"
+                      length="40"
+                      name="NM_STAD" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].ExternalColumns[DT_UIT_DNS]"
+                      dataType="dbDate"
+                      name="DT_UIT_DNS" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].ExternalColumns[NR_TEL_INT_1]"
+                      dataType="wstr"
+                      length="5"
+                      name="NR_TEL_INT_1" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].ExternalColumns[COD_EH_ORG_DIR]"
+                      dataType="wstr"
+                      length="8"
+                      name="COD_EH_ORG_DIR" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].ExternalColumns[COD_EH_ORG_AFD]"
+                      dataType="wstr"
+                      length="8"
+                      name="COD_EH_ORG_AFD" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].ExternalColumns[COD_EH_ORG_AFD_ON]"
+                      dataType="wstr"
+                      length="8"
+                      name="COD_EH_ORG_AFD_ON" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].ExternalColumns[NR_IND_WKG]"
+                      dataType="numeric"
+                      name="NR_IND_WKG"
+                      precision="7" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output].ExternalColumns[NM_JURI_VENO]"
+                      dataType="wstr"
+                      length="30"
+                      name="NM_JURI_VENO" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Error Output].Columns[NR_IND]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Error Output].Columns[NR_IND]"
+                      name="NR_IND" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Error Output].Columns[SCF_FIE]"
+                      dataType="wstr"
+                      length="40"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Error Output].Columns[SCF_FIE]"
+                      name="SCF_FIE" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Error Output].Columns[VNM]"
+                      dataType="wstr"
+                      length="40"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Error Output].Columns[VNM]"
+                      name="VNM" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Error Output].Columns[NM_FAM]"
+                      dataType="wstr"
+                      length="40"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Error Output].Columns[NM_FAM]"
+                      name="NM_FAM" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Error Output].Columns[GSL]"
+                      dataType="wstr"
+                      length="1"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Error Output].Columns[GSL]"
+                      name="GSL" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Error Output].Columns[DT_GBR]"
+                      dataType="dbDate"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Error Output].Columns[DT_GBR]"
+                      name="DT_GBR" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Error Output].Columns[PLA_GBR_WRN]"
+                      dataType="wstr"
+                      length="40"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Error Output].Columns[PLA_GBR_WRN]"
+                      name="PLA_GBR_WRN" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Error Output].Columns[AD]"
+                      dataType="wstr"
+                      length="60"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Error Output].Columns[AD]"
+                      name="AD" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Error Output].Columns[COD_PO]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Error Output].Columns[COD_PO]"
+                      name="COD_PO" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Error Output].Columns[NM_STAD]"
+                      dataType="wstr"
+                      length="40"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Error Output].Columns[NM_STAD]"
+                      name="NM_STAD" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Error Output].Columns[DT_UIT_DNS]"
+                      dataType="dbDate"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Error Output].Columns[DT_UIT_DNS]"
+                      name="DT_UIT_DNS" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Error Output].Columns[NR_TEL_INT_1]"
+                      dataType="wstr"
+                      length="5"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Error Output].Columns[NR_TEL_INT_1]"
+                      name="NR_TEL_INT_1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Error Output].Columns[COD_EH_ORG_DIR]"
+                      dataType="wstr"
+                      length="8"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Error Output].Columns[COD_EH_ORG_DIR]"
+                      name="COD_EH_ORG_DIR" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Error Output].Columns[COD_EH_ORG_AFD]"
+                      dataType="wstr"
+                      length="8"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Error Output].Columns[COD_EH_ORG_AFD]"
+                      name="COD_EH_ORG_AFD" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Error Output].Columns[COD_EH_ORG_AFD_ON]"
+                      dataType="wstr"
+                      length="8"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Error Output].Columns[COD_EH_ORG_AFD_ON]"
+                      name="COD_EH_ORG_AFD_ON" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Error Output].Columns[NR_IND_WKG]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Error Output].Columns[NR_IND_WKG]"
+                      name="NR_IND_WKG"
+                      precision="7" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Error Output].Columns[NM_JURI_VENO]"
+                      dataType="wstr"
+                      length="30"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Error Output].Columns[NM_JURI_VENO]"
+                      name="NM_JURI_VENO" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Update existing stamnrs"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation;Microsoft SqlServer v9; (C) 2005 Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Executes an SQL command for each row in a dataset."
+              name="Update existing stamnrs"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE    dbo.BBIND
+SET              NM_IND = ?, VNM_IND = ?, AD_IND = ?, PO_COD_WNPL_IND = ?, WNPL_IND = ?, 
+PLA_GBR_IND = ?, DT_GBR_IND = ?, SAP_DIR = ?, SAP_AFD = ?,    SAP_SECT = ?, DT_UIT_DNS = ?, NR_TEL_SID = ?,  SCF_FIE = ?, ID_GSL_IND = ? ,
+NR_IND_WKG = ?,
+NM_JUR_VENO = ?
+WHERE     (ID_IND = ?)</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Update existing stamnrs.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].Columns[NM_FAM]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="NM_FAM"
+                      externalMetadataColumnId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[NM_FAM]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].Columns[VNM]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="VNM"
+                      externalMetadataColumnId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[VNM]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].Columns[AD]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="150"
+                      cachedName="AD"
+                      externalMetadataColumnId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[AD]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].Columns[COD_PO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="COD_PO"
+                      externalMetadataColumnId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[COD_PO]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].Columns[NM_STAD]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="60"
+                      cachedName="NM_STAD"
+                      externalMetadataColumnId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[NM_STAD]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].Columns[PLA_GBR_WRN]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="60"
+                      cachedName="PLA_GBR_WRN"
+                      externalMetadataColumnId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[PLA_GBR_WRN]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].Columns[DT_GBR]"
+                      cachedDataType="dbDate"
+                      cachedName="DT_GBR"
+                      externalMetadataColumnId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[DT_GBR]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].Columns[COD_EH_ORG_DIR]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="COD_EH_ORG_DIR"
+                      externalMetadataColumnId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[COD_EH_ORG_DIR]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].Columns[COD_EH_ORG_AFD]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="COD_EH_ORG_AFD"
+                      externalMetadataColumnId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[COD_EH_ORG_AFD]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].Columns[COD_EH_ORG_AFD_ON]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="COD_EH_ORG_AFD_ON"
+                      externalMetadataColumnId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].ExternalColumns[Param_9]"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[COD_EH_ORG_AFD_ON]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].Columns[DT_UIT_DNS]"
+                      cachedDataType="dbDate"
+                      cachedName="DT_UIT_DNS"
+                      externalMetadataColumnId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].ExternalColumns[Param_10]"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[DT_UIT_DNS]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].Columns[NR_TEL_INT_1]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="NR_TEL_INT_1"
+                      externalMetadataColumnId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].ExternalColumns[Param_11]"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[NR_TEL_INT_1]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].Columns[SCF_FIE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="SCF_FIE"
+                      externalMetadataColumnId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].ExternalColumns[Param_12]"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[SCF_FIE]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].Columns[Geslacht]"
+                      cachedDataType="i4"
+                      cachedName="Geslacht"
+                      externalMetadataColumnId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].ExternalColumns[Param_13]"
+                      lineageId="Package\Data Flow Task\Derived Column - Geslacht.Outputs[Derived Column Output].Columns[Geslacht]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].Columns[NR_IND]"
+                      cachedDataType="i4"
+                      cachedName="NR_IND"
+                      externalMetadataColumnId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].ExternalColumns[Param_16]"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[NR_IND]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].Columns[NR_IND_WKG]"
+                      cachedDataType="numeric"
+                      cachedName="NR_IND_WKG"
+                      cachedPrecision="7"
+                      externalMetadataColumnId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].ExternalColumns[Param_14]"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[NR_IND_WKG]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].Columns[NM_JURI_VENO]"
+                      cachedDataType="wstr"
+                      cachedLength="30"
+                      cachedName="NM_JURI_VENO"
+                      externalMetadataColumnId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].ExternalColumns[Param_15]"
+                      lineageId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output].Columns[NM_JURI_VENO]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">17</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="150"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Param_3">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      name="Param_4">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      name="Param_5">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
+                      dataType="dbTimeStamp"
+                      name="Param_6">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="Param_7">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="Param_8">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].ExternalColumns[Param_9]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="Param_9">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].ExternalColumns[Param_10]"
+                      dataType="dbTimeStamp"
+                      name="Param_10">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].ExternalColumns[Param_11]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Param_11">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].ExternalColumns[Param_12]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="Param_12">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].ExternalColumns[Param_13]"
+                      dataType="i4"
+                      name="Param_13">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].ExternalColumns[Param_14]"
+                      dataType="i4"
+                      name="Param_14">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">17</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].ExternalColumns[Param_15]"
+                      dataType="wstr"
+                      length="40"
+                      name="Param_15">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input].ExternalColumns[Param_16]"
+                      dataType="i4"
+                      name="Param_16">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Update existing stamnrs.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Update existing stamnrs.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Update existing stamnrs.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Update existing stamnrs.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Update existing stamnrs.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Update existing stamnrs.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[Data Conversion Output]"
+              endId="Package\Data Flow Task\Lookup.Inputs[Lookup Input]"
+              name="Data Conversion Output"
+              startId="Package\Data Flow Task\Data Conversion - Add Geslacht.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Derived Column Output]"
+              endId="Package\Data Flow Task\Data Conversion - Add Geslacht.Inputs[Data Conversion Input]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task\Derived Column - Geslacht.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Lookup Error Output]"
+              endId="Package\Data Flow Task\Destination insert new stamnrs - BBIND.Inputs[Destination Input]"
+              name="Lookup Error Output"
+              startId="Package\Data Flow Task\Lookup.Outputs[Lookup Error Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Lookup Output]"
+              endId="Package\Data Flow Task\Update existing stamnrs.Inputs[OLE DB Command Input]"
+              name="Lookup Output"
+              startId="Package\Data Flow Task\Lookup.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
+              endId="Package\Data Flow Task\Derived Column - Geslacht.Inputs[Derived Column Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task\Source DB2 - PERSONL.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql12">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="136,44"
+          Id="Package\Data Flow Task"
+          TopLeft="5.5,5.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="136,44"
+          Id="Package\Data Flow Task\Lookup"
+          TopLeft="78.4056603773585,201.462264150943" />
+        <NodeLayout
+          Size="136,44"
+          Id="Package\Data Flow Task\Update existing stamnrs"
+          TopLeft="4.5,310.292452830189" />
+        <NodeLayout
+          Size="175,44"
+          Id="Package\Data Flow Task\Destination insert new stamnrs - BBIND"
+          TopLeft="251.61320754717,309.575471698113" />
+        <NodeLayout
+          Size="136,44"
+          Id="Package\Data Flow Task\Source DB2 - PERSONL"
+          TopLeft="41.9528301886792,5.5" />
+        <NodeLayout
+          Size="138,44"
+          Id="Package\Data Flow Task\Data Conversion - Add Geslacht"
+          TopLeft="231.160377358491,116.594339622641" />
+        <NodeLayout
+          Size="136,44"
+          Id="Package\Data Flow Task\Derived Column - Geslacht"
+          TopLeft="287.27358490566,7.00943396226415" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="177.72641509434,27.4622641509434">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="109.547169811321,1.50943396226415"
+              Start="0,0"
+              End="102.047169811321,1.50943396226415">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="54.7547169811321,0" />
+                  <mssgle:LineSegment
+                    End="54.7547169811321,1.50943396226415" />
+                  <mssgle:LineSegment
+                    End="102.047169811321,1.50943396226415" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup Output]"
+          TopLeft="125.072327044025,245.462264150943">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-52.5723270440252,64.830188679246"
+              Start="0,0"
+              End="-52.5723270440252,57.330188679246">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.3843791136466" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.3843791136466"
+                    Point2="0,26.3843791136466"
+                    Point3="-4,26.3843791136466" />
+                  <mssgle:LineSegment
+                    End="-48.5723270440252,26.3843791136466" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-48.5723270440252,26.3843791136466"
+                    Point2="-52.5723270440252,26.3843791136466"
+                    Point3="-52.5723270440252,30.3843791136466" />
+                  <mssgle:LineSegment
+                    End="-52.5723270440252,57.330188679246" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-74.4775502407626,31.3843791136466,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup Error Output]"
+          TopLeft="167.047169811321,245.38679245283">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="171.924528301887,64.188679245283"
+              Start="0,0"
+              End="171.924528301887,56.688679245283">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.0754716981132" />
+                  <mssgle:LineSegment
+                    End="171.924528301887,32.0754716981132" />
+                  <mssgle:LineSegment
+                    End="171.924528301887,56.688679245283" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="40.0958774321935,37.0754716981132,91.7327734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Derived Column Output]"
+          TopLeft="355.160377358491,50.9339622641509">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-55.1320754716981,65.6603773584906"
+              Start="0,0"
+              End="-55.1320754716981,58.1603773584906">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.8301886792453" />
+                  <mssgle:LineSegment
+                    End="-55.1320754716981,32.8301886792453" />
+                  <mssgle:LineSegment
+                    End="-55.1320754716981,58.1603773584906" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Data Conversion Output]"
+          TopLeft="300.028301886792,160.518867924528">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-153.735849056604,40.9433962264151"
+              Start="0,0"
+              End="-153.735849056604,33.4433962264151">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.4528301886792" />
+                  <mssgle:LineSegment
+                    End="-153.735849056604,20.4528301886792" />
+                  <mssgle:LineSegment
+                    End="-153.735849056604,33.4433962264151" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[BBIND]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Destination insert new stamnrs - BBIND">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Source DB2 - PERSONL">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

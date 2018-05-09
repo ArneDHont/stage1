@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="TDSDagverslagPersoneel" targetNamespace="http://tempuri.org/TDSDagverslagPersoneel.xsd"
+	elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/TDSDagverslagPersoneel.xsd"
+	xmlns:mstns="http://tempuri.org/TDSDagverslagPersoneel.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="TDSDagverslagPersoneel" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="BBDGPERS">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="NM_IND" type="xs:string" minOccurs="0" />
+							<xs:element name="VNM_IND" type="xs:string" minOccurs="0" />
+							<xs:element name="ID_DG_PERS" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="ID_IND" type="xs:int" minOccurs="0" />
+							<xs:element name="TMS_REG_DG_PERS" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="ID_DG_PERS_TY_REG" type="xs:int" minOccurs="0" />
+							<xs:element name="OPM" type="xs:string" minOccurs="0" />
+							<xs:element name="jaar" msdata:ReadOnly="false" type="xs:int" minOccurs="0" />
+							<xs:element name="maand" msdata:ReadOnly="false" type="xs:int" minOccurs="0" />
+							<xs:element name="weekNr" msdata:ReadOnly="false" type="xs:int" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:key name="TDSDagverslagPersoneelKey2" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:BBDGPERS" />
+			<xs:field xpath="mstns:ID_DG_PERS" />
+		</xs:key>
+	</xs:element>
+</xs:schema>

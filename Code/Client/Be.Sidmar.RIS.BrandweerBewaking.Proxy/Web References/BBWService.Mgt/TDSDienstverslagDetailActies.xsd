@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/TDSDienstverslagDetailActies.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/TDSDienstverslagDetailActies.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/TDSDienstverslagDetailActies.xsd" id="TDSDienstverslagDetailActies" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="TDSDienstverslagDetailActies">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Acties">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ActieCodeGroepId" type="xs:int" />
+              <xs:element name="ActieCodeId" type="xs:int" />
+              <xs:element minOccurs="0" name="ActieOmschr" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Actiegroepen">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ActieCodeGroepId" type="xs:int" />
+              <xs:element minOccurs="0" name="ActieCodeGroepOmschr" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:Acties" />
+      <xs:field xpath="mstns:ActieCodeGroepId" />
+      <xs:field xpath="mstns:ActieCodeId" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="Actiegroepen_Constraint1">
+      <xs:selector xpath=".//mstns:Actiegroepen" />
+      <xs:field xpath="mstns:ActieCodeGroepId" />
+    </xs:unique>
+    <xs:keyref name="FK_Actiegroepen_Acties" refer="mstns:Actiegroepen_Constraint1">
+      <xs:selector xpath=".//mstns:Acties" />
+      <xs:field xpath="mstns:ActieCodeGroepId" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

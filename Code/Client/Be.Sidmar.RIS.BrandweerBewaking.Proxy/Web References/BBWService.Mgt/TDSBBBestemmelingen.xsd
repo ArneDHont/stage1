@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/TDSBBBestemmelingen.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/TDSBBBestemmelingen.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/TDSBBBestemmelingen.xsd" id="TDSBBBestemmelingen" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="TDSBBBestemmelingen">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BBBST">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:ReadOnly="true" msdata:AutoIncrement="true" name="ID_BST" type="xs:int" />
+              <xs:element minOccurs="0" name="ID_INTV_BRDW" type="xs:int" />
+              <xs:element minOccurs="0" name="ID_REG" type="xs:int" />
+              <xs:element minOccurs="0" name="ID_IND" type="xs:int" />
+              <xs:element minOccurs="0" name="NM_IND" type="xs:string" />
+              <xs:element minOccurs="0" name="VNM_IND" type="xs:string" />
+              <xs:element minOccurs="0" name="AD_EMAL_IND" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="TDSBBBestemmelingenKey1">
+      <xs:selector xpath=".//mstns:BBBST" />
+      <xs:field xpath="mstns:ID_BST" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

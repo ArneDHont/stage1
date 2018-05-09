@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="TDSVoertuigTypes" targetNamespace="http://tempuri.org/TDSVoertuigTypes.xsd"
+	elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/TDSVoertuigTypes.xsd"
+	xmlns:mstns="http://tempuri.org/TDSVoertuigTypes.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="TDSVoertuigTypes" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="BBTYTSP">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ID_TY_TSP" type="xs:int" />
+							<xs:element name="SCF_TY_TSP" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="TDSVoertuigTypesKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:BBTYTSP" />
+			<xs:field xpath="mstns:ID_TY_TSP" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,19 @@
+﻿
+CREATE PROC dbo.[USP_WY_BBINBRVA_UPDATE]
+  @ID_INBRVA int,
+  @ID_REG int,
+  @ID_ART_INBR int=NULL,
+  @SNL_OK int=NULL,
+  @SNL_REG int=NULL,
+  @Original_ID_INBRVA int --Primary Key Field
+
+AS
+SET NOCOUNT OFF
+
+UPDATE [BBINBRVA] SET
+  [ID_REG] = @ID_REG,
+  [ID_ART_INBR] = @ID_ART_INBR,
+  [SNL_OK] = @SNL_OK,
+  [SNL_REG] = @SNL_REG
+WHERE [ID_INBRVA] = @Original_ID_INBRVA
+

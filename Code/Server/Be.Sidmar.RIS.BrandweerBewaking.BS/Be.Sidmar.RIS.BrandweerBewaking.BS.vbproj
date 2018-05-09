@@ -1,0 +1,1765 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8718D31D-EE90-4B87-94A9-E9260A13A6B1}</ProjectGuid>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Be.Sidmar.RIS.BrandweerBewaking.BS</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyMode>None</AssemblyOriginatorKeyMode>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>Off</OptionStrict>
+    <RootNamespace>Be.Sidmar.RIS.BrandweerBewaking.BS</RootNamespace>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <MyType>Windows</MyType>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>http://localhost/Be.Sidmar.RIS.BrandweerBewaking.BS/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Be.Sidmar.RIS.BrandweerBewaking.BS.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Be.Sidmar.RIS.BrandweerBewaking.BS.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>none</DebugType>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ADF.Configuration">
+      <HintPath>..\..\References\ADF.Configuration.9.0.4\lib\NET452\ADF.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="ADF.Data, Version=5.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\References\ADF.Data.9.0.4\lib\NET452\ADF.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ADF.EnterpriseServices, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\References\ADF.EnterpriseServices.9.0.4\lib\NET452\ADF.EnterpriseServices.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ADF.ExceptionHandling, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\References\ADF.ExceptionHandling.9.0.4\lib\NET452\ADF.ExceptionHandling.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ADF.Instrumentation">
+      <HintPath>..\..\References\ADF.Instrumentation.9.0.4\lib\NET452\ADF.Instrumentation.dll</HintPath>
+    </Reference>
+    <Reference Include="ADF.RemoteServices, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\References\ADF.RemoteServices.9.0.4\lib\NET452\ADF.RemoteServices.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ADF.System, Version=9.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\References\ADF.System.9.0.4\lib\NET452\ADF.System.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BP\RegisterCodeTabellen.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BP\RegisterDataBBW.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessServiceFacade.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DMC\GetAfdelingBBW.vb" />
+    <Compile Include="DMC\GetDataBBW.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DMC\GetReportsBBW.vb" />
+    <Compile Include="DMC\GetVerzendingBBW.vb" />
+    <Compile Include="DMC\UpdateDataAdaptersBBW.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DMC\UpdateDataBBW.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DMC\UpdateDataSoDie.vb" />
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSBBBestemmelingen.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSBBBestemmelingen.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSBewakingSnelheidSanction.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSBewakingSnelheidSanction.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSBewakingSnelheidSanctionMatrix.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSBewakingSnelheidSanctionMatrix.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSBrandweerActie.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSBrandweerActie.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSBrandweerAfdelingMateriaal.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSBrandweerAfdelingMateriaal.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSBrandweerInkoop.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSBrandweerInkoop.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSBrandweerMateriaalActie.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSBrandweerMateriaalActie.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSBrandweerMateriaalBeheerderAfdeling.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSBrandweerMateriaalBeheerderAfdeling.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSBrandweerMateriaalControleLijst.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSBrandweerMateriaalControleLijst.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSBrandweerReportHervuldeBlustoestellen.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSBrandweerReportHervuldeBlustoestellen.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSAanrijding.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSAanrijding.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSAanspreektitel.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSAanspreektitel.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSAarden.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSAarden.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSAfdelingen.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSAfdelingen.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSAlcoholtest.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSAlcoholtest.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSArtikelgroep.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSArtikelgroep.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSBBAFDAMC.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSBBAFDAMC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSBBBRPers.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSBBBRPers.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSBBBSTBY.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSBBBSTBY.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSBBBTROGV.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSBBBTROGV.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSBBBWPERS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSBBBWPERS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSBBDGPERSVZ.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSBBDGPERSVZ.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSBBWAKPers.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSBBWAKPers.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSBeheerAFDAMC.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSBeheerAFDAMC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSBeheerAFDAMC.vb">
+      <DependentUpon>TDSBeheerAFDAMC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSBewakingDup.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSBewakingDup.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSBrandenPerAfdeling.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSBrandenPerAfdeling.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSBrandweerAfdelingen.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSBrandweerAfdelingen.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSBrandweerBeheerderAfdeling.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSBrandweerBeheerderAfdeling.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSBrandweerExtinguisherTypes.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSBrandweerExtinguisherTypes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSBrandweerExtinguisherTypes.vb">
+      <DependentUpon>TDSBrandweerExtinguisherTypes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSBrandweerLeveranciers.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSBrandweerLeveranciers.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSBrandweerMateriaal.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSBrandweerMateriaal.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSBrandweerMateriaalItem.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSBrandweerMateriaalItem.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSBrandweerMateriaalTypes.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSBrandweerMateriaalTypes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSBrandweerMateriaalTypes.vb">
+      <DependentUpon>TDSBrandweerMateriaalTypes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSBrandweerStatus.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSBrandweerStatus.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSBrandweerVerzending.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSBrandweerVerzending.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSBrandweerVerzendingLijst.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSBrandweerVerzendingLijst.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSChipKlachten.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSChipKlachten.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSConfiguratie.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSConfiguratie.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSControleVoertuig.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSControleVoertuig.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSDagverslagInlichtingen.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSDagverslagInlichtingen.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSDagverslagInlichtingType.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSDagverslagInlichtingType.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSDagverslagPersoneel.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSDagverslagPersoneel.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSDagverslagRegistratieType.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSDagverslagRegistratieType.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSDiefDup.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSDiefDup.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSDiefstal.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSDiefstal.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSDiefstal.vb">
+      <DependentUpon>TDSDiefstal.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSDivRegistratie.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSDivRegistratie.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSEenheden.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSEenheden.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSFirmas.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSFirmas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSFirmas.vb">
+      <DependentUpon>TDSFirmas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSGebruikVoertuig.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSGebruikVoertuig.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSInbrArt.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSInbrArt.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSInbreukRegl.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSInbreukRegl.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSInbrIndTy.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSInbrIndTy.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSInbrType.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSInbrType.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSINBRVASOD.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSINBRVASOD.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSIndividuen.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSIndividuen.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSIndividuType.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSIndividuType.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSInkoop.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSInkoop.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSInkoop.vb">
+      <DependentUpon>TDSInkoop.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSInkoopFirmaCHIP.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSInkoopFirmaCHIP.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSInterventie.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSInterventie.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSIntvArt.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSIntvArt.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSIntvBr.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSIntvBr.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSIntvType.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSIntvType.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSLijstInbreukRegl.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSLijstInbreukRegl.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSOorzaken.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSOorzaken.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSOpenKleerkast.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSOpenKleerkast.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSOvertreding.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSOvertreding.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSPloeg.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSPloeg.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSRegBew.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSRegBew.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSRegType.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSRegType.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSScadObjecten.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSScadObjecten.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSSchadegeval.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSSchadegeval.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSSnelheidsOvertredingen.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSSnelheidsOvertredingen.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSSnelheidsOvertredingen.vb">
+      <DependentUpon>TDSSnelheidsOvertredingen.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSToestanden.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSToestanden.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSToestandType.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSToestandType.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSTrimesterDiefstal.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSTrimesterDiefstal.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSTypeBetrokkene.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSTypeBetrokkene.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSVastgesteldeInbreuken.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSVastgesteldeInbreuken.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSVaststellerAanrijding.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSVaststellerAanrijding.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSVerbruiksArtikel.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSVerbruiksArtikel.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSVerzFirmas.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSVerzFirmas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSVoertuigen.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSVoertuigen.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSVoertuigTypes.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSVoertuigTypes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PublicData\TDSWerfVoertuig.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSWerfVoertuig.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SSOUserManagementService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Content Include="PublicData\TDSAanrijding.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSAanrijding.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSAanspreektitel.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSAanspreektitel.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSAarden.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSAarden.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSAfdelingen.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSAfdelingen.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSAlcoholtest.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSAlcoholtest.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSArtikelgroep.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSArtikelgroep.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSBBBRPers.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSBBBRPers.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSBBBSTBY.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSBBBSTBY.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSBBBTROGV.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSBBBTROGV.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSBBBWPERS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSBBBWPERS.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSBBDGPERSVZ.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSBBDGPERSVZ.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSBBWAKPers.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSBBWAKPers.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSBewakingDup.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSBewakingDup.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSBrandenPerAfdeling.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSBrandenPerAfdeling.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSConfiguratie.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSConfiguratie.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSControleVoertuig.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSControleVoertuig.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSDagverslagInlichtingen.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSDagverslagInlichtingen.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSDagverslagInlichtingType.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSDagverslagInlichtingType.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSDagverslagPersoneel.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSDagverslagPersoneel.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSDagverslagRegistratieType.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSDagverslagRegistratieType.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSDiefDup.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSDiefDup.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSDiefstal.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSDiefstal.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSDivRegistratie.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>TDSDivRegistratie.Designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="PublicData\TDSEenheden.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSEenheden.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSFirmas.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSFirmas.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSGebruikVoertuig.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSGebruikVoertuig.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSInbrArt.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSInbrArt.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSInbreukRegl.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSInbreukRegl.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSInbrIndTy.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSInbrIndTy.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSInbrType.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSInbrType.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSIndividuen.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSIndividuen.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSIndividuType.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSIndividuType.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSInterventie.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSInterventie.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSIntvArt.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSIntvArt.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSIntvBr.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSIntvBr.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSIntvType.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSIntvType.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSLijstInbreukRegl.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSLijstInbreukRegl.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSOorzaken.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSOorzaken.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSOpenKleerkast.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSOpenKleerkast.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSPloeg.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSPloeg.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSRegBew.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSRegBew.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSRegType.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSRegType.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSScadObjecten.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSScadObjecten.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSSchadegeval.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSSchadegeval.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSToestanden.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSToestanden.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSToestandType.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSToestandType.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSTrimesterDiefstal.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSTrimesterDiefstal.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSTypeBetrokkene.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSTypeBetrokkene.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSVastgesteldeInbreuken.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSVastgesteldeInbreuken.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSVaststellerAanrijding.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSVaststellerAanrijding.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSVerbruiksArtikel.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSVerbruiksArtikel.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSVerzFirmas.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSVerzFirmas.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSVoertuigen.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSVoertuigen.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSVoertuigTypes.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSVoertuigTypes.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PublicData\TDSWerfVoertuig.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSWerfVoertuig.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="packages.config" />
+    <None Include="Service References\SSOUserManagementService\Be.Sidmar.RIS.BrandweerBewaking.BS.SSOUserManagementService.User.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSOUserManagementService\Be.Sidmar.RIS.BrandweerBewaking.BS.SSOUserManagementService.UserProfile.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSOUserManagementService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Service References\SSOUserManagementService\configuration.svcinfo" />
+    <None Include="Service References\SSOUserManagementService\configuration91.svcinfo" />
+    <None Include="Service References\SSOUserManagementService\UserManagementService.disco" />
+    <None Include="app.config" />
+    <None Include="app.transform.config" />
+    <None Include="My Project\Settings.settings">
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="PublicData\TDSBBBestemmelingen.xsc">
+      <DependentUpon>TDSBBBestemmelingen.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBBBestemmelingen.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSBBBestemmelingen.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="PublicData\TDSBBBestemmelingen.xss">
+      <DependentUpon>TDSBBBestemmelingen.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBewakingSnelheidSanction.xsc">
+      <DependentUpon>TDSBewakingSnelheidSanction.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBewakingSnelheidSanction.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSBewakingSnelheidSanction.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="PublicData\TDSBewakingSnelheidSanction.xss">
+      <DependentUpon>TDSBewakingSnelheidSanction.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBewakingSnelheidSanctionMatrix.xsc">
+      <DependentUpon>TDSBewakingSnelheidSanctionMatrix.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBewakingSnelheidSanctionMatrix.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSBewakingSnelheidSanctionMatrix.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="PublicData\TDSBewakingSnelheidSanctionMatrix.xss">
+      <DependentUpon>TDSBewakingSnelheidSanctionMatrix.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBrandweerActie.xsc">
+      <DependentUpon>TDSBrandweerActie.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBrandweerActie.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSBrandweerActie.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="PublicData\TDSBrandweerActie.xss">
+      <DependentUpon>TDSBrandweerActie.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBrandweerAfdelingMateriaal.xsc">
+      <DependentUpon>TDSBrandweerAfdelingMateriaal.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBrandweerAfdelingMateriaal.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSBrandweerAfdelingMateriaal.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="PublicData\TDSBrandweerAfdelingMateriaal.xss">
+      <DependentUpon>TDSBrandweerAfdelingMateriaal.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBrandweerInkoop.xsc">
+      <DependentUpon>TDSBrandweerInkoop.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBrandweerInkoop.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSBrandweerInkoop.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="PublicData\TDSBrandweerInkoop.xss">
+      <DependentUpon>TDSBrandweerInkoop.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBrandweerMateriaalActie.xsc">
+      <DependentUpon>TDSBrandweerMateriaalActie.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBrandweerMateriaalActie.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSBrandweerMateriaalActie.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="PublicData\TDSBrandweerMateriaalActie.xss">
+      <DependentUpon>TDSBrandweerMateriaalActie.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBrandweerMateriaalBeheerderAfdeling.xsc">
+      <DependentUpon>TDSBrandweerMateriaalBeheerderAfdeling.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBrandweerMateriaalBeheerderAfdeling.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSBrandweerMateriaalBeheerderAfdeling.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="PublicData\TDSBrandweerMateriaalBeheerderAfdeling.xss">
+      <DependentUpon>TDSBrandweerMateriaalBeheerderAfdeling.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBrandweerMateriaalControleLijst.xsc">
+      <DependentUpon>TDSBrandweerMateriaalControleLijst.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBrandweerMateriaalControleLijst.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSBrandweerMateriaalControleLijst.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="PublicData\TDSBrandweerMateriaalControleLijst.xss">
+      <DependentUpon>TDSBrandweerMateriaalControleLijst.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBrandweerReportHervuldeBlustoestellen.xsc">
+      <DependentUpon>TDSBrandweerReportHervuldeBlustoestellen.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBrandweerReportHervuldeBlustoestellen.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSBrandweerReportHervuldeBlustoestellen.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="PublicData\TDSBrandweerReportHervuldeBlustoestellen.xss">
+      <DependentUpon>TDSBrandweerReportHervuldeBlustoestellen.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSAanrijding.xsc">
+      <DependentUpon>TDSAanrijding.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSAanrijding.xss">
+      <DependentUpon>TDSAanrijding.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSAanrijding.xsx">
+      <DependentUpon>TDSAanrijding.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSAanspreektitel.xsc">
+      <DependentUpon>TDSAanspreektitel.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSAanspreektitel.xss">
+      <DependentUpon>TDSAanspreektitel.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSAanspreektitel.xsx">
+      <DependentUpon>TDSAanspreektitel.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSAarden.xsc">
+      <DependentUpon>TDSAarden.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSAarden.xss">
+      <DependentUpon>TDSAarden.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSAarden.xsx">
+      <DependentUpon>TDSAarden.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSAfdelingen.xsc">
+      <DependentUpon>TDSAfdelingen.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSAfdelingen.xss">
+      <DependentUpon>TDSAfdelingen.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSAfdelingen.xsx">
+      <DependentUpon>TDSAfdelingen.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSAlcoholtest.xsc">
+      <DependentUpon>TDSAlcoholtest.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSAlcoholtest.xss">
+      <DependentUpon>TDSAlcoholtest.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSAlcoholtest.xsx">
+      <DependentUpon>TDSAlcoholtest.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSArtikelgroep.xsc">
+      <DependentUpon>TDSArtikelgroep.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSArtikelgroep.xss">
+      <DependentUpon>TDSArtikelgroep.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSArtikelgroep.xsx">
+      <DependentUpon>TDSArtikelgroep.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBBAFDAMC.xsc">
+      <DependentUpon>TDSBBAFDAMC.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBBAFDAMC.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSBBAFDAMC.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="PublicData\TDSBBAFDAMC.xss">
+      <DependentUpon>TDSBBAFDAMC.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBBBRPers.xsc">
+      <DependentUpon>TDSBBBRPers.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBBBRPers.xss">
+      <DependentUpon>TDSBBBRPers.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBBBRPers.xsx">
+      <DependentUpon>TDSBBBRPers.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBBBSTBY.xsc">
+      <DependentUpon>TDSBBBSTBY.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBBBSTBY.xss">
+      <DependentUpon>TDSBBBSTBY.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBBBSTBY.xsx">
+      <DependentUpon>TDSBBBSTBY.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBBBTROGV.xsc">
+      <DependentUpon>TDSBBBTROGV.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBBBTROGV.xss">
+      <DependentUpon>TDSBBBTROGV.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBBBTROGV.xsx">
+      <DependentUpon>TDSBBBTROGV.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBBBWPERS.xsc">
+      <DependentUpon>TDSBBBWPERS.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBBBWPERS.xss">
+      <DependentUpon>TDSBBBWPERS.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBBBWPERS.xsx">
+      <DependentUpon>TDSBBBWPERS.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBBDGPERSVZ.xsc">
+      <DependentUpon>TDSBBDGPERSVZ.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBBDGPERSVZ.xss">
+      <DependentUpon>TDSBBDGPERSVZ.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBBDGPERSVZ.xsx">
+      <DependentUpon>TDSBBDGPERSVZ.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBBWAKPers.xsc">
+      <DependentUpon>TDSBBWAKPers.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBBWAKPers.xss">
+      <DependentUpon>TDSBBWAKPers.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBBWAKPers.xsx">
+      <DependentUpon>TDSBBWAKPers.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBeheerAFDAMC.xsc">
+      <DependentUpon>TDSBeheerAFDAMC.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBeheerAFDAMC.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSBeheerAFDAMC.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="PublicData\TDSBeheerAFDAMC.xss">
+      <DependentUpon>TDSBeheerAFDAMC.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBewakingDup.xsc">
+      <DependentUpon>TDSBewakingDup.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBewakingDup.xss">
+      <DependentUpon>TDSBewakingDup.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBewakingDup.xsx">
+      <DependentUpon>TDSBewakingDup.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBrandenPerAfdeling.xsc">
+      <DependentUpon>TDSBrandenPerAfdeling.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBrandenPerAfdeling.xss">
+      <DependentUpon>TDSBrandenPerAfdeling.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBrandenPerAfdeling.xsx">
+      <DependentUpon>TDSBrandenPerAfdeling.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBrandweerAfdelingen.xsc">
+      <DependentUpon>TDSBrandweerAfdelingen.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBrandweerAfdelingen.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSBrandweerAfdelingen.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="PublicData\TDSBrandweerAfdelingen.xss">
+      <DependentUpon>TDSBrandweerAfdelingen.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBrandweerBeheerderAfdeling.xsc">
+      <DependentUpon>TDSBrandweerBeheerderAfdeling.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBrandweerBeheerderAfdeling.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSBrandweerBeheerderAfdeling.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="PublicData\TDSBrandweerBeheerderAfdeling.xss">
+      <DependentUpon>TDSBrandweerBeheerderAfdeling.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBrandweerExtinguisherTypes.xsc">
+      <DependentUpon>TDSBrandweerExtinguisherTypes.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBrandweerExtinguisherTypes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSBrandweerExtinguisherTypes.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="PublicData\TDSBrandweerExtinguisherTypes.xss">
+      <DependentUpon>TDSBrandweerExtinguisherTypes.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBrandweerLeveranciers.xsc">
+      <DependentUpon>TDSBrandweerLeveranciers.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBrandweerLeveranciers.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSBrandweerLeveranciers.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="PublicData\TDSBrandweerLeveranciers.xss">
+      <DependentUpon>TDSBrandweerLeveranciers.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBrandweerMateriaal.xsc">
+      <DependentUpon>TDSBrandweerMateriaal.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBrandweerMateriaal.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSBrandweerMateriaal.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="PublicData\TDSBrandweerMateriaal.xss">
+      <DependentUpon>TDSBrandweerMateriaal.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBrandweerMateriaalItem.xsc">
+      <DependentUpon>TDSBrandweerMateriaalItem.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBrandweerMateriaalItem.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSBrandweerMateriaalItem.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="PublicData\TDSBrandweerMateriaalItem.xss">
+      <DependentUpon>TDSBrandweerMateriaalItem.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBrandweerMateriaalTypes.xsc">
+      <DependentUpon>TDSBrandweerMateriaalTypes.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBrandweerMateriaalTypes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSBrandweerMateriaalTypes.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="PublicData\TDSBrandweerMateriaalTypes.xss">
+      <DependentUpon>TDSBrandweerMateriaalTypes.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBrandweerStatus.xsc">
+      <DependentUpon>TDSBrandweerStatus.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBrandweerStatus.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSBrandweerStatus.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="PublicData\TDSBrandweerStatus.xss">
+      <DependentUpon>TDSBrandweerStatus.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBrandweerVerzending.xsc">
+      <DependentUpon>TDSBrandweerVerzending.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBrandweerVerzending.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSBrandweerVerzending.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="PublicData\TDSBrandweerVerzending.xss">
+      <DependentUpon>TDSBrandweerVerzending.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBrandweerVerzendingLijst.xsc">
+      <DependentUpon>TDSBrandweerVerzendingLijst.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSBrandweerVerzendingLijst.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSBrandweerVerzendingLijst.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="PublicData\TDSBrandweerVerzendingLijst.xss">
+      <DependentUpon>TDSBrandweerVerzendingLijst.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSChipKlachten.xsc">
+      <DependentUpon>TDSChipKlachten.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSChipKlachten.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSChipKlachten.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="PublicData\TDSChipKlachten.xss">
+      <DependentUpon>TDSChipKlachten.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSConfiguratie.xsc">
+      <DependentUpon>TDSConfiguratie.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSConfiguratie.xss">
+      <DependentUpon>TDSConfiguratie.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSConfiguratie.xsx">
+      <DependentUpon>TDSConfiguratie.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSControleVoertuig.xsc">
+      <DependentUpon>TDSControleVoertuig.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSControleVoertuig.xss">
+      <DependentUpon>TDSControleVoertuig.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSControleVoertuig.xsx">
+      <DependentUpon>TDSControleVoertuig.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSDagverslagInlichtingen.xsc">
+      <DependentUpon>TDSDagverslagInlichtingen.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSDagverslagInlichtingen.xss">
+      <DependentUpon>TDSDagverslagInlichtingen.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSDagverslagInlichtingen.xsx">
+      <DependentUpon>TDSDagverslagInlichtingen.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSDagverslagInlichtingType.xsc">
+      <DependentUpon>TDSDagverslagInlichtingType.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSDagverslagInlichtingType.xss">
+      <DependentUpon>TDSDagverslagInlichtingType.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSDagverslagInlichtingType.xsx">
+      <DependentUpon>TDSDagverslagInlichtingType.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSDagverslagPersoneel.xsc">
+      <DependentUpon>TDSDagverslagPersoneel.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSDagverslagPersoneel.xss">
+      <DependentUpon>TDSDagverslagPersoneel.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSDagverslagPersoneel.xsx">
+      <DependentUpon>TDSDagverslagPersoneel.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSDagverslagRegistratieType.xsc">
+      <DependentUpon>TDSDagverslagRegistratieType.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSDagverslagRegistratieType.xss">
+      <DependentUpon>TDSDagverslagRegistratieType.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSDagverslagRegistratieType.xsx">
+      <DependentUpon>TDSDagverslagRegistratieType.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSDiefDup.xsc">
+      <DependentUpon>TDSDiefDup.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSDiefDup.xss">
+      <DependentUpon>TDSDiefDup.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSDiefDup.xsx">
+      <DependentUpon>TDSDiefDup.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSDiefstal.xsc">
+      <DependentUpon>TDSDiefstal.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSDiefstal.xss">
+      <DependentUpon>TDSDiefstal.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSDiefstal.xsx">
+      <DependentUpon>TDSDiefstal.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSDivRegistratie.xsc">
+      <DependentUpon>TDSDivRegistratie.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSDivRegistratie.xss">
+      <DependentUpon>TDSDivRegistratie.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSDivRegistratie.xsx">
+      <DependentUpon>TDSDivRegistratie.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSEenheden.xsc">
+      <DependentUpon>TDSEenheden.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSEenheden.xss">
+      <DependentUpon>TDSEenheden.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSEenheden.xsx">
+      <DependentUpon>TDSEenheden.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSFirmas.xsc">
+      <DependentUpon>TDSFirmas.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSFirmas.xss">
+      <DependentUpon>TDSFirmas.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSFirmas.xsx">
+      <DependentUpon>TDSFirmas.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSGebruikVoertuig.xsc">
+      <DependentUpon>TDSGebruikVoertuig.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSGebruikVoertuig.xss">
+      <DependentUpon>TDSGebruikVoertuig.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSGebruikVoertuig.xsx">
+      <DependentUpon>TDSGebruikVoertuig.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSInbrArt.xsc">
+      <DependentUpon>TDSInbrArt.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSInbrArt.xss">
+      <DependentUpon>TDSInbrArt.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSInbrArt.xsx">
+      <DependentUpon>TDSInbrArt.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSInbreukRegl.xsc">
+      <DependentUpon>TDSInbreukRegl.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSInbreukRegl.xss">
+      <DependentUpon>TDSInbreukRegl.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSInbreukRegl.xsx">
+      <DependentUpon>TDSInbreukRegl.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSInbrIndTy.xsc">
+      <DependentUpon>TDSInbrIndTy.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSInbrIndTy.xss">
+      <DependentUpon>TDSInbrIndTy.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSInbrIndTy.xsx">
+      <DependentUpon>TDSInbrIndTy.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSInbrType.xsc">
+      <DependentUpon>TDSInbrType.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSInbrType.xss">
+      <DependentUpon>TDSInbrType.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSInbrType.xsx">
+      <DependentUpon>TDSInbrType.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSINBRVASOD.xsc">
+      <DependentUpon>TDSINBRVASOD.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSINBRVASOD.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSINBRVASOD.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="PublicData\TDSINBRVASOD.xss">
+      <DependentUpon>TDSINBRVASOD.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSIndividuen.xsc">
+      <DependentUpon>TDSIndividuen.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSIndividuen.xss">
+      <DependentUpon>TDSIndividuen.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSIndividuen.xsx">
+      <DependentUpon>TDSIndividuen.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSIndividuType.xsc">
+      <DependentUpon>TDSIndividuType.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSIndividuType.xss">
+      <DependentUpon>TDSIndividuType.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSIndividuType.xsx">
+      <DependentUpon>TDSIndividuType.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSInkoop.xsc">
+      <DependentUpon>TDSInkoop.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSInkoop.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSInkoop.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="PublicData\TDSInkoop.xss">
+      <DependentUpon>TDSInkoop.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSInkoopFirmaCHIP.xsc">
+      <DependentUpon>TDSInkoopFirmaCHIP.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSInkoopFirmaCHIP.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSInkoopFirmaCHIP.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="PublicData\TDSInkoopFirmaCHIP.xss">
+      <DependentUpon>TDSInkoopFirmaCHIP.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSInterventie.xsc">
+      <DependentUpon>TDSInterventie.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSInterventie.xss">
+      <DependentUpon>TDSInterventie.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSInterventie.xsx">
+      <DependentUpon>TDSInterventie.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSIntvArt.xsc">
+      <DependentUpon>TDSIntvArt.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSIntvArt.xss">
+      <DependentUpon>TDSIntvArt.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSIntvArt.xsx">
+      <DependentUpon>TDSIntvArt.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSIntvBr.xsc">
+      <DependentUpon>TDSIntvBr.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSIntvBr.xss">
+      <DependentUpon>TDSIntvBr.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSIntvBr.xsx">
+      <DependentUpon>TDSIntvBr.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSIntvType.xsc">
+      <DependentUpon>TDSIntvType.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSIntvType.xss">
+      <DependentUpon>TDSIntvType.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSIntvType.xsx">
+      <DependentUpon>TDSIntvType.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSLijstInbreukRegl.xsc">
+      <DependentUpon>TDSLijstInbreukRegl.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSLijstInbreukRegl.xss">
+      <DependentUpon>TDSLijstInbreukRegl.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSLijstInbreukRegl.xsx">
+      <DependentUpon>TDSLijstInbreukRegl.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSOorzaken.xsc">
+      <DependentUpon>TDSOorzaken.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSOorzaken.xss">
+      <DependentUpon>TDSOorzaken.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSOorzaken.xsx">
+      <DependentUpon>TDSOorzaken.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSOpenKleerkast.xsc">
+      <DependentUpon>TDSOpenKleerkast.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSOpenKleerkast.xss">
+      <DependentUpon>TDSOpenKleerkast.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSOpenKleerkast.xsx">
+      <DependentUpon>TDSOpenKleerkast.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSOvertreding.xsc">
+      <DependentUpon>TDSOvertreding.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSOvertreding.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSOvertreding.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="PublicData\TDSOvertreding.xss">
+      <DependentUpon>TDSOvertreding.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSPloeg.xsc">
+      <DependentUpon>TDSPloeg.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSPloeg.xss">
+      <DependentUpon>TDSPloeg.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSPloeg.xsx">
+      <DependentUpon>TDSPloeg.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSRegBew.xsc">
+      <DependentUpon>TDSRegBew.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSRegBew.xss">
+      <DependentUpon>TDSRegBew.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSRegBew.xsx">
+      <DependentUpon>TDSRegBew.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSRegType.xsc">
+      <DependentUpon>TDSRegType.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSRegType.xss">
+      <DependentUpon>TDSRegType.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSRegType.xsx">
+      <DependentUpon>TDSRegType.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSScadObjecten.xsc">
+      <DependentUpon>TDSScadObjecten.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSScadObjecten.xss">
+      <DependentUpon>TDSScadObjecten.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSScadObjecten.xsx">
+      <DependentUpon>TDSScadObjecten.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSSchadegeval.xsc">
+      <DependentUpon>TDSSchadegeval.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSSchadegeval.xss">
+      <DependentUpon>TDSSchadegeval.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSSchadegeval.xsx">
+      <DependentUpon>TDSSchadegeval.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSSnelheidsOvertredingen.xsc">
+      <DependentUpon>TDSSnelheidsOvertredingen.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSSnelheidsOvertredingen.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSSnelheidsOvertredingen.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="PublicData\TDSSnelheidsOvertredingen.xss">
+      <DependentUpon>TDSSnelheidsOvertredingen.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSToestanden.xsc">
+      <DependentUpon>TDSToestanden.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSToestanden.xss">
+      <DependentUpon>TDSToestanden.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSToestanden.xsx">
+      <DependentUpon>TDSToestanden.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSToestandType.xsc">
+      <DependentUpon>TDSToestandType.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSToestandType.xss">
+      <DependentUpon>TDSToestandType.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSToestandType.xsx">
+      <DependentUpon>TDSToestandType.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSTrimesterDiefstal.xsc">
+      <DependentUpon>TDSTrimesterDiefstal.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSTrimesterDiefstal.xss">
+      <DependentUpon>TDSTrimesterDiefstal.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSTrimesterDiefstal.xsx">
+      <DependentUpon>TDSTrimesterDiefstal.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSTypeBetrokkene.xsc">
+      <DependentUpon>TDSTypeBetrokkene.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSTypeBetrokkene.xss">
+      <DependentUpon>TDSTypeBetrokkene.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSTypeBetrokkene.xsx">
+      <DependentUpon>TDSTypeBetrokkene.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSVastgesteldeInbreuken.xsc">
+      <DependentUpon>TDSVastgesteldeInbreuken.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSVastgesteldeInbreuken.xss">
+      <DependentUpon>TDSVastgesteldeInbreuken.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSVastgesteldeInbreuken.xsx">
+      <DependentUpon>TDSVastgesteldeInbreuken.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSVaststellerAanrijding.xsc">
+      <DependentUpon>TDSVaststellerAanrijding.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSVaststellerAanrijding.xss">
+      <DependentUpon>TDSVaststellerAanrijding.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSVaststellerAanrijding.xsx">
+      <DependentUpon>TDSVaststellerAanrijding.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSVerbruiksArtikel.xsc">
+      <DependentUpon>TDSVerbruiksArtikel.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSVerbruiksArtikel.xss">
+      <DependentUpon>TDSVerbruiksArtikel.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSVerbruiksArtikel.xsx">
+      <DependentUpon>TDSVerbruiksArtikel.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSVerzFirmas.xsc">
+      <DependentUpon>TDSVerzFirmas.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSVerzFirmas.xss">
+      <DependentUpon>TDSVerzFirmas.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSVerzFirmas.xsx">
+      <DependentUpon>TDSVerzFirmas.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSVoertuigen.xsc">
+      <DependentUpon>TDSVoertuigen.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSVoertuigen.xss">
+      <DependentUpon>TDSVoertuigen.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSVoertuigen.xsx">
+      <DependentUpon>TDSVoertuigen.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSVoertuigTypes.xsc">
+      <DependentUpon>TDSVoertuigTypes.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSVoertuigTypes.xss">
+      <DependentUpon>TDSVoertuigTypes.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSVoertuigTypes.xsx">
+      <DependentUpon>TDSVoertuigTypes.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSWerfVoertuig.xsc">
+      <DependentUpon>TDSWerfVoertuig.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSWerfVoertuig.xss">
+      <DependentUpon>TDSWerfVoertuig.xsd</DependentUpon>
+    </None>
+    <None Include="PublicData\TDSWerfVoertuig.xsx">
+      <DependentUpon>TDSWerfVoertuig.xsd</DependentUpon>
+    </None>
+    <None Include="Service References\SSOUserManagementService\UserManagementService.wsdl" />
+    <None Include="Service References\SSOUserManagementService\UserManagementService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SSOUserManagementService\UserManagementService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SSOUserManagementService\UserManagementService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SSOUserManagementService\UserManagementService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\SSOUserManagementService\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

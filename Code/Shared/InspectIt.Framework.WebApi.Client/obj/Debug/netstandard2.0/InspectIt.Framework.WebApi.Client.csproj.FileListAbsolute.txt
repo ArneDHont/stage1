@@ -1,0 +1,13 @@
+C:\Sources\BBW\Development\Code\Shared\InspectIt.Framework.WebApi.Client\bin\Debug\netstandard2.0\InspectIt.Framework.WebApi.Client.deps.json
+C:\Sources\BBW\Development\Code\Shared\InspectIt.Framework.WebApi.Client\bin\Debug\netstandard2.0\InspectIt.Framework.WebApi.Client.dll
+C:\Sources\BBW\Development\Code\Shared\InspectIt.Framework.WebApi.Client\bin\Debug\netstandard2.0\InspectIt.Framework.WebApi.Client.pdb
+C:\Sources\BBW\Development\Code\Shared\InspectIt.Framework.WebApi.Client\bin\Debug\netstandard2.0\InspectIt.Framework.WebApi.Core.dll
+C:\Sources\BBW\Development\Code\Shared\InspectIt.Framework.WebApi.Client\bin\Debug\netstandard2.0\InspectIt.Framework.WebApi.Core.pdb
+C:\Sources\BBW\Development\Code\Shared\InspectIt.Framework.WebApi.Client\obj\Debug\netstandard2.0\InspectIt.Framework.WebApi.Client.csprojResolveAssemblyReference.cache
+C:\Sources\BBW\Development\Code\Shared\InspectIt.Framework.WebApi.Client\obj\Debug\netstandard2.0\InspectIt.Framework.WebApi.Client.Resources.Strings.resources
+C:\Sources\BBW\Development\Code\Shared\InspectIt.Framework.WebApi.Client\obj\Debug\netstandard2.0\InspectIt.Framework.WebApi.Client.csproj.GenerateResource.Cache
+C:\Sources\BBW\Development\Code\Shared\InspectIt.Framework.WebApi.Client\obj\Debug\netstandard2.0\InspectIt.Framework.WebApi.Client.csproj.CoreCompileInputs.cache
+C:\Sources\BBW\Development\Code\Shared\InspectIt.Framework.WebApi.Client\obj\Debug\netstandard2.0\InspectIt.Framework.WebApi.Client.AssemblyInfoInputs.cache
+C:\Sources\BBW\Development\Code\Shared\InspectIt.Framework.WebApi.Client\obj\Debug\netstandard2.0\InspectIt.Framework.WebApi.Client.AssemblyInfo.cs
+C:\Sources\BBW\Development\Code\Shared\InspectIt.Framework.WebApi.Client\obj\Debug\netstandard2.0\InspectIt.Framework.WebApi.Client.dll
+C:\Sources\BBW\Development\Code\Shared\InspectIt.Framework.WebApi.Client\obj\Debug\netstandard2.0\InspectIt.Framework.WebApi.Client.pdb

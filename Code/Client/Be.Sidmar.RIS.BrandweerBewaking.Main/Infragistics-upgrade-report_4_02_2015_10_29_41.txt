@@ -1,0 +1,98 @@
+11:29:41: Running VS2010 Add-in UI Version 13.1.20131.1001
+11:29:41: Gathering volume and assembly information.
+11:29:41: Gathering volume and assembly information.
+11:29:44: ProjectFile element: ..\..\Be.Sidmar.RIS.BrandweerBewaking.Proxy\Be.Sidmar.RIS.BrandweerBewaking.Proxy.vbproj is being treated as a proj file.
+11:29:44: Analyzing Be.Sidmar.RIS.BrandweerBewaking.Proxy.vbproj...
+11:29:44: Nothing for us to upgrade.
+11:29:48: ProjectFile element: ..\..\Be.Sidmar.RIS.BrandweerBewaking.Client\Be.Sidmar.RIS.BrandweerBewaking.Client.vbproj is being treated as a proj file.
+11:29:48: Analyzing Be.Sidmar.RIS.BrandweerBewaking.Client.vbproj...
+11:29:48: The project has references that need to be updated.
+11:29:57: ProjectFile element: ..\..\Be.Sidmar.RIS.BrandweerBewaking.Main\Be.Sidmar.RIS.BrandweerBewaking.Main.vbproj is being treated as a proj file.
+11:29:57: Analyzing Be.Sidmar.RIS.BrandweerBewaking.Main.vbproj...
+11:29:57: The project has references that need to be updated.
+11:29:58: ProjectFile element: ..\..\Be.Sidmar.RIS.BrandweerBewaking.Component\Be.Sidmar.RIS.BrandweerBewaking.Component.vbproj is being treated as a proj file.
+11:29:58: Analyzing Be.Sidmar.RIS.BrandweerBewaking.Component.vbproj...
+11:29:58: The project has references that need to be updated.
+11:29:58: ProjectFile element: ..\..\Be.Sidmar.RIS.BrandweerBewaking.Client2\Be.Sidmar.RIS.BrandweerBewaking.Client2.vbproj is being treated as a proj file.
+11:29:58: Analyzing Be.Sidmar.RIS.BrandweerBewaking.Client2.vbproj...
+11:29:58: The project has references that need to be updated.
+11:31:41: Upgrading Solution Be.Sidmar.RIS.BrandweerBewaking.Client.sln
+11:31:41: Updating Be.Sidmar.RIS.BrandweerBewaking.Proxy.vbproj...
+11:31:41: C:\_Data\Inf\Be.Gent.PreventionSecurity\BrandweerBewaking\Development\Code\Client\Be.Sidmar.RIS.BrandweerBewaking.Proxy\Be.Sidmar.RIS.BrandweerBewaking.Proxy.vbproj has been backed up.
+11:31:41: Done Updating Be.Sidmar.RIS.BrandweerBewaking.Proxy.vbproj.
+11:31:41: Updating Be.Sidmar.RIS.BrandweerBewaking.Client.vbproj...
+11:31:41: C:\_Data\Inf\Be.Gent.PreventionSecurity\BrandweerBewaking\Development\Code\Client\Be.Sidmar.RIS.BrandweerBewaking.Client\Be.Sidmar.RIS.BrandweerBewaking.Client.vbproj has been backed up.
+11:31:41: Updating Infragistics2.Documents.Core.v12.1 Version=12.1.20121.1001 to new reference Infragistics4.Documents.Core.v13.1. Version 13.1.20131.1001
+11:31:42: Updating Infragistics2.Win.v12.1 Version=12.1.20121.1001 to new reference Infragistics4.Win.v13.1. Version 13.1.20131.1001
+11:31:42: Updating Infragistics2.Win.UltraWinTabControl.v12.1 Version=12.1.20121.1001 to new reference Infragistics4.Win.UltraWinTabControl.v13.1. Version 13.1.20131.1001
+11:31:42: Updating Infragistics2.Win.UltraWinSchedule.v12.1 Version=12.1.20121.1001 to new reference Infragistics4.Win.UltraWinSchedule.v13.1. Version 13.1.20131.1001
+11:31:42: Updating Infragistics2.Win.UltraWinPrintPreviewDialog.v12.1 Version=12.1.20121.1001 to new reference Infragistics4.Win.UltraWinPrintPreviewDialog.v13.1. Version 13.1.20131.1001
+11:31:42: Updating Infragistics2.Win.UltraWinMaskedEdit.v12.1 Version=12.1.20121.1001 to new reference Infragistics4.Win.UltraWinMaskedEdit.v13.1. Version 13.1.20131.1001
+11:31:42: Updating Infragistics2.Win.UltraWinGrid.v12.1 Version=12.1.20121.1001 to new reference Infragistics4.Win.UltraWinGrid.v13.1. Version 13.1.20131.1001
+11:31:42: Updating Infragistics2.Win.UltraWinGrid.ExcelExport.v12.1 Version=12.1.20121.1001 to new reference Infragistics4.Win.UltraWinGrid.ExcelExport.v13.1. Version 13.1.20131.1001
+11:31:42: Updating Infragistics2.Win.UltraWinEditors.v12.1 Version=12.1.20121.1001 to new reference Infragistics4.Win.UltraWinEditors.v13.1. Version 13.1.20131.1001
+11:31:42: Updating Infragistics2.Win.UltraWinCalcManager.v12.1 Version=12.1.20121.1001 to new reference Infragistics4.Win.UltraWinCalcManager.v13.1. Version 13.1.20131.1001
+11:31:42: Updating Infragistics2.Win.Misc.v12.1 Version=12.1.20121.1001 to new reference Infragistics4.Win.Misc.v13.1. Version 13.1.20131.1001
+11:31:42: Updating Infragistics2.Shared.v12.1 Version=12.1.20121.1001 to new reference Infragistics4.Shared.v13.1. Version 13.1.20131.1001
+11:31:42: Updating Infragistics2.Documents.Excel.v12.1 Version=12.1.20121.1001 to new reference Infragistics4.Documents.Excel.v13.1. Version 13.1.20131.1001
+11:31:42: C:\_Data\Inf\Be.Gent.PreventionSecurity\BrandweerBewaking\Development\Code\Client\Be.Sidmar.RIS.BrandweerBewaking.Client\Forms\Bewaking\FormBewakingOvertredingReglement.vb has been backed up.
+11:31:42: C:\_Data\Inf\Be.Gent.PreventionSecurity\BrandweerBewaking\Development\Code\Client\Be.Sidmar.RIS.BrandweerBewaking.Client\Forms\Bewaking\FormPrintTrafficInfractions.vb has been backed up.
+11:31:42: C:\_Data\Inf\Be.Gent.PreventionSecurity\BrandweerBewaking\Development\Code\Client\Be.Sidmar.RIS.BrandweerBewaking.Client\Forms\Bewaking\FormPrintTrafficInfractionsExtern.vb has been backed up.
+11:31:42: C:\_Data\Inf\Be.Gent.PreventionSecurity\BrandweerBewaking\Development\Code\Client\Be.Sidmar.RIS.BrandweerBewaking.Client\Forms\Bewaking\FormBewakingSnelheidsovertredingen.vb has been backed up.
+11:31:42: C:\_Data\Inf\Be.Gent.PreventionSecurity\BrandweerBewaking\Development\Code\Client\Be.Sidmar.RIS.BrandweerBewaking.Client\Forms\Brandweer\FormBrandweerAfdelingBeheerders.vb has been backed up.
+11:31:42: C:\_Data\Inf\Be.Gent.PreventionSecurity\BrandweerBewaking\Development\Code\Client\Be.Sidmar.RIS.BrandweerBewaking.Client\Forms\Brandweer\FormBrandweerAfdelingMateriaal.vb has been backed up.
+11:31:42: C:\_Data\Inf\Be.Gent.PreventionSecurity\BrandweerBewaking\Development\Code\Client\Be.Sidmar.RIS.BrandweerBewaking.Client\Forms\Brandweer\FormBrandweerInkoop.vb has been backed up.
+11:31:42: C:\_Data\Inf\Be.Gent.PreventionSecurity\BrandweerBewaking\Development\Code\Client\Be.Sidmar.RIS.BrandweerBewaking.Client\Forms\Brandweer\FormBrandweerJaaroverzichtHervuldeBlustoestellen.vb has been backed up.
+11:31:42: C:\_Data\Inf\Be.Gent.PreventionSecurity\BrandweerBewaking\Development\Code\Client\Be.Sidmar.RIS.BrandweerBewaking.Client\Forms\Brandweer\FormBrandweerMateriaalFiche.vb has been backed up.
+11:31:42: C:\_Data\Inf\Be.Gent.PreventionSecurity\BrandweerBewaking\Development\Code\Client\Be.Sidmar.RIS.BrandweerBewaking.Client\Forms\Brandweer\FormBrandweerMateriaalOpLocatie.vb has been backed up.
+11:31:42: C:\_Data\Inf\Be.Gent.PreventionSecurity\BrandweerBewaking\Development\Code\Client\Be.Sidmar.RIS.BrandweerBewaking.Client\Forms\Brandweer\FormBrandweerVerzendingen.vb has been backed up.
+11:31:42: C:\_Data\Inf\Be.Gent.PreventionSecurity\BrandweerBewaking\Development\Code\Client\Be.Sidmar.RIS.BrandweerBewaking.Client\Forms\Brandweer\FormBrandweerZoekVervangmateriaal.vb has been backed up.
+11:31:42: C:\_Data\Inf\Be.Gent.PreventionSecurity\BrandweerBewaking\Development\Code\Client\Be.Sidmar.RIS.BrandweerBewaking.Client\Forms\Bewaking\FormBewakingFirmas.vb has been backed up.
+11:31:42: C:\_Data\Inf\Be.Gent.PreventionSecurity\BrandweerBewaking\Development\Code\Client\Be.Sidmar.RIS.BrandweerBewaking.Client\Forms\Bewaking\FormBewakingInbreuken.vb has been backed up.
+11:31:42: C:\_Data\Inf\Be.Gent.PreventionSecurity\BrandweerBewaking\Development\Code\Client\Be.Sidmar.RIS.BrandweerBewaking.Client\Forms\Bewaking\FormBewakingInbreukReglementen.vb has been backed up.
+11:31:42: C:\_Data\Inf\Be.Gent.PreventionSecurity\BrandweerBewaking\Development\Code\Client\Be.Sidmar.RIS.BrandweerBewaking.Client\Forms\Bewaking\FormBewakingRegistratieOverzicht.vb has been backed up.
+11:31:42: C:\_Data\Inf\Be.Gent.PreventionSecurity\BrandweerBewaking\Development\Code\Client\Be.Sidmar.RIS.BrandweerBewaking.Client\Forms\Bewaking\FormBewakingTrimesterDiefstal.vb has been backed up.
+11:31:42: C:\_Data\Inf\Be.Gent.PreventionSecurity\BrandweerBewaking\Development\Code\Client\Be.Sidmar.RIS.BrandweerBewaking.Client\Forms\Bewaking\FormBewakingVerzekeringsfirma.vb has been backed up.
+11:31:42: C:\_Data\Inf\Be.Gent.PreventionSecurity\BrandweerBewaking\Development\Code\Client\Be.Sidmar.RIS.BrandweerBewaking.Client\Forms\Bewaking\FormBewakingVoertuig.vb has been backed up.
+11:31:42: C:\_Data\Inf\Be.Gent.PreventionSecurity\BrandweerBewaking\Development\Code\Client\Be.Sidmar.RIS.BrandweerBewaking.Client\Forms\Brandweer\FormBrandweerMilieuverontreinigingen.vb has been backed up.
+11:31:42: C:\_Data\Inf\Be.Gent.PreventionSecurity\BrandweerBewaking\Development\Code\Client\Be.Sidmar.RIS.BrandweerBewaking.Client\Forms\Brandweer\FormBrandweerOverzichtInterventies.vb has been backed up.
+11:31:42: C:\_Data\Inf\Be.Gent.PreventionSecurity\BrandweerBewaking\Development\Code\Client\Be.Sidmar.RIS.BrandweerBewaking.Client\Forms\Brandweer\FormBrandweerOverzichtStock.vb has been backed up.
+11:31:42: C:\_Data\Inf\Be.Gent.PreventionSecurity\BrandweerBewaking\Development\Code\Client\Be.Sidmar.RIS.BrandweerBewaking.Client\Forms\FormCodetabellen.vb has been backed up.
+11:31:43: C:\_Data\Inf\Be.Gent.PreventionSecurity\BrandweerBewaking\Development\Code\Client\Be.Sidmar.RIS.BrandweerBewaking.Client\Forms\FormIndividuen.vb has been backed up.
+11:31:43: C:\_Data\Inf\Be.Gent.PreventionSecurity\BrandweerBewaking\Development\Code\Client\Be.Sidmar.RIS.BrandweerBewaking.Client\UserControls\UserControlSAPPresence.vb has been backed up.
+11:31:43: C:\_Data\Inf\Be.Gent.PreventionSecurity\BrandweerBewaking\Development\Code\Client\Be.Sidmar.RIS.BrandweerBewaking.Client\My Project\licenses.licx has been backed up.
+11:31:43: Done Updating Be.Sidmar.RIS.BrandweerBewaking.Client.vbproj.
+11:31:43: Updating Be.Sidmar.RIS.BrandweerBewaking.Main.vbproj...
+11:31:43: C:\_Data\Inf\Be.Gent.PreventionSecurity\BrandweerBewaking\Development\Code\Client\Be.Sidmar.RIS.BrandweerBewaking.Main\Be.Sidmar.RIS.BrandweerBewaking.Main.vbproj has been backed up.
+11:31:43: Updating Infragistics2.Win.UltraWinGrid.v12.1 Version=12.1.20121.1001 to new reference Infragistics4.Win.UltraWinGrid.v13.1. Version 13.1.20131.1001
+11:31:43: Updating Infragistics2.Shared.v12.1 Version=12.1.20121.1001 to new reference Infragistics4.Shared.v13.1. Version 13.1.20131.1001
+11:31:43: Updating Infragistics2.Win.Misc.v12.1 Version=12.1.20121.1001 to new reference Infragistics4.Win.Misc.v13.1. Version 13.1.20131.1001
+11:31:43: Updating Infragistics2.Win.UltraWinDock.v12.1 Version=12.1.20121.1001 to new reference Infragistics4.Win.UltraWinDock.v13.1. Version 13.1.20131.1001
+11:31:43: Updating Infragistics2.Win.UltraWinTabbedMdi.v12.1 Version=12.1.20121.1001 to new reference Infragistics4.Win.UltraWinTabbedMdi.v13.1. Version 13.1.20131.1001
+11:31:43: Updating Infragistics2.Win.UltraWinToolbars.v12.1 Version=12.1.20121.1001 to new reference Infragistics4.Win.UltraWinToolbars.v13.1. Version 13.1.20131.1001
+11:31:43: Updating Infragistics2.Win.UltraWinTree.v12.1 Version=12.1.20121.1001 to new reference Infragistics4.Win.UltraWinTree.v13.1. Version 13.1.20131.1001
+11:31:43: Updating Infragistics2.Win.v12.1 Version=12.1.20121.1001 to new reference Infragistics4.Win.v13.1. Version 13.1.20131.1001
+11:31:43: C:\_Data\Inf\Be.Gent.PreventionSecurity\BrandweerBewaking\Development\Code\Client\Be.Sidmar.RIS.BrandweerBewaking.Main\FormMainMDI.vb has been backed up.
+11:31:43: C:\_Data\Inf\Be.Gent.PreventionSecurity\BrandweerBewaking\Development\Code\Client\Be.Sidmar.RIS.BrandweerBewaking.Main\licenses.licx has been backed up.
+11:31:43: Done Updating Be.Sidmar.RIS.BrandweerBewaking.Main.vbproj.
+11:31:43: Updating Be.Sidmar.RIS.BrandweerBewaking.Component.vbproj...
+11:31:43: C:\_Data\Inf\Be.Gent.PreventionSecurity\BrandweerBewaking\Development\Code\Client\Be.Sidmar.RIS.BrandweerBewaking.Component\Be.Sidmar.RIS.BrandweerBewaking.Component.vbproj has been backed up.
+11:31:43: Updating Infragistics2.Shared.v12.1 Version=12.1.20121.1001 to new reference Infragistics4.Shared.v13.1. Version 13.1.20131.1001
+11:31:43: Updating Infragistics2.Win.UltraWinEditors.v12.1 Version=12.1.20121.1001 to new reference Infragistics4.Win.UltraWinEditors.v13.1. Version 13.1.20131.1001
+11:31:43: Updating Infragistics2.Win.UltraWinGrid.v12.1 Version=12.1.20121.1001 to new reference Infragistics4.Win.UltraWinGrid.v13.1. Version 13.1.20131.1001
+11:31:43: Updating Infragistics2.Win.v12.1 Version=12.1.20121.1001 to new reference Infragistics4.Win.v13.1. Version 13.1.20131.1001
+11:31:43: C:\_Data\Inf\Be.Gent.PreventionSecurity\BrandweerBewaking\Development\Code\Client\Be.Sidmar.RIS.BrandweerBewaking.Component\My Project\licenses.licx has been backed up.
+11:31:43: C:\_Data\Inf\Be.Gent.PreventionSecurity\BrandweerBewaking\Development\Code\Client\Be.Sidmar.RIS.BrandweerBewaking.Component\UserControlGeneralFunctions.vb has been backed up.
+11:31:43: Done Updating Be.Sidmar.RIS.BrandweerBewaking.Component.vbproj.
+11:31:43: Updating Be.Sidmar.RIS.BrandweerBewaking.Client2.vbproj...
+11:31:43: C:\_Data\Inf\Be.Gent.PreventionSecurity\BrandweerBewaking\Development\Code\Client\Be.Sidmar.RIS.BrandweerBewaking.Client2\Be.Sidmar.RIS.BrandweerBewaking.Client2.vbproj has been backed up.
+11:31:43: Updating Infragistics2.Win.v12.1 Version=12.1.20121.1001 to new reference Infragistics4.Win.v13.1. Version 13.1.20131.1001
+11:31:43: Updating Infragistics2.Win.UltraWinPrintPreviewDialog.v12.1 Version=12.1.20121.1001 to new reference Infragistics4.Win.UltraWinPrintPreviewDialog.v13.1. Version 13.1.20131.1001
+11:31:43: Updating Infragistics2.Win.UltraWinGrid.v12.1 Version=12.1.20121.1001 to new reference Infragistics4.Win.UltraWinGrid.v13.1. Version 13.1.20131.1001
+11:31:43: Updating Infragistics2.Shared.v12.1 Version=12.1.20121.1001 to new reference Infragistics4.Shared.v13.1. Version 13.1.20131.1001
+11:31:43: C:\_Data\Inf\Be.Gent.PreventionSecurity\BrandweerBewaking\Development\Code\Client\Be.Sidmar.RIS.BrandweerBewaking.Client2\Forms\FormDienstverslagEntry.vb has been backed up.
+11:31:43: C:\_Data\Inf\Be.Gent.PreventionSecurity\BrandweerBewaking\Development\Code\Client\Be.Sidmar.RIS.BrandweerBewaking.Client2\Forms\FormDienstverslagKiesMedewerker.vb has been backed up.
+11:31:43: C:\_Data\Inf\Be.Gent.PreventionSecurity\BrandweerBewaking\Development\Code\Client\Be.Sidmar.RIS.BrandweerBewaking.Client2\Forms\FormDienstverslagOverzicht.vb has been backed up.
+11:31:43: C:\_Data\Inf\Be.Gent.PreventionSecurity\BrandweerBewaking\Development\Code\Client\Be.Sidmar.RIS.BrandweerBewaking.Client2\Helpers\TimeSpanAggregator.vb has been backed up.
+11:31:43: C:\_Data\Inf\Be.Gent.PreventionSecurity\BrandweerBewaking\Development\Code\Client\Be.Sidmar.RIS.BrandweerBewaking.Client2\My Project\licenses.licx has been backed up.
+11:31:43: Done Updating Be.Sidmar.RIS.BrandweerBewaking.Client2.vbproj.

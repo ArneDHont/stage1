@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ArcelorMittal Wix template for RAD compliant Windows client deployments -->
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+
+  <!-- Include package specific configuration -->
+  <?include $(sys.CURRENTDIR)\Configuration.wxi?>
+
+  <Product Id="*"  Name="$(var.ProductName)" Manufacturer="$(var.Manufacturer)" Version="$(var.UCMVersion)"
+                   UpgradeCode="$(var.UpgradeCode)" Language="1033" Codepage="Windows-1252">
+
+    <Package Id="*" Description="$(var.Description)" Comments="$(var.Comments)" Manufacturer="$(var.Manufacturer)"
+                    InstallerVersion="200" Languages="1033" 
+                    Compressed="$(var.Compressed)" InstallScope="perMachine" InstallPrivileges="elevated"/>
+
+    <MediaTemplate EmbedCab="yes" />
+
+    <!-- Set the custom properties -->
+    <Property Id="VSDFrameworkVersion" Value="v2.0"  />
+   
+    <!-- Use the ArcelorMittal Windows UI to select the windows directory -->
+    <UIRef Id = "WixUI_WinArcelorMittal"/>
+   
+    <!-- Include the project output -->
+    <Feature Id="ProductFeature" Title="$(var.ProductTitle)" Level="1">
+      <ComponentGroupRef Id="myProjectOutputFiles" />
+    </Feature>
+
+    <Directory Id="TARGETDIR" Name="SourceDir">
+	    <Directory Id="INSTALLDIR" Name="$(var.PackageDirectory)" >
+		    <!-- The project output will be dropped in this folder -->
+	    </Directory >
+    </Directory >
+  </Product>
+</Wix>

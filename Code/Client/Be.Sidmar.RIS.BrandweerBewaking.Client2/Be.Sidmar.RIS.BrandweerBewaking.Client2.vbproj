@@ -1,0 +1,473 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{2F61714B-D4A8-4A23-91A8-5C3DA1FEE567}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Be.Sidmar.RIS.BrandweerBewaking.Client2</RootNamespace>
+    <AssemblyName>Be.Sidmar.RIS.BrandweerBewaking.Client2</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Be.Sidmar.RIS.BrandweerBewaking.Client2.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Be.Sidmar.RIS.BrandweerBewaking.Client2.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>On</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ADF.Configuration, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\References\ADF.Configuration.9.0.4\lib\NET452\ADF.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ADF.Data, Version=5.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\References\ADF.Data.9.0.4\lib\NET452\ADF.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ADF.Diagnostics.Tracing, Version=4.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\References\ADF.Diagnostics.Tracing.9.0.4\lib\NET452\ADF.Diagnostics.Tracing.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ADF.EnterpriseServices, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\References\ADF.EnterpriseServices.9.0.4\lib\NET452\ADF.EnterpriseServices.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ADF.ExceptionHandling, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\References\ADF.ExceptionHandling.9.0.4\lib\NET452\ADF.ExceptionHandling.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ADF.Instrumentation, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\References\ADF.Instrumentation.9.0.4\lib\NET452\ADF.Instrumentation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ADF.Mail, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\References\ADF.Mail.9.0.4\lib\NET452\ADF.Mail.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ADF.Presentation.Windows.Infragistics.16.1, Version=8.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\References\ADF.Presentation.Windows.Infragistics.2016.1.9.0.4\lib\NET452\ADF.Presentation.Windows.Infragistics.16.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ADF.RemoteServices, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\References\ADF.RemoteServices.9.0.4\lib\NET452\ADF.RemoteServices.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ADF.Security, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\References\ADF.Security.9.0.4\lib\NET452\ADF.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ADF.Security.ApplicationSecurity, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\References\ADF.Security.9.0.4\lib\NET452\ADF.Security.ApplicationSecurity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ADF.Security.Common, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\References\ADF.Security.9.0.4\lib\NET452\ADF.Security.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ADF.ServiceModel, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\References\ADF.ServiceModel.9.0.4\lib\NET452\ADF.ServiceModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ADF.System, Version=9.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\References\ADF.System.9.0.4\lib\NET452\ADF.System.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ADF.Web.Services, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\References\ADF.Web.Services.9.0.4\lib\NET452\ADF.Web.Services.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ADF.Windows, Version=8.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\References\ADF.Presentation.Windows.Infragistics.2016.1.9.0.4\lib\NET452\ADF.Windows.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Castle.Core, Version=3.2.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\..\References\Castle.Core.3.2.0\lib\net45\Castle.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Common.Logging, Version=3.4.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\..\References\Common.Logging.3.4.1\lib\net40\Common.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Common.Logging.Core, Version=3.4.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\..\References\Common.Logging.Core.3.4.1\lib\net40\Common.Logging.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Common.Logging.Log4Net208, Version=3.4.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\..\References\Common.Logging.Log4Net208.3.4.1\lib\net40\Common.Logging.Log4Net208.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Shared.v16.1, Version=16.1.20161.2033, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>..\..\References\ADF.Presentation.Windows.Infragistics.2016.1.9.0.4\lib\NET452\Infragistics4.Shared.v16.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.Misc.v16.1, Version=16.1.20161.2033, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>..\..\References\ADF.Presentation.Windows.Infragistics.2016.1.9.0.4\lib\NET452\Infragistics4.Win.Misc.v16.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinDock.v16.1, Version=16.1.20161.2033, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>..\..\References\ADF.Presentation.Windows.Infragistics.2016.1.9.0.4\lib\NET452\Infragistics4.Win.UltraWinDock.v16.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinEditors.v16.1, Version=16.1.20161.2033, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>..\..\References\ADF.Presentation.Windows.Infragistics.2016.1.9.0.4\lib\NET452\Infragistics4.Win.UltraWinEditors.v16.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinGrid.v16.1, Version=16.1.20161.2033, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>..\..\References\ADF.Presentation.Windows.Infragistics.2016.1.9.0.4\lib\NET452\Infragistics4.Win.UltraWinGrid.v16.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinPrintPreviewDialog.v16.1, Version=16.1.20161.2033, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>..\..\References\ADF.Presentation.Windows.Infragistics.2016.1.9.0.4\lib\NET452\Infragistics4.Win.UltraWinPrintPreviewDialog.v16.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinStatusBar.v16.1, Version=16.1.20161.2033, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>..\..\References\ADF.Presentation.Windows.Infragistics.2016.1.9.0.4\lib\NET452\Infragistics4.Win.UltraWinStatusBar.v16.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinTabbedMdi.v16.1, Version=16.1.20161.2033, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>..\..\References\ADF.Presentation.Windows.Infragistics.2016.1.9.0.4\lib\NET452\Infragistics4.Win.UltraWinTabbedMdi.v16.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinTabControl.v16.1, Version=16.1.20161.2033, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>..\..\References\ADF.Presentation.Windows.Infragistics.2016.1.9.0.4\lib\NET452\Infragistics4.Win.UltraWinTabControl.v16.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinToolbars.v16.1, Version=16.1.20161.2033, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>..\..\References\ADF.Presentation.Windows.Infragistics.2016.1.9.0.4\lib\NET452\Infragistics4.Win.UltraWinToolbars.v16.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.v16.1, Version=16.1.20161.2033, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>..\..\References\ADF.Presentation.Windows.Infragistics.2016.1.9.0.4\lib\NET452\Infragistics4.Win.v16.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Interop.VOPCOMLib4.0, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\References\ADF.Web.Services.9.0.4\lib\NET452\Interop.VOPCOMLib4.0.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\..\References\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\TDSDienstverslagAfdelingen.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSDienstverslagAfdelingen.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TDSDienstVerslagDetail.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSDienstVerslagDetail.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TDSDienstverslagDetailActies.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSDienstverslagDetailActies.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TDSDienstVerslagDetailOversten.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSDienstVerslagDetailOversten.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TDSDienstVerslagDetailTeamMembers.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSDienstVerslagDetailTeamMembers.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TDSDienstVerslagDetailTeams.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSDienstVerslagDetailTeams.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TDSDienstverslagLijst.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSDienstverslagLijst.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TDSDienstverslagMaanden.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TDSDienstverslagMaanden.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormManager.vb" />
+    <Compile Include="Forms\FormDienstverslagEntry.Designer.vb">
+      <DependentUpon>FormDienstverslagEntry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormDienstverslagEntry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormDienstverslagKiesMedewerker.Designer.vb">
+      <DependentUpon>FormDienstverslagKiesMedewerker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormDienstverslagKiesMedewerker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormDienstVerslagNieuw.Designer.vb">
+      <DependentUpon>FormDienstVerslagNieuw.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormDienstVerslagNieuw.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormDienstverslagOverzicht.designer.vb">
+      <DependentUpon>FormDienstverslagOverzicht.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormDienstverslagOverzicht.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Helpers\Extensions.vb" />
+    <Compile Include="Helpers\OpleidingsInfoStore.vb" />
+    <Compile Include="Helpers\TimeSpanAggregator.vb" />
+    <Compile Include="Helpers\WaitCursor.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\FormDienstverslagEntry.resx">
+      <DependentUpon>FormDienstverslagEntry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormDienstverslagKiesMedewerker.resx">
+      <DependentUpon>FormDienstverslagKiesMedewerker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormDienstVerslagNieuw.resx">
+      <DependentUpon>FormDienstVerslagNieuw.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormDienstverslagOverzicht.resx">
+      <DependentUpon>FormDienstverslagOverzicht.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\TDSDienstverslagAfdelingen.xsc">
+      <DependentUpon>TDSDienstverslagAfdelingen.xsd</DependentUpon>
+    </None>
+    <None Include="Data\TDSDienstverslagAfdelingen.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSDienstverslagAfdelingen.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Data\TDSDienstverslagAfdelingen.xss">
+      <DependentUpon>TDSDienstverslagAfdelingen.xsd</DependentUpon>
+    </None>
+    <None Include="Data\TDSDienstVerslagDetail.xsc">
+      <DependentUpon>TDSDienstVerslagDetail.xsd</DependentUpon>
+    </None>
+    <None Include="Data\TDSDienstVerslagDetail.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSDienstVerslagDetail.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\TDSDienstVerslagDetail.xss">
+      <DependentUpon>TDSDienstVerslagDetail.xsd</DependentUpon>
+    </None>
+    <None Include="Data\TDSDienstverslagDetailActies.xsc">
+      <DependentUpon>TDSDienstverslagDetailActies.xsd</DependentUpon>
+    </None>
+    <None Include="Data\TDSDienstverslagDetailActies.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSDienstverslagDetailActies.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\TDSDienstverslagDetailActies.xss">
+      <DependentUpon>TDSDienstverslagDetailActies.xsd</DependentUpon>
+    </None>
+    <None Include="Data\TDSDienstVerslagDetailOversten.xsc">
+      <DependentUpon>TDSDienstVerslagDetailOversten.xsd</DependentUpon>
+    </None>
+    <None Include="Data\TDSDienstVerslagDetailOversten.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSDienstVerslagDetailOversten.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\TDSDienstVerslagDetailOversten.xss">
+      <DependentUpon>TDSDienstVerslagDetailOversten.xsd</DependentUpon>
+    </None>
+    <None Include="Data\TDSDienstVerslagDetailTeamMembers.xsc">
+      <DependentUpon>TDSDienstVerslagDetailTeamMembers.xsd</DependentUpon>
+    </None>
+    <None Include="Data\TDSDienstVerslagDetailTeamMembers.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSDienstVerslagDetailTeamMembers.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Data\TDSDienstVerslagDetailTeamMembers.xss">
+      <DependentUpon>TDSDienstVerslagDetailTeamMembers.xsd</DependentUpon>
+    </None>
+    <None Include="Data\TDSDienstVerslagDetailTeams.xsc">
+      <DependentUpon>TDSDienstVerslagDetailTeams.xsd</DependentUpon>
+    </None>
+    <None Include="Data\TDSDienstVerslagDetailTeams.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSDienstVerslagDetailTeams.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\TDSDienstVerslagDetailTeams.xss">
+      <DependentUpon>TDSDienstVerslagDetailTeams.xsd</DependentUpon>
+    </None>
+    <None Include="Data\TDSDienstverslagLijst.xsc">
+      <DependentUpon>TDSDienstverslagLijst.xsd</DependentUpon>
+    </None>
+    <None Include="Data\TDSDienstverslagLijst.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSDienstverslagLijst.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\TDSDienstverslagLijst.xss">
+      <DependentUpon>TDSDienstverslagLijst.xsd</DependentUpon>
+    </None>
+    <None Include="Data\TDSDienstverslagMaanden.xsc">
+      <DependentUpon>TDSDienstverslagMaanden.xsd</DependentUpon>
+    </None>
+    <None Include="Data\TDSDienstverslagMaanden.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TDSDienstverslagMaanden.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\TDSDienstverslagMaanden.xss">
+      <DependentUpon>TDSDienstverslagMaanden.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Be.Sidmar.RIS.BrandweerBewaking.Proxy\Be.Sidmar.RIS.BrandweerBewaking.Proxy.vbproj">
+      <Project>{17EE629F-D90C-48B6-9818-A8D8C8937452}</Project>
+      <Name>Be.Sidmar.RIS.BrandweerBewaking.Proxy</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\123.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Check.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DailyReport.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OnderhoudPersonen.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trashcan.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\male.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit2.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

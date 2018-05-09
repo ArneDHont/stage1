@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Inspect.FireSafety.Business.Properties" GeneratedClassName="MailSettings">
+  <Profiles />
+  <Settings>
+    <Setting Name="From" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">do-not-reply-bbw@arcelormittal.com</Value>
+    </Setting>
+    <Setting Name="SummeryTo" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SIDADHT@arcelormittal.onmicrosoft.com</Value>
+    </Setting>
+    <Setting Name="Cc" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">nancy.coppens@arcelormittal.com</Value>
+    </Setting>
+    <Setting Name="ReportTo" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SIDADHT@arcelormittal.onmicrosoft.com</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

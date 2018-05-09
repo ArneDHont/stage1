@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/TDSConfiguratie.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/TDSConfiguratie.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/TDSConfiguratie.xsd" id="TDSConfiguratie" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="TDSConfiguratie">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BBCONF">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="GR_SLE" type="xs:string" />
+              <xs:element name="SLE" type="xs:string" />
+              <xs:element minOccurs="0" name="WD" type="xs:string" />
+              <xs:element minOccurs="0" name="OPM" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="TDSConfiguratieKey1">
+      <xs:selector xpath=".//mstns:BBCONF" />
+      <xs:field xpath="mstns:GR_SLE" />
+      <xs:field xpath="mstns:SLE" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

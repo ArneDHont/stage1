@@ -1,0 +1,29 @@
+﻿
+CREATE PROC dbo.[USP_WY_BBBRKART_UPDATE]
+  @ID_ART_BRK int,
+  @ID_GR_ART int=NULL,
+  @ID_EH varchar(10)=NULL,
+  @NR_ART_BRK_SAP varchar(20)=NULL,
+  @SCF_ART varchar(80)=NULL,
+  @STK_ACT_ART int=NULL,
+  @STK_MIN_ART int=NULL,
+  @STK_MAX_ART float=NULL,
+  @PR_EH_ART_INTV float=NULL,
+  @DT_WY_L datetime=NULL,
+  @Original_ID_ART_BRK int --Primary Key Field
+
+AS
+SET NOCOUNT OFF
+
+UPDATE [BBBRKART] SET
+  [ID_GR_ART] = @ID_GR_ART,
+  [ID_EH] = @ID_EH,
+  [NR_ART_BRK_SAP] = @NR_ART_BRK_SAP,
+  [SCF_ART] = @SCF_ART,
+  [STK_ACT_ART] = @STK_ACT_ART,
+  [STK_MIN_ART] = @STK_MIN_ART,
+  [STK_MAX_ART] = @STK_MAX_ART,
+  [PR_EH_ART_INTV] = @PR_EH_ART_INTV,
+  [DT_WY_L] = @DT_WY_L
+WHERE [ID_ART_BRK] = @Original_ID_ART_BRK
+

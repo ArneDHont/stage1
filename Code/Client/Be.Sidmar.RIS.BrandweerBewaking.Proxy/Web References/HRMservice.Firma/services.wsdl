@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/HRMService.Firma/Services" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/HRMService.Firma/Services" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/HRMService.Firma/Services">
+      <s:import namespace="http://tempuri.org/tdsFirma.xsd" />
+      <s:import schemaLocation="http://wfhrmprod.sidmar.be/hrmservice.firma/services.asmx?schema=tdsFirma" namespace="http://tempuri.org/tdsFirma.xsd" />
+      <s:element name="GetFirma">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Firma" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFirmaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFirmaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/tdsFirma.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListChildren">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Firma" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListChildrenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListChildrenResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/tdsFirma.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListParent">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetListParentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListParentResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/tdsFirma.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListFirma">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetListFirmaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListFirmaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/tdsFirma.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateParent">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateParentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateParentResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/tdsFirma.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateFirma">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="firma" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="firmanaam" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="parent" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateFirmaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateFirmaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/tdsFirma.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="tdsFirma" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:any namespace="http://tempuri.org/tdsFirma.xsd" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetFirmaSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFirma" />
+  </wsdl:message>
+  <wsdl:message name="GetFirmaSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFirmaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListChildrenSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListChildren" />
+  </wsdl:message>
+  <wsdl:message name="GetListChildrenSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListChildrenResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListParentSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListParent" />
+  </wsdl:message>
+  <wsdl:message name="GetListParentSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListParentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListFirmaSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListFirma" />
+  </wsdl:message>
+  <wsdl:message name="GetListFirmaSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListFirmaResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateParentSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateParent" />
+  </wsdl:message>
+  <wsdl:message name="UpdateParentSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateParentResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateFirmaSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateFirma" />
+  </wsdl:message>
+  <wsdl:message name="CreateFirmaSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateFirmaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFirmaHttpGetIn">
+    <wsdl:part name="Firma" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFirmaHttpGetOut">
+    <wsdl:part name="Body" element="tns:tdsFirma" />
+  </wsdl:message>
+  <wsdl:message name="GetListChildrenHttpGetIn">
+    <wsdl:part name="Firma" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetListChildrenHttpGetOut">
+    <wsdl:part name="Body" element="tns:tdsFirma" />
+  </wsdl:message>
+  <wsdl:message name="GetListParentHttpGetIn" />
+  <wsdl:message name="GetListParentHttpGetOut">
+    <wsdl:part name="Body" element="tns:tdsFirma" />
+  </wsdl:message>
+  <wsdl:message name="GetListFirmaHttpGetIn" />
+  <wsdl:message name="GetListFirmaHttpGetOut">
+    <wsdl:part name="Body" element="tns:tdsFirma" />
+  </wsdl:message>
+  <wsdl:message name="UpdateParentHttpGetIn" />
+  <wsdl:message name="UpdateParentHttpGetOut">
+    <wsdl:part name="Body" element="tns:tdsFirma" />
+  </wsdl:message>
+  <wsdl:message name="CreateFirmaHttpGetIn">
+    <wsdl:part name="firma" type="s:string" />
+    <wsdl:part name="firmanaam" type="s:string" />
+    <wsdl:part name="parent" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateFirmaHttpGetOut">
+    <wsdl:part name="Body" element="tns:tdsFirma" />
+  </wsdl:message>
+  <wsdl:message name="GetFirmaHttpPostIn">
+    <wsdl:part name="Firma" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFirmaHttpPostOut">
+    <wsdl:part name="Body" element="tns:tdsFirma" />
+  </wsdl:message>
+  <wsdl:message name="GetListChildrenHttpPostIn">
+    <wsdl:part name="Firma" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetListChildrenHttpPostOut">
+    <wsdl:part name="Body" element="tns:tdsFirma" />
+  </wsdl:message>
+  <wsdl:message name="GetListParentHttpPostIn" />
+  <wsdl:message name="GetListParentHttpPostOut">
+    <wsdl:part name="Body" element="tns:tdsFirma" />
+  </wsdl:message>
+  <wsdl:message name="GetListFirmaHttpPostIn" />
+  <wsdl:message name="GetListFirmaHttpPostOut">
+    <wsdl:part name="Body" element="tns:tdsFirma" />
+  </wsdl:message>
+  <wsdl:message name="UpdateParentHttpPostIn" />
+  <wsdl:message name="UpdateParentHttpPostOut">
+    <wsdl:part name="Body" element="tns:tdsFirma" />
+  </wsdl:message>
+  <wsdl:message name="CreateFirmaHttpPostIn">
+    <wsdl:part name="firma" type="s:string" />
+    <wsdl:part name="firmanaam" type="s:string" />
+    <wsdl:part name="parent" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateFirmaHttpPostOut">
+    <wsdl:part name="Body" element="tns:tdsFirma" />
+  </wsdl:message>
+  <wsdl:portType name="ServicesSoap">
+    <wsdl:operation name="GetFirma">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lees gegevens van een firma</wsdl:documentation>
+      <wsdl:input message="tns:GetFirmaSoapIn" />
+      <wsdl:output message="tns:GetFirmaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListChildren">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Geef een lijst met de kinderen van de parentfirma (inclusief parent)</wsdl:documentation>
+      <wsdl:input message="tns:GetListChildrenSoapIn" />
+      <wsdl:output message="tns:GetListChildrenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListParent">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Geef een lijst alle parents</wsdl:documentation>
+      <wsdl:input message="tns:GetListParentSoapIn" />
+      <wsdl:output message="tns:GetListParentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListFirma">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Geef een lijst alle firma's</wsdl:documentation>
+      <wsdl:input message="tns:GetListFirmaSoapIn" />
+      <wsdl:output message="tns:GetListFirmaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateParent">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">update firmanaam en parent (gegevens uit SAP)</wsdl:documentation>
+      <wsdl:input message="tns:UpdateParentSoapIn" />
+      <wsdl:output message="tns:UpdateParentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateFirma">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">creatie record ashr_firma met firma, firmanaam en parent</wsdl:documentation>
+      <wsdl:input message="tns:CreateFirmaSoapIn" />
+      <wsdl:output message="tns:CreateFirmaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ServicesHttpGet">
+    <wsdl:operation name="GetFirma">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lees gegevens van een firma</wsdl:documentation>
+      <wsdl:input message="tns:GetFirmaHttpGetIn" />
+      <wsdl:output message="tns:GetFirmaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListChildren">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Geef een lijst met de kinderen van de parentfirma (inclusief parent)</wsdl:documentation>
+      <wsdl:input message="tns:GetListChildrenHttpGetIn" />
+      <wsdl:output message="tns:GetListChildrenHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListParent">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Geef een lijst alle parents</wsdl:documentation>
+      <wsdl:input message="tns:GetListParentHttpGetIn" />
+      <wsdl:output message="tns:GetListParentHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListFirma">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Geef een lijst alle firma's</wsdl:documentation>
+      <wsdl:input message="tns:GetListFirmaHttpGetIn" />
+      <wsdl:output message="tns:GetListFirmaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateParent">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">update firmanaam en parent (gegevens uit SAP)</wsdl:documentation>
+      <wsdl:input message="tns:UpdateParentHttpGetIn" />
+      <wsdl:output message="tns:UpdateParentHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateFirma">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">creatie record ashr_firma met firma, firmanaam en parent</wsdl:documentation>
+      <wsdl:input message="tns:CreateFirmaHttpGetIn" />
+      <wsdl:output message="tns:CreateFirmaHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ServicesHttpPost">
+    <wsdl:operation name="GetFirma">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lees gegevens van een firma</wsdl:documentation>
+      <wsdl:input message="tns:GetFirmaHttpPostIn" />
+      <wsdl:output message="tns:GetFirmaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListChildren">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Geef een lijst met de kinderen van de parentfirma (inclusief parent)</wsdl:documentation>
+      <wsdl:input message="tns:GetListChildrenHttpPostIn" />
+      <wsdl:output message="tns:GetListChildrenHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListParent">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Geef een lijst alle parents</wsdl:documentation>
+      <wsdl:input message="tns:GetListParentHttpPostIn" />
+      <wsdl:output message="tns:GetListParentHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListFirma">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Geef een lijst alle firma's</wsdl:documentation>
+      <wsdl:input message="tns:GetListFirmaHttpPostIn" />
+      <wsdl:output message="tns:GetListFirmaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateParent">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">update firmanaam en parent (gegevens uit SAP)</wsdl:documentation>
+      <wsdl:input message="tns:UpdateParentHttpPostIn" />
+      <wsdl:output message="tns:UpdateParentHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateFirma">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">creatie record ashr_firma met firma, firmanaam en parent</wsdl:documentation>
+      <wsdl:input message="tns:CreateFirmaHttpPostIn" />
+      <wsdl:output message="tns:CreateFirmaHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServicesSoap" type="tns:ServicesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetFirma">
+      <soap:operation soapAction="http://tempuri.org/HRMService.Firma/Services/GetFirma" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListChildren">
+      <soap:operation soapAction="http://tempuri.org/HRMService.Firma/Services/GetListChildren" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListParent">
+      <soap:operation soapAction="http://tempuri.org/HRMService.Firma/Services/GetListParent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListFirma">
+      <soap:operation soapAction="http://tempuri.org/HRMService.Firma/Services/GetListFirma" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateParent">
+      <soap:operation soapAction="http://tempuri.org/HRMService.Firma/Services/UpdateParent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateFirma">
+      <soap:operation soapAction="http://tempuri.org/HRMService.Firma/Services/CreateFirma" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServicesSoap12" type="tns:ServicesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetFirma">
+      <soap12:operation soapAction="http://tempuri.org/HRMService.Firma/Services/GetFirma" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListChildren">
+      <soap12:operation soapAction="http://tempuri.org/HRMService.Firma/Services/GetListChildren" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListParent">
+      <soap12:operation soapAction="http://tempuri.org/HRMService.Firma/Services/GetListParent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListFirma">
+      <soap12:operation soapAction="http://tempuri.org/HRMService.Firma/Services/GetListFirma" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateParent">
+      <soap12:operation soapAction="http://tempuri.org/HRMService.Firma/Services/UpdateParent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateFirma">
+      <soap12:operation soapAction="http://tempuri.org/HRMService.Firma/Services/CreateFirma" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServicesHttpGet" type="tns:ServicesHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetFirma">
+      <http:operation location="/GetFirma" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListChildren">
+      <http:operation location="/GetListChildren" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListParent">
+      <http:operation location="/GetListParent" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListFirma">
+      <http:operation location="/GetListFirma" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateParent">
+      <http:operation location="/UpdateParent" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateFirma">
+      <http:operation location="/CreateFirma" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServicesHttpPost" type="tns:ServicesHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetFirma">
+      <http:operation location="/GetFirma" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListChildren">
+      <http:operation location="/GetListChildren" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListParent">
+      <http:operation location="/GetListParent" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListFirma">
+      <http:operation location="/GetListFirma" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateParent">
+      <http:operation location="/UpdateParent" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateFirma">
+      <http:operation location="/CreateFirma" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Services">
+    <wsdl:port name="ServicesSoap" binding="tns:ServicesSoap">
+      <soap:address location="http://wfhrmprod.sidmar.be/hrmservice.firma/services.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServicesSoap12" binding="tns:ServicesSoap12">
+      <soap12:address location="http://wfhrmprod.sidmar.be/hrmservice.firma/services.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServicesHttpGet" binding="tns:ServicesHttpGet">
+      <http:address location="http://wfhrmprod.sidmar.be/hrmservice.firma/services.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServicesHttpPost" binding="tns:ServicesHttpPost">
+      <http:address location="http://wfhrmprod.sidmar.be/hrmservice.firma/services.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

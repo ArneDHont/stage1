@@ -1,0 +1,10 @@
+﻿
+CREATE PROC dbo.[USP_WY_BBREGTY_DELETE]
+  @Original_ID_TY_REG int --Primary Key Field
+
+AS
+SET NOCOUNT OFF
+
+DELETE FROM [BBREGTY]
+WHERE [ID_TY_REG] = @Original_ID_TY_REG
+

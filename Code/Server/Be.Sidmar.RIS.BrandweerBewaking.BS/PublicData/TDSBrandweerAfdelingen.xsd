@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TDSBrandweerAfdelingen" targetNamespace="http://tempuri.org/TDSBrandweerAfdelingen.xsd" xmlns:mstns="http://tempuri.org/TDSBrandweerAfdelingen.xsd" xmlns="http://tempuri.org/TDSBrandweerAfdelingen.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="bbwConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="bbwConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Be.Sidmar.RIS.BrandweerBewaking.BS.My.MySettings.GlobalReference.Default.bbwConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TDSBrandweerAfdelingen" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="TDSBrandweerAfdelingen" msprop:Generator_UserDSName="TDSBrandweerAfdelingen">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Afdeling" msprop:Generator_TableClassName="AfdelingDataTable" msprop:Generator_TableVarName="tableAfdeling" msprop:Generator_TablePropName="Afdeling" msprop:Generator_RowDeletingName="AfdelingRowDeleting" msprop:Generator_UserTableName="Afdeling" msprop:Generator_RowChangingName="AfdelingRowChanging" msprop:Generator_RowEvHandlerName="AfdelingRowChangeEventHandler" msprop:Generator_RowDeletedName="AfdelingRowDeleted" msprop:Generator_RowEvArgName="AfdelingRowChangeEvent" msprop:Generator_RowChangedName="AfdelingRowChanged" msprop:Generator_RowClassName="AfdelingRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AfdelingID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnAfdelingID" msprop:Generator_ColumnPropNameInRow="AfdelingID" msprop:Generator_ColumnPropNameInTable="AfdelingIDColumn" msprop:Generator_UserColumnName="AfdelingID" type="xs:int" />
+              <xs:element name="AfdelingCode" msprop:Generator_ColumnVarNameInTable="columnAfdelingCode" msprop:Generator_ColumnPropNameInRow="AfdelingCode" msprop:Generator_ColumnPropNameInTable="AfdelingCodeColumn" msprop:Generator_UserColumnName="AfdelingCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AfdelingNaam" msprop:Generator_ColumnVarNameInTable="columnAfdelingNaam" msprop:Generator_ColumnPropNameInRow="AfdelingNaam" msprop:Generator_ColumnPropNameInTable="AfdelingNaamColumn" msprop:Generator_UserColumnName="AfdelingNaam" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Zone" msprop:Generator_TableClassName="ZoneDataTable" msprop:Generator_TableVarName="tableZone" msprop:Generator_TablePropName="Zone" msprop:Generator_RowDeletingName="ZoneRowDeleting" msprop:Generator_UserTableName="Zone" msprop:Generator_RowChangingName="ZoneRowChanging" msprop:Generator_RowEvHandlerName="ZoneRowChangeEventHandler" msprop:Generator_RowDeletedName="ZoneRowDeleted" msprop:Generator_RowEvArgName="ZoneRowChangeEvent" msprop:Generator_RowChangedName="ZoneRowChanged" msprop:Generator_RowClassName="ZoneRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="LocatieID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnLocatieID" msprop:Generator_ColumnPropNameInRow="LocatieID" msprop:Generator_ColumnPropNameInTable="LocatieIDColumn" msprop:Generator_UserColumnName="LocatieID" type="xs:int" />
+              <xs:element name="AfdelingID" msprop:Generator_ColumnVarNameInTable="columnAfdelingID" msprop:Generator_ColumnPropNameInRow="AfdelingID" msprop:Generator_ColumnPropNameInTable="AfdelingIDColumn" msprop:Generator_UserColumnName="AfdelingID" type="xs:int" minOccurs="0" />
+              <xs:element name="LocatieZone" msprop:Generator_ColumnVarNameInTable="columnLocatieZone" msprop:Generator_ColumnPropNameInRow="LocatieZone" msprop:Generator_ColumnPropNameInTable="LocatieZoneColumn" msprop:Generator_UserColumnName="LocatieZone" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AfdelingUser" msprop:Generator_TableClassName="AfdelingUserDataTable" msprop:Generator_TableVarName="tableAfdelingUser" msprop:Generator_TablePropName="AfdelingUser" msprop:Generator_RowDeletingName="AfdelingUserRowDeleting" msprop:Generator_UserTableName="AfdelingUser" msprop:Generator_RowChangingName="AfdelingUserRowChanging" msprop:Generator_RowEvHandlerName="AfdelingUserRowChangeEventHandler" msprop:Generator_RowDeletedName="AfdelingUserRowDeleted" msprop:Generator_RowEvArgName="AfdelingUserRowChangeEvent" msprop:Generator_RowChangedName="AfdelingUserRowChanged" msprop:Generator_RowClassName="AfdelingUserRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AfdelingUserID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnAfdelingUserID" msprop:Generator_ColumnPropNameInRow="AfdelingUserID" msprop:Generator_ColumnPropNameInTable="AfdelingUserIDColumn" msprop:Generator_UserColumnName="AfdelingUserID" type="xs:int" />
+              <xs:element name="LoginNaam" msprop:Generator_ColumnVarNameInTable="columnLoginNaam" msprop:Generator_ColumnPropNameInRow="LoginNaam" msprop:Generator_ColumnPropNameInTable="LoginNaamColumn" msprop:Generator_UserColumnName="LoginNaam" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AfdelingID" msprop:Generator_ColumnVarNameInTable="columnAfdelingID" msprop:Generator_ColumnPropNameInRow="AfdelingID" msprop:Generator_ColumnPropNameInTable="AfdelingIDColumn" msprop:Generator_UserColumnName="AfdelingID" type="xs:int" minOccurs="0" />
+              <xs:element name="AfdelingOmschr" msprop:Generator_ColumnVarNameInTable="columnAfdelingOmschr" msprop:Generator_ColumnPropNameInRow="AfdelingOmschr" msprop:Generator_ColumnPropNameInTable="AfdelingOmschrColumn" msprop:Generator_UserColumnName="AfdelingOmschr" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BrandweerYN" msprop:Generator_ColumnVarNameInTable="columnBrandweerYN" msprop:Generator_ColumnPropNameInRow="BrandweerYN" msprop:Generator_ColumnPropNameInTable="BrandweerYNColumn" msprop:Generator_UserColumnName="BrandweerYN" type="xs:boolean" minOccurs="0" />
+              <xs:element name="AfdelingID2" msprop:Generator_ColumnVarNameInTable="columnAfdelingID2" msprop:Generator_ColumnPropNameInRow="AfdelingID2" msprop:Generator_ColumnPropNameInTable="AfdelingID2Column" msprop:Generator_UserColumnName="AfdelingID2" type="xs:int" minOccurs="0" />
+              <xs:element name="AfdelingID3" msprop:Generator_ColumnVarNameInTable="columnAfdelingID3" msprop:Generator_ColumnPropNameInRow="AfdelingID3" msprop:Generator_ColumnPropNameInTable="AfdelingID3Column" msprop:Generator_UserColumnName="AfdelingID3" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Afdeling" />
+      <xs:field xpath="mstns:AfdelingID" />
+    </xs:unique>
+    <xs:unique name="Zone_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Zone" />
+      <xs:field xpath="mstns:LocatieID" />
+    </xs:unique>
+    <xs:unique name="AfdelingUser_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:AfdelingUser" />
+      <xs:field xpath="mstns:AfdelingUserID" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK_bmLocatie_bmAfdeling" msdata:parent="Afdeling" msdata:child="Zone" msdata:parentkey="AfdelingID" msdata:childkey="AfdelingID" msprop:Generator_UserChildTable="Zone" msprop:Generator_ChildPropName="GetZoneRows" msprop:Generator_ParentPropName="AfdelingRow" msprop:Generator_UserRelationName="FK_bmLocatie_bmAfdeling" msprop:Generator_RelationVarName="relationFK_bmLocatie_bmAfdeling" msprop:Generator_UserParentTable="Afdeling" />
+      <msdata:Relationship name="FK_bmAfdelingUser_bmAfdeling" msdata:parent="Afdeling" msdata:child="AfdelingUser" msdata:parentkey="AfdelingID" msdata:childkey="AfdelingID" msprop:Generator_UserChildTable="AfdelingUser" msprop:Generator_ChildPropName="GetAfdelingUserRows" msprop:Generator_ParentPropName="AfdelingRow" msprop:Generator_UserRelationName="FK_bmAfdelingUser_bmAfdeling" msprop:Generator_RelationVarName="relationFK_bmAfdelingUser_bmAfdeling" msprop:Generator_UserParentTable="Afdeling" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

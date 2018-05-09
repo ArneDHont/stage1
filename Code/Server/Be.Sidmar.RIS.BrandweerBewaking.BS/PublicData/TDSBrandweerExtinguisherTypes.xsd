@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TDSBrandweerExtinguisherTypes" targetNamespace="http://tempuri.org/TDSBrandweerExtinguisherTypes.xsd" xmlns:mstns="http://tempuri.org/TDSBrandweerExtinguisherTypes.xsd" xmlns="http://tempuri.org/TDSBrandweerExtinguisherTypes.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="bbwConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="bbwConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Be.Sidmar.RIS.BrandweerBewaking.BS.My.MySettings.GlobalReference.Default.bbwConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TDSBrandweerExtinguisherTypes" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="TDSBrandweerExtinguisherTypes" msprop:Generator_UserDSName="TDSBrandweerExtinguisherTypes">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TypeBlustoestel" msprop:Generator_TableClassName="TypeBlustoestelDataTable" msprop:Generator_TableVarName="tableTypeBlustoestel" msprop:Generator_TablePropName="TypeBlustoestel" msprop:Generator_RowDeletingName="TypeBlustoestelRowDeleting" msprop:Generator_UserTableName="TypeBlustoestel" msprop:Generator_RowChangingName="TypeBlustoestelRowChanging" msprop:Generator_RowEvHandlerName="TypeBlustoestelRowChangeEventHandler" msprop:Generator_RowDeletedName="TypeBlustoestelRowDeleted" msprop:Generator_RowEvArgName="TypeBlustoestelRowChangeEvent" msprop:Generator_RowChangedName="TypeBlustoestelRowChanged" msprop:Generator_RowClassName="TypeBlustoestelRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SoortTypeMatID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnSoortTypeMatID" msprop:Generator_ColumnPropNameInRow="SoortTypeMatID" msprop:Generator_ColumnPropNameInTable="SoortTypeMatIDColumn" msprop:Generator_UserColumnName="SoortTypeMatID" type="xs:int" />
+              <xs:element name="TypeMatID" msprop:Generator_ColumnVarNameInTable="columnTypeMatID" msprop:Generator_ColumnPropNameInRow="TypeMatID" msprop:Generator_ColumnPropNameInTable="TypeMatIDColumn" msprop:Generator_UserColumnName="TypeMatID" type="xs:int" minOccurs="0" />
+              <xs:element name="BrandblusCodeID" msprop:Generator_ColumnVarNameInTable="columnBrandblusCodeID" msprop:Generator_ColumnPropNameInRow="BrandblusCodeID" msprop:Generator_ColumnPropNameInTable="BrandblusCodeIDColumn" msprop:Generator_UserColumnName="BrandblusCodeID" type="xs:int" minOccurs="0" />
+              <xs:element name="BrandblusInhoud" msprop:Generator_ColumnVarNameInTable="columnBrandblusInhoud" msprop:Generator_ColumnPropNameInRow="BrandblusInhoud" msprop:Generator_ColumnPropNameInTable="BrandblusInhoudColumn" msprop:Generator_UserColumnName="BrandblusInhoud" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="SoortTypeMatOmschr" msprop:Generator_ColumnVarNameInTable="columnSoortTypeMatOmschr" msprop:Generator_ColumnPropNameInRow="SoortTypeMatOmschr" msprop:Generator_ColumnPropNameInTable="SoortTypeMatOmschrColumn" msprop:Generator_UserColumnName="SoortTypeMatOmschr" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="BrandblusCode" msprop:Generator_TableClassName="BrandblusCodeDataTable" msprop:Generator_TableVarName="tableBrandblusCode" msprop:Generator_TablePropName="BrandblusCode" msprop:Generator_RowDeletingName="BrandblusCodeRowDeleting" msprop:Generator_UserTableName="BrandblusCode" msprop:Generator_RowChangingName="BrandblusCodeRowChanging" msprop:Generator_RowEvHandlerName="BrandblusCodeRowChangeEventHandler" msprop:Generator_RowDeletedName="BrandblusCodeRowDeleted" msprop:Generator_RowEvArgName="BrandblusCodeRowChangeEvent" msprop:Generator_RowChangedName="BrandblusCodeRowChanged" msprop:Generator_RowClassName="BrandblusCodeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BrandblusCodeID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnBrandblusCodeID" msprop:Generator_ColumnPropNameInRow="BrandblusCodeID" msprop:Generator_ColumnPropNameInTable="BrandblusCodeIDColumn" msprop:Generator_UserColumnName="BrandblusCodeID" type="xs:int" />
+              <xs:element name="BrandblusCodeOmschr" msprop:Generator_ColumnVarNameInTable="columnBrandblusCodeOmschr" msprop:Generator_ColumnPropNameInRow="BrandblusCodeOmschr" msprop:Generator_ColumnPropNameInTable="BrandblusCodeOmschrColumn" msprop:Generator_UserColumnName="BrandblusCodeOmschr" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GroteControleFreq" msprop:Generator_ColumnVarNameInTable="columnGroteControleFreq" msprop:Generator_ColumnPropNameInRow="GroteControleFreq" msprop:Generator_ColumnPropNameInTable="GroteControleFreqColumn" msprop:Generator_UserColumnName="GroteControleFreq" type="xs:short" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TypeBlustoestel" />
+      <xs:field xpath="mstns:SoortTypeMatID" />
+    </xs:unique>
+    <xs:unique name="BrandblusCode_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:BrandblusCode" />
+      <xs:field xpath="mstns:BrandblusCodeID" />
+    </xs:unique>
+    <xs:keyref name="FK_BrandblusCode_TypeBlustoestel" refer="BrandblusCode_Constraint1" msdata:ConstraintOnly="true" msdata:UpdateRule="None" msdata:DeleteRule="None">
+      <xs:selector xpath=".//mstns:TypeBlustoestel" />
+      <xs:field xpath="mstns:BrandblusCodeID" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

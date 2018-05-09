@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>3.8</ProductVersion>
+    <ProjectGuid>{4ba6306e-b29e-489b-ac2a-41bb28dfd3b3}</ProjectGuid>
+    <SchemaVersion>2.0</SchemaVersion>
+    <OutputName>Inspect.WebApi.Host.Setup</OutputName>
+    <OutputType>Package</OutputType>
+    <EnableProjectHarvesting>True</EnableProjectHarvesting>
+    <WixToolPath>wix\</WixToolPath>
+    <WixTargetsPath>$(WixToolPath)Wix.targets</WixTargetsPath>
+    <WixTasksPath>$(WixToolPath)..\WixTasks.dll</WixTasksPath>
+    <!--<WixTargetsPath Condition=" '$(WixTargetsPath)' == '' AND '$(MSBuildExtensionsPath32)' != '' ">$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
+    <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' ">$(MSBuildExtensionsPath)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>-->
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <DefineConstants>Debug</DefineConstants>
+    <CompilerAdditionalOptions>-ext WixIIsExtension
+-ext WixUIExtension
+-ext WixUtilExtension</CompilerAdditionalOptions>
+    <LinkerAdditionalOptions>-ext WixIIsExtension
+-ext WixUIExtension
+-ext WixUtilExtension</LinkerAdditionalOptions>
+    <SuppressIces>ICE17</SuppressIces>
+    <SuppressAllWarnings>False</SuppressAllWarnings>
+    <Pedantic>False</Pedantic>
+    <SuppressValidation>True</SuppressValidation>
+    <SuppressPdbOutput>True</SuppressPdbOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <CompilerAdditionalOptions>-ext WixIIsExtension
+-ext WixUIExtension
+-ext WixUtilExtension</CompilerAdditionalOptions>
+    <LinkerAdditionalOptions>-ext WixIIsExtension
+-ext WixUIExtension
+-ext WixUtilExtension</LinkerAdditionalOptions>
+    <SuppressIces>ICE17</SuppressIces>
+    <SuppressAllWarnings>False</SuppressAllWarnings>
+    <Pedantic>False</Pedantic>
+    <SuppressValidation>True</SuppressValidation>
+    <SuppressPdbOutput>True</SuppressPdbOutput>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="myProjectOutputFiles.wxs" />
+    <Compile Include="Product.wxs" />
+    <Compile Include="WebArcelorMittal.wxs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Configuration.wxi" />
+    <Content Include="FileFilter.xsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Server\Inspect.WebApi.Host\Inspect.WebApi.Host.csproj">
+      <Name>myProjectOutput</Name>
+      <Project>{b34a261c-9c48-4e7c-96d8-0096e4a374e2}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(WixTargetsPath)" />
+  <!--
+	To modify your build process, add your task inside one of the targets below and uncomment it.
+	Other similar extension points exist, see Wix.targets.
+	<Target Name="AfterBuild">
+	</Target>
+	-->
+  <Target Name="BeforeBuild">
+    <MSBuild Projects="%(ProjectReference.FullPath)" Targets="Package" Properties="Configuration=$(Configuration);Platform=AnyCPU" />
+    <!-- Define the ProjectReferences properties -->
+    <ItemGroup>
+      <ProjectReferences Include="@(ProjectReference)">
+        <PackageFolder>%(RootDir)%(Directory)obj\$(Configuration)\Package\PackageTmp\</PackageFolder>
+      </ProjectReferences>
+    </ItemGroup>
+    <!-- define the variables for the Wix project -->
+    <CreateItem Include="%(ProjectReferences.Name).PackagePath=%(ProjectReferences.PackageFolder)">
+      <Output ItemName="ProjectReferencePackagePathProperties" TaskParameter="Include" />
+    </CreateItem>
+    <Message Text="ProjectReferencePackagePathProperties: @(ProjectReferencePackagePathProperties)" Importance="high" />
+    <PropertyGroup>
+      <DefineConstants>@(ProjectReferencePackagePathProperties)</DefineConstants>
+    </PropertyGroup>
+    <ItemGroup>
+      <LinkerBindInputPaths Include="%(ProjectReferences.PackageFolder)" />
+    </ItemGroup>
+    <!-- Generate Wix files -->
+    <Exec Command="attrib -r %(ProjectReferences.Name)Files.wxs" />
+    <HeatDirectory OutputFile="%(ProjectReferences.Name)Files.wxs" Directory="%(ProjectReferences.PackageFolder)" DirectoryRefId="INSTALLDIR" ComponentGroupName="%(ProjectReferences.Name)Files" AutoGenerateGuids="false" GenerateGuidsNow="true" SuppressCom="true" SuppressFragments="true" SuppressRegistry="true" SuppressRootDirectory="true" ToolPath="$(WiXToolPath)" Transforms="FileFilter.xsl" PreprocessorVariable="var.%(ProjectReferences.Name).PackagePath" />
+    <Exec Command="attrib +r %(ProjectReferences.Name)Files.wxs" />
+  </Target>
+</Project>

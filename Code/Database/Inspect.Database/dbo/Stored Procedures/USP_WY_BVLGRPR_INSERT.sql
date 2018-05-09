@@ -1,0 +1,20 @@
+﻿
+CREATE PROC dbo.[USP_WY_BVLGRPR_INSERT]
+  @ID_GR char(50),
+  @ID_TOEP char(50),
+  @ID_PRFL char(50)
+
+AS
+SET NOCOUNT OFF
+
+INSERT INTO [BVLGRPR] (
+  [ID_GR],
+  [ID_TOEP],
+  [ID_PRFL]
+)
+VALUES (
+  @ID_GR,
+  @ID_TOEP,
+  @ID_PRFL
+)
+

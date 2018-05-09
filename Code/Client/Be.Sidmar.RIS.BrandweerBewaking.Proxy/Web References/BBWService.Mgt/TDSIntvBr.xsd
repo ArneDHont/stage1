@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/TDSIntvBr.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/TDSIntvBr.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/TDSIntvBr.xsd" id="TDSIntvBr" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:Locale="en-US" name="TDSIntvBr">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BBINTVBR">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_INTV_BRDW" type="xs:int" />
+              <xs:element minOccurs="0" name="ID_TY_INTV" type="xs:int" />
+              <xs:element minOccurs="0" name="SCF_TY_INTV" type="xs:string" />
+              <xs:element minOccurs="0" name="VLG_TY_INTV_JR" type="xs:int" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="YEAR" type="xs:int" />
+              <xs:element minOccurs="0" name="TMS_INTV" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="KRT_AFD" type="xs:string" />
+              <xs:element minOccurs="0" name="PLA_INTV" type="xs:string" />
+              <xs:element minOccurs="0" name="SCF_BR_TY_INTV" type="xs:string" />
+              <xs:element minOccurs="0" name="SCF_BR_RD_INTV" type="xs:string" />
+              <xs:element minOccurs="0" name="INDI_BRD_BLUS_AFD" type="xs:boolean" />
+              <xs:element minOccurs="0" name="INDI_BRD_BLUS_SID" type="xs:boolean" />
+              <xs:element minOccurs="0" name="INDI_BRDW_SID_OPR" type="xs:boolean" />
+              <xs:element minOccurs="0" name="INDI_RAP_INC_OTV" type="xs:boolean" />
+              <xs:element minOccurs="0" name="DT_VZ_RAP_NW" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DT_OK" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DT_VZ_BST" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="FireCauseExtraInfoId" type="xs:int" />
+              <xs:element minOccurs="0" name="FireCauseExtraInfo" type="xs:string" />
+              <xs:element minOccurs="0" name="VeraReference" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

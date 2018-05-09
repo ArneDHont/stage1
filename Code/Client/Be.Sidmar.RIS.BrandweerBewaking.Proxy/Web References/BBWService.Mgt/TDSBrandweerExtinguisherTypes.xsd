@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/TDSBrandweerExtinguisherTypes.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/TDSBrandweerExtinguisherTypes.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/TDSBrandweerExtinguisherTypes.xsd" id="TDSBrandweerExtinguisherTypes" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="TDSBrandweerExtinguisherTypes">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TypeBlustoestel">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="SoortTypeMatID" type="xs:int" />
+              <xs:element minOccurs="0" name="TypeMatID" type="xs:int" />
+              <xs:element minOccurs="0" name="BrandblusCodeID" type="xs:int" />
+              <xs:element minOccurs="0" name="BrandblusInhoud" type="xs:unsignedByte" />
+              <xs:element minOccurs="0" name="SoortTypeMatOmschr">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="BrandblusCode">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="BrandblusCodeID" type="xs:int" />
+              <xs:element minOccurs="0" name="BrandblusCodeOmschr">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="GroteControleFreq" type="xs:short" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:TypeBlustoestel" />
+      <xs:field xpath="mstns:SoortTypeMatID" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="BrandblusCode_Constraint1">
+      <xs:selector xpath=".//mstns:BrandblusCode" />
+      <xs:field xpath="mstns:BrandblusCodeID" />
+    </xs:unique>
+    <xs:keyref msdata:ConstraintOnly="true" msdata:UpdateRule="None" msdata:DeleteRule="None" name="FK_BrandblusCode_TypeBlustoestel" refer="mstns:BrandblusCode_Constraint1">
+      <xs:selector xpath=".//mstns:TypeBlustoestel" />
+      <xs:field xpath="mstns:BrandblusCodeID" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

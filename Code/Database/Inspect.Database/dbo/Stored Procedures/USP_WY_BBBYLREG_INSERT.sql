@@ -1,0 +1,20 @@
+﻿
+CREATE PROC dbo.[USP_WY_BBBYLREG_INSERT]
+  @ID_BYLG_REG int,
+  @ID_REG int=NULL,
+  @PLA_BYLG varchar(50)=NULL
+
+AS
+SET NOCOUNT OFF
+
+INSERT INTO [BBBYLREG] (
+  [ID_BYLG_REG],
+  [ID_REG],
+  [PLA_BYLG]
+)
+VALUES (
+  @ID_BYLG_REG,
+  @ID_REG,
+  @PLA_BYLG
+)
+

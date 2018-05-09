@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseName>BBW</TargetDatabaseName>
+    <DeployScriptFileName>Inspect.Database.sql</DeployScriptFileName>
+    <TargetConnectionString>Data Source=DBBBWDVLP;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Connect Timeout=60;Encrypt=False;TrustServerCertificate=True</TargetConnectionString>
+    <ProfileVersionNumber>1</ProfileVersionNumber>
+    <BlockOnPossibleDataLoss>True</BlockOnPossibleDataLoss>
+    <IgnoreExtendedProperties>True</IgnoreExtendedProperties>
+    <DropExtendedPropertiesNotInSource>False</DropExtendedPropertiesNotInSource>
+    <DropDmlTriggersNotInSource>False</DropDmlTriggersNotInSource>
+    <DropConstraintsNotInSource>False</DropConstraintsNotInSource>
+    <DropIndexesNotInSource>False</DropIndexesNotInSource>
+    <ScriptDatabaseOptions>False</ScriptDatabaseOptions>
+    <ExcludeDatabaseTriggers>True</ExcludeDatabaseTriggers>
+    <DropObjectsNotInSource>True</DropObjectsNotInSource>
+    <DoNotDropApplicationRoles>False</DoNotDropApplicationRoles>
+    <DoNotDropDatabaseRoles>True</DoNotDropDatabaseRoles>
+    <DoNotDropDatabaseTriggers>True</DoNotDropDatabaseTriggers>
+    <DoNotDropDefaults>False</DoNotDropDefaults>
+    <DropRoleMembersNotInSource>False</DropRoleMembersNotInSource>
+    <DropPermissionsNotInSource>False</DropPermissionsNotInSource>
+    <DoNotDropPermissions>True</DoNotDropPermissions>
+    <DoNotDropLogins>True</DoNotDropLogins>
+    <DoNotDropRoleMembership>True</DoNotDropRoleMembership>
+    <DoNotDropUsers>True</DoNotDropUsers>
+  </PropertyGroup>
+</Project>

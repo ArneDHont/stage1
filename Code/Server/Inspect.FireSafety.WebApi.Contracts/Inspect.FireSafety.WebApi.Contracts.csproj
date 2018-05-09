@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{02221015-68E5-4EBD-899B-687828BA42B8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Inspect.FireSafety.WebApi</RootNamespace>
+    <AssemblyName>Inspect.FireSafety.WebApi.Contracts</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile44</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .NET Framework is automatically included -->
+    <ProjectReference Include="..\..\Shared\Inspect.Framework.Hypermedia\Inspect.Framework.Hypermedia.csproj">
+      <Project>{279768b3-4659-4691-ab15-fffd09c6ddb8}</Project>
+      <Name>Inspect.Framework.Hypermedia</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EquipmentTypes\EquipmentTypeCollectionParameters.cs" />
+    <Compile Include="EquipmentTypes\EquipmentTypeParameters.cs" />
+    <Compile Include="EquipmentTypes\EquipmentTypeRepresentation.cs" />
+    <Compile Include="InspectionEquipmentFeedbacks\HypermediaLinks.cs" />
+    <Compile Include="InspectionEquipmentFeedbacks\InspectionEquipmentFeedbackAttachmentRepresentation.cs" />
+    <Compile Include="InspectionEquipmentFeedbacks\InspectionEquipmentFeedbackAttachmentRepresentationForCreation.cs" />
+    <Compile Include="Equipment\EquipmentCollectionParameters.cs" />
+    <Compile Include="Equipment\EquipmentIdentificationRepresentation.cs" />
+    <Compile Include="Equipment\EquipmentLocationRepresentation.cs" />
+    <Compile Include="Equipment\EquipmentParameters.cs" />
+    <Compile Include="Equipment\EquipmentRepresentation.cs" />
+    <Compile Include="Equipment\HypermediaLinks.cs" />
+    <Compile Include="Equipment\LocationRepresentation.cs" />
+    <Compile Include="Equipment\OrganisationUnitRepresentation.cs" />
+    <Compile Include="FeedbackTypes\FeedbackTypeCollectionParameters.cs" />
+    <Compile Include="FeedbackTypes\FeedbackTypeParameters.cs" />
+    <Compile Include="FeedbackTypes\FeedbackTypeRepresentation.cs" />
+    <Compile Include="Hypermedia.cs" />
+    <Compile Include="InspectionEquipmentFeedbacks\InspectionEquipmentFeedbackCollectionParameters.cs" />
+    <Compile Include="InspectionEquipmentFeedbacks\InspectionEquipmentFeedbackParameters.cs" />
+    <Compile Include="InspectionEquipmentFeedbacks\InspectionEquipmentFeedbackRepresentation.cs" />
+    <Compile Include="InspectionEquipmentFeedbacks\InspectionEquipmentFeedbackRepresentationForCreation.cs" />
+    <Compile Include="InspectionSummary\EquipmentReportItemRepresentation.cs" />
+    <Compile Include="InspectionSummary\InspectionSummaryRepresentation.cs" />
+    <Compile Include="InspectionSummary\InspectionSummaryRepresentationForCreation.cs" />
+    <Compile Include="Inspections\InspectionCollectionParameters.cs" />
+    <Compile Include="Inspections\InspectionRepresentation.cs" />
+    <Compile Include="Locations\LocationCollectionParameters.cs" />
+    <Compile Include="Locations\LocationRepresentation.cs" />
+    <Compile Include="OrganisationUnits\HypermediaLinks.cs" />
+    <Compile Include="OrganisationUnits\OrganisationUnitCollectionParameters.cs" />
+    <Compile Include="OrganisationUnits\OrganisationUnitParameters.cs" />
+    <Compile Include="OrganisationUnits\OrganisationUnitRepresentation.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Users\UserCollectionParameters.cs" />
+    <Compile Include="Users\UserParameters.cs" />
+    <Compile Include="Users\UserRepresentation.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\References\Newtonsoft.Json.11.0.1\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+</Project>

@@ -1,0 +1,10 @@
+﻿
+CREATE PROC dbo.[USP_WY_BBINDGSL_DELETE]
+  @Original_ID_GSL_IND int --Primary Key Field
+
+AS
+SET NOCOUNT OFF
+
+DELETE FROM [BBINDGSL]
+WHERE [ID_GSL_IND] = @Original_ID_GSL_IND
+

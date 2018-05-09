@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TDSBrandweerMateriaal" targetNamespace="http://tempuri.org/TDSBrandweerMateriaal.xsd" xmlns:mstns="http://tempuri.org/TDSBrandweerMateriaal.xsd" xmlns="http://tempuri.org/TDSBrandweerMateriaal.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="bbwConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="bbwConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Be.Sidmar.RIS.BrandweerBewaking.BS.My.MySettings.GlobalReference.Default.bbwConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TDSBrandweerMateriaal" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="TDSBrandweerMateriaal" msprop:Generator_UserDSName="TDSBrandweerMateriaal">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BrandweerMateriaal" msprop:Generator_TableClassName="BrandweerMateriaalDataTable" msprop:Generator_TableVarName="tableBrandweerMateriaal" msprop:Generator_RowChangedName="BrandweerMateriaalRowChanged" msprop:Generator_TablePropName="BrandweerMateriaal" msprop:Generator_RowDeletingName="BrandweerMateriaalRowDeleting" msprop:Generator_RowChangingName="BrandweerMateriaalRowChanging" msprop:Generator_RowEvHandlerName="BrandweerMateriaalRowChangeEventHandler" msprop:Generator_RowDeletedName="BrandweerMateriaalRowDeleted" msprop:Generator_RowClassName="BrandweerMateriaalRow" msprop:Generator_UserTableName="BrandweerMateriaal" msprop:Generator_RowEvArgName="BrandweerMateriaalRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TypeMatID" msprop:Generator_ColumnVarNameInTable="columnTypeMatID" msprop:Generator_ColumnPropNameInRow="TypeMatID" msprop:Generator_ColumnPropNameInTable="TypeMatIDColumn" msprop:Generator_UserColumnName="TypeMatID" type="xs:int" />
+              <xs:element name="MateriaalVolgNr" msprop:Generator_ColumnVarNameInTable="columnMateriaalVolgNr" msprop:Generator_ColumnPropNameInRow="MateriaalVolgNr" msprop:Generator_ColumnPropNameInTable="MateriaalVolgNrColumn" msprop:Generator_UserColumnName="MateriaalVolgNr" type="xs:int" />
+              <xs:element name="TypeMatOmschr" msprop:Generator_ColumnVarNameInTable="columnTypeMatOmschr" msprop:Generator_ColumnPropNameInRow="TypeMatOmschr" msprop:Generator_ColumnPropNameInTable="TypeMatOmschrColumn" msprop:Generator_UserColumnName="TypeMatOmschr" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SoortTypeMatOmschr" msprop:Generator_ColumnVarNameInTable="columnSoortTypeMatOmschr" msprop:Generator_ColumnPropNameInRow="SoortTypeMatOmschr" msprop:Generator_ColumnPropNameInTable="SoortTypeMatOmschrColumn" msprop:Generator_UserColumnName="SoortTypeMatOmschr" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FabricatieNr" msprop:Generator_ColumnVarNameInTable="columnFabricatieNr" msprop:Generator_ColumnPropNameInRow="FabricatieNr" msprop:Generator_ColumnPropNameInTable="FabricatieNrColumn" msprop:Generator_UserColumnName="FabricatieNr" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AfdelingCode" msprop:Generator_ColumnVarNameInTable="columnAfdelingCode" msprop:Generator_ColumnPropNameInRow="AfdelingCode" msprop:Generator_ColumnPropNameInTable="AfdelingCodeColumn" msprop:Generator_UserColumnName="AfdelingCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LocatieZone" msprop:Generator_ColumnVarNameInTable="columnLocatieZone" msprop:Generator_ColumnPropNameInRow="LocatieZone" msprop:Generator_ColumnPropNameInTable="LocatieZoneColumn" msprop:Generator_UserColumnName="LocatieZone" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LocatieNr" msprop:Generator_ColumnVarNameInTable="columnLocatieNr" msprop:Generator_ColumnPropNameInRow="LocatieNr" msprop:Generator_ColumnPropNameInTable="LocatieNrColumn" msprop:Generator_UserColumnName="LocatieNr" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LocatieOmschr" msprop:Generator_ColumnVarNameInTable="columnLocatieOmschr" msprop:Generator_ColumnPropNameInRow="LocatieOmschr" msprop:Generator_ColumnPropNameInTable="LocatieOmschrColumn" msprop:Generator_UserColumnName="LocatieOmschr" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NaamLeverancier" msprop:Generator_ColumnVarNameInTable="columnNaamLeverancier" msprop:Generator_ColumnPropNameInRow="NaamLeverancier" msprop:Generator_ColumnPropNameInTable="NaamLeverancierColumn" msprop:Generator_UserColumnName="NaamLeverancier" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BeheerderAfdelingNaam" msprop:Generator_ColumnVarNameInTable="columnBeheerderAfdelingNaam" msprop:Generator_ColumnPropNameInRow="BeheerderAfdelingNaam" msprop:Generator_ColumnPropNameInTable="BeheerderAfdelingNaamColumn" msprop:Generator_UserColumnName="BeheerderAfdelingNaam" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LeveringsDatum" msprop:Generator_ColumnVarNameInTable="columnLeveringsDatum" msprop:Generator_ColumnPropNameInRow="LeveringsDatum" msprop:Generator_ColumnPropNameInTable="LeveringsDatumColumn" msprop:Generator_UserColumnName="LeveringsDatum" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="VisueleControleFreq" msprop:Generator_ColumnVarNameInTable="columnVisueleControleFreq" msprop:Generator_ColumnPropNameInRow="VisueleControleFreq" msprop:Generator_ColumnPropNameInTable="VisueleControleFreqColumn" msprop:Generator_UserColumnName="VisueleControleFreq" type="xs:short" minOccurs="0" />
+              <xs:element name="DatumVisueleKeuring" msprop:Generator_ColumnVarNameInTable="columnDatumVisueleKeuring" msprop:Generator_ColumnPropNameInRow="DatumVisueleKeuring" msprop:Generator_ColumnPropNameInTable="DatumVisueleKeuringColumn" msprop:Generator_UserColumnName="DatumVisueleKeuring" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status" type="xs:string" minOccurs="0" />
+              <xs:element name="DatumPoederControle" msprop:Generator_ColumnVarNameInTable="columnDatumPoederControle" msprop:Generator_ColumnPropNameInRow="DatumPoederControle" msprop:Generator_ColumnPropNameInTable="DatumPoederControleColumn" msprop:Generator_UserColumnName="DatumPoederControle" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DatumHervullingNaGebruik" msprop:Generator_ColumnVarNameInTable="columnDatumHervullingNaGebruik" msprop:Generator_ColumnPropNameInRow="DatumHervullingNaGebruik" msprop:Generator_ColumnPropNameInTable="DatumHervullingNaGebruikColumn" msprop:Generator_UserColumnName="DatumHervullingNaGebruik" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="HervullingGemeld" msprop:Generator_ColumnVarNameInTable="columnHervullingGemeld" msprop:Generator_ColumnPropNameInRow="HervullingGemeld" msprop:Generator_ColumnPropNameInTable="HervullingGemeldColumn" msprop:Generator_UserColumnName="HervullingGemeld" type="xs:string" minOccurs="0" />
+              <xs:element name="BrandblusCodeomschr" msprop:Generator_ColumnVarNameInTable="columnBrandblusCodeomschr" msprop:Generator_ColumnPropNameInRow="BrandblusCodeomschr" msprop:Generator_ColumnPropNameInTable="BrandblusCodeomschrColumn" msprop:Generator_UserColumnName="BrandblusCodeomschr" type="xs:string" minOccurs="0" />
+              <xs:element name="GroteControleFreq" msprop:Generator_ColumnVarNameInTable="columnGroteControleFreq" msprop:Generator_ColumnPropNameInRow="GroteControleFreq" msprop:Generator_ColumnPropNameInTable="GroteControleFreqColumn" msprop:Generator_UserColumnName="GroteControleFreq" type="xs:short" minOccurs="0" />
+              <xs:element name="DatumLaatsteKeuring" msprop:Generator_ColumnVarNameInTable="columnDatumLaatsteKeuring" msprop:Generator_ColumnPropNameInRow="DatumLaatsteKeuring" msprop:Generator_ColumnPropNameInTable="DatumLaatsteKeuringColumn" msprop:Generator_UserColumnName="DatumLaatsteKeuring" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DatumVolgendeKeuring" msprop:Generator_ColumnVarNameInTable="columnDatumVolgendeKeuring" msprop:Generator_ColumnPropNameInRow="DatumVolgendeKeuring" msprop:Generator_ColumnPropNameInTable="DatumVolgendeKeuringColumn" msprop:Generator_UserColumnName="DatumVolgendeKeuring" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="VervangenDoor" msprop:Generator_ColumnVarNameInTable="columnVervangenDoor" msprop:Generator_ColumnPropNameInRow="VervangenDoor" msprop:Generator_ColumnPropNameInTable="VervangenDoorColumn" msprop:Generator_UserColumnName="VervangenDoor" type="xs:int" minOccurs="0" />
+              <xs:element name="DatumHerkeuringLeverancier" msprop:Generator_ColumnVarNameInTable="columnDatumHerkeuringLeverancier" msprop:Generator_ColumnPropNameInRow="DatumHerkeuringLeverancier" msprop:Generator_ColumnPropNameInTable="DatumHerkeuringLeverancierColumn" msprop:Generator_UserColumnName="DatumHerkeuringLeverancier" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="VolgnummerAfdeling" msprop:Generator_ColumnVarNameInTable="columnVolgnummerAfdeling" msprop:Generator_ColumnPropNameInRow="VolgnummerAfdeling" msprop:Generator_ColumnPropNameInTable="VolgnummerAfdelingColumn" msprop:Generator_UserColumnName="VolgnummerAfdeling" type="xs:long" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:BrandweerMateriaal" />
+      <xs:field xpath="mstns:TypeMatID" />
+      <xs:field xpath="mstns:MateriaalVolgNr" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

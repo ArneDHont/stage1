@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/TDSRegistratie.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/TDSRegistratie.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/TDSRegistratie.xsd" id="TDSRegBew" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:Locale="en-US" name="TDSRegBew">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BBBEWREG">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_REG" type="xs:int" />
+              <xs:element minOccurs="0" name="ID_OPS" type="xs:int" />
+              <xs:element minOccurs="0" name="ID_TY_REG" type="xs:int" />
+              <xs:element minOccurs="0" name="TMS_OPS_REG" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="TMS_INC" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="SCF_REG">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="PLA_INC">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="VLG_REG_JR_BPL" type="xs:int" />
+              <xs:element minOccurs="0" name="DT_VZ_RAP_NW" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DT_OK" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DT_VZ_BST" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="OPM_OPS">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="OPM_CHEF_PO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="OPM_HFD_BRW">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DT_OPS_RAP_INTV" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="SAP_SUPPLIER_ID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DT_CHIP" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="OPM_CHIP">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CHIP_YN" type="xs:boolean" />
+              <xs:element minOccurs="0" name="VeraReference" type="xs:string" />
+              <xs:element minOccurs="0" default="false" name="VerslagContractantYN" type="xs:boolean" />
+              <xs:element minOccurs="0" name="TMS_IKP_SENDMAIL" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DateInvalid" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="UserInvalid">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="RemarkInvalid">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:BBBEWREG" />
+      <xs:field xpath="mstns:ID_REG" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

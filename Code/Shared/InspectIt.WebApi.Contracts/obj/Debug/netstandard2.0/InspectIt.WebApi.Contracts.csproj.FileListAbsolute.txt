@@ -1,0 +1,9 @@
+C:\Sources\BBW\Development\Code\Shared\InspectIt.WebApi.Contracts\bin\Debug\netstandard2.0\InspectIt.WebApi.Contracts.deps.json
+C:\Sources\BBW\Development\Code\Shared\InspectIt.WebApi.Contracts\bin\Debug\netstandard2.0\InspectIt.WebApi.Contracts.dll
+C:\Sources\BBW\Development\Code\Shared\InspectIt.WebApi.Contracts\bin\Debug\netstandard2.0\InspectIt.WebApi.Contracts.pdb
+C:\Sources\BBW\Development\Code\Shared\InspectIt.WebApi.Contracts\obj\Debug\netstandard2.0\InspectIt.WebApi.Contracts.csprojResolveAssemblyReference.cache
+C:\Sources\BBW\Development\Code\Shared\InspectIt.WebApi.Contracts\obj\Debug\netstandard2.0\InspectIt.WebApi.Contracts.csproj.CoreCompileInputs.cache
+C:\Sources\BBW\Development\Code\Shared\InspectIt.WebApi.Contracts\obj\Debug\netstandard2.0\InspectIt.WebApi.Contracts.AssemblyInfoInputs.cache
+C:\Sources\BBW\Development\Code\Shared\InspectIt.WebApi.Contracts\obj\Debug\netstandard2.0\InspectIt.WebApi.Contracts.AssemblyInfo.cs
+C:\Sources\BBW\Development\Code\Shared\InspectIt.WebApi.Contracts\obj\Debug\netstandard2.0\InspectIt.WebApi.Contracts.dll
+C:\Sources\BBW\Development\Code\Shared\InspectIt.WebApi.Contracts\obj\Debug\netstandard2.0\InspectIt.WebApi.Contracts.pdb

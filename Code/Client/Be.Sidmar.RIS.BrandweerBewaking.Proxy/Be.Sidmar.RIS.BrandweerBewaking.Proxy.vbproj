@@ -1,0 +1,665 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{17EE629F-D90C-48B6-9818-A8D8C8937452}</ProjectGuid>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Be.Sidmar.RIS.BrandweerBewaking.Proxy</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyMode>None</AssemblyOriginatorKeyMode>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>Off</OptionStrict>
+    <RootNamespace>Be.Sidmar.RIS.BrandweerBewaking.Proxy</RootNamespace>
+    <StartupObject>
+    </StartupObject>
+    <WebReference_EnableProperties>true</WebReference_EnableProperties>
+    <WebReference_EnableSQLTypes>false</WebReference_EnableSQLTypes>
+    <WebReference_EnableLegacyEventingModel>true</WebReference_EnableLegacyEventingModel>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <MyType>Windows</MyType>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>http://localhost/Be.Sidmar.RIS.BrandweerBewaking.Proxy/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Be.Sidmar.RIS.BrandweerBewaking.Proxy.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Be.Sidmar.RIS.BrandweerBewaking.Proxy.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>none</DebugType>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ADF.RemoteServices, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\References\ADF.RemoteServices.9.0.4\lib\NET452\ADF.RemoteServices.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ADF.System, Version=9.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\References\ADF.System.9.0.4\lib\NET452\ADF.System.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Common.Logging, Version=3.4.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\..\References\Common.Logging.3.4.1\lib\net40\Common.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Common.Logging.Core, Version=3.4.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\..\References\Common.Logging.Core.3.4.1\lib\net40\Common.Logging.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HRSServiceManagementProxy.vb" />
+    <Compile Include="Web References\BBWService.Mgt\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\HRSService.HRMData\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="app.transform.config" />
+    <None Include="My Project\Settings.settings">
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Web References\BBWService.Documentum\BBWServices.disco" />
+    <None Include="Web References\BBWService.Documentum\BBWServices.wsdl" />
+    <None Include="Web References\BBWService.Documentum\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\BBWService.Mgt\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\BBWService.Mgt\services.wsdl" />
+    <None Include="Web References\BBWService.Mgt\TDSAanrijding.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSAanrijding1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSAanspreektitel.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSAanspreektitel1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSAarden.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSAarden1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSAfdelingen.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSAfdelingen1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSAlcoholtest.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSAlcoholtest1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSArtikelgroep.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSArtikelgroep1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSBBAFDAMC.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSBBAFDAMC1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSBBBestemmelingen.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSBBBestemmelingen1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSBBBRPers.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSBBBRPers1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSBBBSTBY.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSBBBSTBY1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSBBBTROGV.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSBBBTROGV1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSBBBWPERS.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSBBBWPERS1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSBBWAKPers.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSBBWAKPers1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSBeheerAFDAMC.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSBeheerAFDAMC1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSBewakingDup.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSBewakingDup1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSBewakingSnelheidSanction.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSBewakingSnelheidSanction1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSBewakingSnelheidSanctionMatrix.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSBewakingSnelheidSanctionMatrix1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSBrandenPerAfdeling.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSBrandenPerAfdeling1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSBrandweerActie.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSBrandweerActie1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSBrandweerAfdelingen.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSBrandweerAfdelingen1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSBrandweerAfdelingMateriaal.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSBrandweerAfdelingMateriaal1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSBrandweerBeheerderAfdeling.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSBrandweerBeheerderAfdeling1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSBrandweerExtinguisherTypes.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSBrandweerExtinguisherTypes1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSBrandweerInkoop.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSBrandweerInkoop.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSBrandweerLeveranciers.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSBrandweerLeveranciers1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSBrandweerMateriaal.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSBrandweerMateriaal1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSBrandweerMateriaalActie.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSBrandweerMateriaalActie1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSBrandweerMateriaalBeheerderAfdeling.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSBrandweerMateriaalBeheerderAfdeling1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSBrandweerMateriaalControleLijst.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSBrandweerMateriaalControleLijst1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSBrandweerMateriaalItem.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSBrandweerMateriaalItem1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSBrandweerMateriaalTypes.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSBrandweerMateriaalTypes1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSBrandweerReportHervuldeBlustoestellen.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSBrandweerReportHervuldeBlustoestellen1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSBrandweerStatus.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSBrandweerStatus1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSBrandweerVerzending.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSBrandweerVerzending1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSBrandweerVerzendingLijst.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSBrandweerVerzendingLijst1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSBriefSnelheidsovertredingInfo.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSBriefSnelheidsovertredingInfo1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSChipKlachten.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSChipKlachten1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSConfiguratie.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSConfiguratie1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSControleVoertuig.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSControleVoertuig1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSDagverslagInlichtingen.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSDagverslagInlichtingen1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSDagverslagInlichtingType.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSDagverslagInlichtingType1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSDagverslagPersoneel.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSDagverslagPersoneel1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSDagverslagRegistratieType.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSDagverslagRegistratieType1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSDiefDup.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSDiefDup1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSDiefstal.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSDiefstal1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSDienstverslagAfdelingen.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSDienstverslagAfdelingen1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSDienstVerslagDetail.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSDienstVerslagDetail1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSDienstverslagDetailActies.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSDienstverslagDetailActies1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSDienstVerslagDetailOversten.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSDienstVerslagDetailOversten1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSDienstVerslagDetailTeamMembers.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSDienstVerslagDetailTeamMembers1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSDienstVerslagDetailTeams.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSDienstVerslagDetailTeams1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSDienstverslagLijst.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSDienstverslagLijst1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSDienstverslagMaanden.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSDienstverslagMaanden1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSDivRegistratie.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSDivRegistratie1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSEenheden.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSEenheden1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSFirmas.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSFirmas1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSGebruikVoertuig.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSGebruikVoertuig1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSInbrArt.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSInbrArt1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSInbreukRegl.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSInbreukRegl1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSInbrIndTy.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSInbrIndTy1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSInbrType.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSInbrType1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSIndividuen.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSIndividuen1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSIndividuType.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSIndividuType1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSInkoop.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSInkoop1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSInkoopFirmaCHIP.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSInkoopFirmaCHIP.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSInterventie.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSInterventie1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSIntvArt.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSIntvArt1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSIntvBr.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSIntvBr1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSIntvType.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSIntvType1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSLijstInbreukRegl.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSLijstInbreukRegl1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSOorzaken.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSOorzaken1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSOpenKleerkast.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSOpenKleerkast1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSOvertreding.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSOvertreding.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSPloeg.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSPloeg1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSRegBew.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSRegBew1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSRegType.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSRegType1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSScadObjecten.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSScadObjecten1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSSchadegeval.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSSchadegeval1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSSnelheidsOvertredingen.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSSnelheidsOvertredingen1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSToestanden.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSToestanden1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSToestandType.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSToestandType1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSTrimesterDiefstal.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSTrimesterDiefstal1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSTypeBetrokkene.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSTypeBetrokkene1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSVastgesteldeInbreuken.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSVastgesteldeInbreuken1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSVaststellerAanrijding.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSVaststellerAanrijding1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSVerbruiksArtikel.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSVerbruiksArtikel1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSVerzFirmas.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSVerzFirmas1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSVoertuigen.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSVoertuigen1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSVoertuigTypes.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSVoertuigTypes1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BBWService.Mgt\TDSWerfVoertuig.xsd" />
+    <None Include="Web References\BBWService.Mgt\TDSWerfVoertuig1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HRMservice.Firma\services.wsdl" />
+    <None Include="Web References\HRMservice.Firma\tdsFirma.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Compile Include="AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BBWServiceDocumentumProxy.vb">
+      <SubType>code</SubType>
+    </Compile>
+    <Compile Include="BBWServiceManagementProxy.vb">
+      <SubType>code</SubType>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\BBWService.Documentum\Reference.vb">
+      <DependentUpon>Reference.map</DependentUpon>
+      <SubType>code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Web References\HRMservice.Firma\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <None Include="Web References\HRSService.HRMData\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\HRSService.HRMData\Services.wsdl" />
+    <None Include="Web References\HRSService.HRMData\TDSdspers.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HRSService.HRMData\TDSdspers.xsd" />
+    <None Include="Web References\HRSService.HRMData\TDSEntranceExam.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HRSService.HRMData\TDSEntranceExam.xsd" />
+    <None Include="Web References\HRSService.HRMData\TDSPBMData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HRSService.HRMData\TDSPBMData.xsd" />
+    <None Include="Web References\HRSService.HRMData\TDSwerknemer.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HRSService.HRMData\TDSwerknemer.xsd" />
+    <WebReferenceUrl Include="http://localhost/BBWService.Management/Services.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\BBWService.Mgt\</RelPath>
+      <UpdateFromURL>http://localhost/BBWService.Management/Services.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Be_Sidmar_RIS_BrandweerBewaking_Proxy_B_Services</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://svsim045.sidmar.be/DocService.DocInfo/BBWServices.asmx">
+      <RelPath>Web References\BBWService.Documentum\</RelPath>
+      <UrlBehavior>Static</UrlBehavior>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://wfhrmprod.sidmar.be/hrmservice.firma/services.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\HRMservice.Firma\</RelPath>
+      <UpdateFromURL>http://wfhrmprod.sidmar.be/hrmservice.firma/services.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Be_Sidmar_RIS_BrandweerBewaking_Proxy_HRMservice_Firma_Services</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferences Include="Web References\" />
+    <WebReferenceUrl Include="http://wfhrsprod.sidmar.be/HRSService.HRMData/Services.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\HRSService.HRMData\</RelPath>
+      <UpdateFromURL>http://wfhrsprod.sidmar.be/HRSService.HRMData/Services.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Be_Sidmar_RIS_BrandweerBewaking_Proxy_HRSService_HRMData_Services</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\HRMservice.Firma\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\HRMservice.Firma\services.disco" />
+    <None Include="Web References\HRMservice.Firma\tdsFirma.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\HRSService.HRMData\Services.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\BBWService.Mgt\services.disco" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/TDSBriefSnelheidsovertredingInfo.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/TDSBriefSnelheidsovertredingInfo.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/TDSBriefSnelheidsovertredingInfo.xsd" id="TDSBriefSnelheidsovertredingInfo" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="TDSBriefSnelheidsovertredingInfo">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Info">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="DriverName" type="xs:string" />
+              <xs:element minOccurs="0" name="LicensePlate" type="xs:string" />
+              <xs:element minOccurs="0" name="VehiculeType" type="xs:string" />
+              <xs:element minOccurs="0" name="MeasuredSpeed" type="xs:int" />
+              <xs:element minOccurs="0" name="MaximumSpeed" type="xs:int" />
+              <xs:element minOccurs="0" name="Aantal" type="xs:int" />
+              <xs:element minOccurs="0" name="Taal" type="xs:string" />
+              <xs:element minOccurs="0" name="IdFirma" type="xs:int" />
+              <xs:element minOccurs="0" name="NaamFirma" type="xs:string" />
+              <xs:element minOccurs="0" name="AdresFirma" type="xs:string" />
+              <xs:element minOccurs="0" name="PostNrFirma" type="xs:string" />
+              <xs:element minOccurs="0" name="PlaatsFirma" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

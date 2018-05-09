@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TDSBrandweerLeveranciers" targetNamespace="http://tempuri.org/TDSBrandweerLeveranciers.xsd" xmlns:mstns="http://tempuri.org/TDSBrandweerLeveranciers.xsd" xmlns="http://tempuri.org/TDSBrandweerLeveranciers.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="bbwConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="bbwConnectionString1 (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Be.Sidmar.RIS.BrandweerBewaking.Client.My.MySettings.GlobalReference.Default.bbwConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TDSBrandweerLeveranciers" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="TDSBrandweerLeveranciers" msprop:Generator_UserDSName="TDSBrandweerLeveranciers">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Leverancier" msprop:Generator_TableClassName="LeverancierDataTable" msprop:Generator_TableVarName="tableLeverancier" msprop:Generator_TablePropName="Leverancier" msprop:Generator_RowDeletingName="LeverancierRowDeleting" msprop:Generator_UserTableName="Leverancier" msprop:Generator_RowChangingName="LeverancierRowChanging" msprop:Generator_RowEvHandlerName="LeverancierRowChangeEventHandler" msprop:Generator_RowDeletedName="LeverancierRowDeleted" msprop:Generator_RowEvArgName="LeverancierRowChangeEvent" msprop:Generator_RowChangedName="LeverancierRowChanged" msprop:Generator_RowClassName="LeverancierRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="LeverancierID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnLeverancierID" msprop:Generator_ColumnPropNameInRow="LeverancierID" msprop:Generator_ColumnPropNameInTable="LeverancierIDColumn" msprop:Generator_UserColumnName="LeverancierID" type="xs:int" />
+              <xs:element name="NaamLeverancier" msprop:Generator_ColumnVarNameInTable="columnNaamLeverancier" msprop:Generator_ColumnPropNameInRow="NaamLeverancier" msprop:Generator_ColumnPropNameInTable="NaamLeverancierColumn" msprop:Generator_UserColumnName="NaamLeverancier" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Leverancier" />
+      <xs:field xpath="mstns:LeverancierID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

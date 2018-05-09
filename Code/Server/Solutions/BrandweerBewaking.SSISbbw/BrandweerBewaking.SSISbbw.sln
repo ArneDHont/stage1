@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "BrandweerBewaking.SSISbbw", "..\..\BrandweerBewaking.SSISbbw\BrandweerBewaking.SSISbbw.dtproj", "{564029D8-AABF-40E6-8750-0A38A62B4471}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://wftfsprod.sidmar.be:8080/tfs/inf
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ..\\..\\BrandweerBewaking.SSISbbw\\BrandweerBewaking.SSISbbw.dtproj
+		SccProjectName1 = ../../BrandweerBewaking.SSISbbw
+		SccLocalPath1 = ..\\..\\BrandweerBewaking.SSISbbw
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{564029D8-AABF-40E6-8750-0A38A62B4471}.Development|Default.ActiveCfg = Development
+		{564029D8-AABF-40E6-8750-0A38A62B4471}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

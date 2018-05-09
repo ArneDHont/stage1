@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/TDSBrandweerMateriaalItem.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/TDSBrandweerMateriaalItem.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/TDSBrandweerMateriaalItem.xsd" id="TDSBrandweerMateriaalItem" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="TDSBrandweerMateriaalItem">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Materiaal">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TypeMatID" type="xs:int" />
+              <xs:element name="MateriaalVolgNr" type="xs:int" />
+              <xs:element minOccurs="0" name="LocatieID" type="xs:int" />
+              <xs:element minOccurs="0" name="LocatieNr">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="LocatieOmschr">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="VisueleControleFreq" type="xs:short" />
+              <xs:element minOccurs="0" name="BeheerderID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SoortTypeMatID" type="xs:int" />
+              <xs:element minOccurs="0" name="LeverancierID" type="xs:int" />
+              <xs:element minOccurs="0" name="FabricatieNr">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="LeveringsDatum" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DatumLaatsteKeuring" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DatumVisueleKeuring" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DatumPoederControle" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DatumVolgendePoederControle" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DatumHervullingNaGebruik" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="HervullingGemeld" type="xs:unsignedByte" />
+              <xs:element minOccurs="0" name="DatumHerkeuringLeverancier" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="VervangenDoor" type="xs:int" />
+              <xs:element minOccurs="0" name="Opmerking">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="GecontroleerdYN" type="xs:boolean" />
+              <xs:element minOccurs="0" name="GecontroleerdPoederYN" type="xs:boolean" />
+              <xs:element minOccurs="0" name="BeheerderAfdelingID" type="xs:int" />
+              <xs:element minOccurs="0" name="VolgnummerAfdeling" type="xs:int" />
+              <xs:element minOccurs="0" name="StatusId" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:Materiaal" />
+      <xs:field xpath="mstns:TypeMatID" />
+      <xs:field xpath="mstns:MateriaalVolgNr" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

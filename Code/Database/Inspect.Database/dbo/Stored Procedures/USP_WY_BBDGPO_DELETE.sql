@@ -1,0 +1,10 @@
+﻿
+CREATE PROC dbo.[USP_WY_BBDGPO_DELETE]
+  @Original_ID_DG_PO int --Primary Key Field
+
+AS
+SET NOCOUNT OFF
+
+DELETE FROM [BBDGPO]
+WHERE [ID_DG_PO] = @Original_ID_DG_PO
+

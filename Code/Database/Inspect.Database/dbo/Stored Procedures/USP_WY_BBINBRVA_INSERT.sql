@@ -1,0 +1,24 @@
+﻿
+CREATE PROC dbo.[USP_WY_BBINBRVA_INSERT]
+  @ID_INBRVA int,
+  @ID_REG int,
+  @ID_ART_INBR int=NULL,
+  @SNL_OK int=NULL,
+  @SNL_REG int=NULL
+
+AS
+SET NOCOUNT OFF
+
+INSERT INTO [BBINBRVA] (
+  [ID_REG],
+  [ID_ART_INBR],
+  [SNL_OK],
+  [SNL_REG]
+)
+VALUES (
+  @ID_REG,
+  @ID_ART_INBR,
+  @SNL_OK,
+  @SNL_REG
+)
+

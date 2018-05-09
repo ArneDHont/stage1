@@ -1,0 +1,10 @@
+﻿
+CREATE PROC dbo.[USP_WY_BBOGVBTR_DELETE]
+  @Original_ID_BTRK_OGV int --Primary Key Field
+
+AS
+SET NOCOUNT OFF
+
+DELETE FROM [BBOGVBTR]
+WHERE [ID_BTRK_OGV] = @Original_ID_BTRK_OGV
+

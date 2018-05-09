@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/TDSFirmas.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/TDSFirmas.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/TDSFirmas.xsd" id="TDSFirmas" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:Locale="en-US" name="TDSFirmas">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BBFRM">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_FRM" type="xs:int" />
+              <xs:element minOccurs="0" name="NM_FRM" type="xs:string" />
+              <xs:element minOccurs="0" name="STRA_FRM" type="xs:string" />
+              <xs:element minOccurs="0" name="PO_COD_PLA_FRM" type="xs:string" />
+              <xs:element minOccurs="0" name="PLA_FRM" type="xs:string" />
+              <xs:element minOccurs="0" name="NR_IND_FRM_SAP" type="xs:int" />
+              <xs:element minOccurs="0" name="NM_FRM_SAP">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="TDSFirmasKey1">
+      <xs:selector xpath=".//mstns:BBFRM" />
+      <xs:field xpath="mstns:ID_FRM" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

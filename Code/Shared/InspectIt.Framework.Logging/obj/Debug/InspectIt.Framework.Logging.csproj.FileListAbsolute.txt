@@ -1,0 +1,6 @@
+C:\Sources\BBW\Development\Code\Shared\InspectIt.Framework.Logging\bin\Debug\InspectIt.Framework.Logging.dll
+C:\Sources\BBW\Development\Code\Shared\InspectIt.Framework.Logging\bin\Debug\InspectIt.Framework.Logging.pdb
+C:\Sources\BBW\Development\Code\Shared\InspectIt.Framework.Logging\obj\Debug\InspectIt.Framework.Logging.csprojResolveAssemblyReference.cache
+C:\Sources\BBW\Development\Code\Shared\InspectIt.Framework.Logging\obj\Debug\InspectIt.Framework.Logging.csproj.CoreCompileInputs.cache
+C:\Sources\BBW\Development\Code\Shared\InspectIt.Framework.Logging\obj\Debug\InspectIt.Framework.Logging.dll
+C:\Sources\BBW\Development\Code\Shared\InspectIt.Framework.Logging\obj\Debug\InspectIt.Framework.Logging.pdb

@@ -1,0 +1,17 @@
+﻿
+CREATE PROC dbo.[USP_WY_BBINTVBYLG_UPDATE]
+  @ID_BYLG_INTV int,
+  @ID_INTV_BRDW int=NULL,
+  @PLA_BYLG varchar(50)=NULL,
+  @OPM varchar(1000)=NULL,
+  @Original_ID_BYLG_INTV int --Primary Key Field
+
+AS
+SET NOCOUNT OFF
+
+UPDATE [BBINTVBYLG] SET
+  [ID_INTV_BRDW] = @ID_INTV_BRDW,
+  [PLA_BYLG] = @PLA_BYLG,
+  [OPM] = @OPM
+WHERE [ID_BYLG_INTV] = @Original_ID_BYLG_INTV
+

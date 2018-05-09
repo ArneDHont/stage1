@@ -1,0 +1,10 @@
+﻿
+CREATE PROC dbo.[USP_WY_BBAFD_DELETE]
+  @Original_ID_AFD int --Primary Key Field
+
+AS
+SET NOCOUNT OFF
+
+DELETE FROM [BBAFD]
+WHERE [ID_AFD] = @Original_ID_AFD
+

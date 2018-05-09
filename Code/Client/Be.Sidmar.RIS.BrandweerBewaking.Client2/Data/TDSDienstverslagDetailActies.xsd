@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TDSDienstverslagDetailActies" targetNamespace="http://tempuri.org/TDSDienstverslagDetailActies.xsd" xmlns:mstns="http://tempuri.org/TDSDienstverslagDetailActies.xsd" xmlns="http://tempuri.org/TDSDienstverslagDetailActies.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TDSDienstverslagDetailActies" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="TDSDienstverslagDetailActies" msprop:Generator_UserDSName="TDSDienstverslagDetailActies">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Acties" msprop:Generator_TableClassName="ActiesDataTable" msprop:Generator_TableVarName="tableActies" msprop:Generator_TablePropName="Acties" msprop:Generator_RowDeletingName="ActiesRowDeleting" msprop:Generator_UserTableName="Acties" msprop:Generator_RowChangingName="ActiesRowChanging" msprop:Generator_RowEvHandlerName="ActiesRowChangeEventHandler" msprop:Generator_RowDeletedName="ActiesRowDeleted" msprop:Generator_RowEvArgName="ActiesRowChangeEvent" msprop:Generator_RowChangedName="ActiesRowChanged" msprop:Generator_RowClassName="ActiesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ActieCodeGroepId" msprop:Generator_ColumnVarNameInTable="columnActieCodeGroepId" msprop:Generator_ColumnPropNameInRow="ActieCodeGroepId" msprop:Generator_ColumnPropNameInTable="ActieCodeGroepIdColumn" msprop:Generator_UserColumnName="ActieCodeGroepId" type="xs:int" />
+              <xs:element name="ActieCodeId" msprop:Generator_ColumnVarNameInTable="columnActieCodeId" msprop:Generator_ColumnPropNameInRow="ActieCodeId" msprop:Generator_ColumnPropNameInTable="ActieCodeIdColumn" msprop:Generator_UserColumnName="ActieCodeId" type="xs:int" />
+              <xs:element name="ActieOmschr" msprop:Generator_ColumnVarNameInTable="columnActieOmschr" msprop:Generator_ColumnPropNameInRow="ActieOmschr" msprop:Generator_ColumnPropNameInTable="ActieOmschrColumn" msprop:Generator_UserColumnName="ActieOmschr" type="xs:string" minOccurs="0" />
+              <xs:element name="ActieCodeGroepOmschr" msprop:Generator_ColumnVarNameInTable="columnActieCodeGroepOmschr" msprop:Generator_ColumnPropNameInRow="ActieCodeGroepOmschr" msprop:Generator_ColumnPropNameInTable="ActieCodeGroepOmschrColumn" msprop:Generator_UserColumnName="ActieCodeGroepOmschr" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Acties" />
+      <xs:field xpath="mstns:ActieCodeGroepId" />
+      <xs:field xpath="mstns:ActieCodeId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

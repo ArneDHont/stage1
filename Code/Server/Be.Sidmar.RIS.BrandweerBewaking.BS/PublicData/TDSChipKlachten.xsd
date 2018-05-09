@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TDSChipKlachten" targetNamespace="http://tempuri.org/TDSChipKlachten.xsd" xmlns:mstns="http://tempuri.org/TDSChipKlachten.xsd" xmlns="http://tempuri.org/TDSChipKlachten.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="bbwConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="bbwConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Be.Sidmar.RIS.BrandweerBewaking.BS.My.MySettings.GlobalReference.Default.bbwConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TDSChipKlachten" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="TDSChipKlachten" msprop:Generator_UserDSName="TDSChipKlachten">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="VW_CHIP_KLACHTEN" msprop:Generator_UserTableName="VW_CHIP_KLACHTEN" msprop:Generator_RowEvArgName="VW_CHIP_KLACHTENRowChangeEvent" msprop:Generator_TableVarName="tableVW_CHIP_KLACHTEN" msprop:Generator_TablePropName="VW_CHIP_KLACHTEN" msprop:Generator_RowDeletingName="VW_CHIP_KLACHTENRowDeleting" msprop:Generator_RowChangingName="VW_CHIP_KLACHTENRowChanging" msprop:Generator_RowDeletedName="VW_CHIP_KLACHTENRowDeleted" msprop:Generator_RowEvHandlerName="VW_CHIP_KLACHTENRowChangeEventHandler" msprop:Generator_TableClassName="VW_CHIP_KLACHTENDataTable" msprop:Generator_RowChangedName="VW_CHIP_KLACHTENRowChanged" msprop:Generator_RowClassName="VW_CHIP_KLACHTENRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_REG" msprop:Generator_ColumnVarNameInTable="columnID_REG" msprop:Generator_ColumnPropNameInRow="ID_REG" msprop:Generator_ColumnPropNameInTable="ID_REGColumn" msprop:Generator_UserColumnName="ID_REG" type="xs:int" />
+              <xs:element name="TMS_OPS_REG" msprop:Generator_ColumnVarNameInTable="columnTMS_OPS_REG" msprop:Generator_ColumnPropNameInRow="TMS_OPS_REG" msprop:Generator_ColumnPropNameInTable="TMS_OPS_REGColumn" msprop:Generator_UserColumnName="TMS_OPS_REG" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TMS_INC" msprop:Generator_ColumnVarNameInTable="columnTMS_INC" msprop:Generator_ColumnPropNameInRow="TMS_INC" msprop:Generator_ColumnPropNameInTable="TMS_INCColumn" msprop:Generator_UserColumnName="TMS_INC" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TYPE_REG" msprop:Generator_ColumnVarNameInTable="columnTYPE_REG" msprop:Generator_ColumnPropNameInRow="TYPE_REG" msprop:Generator_ColumnPropNameInTable="TYPE_REGColumn" msprop:Generator_UserColumnName="TYPE_REG" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PLA_INC" msprop:Generator_ColumnVarNameInTable="columnPLA_INC" msprop:Generator_ColumnPropNameInRow="PLA_INC" msprop:Generator_ColumnPropNameInTable="PLA_INCColumn" msprop:Generator_UserColumnName="PLA_INC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SCF_REG" msprop:Generator_ColumnVarNameInTable="columnSCF_REG" msprop:Generator_ColumnPropNameInRow="SCF_REG" msprop:Generator_ColumnPropNameInTable="SCF_REGColumn" msprop:Generator_UserColumnName="SCF_REG" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SAP_SUPPLIER_ID" msprop:Generator_ColumnVarNameInTable="columnSAP_SUPPLIER_ID" msprop:Generator_ColumnPropNameInRow="SAP_SUPPLIER_ID" msprop:Generator_ColumnPropNameInTable="SAP_SUPPLIER_IDColumn" msprop:Generator_UserColumnName="SAP_SUPPLIER_ID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DT_CHIP" msprop:Generator_ColumnVarNameInTable="columnDT_CHIP" msprop:Generator_ColumnPropNameInRow="DT_CHIP" msprop:Generator_ColumnPropNameInTable="DT_CHIPColumn" msprop:Generator_UserColumnName="DT_CHIP" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="OPM_CHIP" msprop:Generator_ColumnVarNameInTable="columnOPM_CHIP" msprop:Generator_ColumnPropNameInRow="OPM_CHIP" msprop:Generator_ColumnPropNameInTable="OPM_CHIPColumn" msprop:Generator_UserColumnName="OPM_CHIP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ID_IND" msprop:Generator_ColumnVarNameInTable="columnID_IND" msprop:Generator_ColumnPropNameInRow="ID_IND" msprop:Generator_ColumnPropNameInTable="ID_INDColumn" msprop:Generator_UserColumnName="ID_IND" type="xs:int" minOccurs="0" />
+              <xs:element name="NM_IND" msprop:Generator_ColumnVarNameInTable="columnNM_IND" msprop:Generator_ColumnPropNameInRow="NM_IND" msprop:Generator_ColumnPropNameInTable="NM_INDColumn" msprop:Generator_UserColumnName="NM_IND" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VNM_IND" msprop:Generator_ColumnVarNameInTable="columnVNM_IND" msprop:Generator_ColumnPropNameInRow="VNM_IND" msprop:Generator_ColumnPropNameInTable="VNM_INDColumn" msprop:Generator_UserColumnName="VNM_IND" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ExtraInfoBBW1" msprop:Generator_ColumnVarNameInTable="columnExtraInfoBBW1" msprop:Generator_ColumnPropNameInRow="ExtraInfoBBW1" msprop:Generator_ColumnPropNameInTable="ExtraInfoBBW1Column" msprop:Generator_UserColumnName="ExtraInfoBBW1" type="xs:string" minOccurs="0" />
+              <xs:element name="ExtraInfoBBW2" msprop:Generator_ColumnVarNameInTable="columnExtraInfoBBW2" msprop:Generator_ColumnPropNameInRow="ExtraInfoBBW2" msprop:Generator_ColumnPropNameInTable="ExtraInfoBBW2Column" msprop:Generator_UserColumnName="ExtraInfoBBW2" type="xs:string" minOccurs="0" />
+              <xs:element name="tmsCHIPgelezen" msprop:Generator_ColumnVarNameInTable="columntmsCHIPgelezen" msprop:Generator_ColumnPropNameInRow="tmsCHIPgelezen" msprop:Generator_ColumnPropNameInTable="tmsCHIPgelezenColumn" msprop:Generator_UserColumnName="tmsCHIPgelezen" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,19 @@
+﻿
+CREATE PROC dbo.[USP_WY_BBDGPERS_UPDATE]
+  @ID_DG_PERS int,
+  @ID_IND int,
+  @TMS_REG_DG_PERS datetime,
+  @ID_DG_PERS_TY_REG int,
+  @OPM varchar(50),
+  @Original_ID_DG_PERS int --Primary Key Field
+
+AS
+SET NOCOUNT OFF
+
+UPDATE [BBDGPERS] SET
+  [ID_IND] = @ID_IND,
+  [TMS_REG_DG_PERS] = @TMS_REG_DG_PERS,
+  [ID_DG_PERS_TY_REG] = @ID_DG_PERS_TY_REG,
+  [OPM] = @OPM
+WHERE [ID_DG_PERS] = @Original_ID_DG_PERS
+

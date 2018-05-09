@@ -1,0 +1,17 @@
+﻿
+CREATE PROC dbo.[USP_WY_BBINDTY_INSERT]
+  @ID_TY_IND int,
+  @SCF_TY_IND char(50)
+
+AS
+SET NOCOUNT OFF
+
+INSERT INTO [BBINDTY] (
+  [ID_TY_IND],
+  [SCF_TY_IND]
+)
+VALUES (
+  @ID_TY_IND,
+  @SCF_TY_IND
+)
+

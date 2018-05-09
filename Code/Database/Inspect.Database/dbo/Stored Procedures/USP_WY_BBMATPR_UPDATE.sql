@@ -1,0 +1,19 @@
+﻿
+CREATE PROC dbo.[USP_WY_BBMATPR_UPDATE]
+  @ID_PR_MAT int,
+  @ID_INTV_BRDW int=NULL,
+  @ID_ART_INTV int=NULL,
+  @Q_ART int=NULL,
+  @PR_TOT_ART float=NULL,
+  @Original_ID_PR_MAT int --Primary Key Field
+
+AS
+SET NOCOUNT OFF
+
+UPDATE [BBMATPR] SET
+  [ID_INTV_BRDW] = @ID_INTV_BRDW,
+  [ID_ART_INTV] = @ID_ART_INTV,
+  [Q_ART] = @Q_ART,
+  [PR_TOT_ART] = @PR_TOT_ART
+WHERE [ID_PR_MAT] = @Original_ID_PR_MAT
+

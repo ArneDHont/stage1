@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C4ABA12C-E41A-4A62-9359-AEC20A12AD78}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Inspect.FireSafety.WebApi</RootNamespace>
+    <AssemblyName>Inspect.FireSafety.WebApi.Services</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=6.2.2.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\..\References\AutoMapper.6.2.2\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\..\References\FluentValidation.7.4.0\lib\net45\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\References\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\References\Microsoft.AspNet.WebApi.Client.5.2.4\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Http, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\References\Microsoft.AspNet.WebApi.Core.5.2.4\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Equipment\EquipmentParametersQuery.cs" />
+    <Compile Include="Equipment\EquipmentWithFeedbackParametersQuery.cs" />
+    <Compile Include="InspectionEquipmentFeedbacks\EquipmentFeedbackMapperProfile.cs" />
+    <Compile Include="InspectionEquipmentFeedbacks\InspectionEquipmentFeedbackAttachmentParametersQuery.cs" />
+    <Compile Include="InspectionEquipmentFeedbacks\InspectionEquipmentFeedbackCollectionParametersQuery.cs" />
+    <Compile Include="InspectionEquipmentFeedbacks\InspectionEquipmentFeedbackCollectionParametersSpecification.cs" />
+    <Compile Include="InspectionEquipmentFeedbacks\InspectionEquipmentFeedbackParametersQuery.cs" />
+    <Compile Include="InspectionEquipmentFeedbacks\InspectionEquipmentFeedbackService.cs" />
+    <Compile Include="InspectionEquipmentFeedbacks\HypermediaExtensions.cs" />
+    <Compile Include="EquipmentTypes\EquipmentTypeCollectionParametersQuery.cs" />
+    <Compile Include="EquipmentTypes\EquipmentTypeCollectionParametersSpecification.cs" />
+    <Compile Include="EquipmentTypes\EquipmentTypeMapperProfile.cs" />
+    <Compile Include="EquipmentTypes\EquipmentTypeParametersQuery.cs" />
+    <Compile Include="EquipmentTypes\EquipmentTypeService.cs" />
+    <Compile Include="EquipmentTypes\HypermediaExtensions.cs" />
+    <Compile Include="Equipment\EquipmentCollectionParametersQuery.cs" />
+    <Compile Include="Equipment\EquipmentCollectionParametersSpecification.cs" />
+    <Compile Include="Equipment\EquipmentMapperProfile.cs" />
+    <Compile Include="Equipment\EquipmentService.cs" />
+    <Compile Include="Equipment\HypermediaExtensions.cs" />
+    <Compile Include="FeedbackTypes\FeedbackTypeCollectionParametersQuery.cs" />
+    <Compile Include="FeedbackTypes\FeedbackTypeCollectionParametersSpecification.cs" />
+    <Compile Include="FeedbackTypes\FeedbackTypeMapperProfile.cs" />
+    <Compile Include="FeedbackTypes\FeedbackTypeParametersQuery.cs" />
+    <Compile Include="FeedbackTypes\FeedbackTypeService.cs" />
+    <Compile Include="FeedbackTypes\HypermediaExtensions.cs" />
+    <Compile Include="FireSafetyConfig.cs" />
+    <Compile Include="FireSafetyService.cs" />
+    <Compile Include="InspectionSummary\HypermediaExtensions.cs" />
+    <Compile Include="InspectionSummary\InspectionSummaryMapperProfile.cs" />
+    <Compile Include="InspectionSummary\InspectionSummaryParametersQuery.cs" />
+    <Compile Include="InspectionSummary\InspectionSummaryService.cs" />
+    <Compile Include="Inspections\InspectionService.cs" />
+    <Compile Include="Locations\LocationMapperProfile.cs" />
+    <Compile Include="Locations\LocationService.cs" />
+    <Compile Include="OrganisationUnits\HypermediaExtensions.cs" />
+    <Compile Include="OrganisationUnits\OrganisationUnitCollectionParametersQuery.cs" />
+    <Compile Include="OrganisationUnits\OrganisationUnitCollectionParametersSpecification.cs" />
+    <Compile Include="OrganisationUnits\OrganisationUnitMapperProfile.cs" />
+    <Compile Include="OrganisationUnits\OrganisationUnitParametersQuery.cs" />
+    <Compile Include="OrganisationUnits\OrganisationUnitService.cs" />
+    <Compile Include="OrganisationUnits\OrganisationUnitWithLocationParametersQuery.cs" />
+    <Compile Include="Users\HypermediaExtensions.cs" />
+    <Compile Include="Users\UserCollectionParamerssQuery.cs" />
+    <Compile Include="Users\UserCollectionParametersSpecifications.cs" />
+    <Compile Include="Users\UserMapperProfile.cs" />
+    <Compile Include="Users\UserParametersQuery.cs" />
+    <Compile Include="Users\UserService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Inspect.FireSafety.Shared.Entities\Inspect.FireSafety.Shared.Entities.csproj">
+      <Project>{7317582f-2097-4485-a411-c34fd0567e09}</Project>
+      <Name>Inspect.FireSafety.Shared.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shared\Inspect.Framework.Business\Inspect.Framework.Business.csproj">
+      <Project>{35511315-0e2f-4989-91c4-35c2a6ee9b14}</Project>
+      <Name>Inspect.Framework.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shared\Inspect.Framework.Data.EntityFramework\Inspect.Framework.Data.EntityFramework.csproj">
+      <Project>{536c3428-2b64-485b-bf3f-f7081b6d4c21}</Project>
+      <Name>Inspect.Framework.Data.EntityFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shared\Inspect.Framework.Data\Inspect.Framework.Data.csproj">
+      <Project>{c77644f8-72f0-4d2b-98dd-be8b2156e881}</Project>
+      <Name>Inspect.Framework.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shared\Inspect.Framework.Hypermedia\Inspect.Framework.Hypermedia.csproj">
+      <Project>{279768b3-4659-4691-ab15-fffd09c6ddb8}</Project>
+      <Name>Inspect.Framework.Hypermedia</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Inspect.FireSafety.Business\Inspect.FireSafety.Business.csproj">
+      <Project>{ED2C7E68-5502-4006-969D-DB3C79A0EF60}</Project>
+      <Name>Inspect.FireSafety.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Inspect.FireSafety.WebApi.Contracts\Inspect.FireSafety.WebApi.Contracts.csproj">
+      <Project>{02221015-68e5-4ebd-899b-687828ba42b8}</Project>
+      <Name>Inspect.FireSafety.WebApi.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Inspect.WebApi\Inspect.WebApi.csproj">
+      <Project>{99d8eb67-dae4-4ad3-80b9-dcdf19270645}</Project>
+      <Name>Inspect.WebApi</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

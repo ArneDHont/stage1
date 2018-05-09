@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/TDSIndividuType.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/TDSIndividuType.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/TDSIndividuType.xsd" id="TDSIndividuType" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="TDSIndividuType">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BBINDTY">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_TY_IND" type="xs:int" />
+              <xs:element name="SCF_TY_IND" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="TDSIndividuTypeKey1">
+      <xs:selector xpath=".//mstns:BBINDTY" />
+      <xs:field xpath="mstns:ID_TY_IND" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

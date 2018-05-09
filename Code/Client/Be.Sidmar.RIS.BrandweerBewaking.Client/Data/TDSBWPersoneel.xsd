@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="TDSBWPersoneel" targetNamespace="http://tempuri.org/TDSBWPersoneel.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/TDSBWPersoneel.xsd" xmlns:mstns="http://tempuri.org/TDSBWPersoneel.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="TDSBWPersoneel" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="BBWAKPERS">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ID_IND" type="xs:int" />
+							<xs:element name="NM_IND" type="xs:string" minOccurs="0" />
+							<xs:element name="VNM_IND" type="xs:string" minOccurs="0" />
+							<xs:element name="SCF_PLG_IND" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

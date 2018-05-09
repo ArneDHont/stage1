@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/TDSBrandweerMateriaalBeheerderAfdeling.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/TDSBrandweerMateriaalBeheerderAfdeling.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/TDSBrandweerMateriaalBeheerderAfdeling.xsd" id="TDSBrandweerMateriaalBeheerderAfdeling" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="TDSBrandweerMateriaalBeheerderAfdeling">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BeheerderAfdeling">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TypeMatID" type="xs:int" />
+              <xs:element name="MateriaalVolgNr" type="xs:int" />
+              <xs:element minOccurs="0" name="AfdelingID" type="xs:int" />
+              <xs:element minOccurs="0" name="AfdelingNaam" type="xs:string" />
+              <xs:element minOccurs="0" name="LocatieZone" type="xs:string" />
+              <xs:element minOccurs="0" name="BeheerderAfdelingID" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:BeheerderAfdeling" />
+      <xs:field xpath="mstns:TypeMatID" />
+      <xs:field xpath="mstns:MateriaalVolgNr" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

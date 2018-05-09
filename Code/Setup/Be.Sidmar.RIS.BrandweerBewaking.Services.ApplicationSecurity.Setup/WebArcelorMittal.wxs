@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <!-- Include package specific configuration -->
+  <?include $(sys.CURRENTDIR)\Configuration.wxi?>
+    <Fragment>
+      <Binary Id="Bin1" SourceFile="$(env.Wix)sdk\CustomActions\WixCustomActions.CA.dll"  />
+      <Binary Id="Bin2" SourceFile="$(env.Wix)sdk\CustomActions\WixCustomActions.CA.dll"  />
+      <Binary Id="Bin3" SourceFile="$(env.Wix)sdk\CustomActions\WixCustomActions.CA.dll"  />
+
+      <InstallUISequence>
+        <Custom Action="WEBCA_TARGETVDIR" Before="CostInitialize">TARGETVDIR=""</Custom>
+        <Custom Action="CA1GatherWebSites" After="CostInitialize"> (NOT Installed) </Custom>
+        <Custom Action="PreventDowngrading" After="FindRelatedProducts">NEWPRODUCTFOUND</Custom>
+        <Custom Action="WEBCA_TARGETSITE" After="CostInitialize">TARGETSITE=""</Custom>
+        <Custom Action="WEBCA_TARGETPORT" After="CostInitialize">TARGETPORT=""</Custom>
+      </InstallUISequence>
+
+      <InstallExecuteSequence>
+        <Custom Action="WEBCA_TARGETVDIR" Before="CostInitialize">TARGETVDIR=""</Custom>
+        <Custom Action="CA2GatherWebSites" After="CostInitialize"> (NOT Installed) </Custom>
+        <Custom Action="PreventDowngrading" After="FindRelatedProducts">NEWPRODUCTFOUND</Custom>
+        <RemoveExistingProducts After="InstallFinalize" />
+        <Custom Action="WEBCA_TARGETSITE" After="CostInitialize">TARGETSITE=""</Custom>
+        <Custom Action="WEBCA_TARGETPORT" After="CostInitialize">TARGETPORT=""</Custom>
+        <Custom Action="AMSetARPINSTALLLOCATION" Before="RemoveFiles">NOT Installed</Custom>
+      </InstallExecuteSequence>
+
+      <CustomAction Id="CA1GatherWebSites" BinaryKey="Bin1" DllEntry="GatherWebSites" Impersonate="yes" Execute="immediate" Return="check"  />
+      <CustomAction Id="AMSetARPINSTALLLOCATION" Property="ARPINSTALLLOCATION" Value="[INSTALLDIR]"  />
+      <CustomAction Id="WEBCA_TARGETVDIR" Property="TARGETVDIR" Value="$(var.WebDirectory)" Execute="firstSequence"  />
+      <CustomAction Id="WEBCA_TARGETPORT" Property="TARGETPORT" Value="80" Execute="firstSequence"  />
+      <CustomAction Id="WEBCA_TARGETSITE" Property="TARGETSITE" Value="$(var.WebSite)" Execute="firstSequence"  />
+      <CustomAction Id="CA2GatherWebSites" BinaryKey="Bin2" DllEntry="GatherWebSites" Impersonate="yes" Execute="immediate" Return="check"  />
+      <CustomAction Id="CA3UpdatePropsWithSelectedWebSite" BinaryKey="Bin3" DllEntry="UpdatePropsWithSelectedWebSite" Impersonate="yes" Execute="immediate" Return="check"  />
+      <CustomAction Id="PreventDowngrading" Error="Newer version already installed"  />
+      
+      <EnsureTable Id="ComboBox" />
+      <CustomTable Id="AvailableWebSites" >
+        <Column Id="WebSiteID" Category="Identifier" PrimaryKey="yes" Type="int" Width="4" />
+        <Column Id="WebSiteDescription" Category="Text" Type="string" PrimaryKey="no" />
+        <Column Id="WebSitePath" Category="Text" Type="string" PrimaryKey="no" Nullable="yes" />
+        <Column Id="WebSitePort" Category="Text" Type="string" PrimaryKey="no" Nullable="yes" />
+
+        <Row>
+          <Data Column="WebSiteID">0</Data>
+          <Data Column="WebSiteDescription">Dummy</Data>
+          <Data Column="WebSitePath"></Data>
+          <Data Column="WebSitePort"></Data>
+        </Row>
+      </CustomTable>
+      <UIRef Id = "WixUI_Common"/>
+      <UI Id="WixUI_WebArcelorMittal">
+       
+        <Property Id="WixUI_Mode" Value="Custom" />
+
+        <TextStyle Id="WixUI_Font_Normal" FaceName="Tahoma" Size="8" />
+        <TextStyle Id="WixUI_Font_Bigger" FaceName="Tahoma" Size="12" />
+        <TextStyle Id="WixUI_Font_Title" FaceName="Tahoma" Size="9" Bold="yes" />
+
+        <Property Id="DefaultUIFont" Value="WixUI_Font_Normal" />
+
+        <DialogRef Id="BrowseDlg" />
+        <DialogRef Id="DiskCostDlg" />
+        <DialogRef Id="ErrorDlg" />
+        <DialogRef Id="FatalError" />
+        <DialogRef Id="FilesInUse" />
+        <DialogRef Id="MsiRMFilesInUse" />
+        <DialogRef Id="PrepareDlg" />
+        <DialogRef Id="ProgressDlg" />
+        <DialogRef Id="ResumeDlg" />
+        <DialogRef Id="UserExit" />
+        <DialogRef Id="InstallWebDlg" />
+        <DialogRef Id="InvalidWebAliasAliasDlg" />
+
+        <Publish Dialog="BrowseDlg" Control="OK" Event="DoAction" Value="WixUIValidatePath" Order="3">1</Publish>
+        <Publish Dialog="BrowseDlg" Control="OK" Event="SpawnDialog" Value="InvalidDirDlg" Order="4"><![CDATA[WIXUI_INSTALLDIR_VALID<>"1"]]></Publish>
+        <Publish Dialog="ExitDialog" Control="Finish" Event="EndDialog" Value="Return" Order="999">1</Publish>
+        <Publish Dialog="WelcomeDlg" Control="Next" Event="NewDialog" Value="InstallWebDlg">1</Publish>
+        <Publish Dialog="VerifyReadyDlg" Control="Back" Event="NewDialog" Value="InstallWebDlg" Order="1">NOT Installed</Publish>
+        <Publish Dialog="VerifyReadyDlg" Control="Back" Event="NewDialog" Value="MaintenanceTypeDlg" Order="2">Installed</Publish>
+        <Publish Dialog="MaintenanceWelcomeDlg" Control="Next" Event="NewDialog" Value="MaintenanceTypeDlg">1</Publish>
+        <Publish Dialog="MaintenanceTypeDlg" Control="RepairButton" Event="NewDialog" Value="VerifyReadyDlg">1</Publish>
+        <Publish Dialog="MaintenanceTypeDlg" Control="RemoveButton" Event="NewDialog" Value="VerifyReadyDlg">1</Publish>
+        <Publish Dialog="MaintenanceTypeDlg" Control="Back" Event="NewDialog" Value="MaintenanceWelcomeDlg">1</Publish>
+
+        <Property Id="ARPNOMODIFY" Value="1" />
+        <Property Id="WIXUI_WEBSITE">Dummy</Property>
+
+
+        <Dialog Id="InvalidWebAliasAliasDlg" Width="260" Height="85" Title="!(loc.InvalidDirDlg_Title) ">
+          <Control Id="OK" Type="PushButton" X="102" Y="57" Width="56" Height="17" Default="yes" Cancel="yes" Text="!(loc.WixUIOK) ">
+            <Publish Event="EndDialog" Value="Return">1</Publish>
+          </Control>
+
+          <Control Id="Text" Type="Text" X="48" Y="22" Width="194" Height="30" Text="The web application name cannot be a blank value." />
+          <Control Id="Icon" Type="Icon" X="15" Y="15" Width="24" Height="24" ToolTip="!(loc.InvalidDirDlgIconTooltip)" FixedSize="yes" IconSize="32" Text="!(loc.InvalidDirDlgIcon)" />
+        </Dialog>
+
+        <Dialog Id="InstallWebDlg" Width="370" Height="270" Title="!(loc.InstallDirDlg_Title)">
+          <Control Id="Next" Type="PushButton" X="236" Y="243" Width="56" Height="17" Default="yes" Text="!(loc.WixUINext)">
+            <!-- Check to see the website name and virt dir name has something in it. -->
+
+            <Publish Event="SpawnDialog" Value="InvalidWebAliasAliasDlg">WIXUI_WEBSITE=""</Publish>
+            <Publish Event="SpawnDialog" Value="InvalidWebAliasAliasDlg">TARGETVDIR=""</Publish>
+
+            <!-- Set the INSTALLDIR property based on the selected web site's physical path using my custom action. -->
+
+            <Publish Event="DoAction" Value="CA3UpdatePropsWithSelectedWebSite">1</Publish>
+
+            <!-- Finally move to the VerifyReadyDlg if all values are looking good.-->
+
+            <Publish Event="NewDialog" Value="VerifyReadyDlg"><![CDATA[(WIXUI_WEBSITE<>"")]]></Publish>
+          </Control>
+
+          <Control Id="Back" Type="PushButton" X="180" Y="243" Width="56" Height="17" Text="!(loc.WixUIBack)">
+            <Publish Event="NewDialog" Value="WelcomeDlg">1</Publish>
+          </Control>
+
+          <Control Id="Cancel" Type="PushButton" X="304" Y="243" Width="56" Height="17" Cancel="yes" Text="!(loc.WixUICancel)">
+            <Publish Event="SpawnDialog" Value="CancelDlg">1</Publish>
+          </Control>
+
+          <Control Id="Description" Type="Text" X="25" Y="23" Width="280" Height="15" Transparent="yes" NoPrefix="yes" Text="!(loc.InstallDirDlgDescription)" />
+          <Control Id="Title" Type="Text" X="15" Y="6" Width="200" Height="15" Transparent="yes" NoPrefix="yes" Text="!(loc.InstallDirDlgTitle)" />
+          <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="370" Height="44" TabSkip="no" Text="!(loc.InstallDirDlgBannerBitmap)" />
+          <Control Id="BannerLine" Type="Line" X="0" Y="44" Width="370" Height="0" />
+          <Control Id="BottomLine" Type="Line" X="0" Y="234" Width="370" Height="0" />
+          <Control Id="SiteLabel" Type="Text" X="20" Y="60" Width="290" Height="10" NoPrefix="yes" Text="Site:" />
+          <Control Id="WebSiteCombo" Type="ComboBox" X="20" Y="72" Width="250" Height="18" Property="WIXUI_WEBSITE" Sorted="yes" ComboList="yes" />
+          <Control Id="WebDirLabel" Type="Text" X="20" Y="120" Width="290" Height="10" NoPrefix="yes" Text="Web Directory:" />
+          <Control Id="WebDir" Type="Edit" X="20" Y="132" Width="320" Height="18" Property="TARGETVDIR" />
+        </Dialog>
+      </UI>
+    </Fragment>
+</Wix>

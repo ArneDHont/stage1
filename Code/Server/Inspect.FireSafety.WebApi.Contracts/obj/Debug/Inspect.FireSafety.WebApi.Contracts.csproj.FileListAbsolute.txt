@@ -1,0 +1,10 @@
+C:\Sources\BBW\Development\Code\Server\Inspect.FireSafety.WebApi.Contracts\bin\Debug\Inspect.FireSafety.WebApi.Contracts.dll
+C:\Sources\BBW\Development\Code\Server\Inspect.FireSafety.WebApi.Contracts\bin\Debug\Inspect.FireSafety.WebApi.Contracts.pdb
+C:\Sources\BBW\Development\Code\Server\Inspect.FireSafety.WebApi.Contracts\bin\Debug\Inspect.Framework.Hypermedia.dll
+C:\Sources\BBW\Development\Code\Server\Inspect.FireSafety.WebApi.Contracts\bin\Debug\Newtonsoft.Json.dll
+C:\Sources\BBW\Development\Code\Server\Inspect.FireSafety.WebApi.Contracts\bin\Debug\Inspect.Framework.Hypermedia.pdb
+C:\Sources\BBW\Development\Code\Server\Inspect.FireSafety.WebApi.Contracts\bin\Debug\Newtonsoft.Json.xml
+C:\Sources\BBW\Development\Code\Server\Inspect.FireSafety.WebApi.Contracts\obj\Debug\Inspect.FireSafety.WebApi.Contracts.csprojResolveAssemblyReference.cache
+C:\Sources\BBW\Development\Code\Server\Inspect.FireSafety.WebApi.Contracts\obj\Debug\Inspect.FireSafety.WebApi.Contracts.csproj.CoreCompileInputs.cache
+C:\Sources\BBW\Development\Code\Server\Inspect.FireSafety.WebApi.Contracts\obj\Debug\Inspect.FireSafety.WebApi.Contracts.dll
+C:\Sources\BBW\Development\Code\Server\Inspect.FireSafety.WebApi.Contracts\obj\Debug\Inspect.FireSafety.WebApi.Contracts.pdb

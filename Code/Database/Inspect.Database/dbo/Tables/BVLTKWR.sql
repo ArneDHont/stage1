@@ -1,0 +1,15 @@
+﻿CREATE TABLE [dbo].[BVLTKWR] (
+    [ID_TOEP]        CHAR (50)    NOT NULL,
+    [ID_WR]          CHAR (50)    NOT NULL,
+    [ID_TK]          CHAR (50)    NOT NULL,
+    [NM_TK]          VARCHAR (50) NOT NULL,
+    [NM_WR]          VARCHAR (50) NOT NULL,
+    [TMS_CRE_RE]     DATETIME     NULL,
+    [ID_BRK_CRE_RE]  CHAR (8)     NULL,
+    [TMS_WY_L_RE]    DATETIME     NULL,
+    [ID_BRK_WY_L_RE] CHAR (8)     NULL,
+    [NR_WY_L_RE]     INT          NULL,
+    CONSTRAINT [PK_BVLTKWR] PRIMARY KEY CLUSTERED ([ID_TOEP] ASC, [ID_WR] ASC, [ID_TK] ASC) WITH (FILLFACTOR = 70),
+    CONSTRAINT [BVLTOEP_BVLWR_FK1] FOREIGN KEY ([ID_TOEP]) REFERENCES [dbo].[BVLTOEP] ([ID_TOEP])
+);
+

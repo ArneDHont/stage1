@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TDSFirmaHRM" targetNamespace="http://tempuri.org/TDSFirmaHRM.xsd" xmlns:mstns="http://tempuri.org/TDSFirmaHRM.xsd" xmlns="http://tempuri.org/TDSFirmaHRM.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="hrmConnectionString" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="hrmConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Be.Sidmar.RIS.BrandweerBewaking.Client.My.MySettings.GlobalReference.Default.hrmConnectionString" Provider="System.Data.SqlClient">
+          </Connection>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TDSFirmaHRM" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="TDSFirmaHRM" msprop:Generator_DataSetName="TDSFirmaHRM">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Firma" msprop:Generator_UserTableName="Firma" msprop:Generator_RowDeletedName="FirmaRowDeleted" msprop:Generator_RowChangedName="FirmaRowChanged" msprop:Generator_RowClassName="FirmaRow" msprop:Generator_RowChangingName="FirmaRowChanging" msprop:Generator_RowEvArgName="FirmaRowChangeEvent" msprop:Generator_RowEvHandlerName="FirmaRowChangeEventHandler" msprop:Generator_TableClassName="FirmaDataTable" msprop:Generator_TableVarName="tableFirma" msprop:Generator_RowDeletingName="FirmaRowDeleting" msprop:Generator_TablePropName="Firma">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="firmanaam" msprop:Generator_UserColumnName="firmanaam" msprop:Generator_ColumnVarNameInTable="columnfirmanaam" msprop:Generator_ColumnPropNameInRow="firmanaam" msprop:Generator_ColumnPropNameInTable="firmanaamColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="firmanummer" msprop:Generator_UserColumnName="firmanummer" msprop:Generator_ColumnVarNameInTable="columnfirmanummer" msprop:Generator_ColumnPropNameInRow="firmanummer" msprop:Generator_ColumnPropNameInTable="firmanummerColumn" type="xs:long" />
+              <xs:element name="parent" msprop:Generator_UserColumnName="parent" msprop:Generator_ColumnPropNameInRow="parent" msprop:Generator_ColumnVarNameInTable="columnparent" msprop:Generator_ColumnPropNameInTable="parentColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="parentnaam" msprop:Generator_UserColumnName="parentnaam" msprop:Generator_ColumnPropNameInRow="parentnaam" msprop:Generator_ColumnVarNameInTable="columnparentnaam" msprop:Generator_ColumnPropNameInTable="parentnaamColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Firma" />
+      <xs:field xpath="mstns:firmanummer" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

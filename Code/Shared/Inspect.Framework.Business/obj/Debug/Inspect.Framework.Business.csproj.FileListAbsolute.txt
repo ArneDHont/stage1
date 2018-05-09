@@ -1,0 +1,10 @@
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Business\bin\Debug\Inspect.Framework.Business.dll
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Business\bin\Debug\Inspect.Framework.Business.pdb
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Business\bin\Debug\FluentValidation.dll
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Business\bin\Debug\Inspect.Framework.Data.dll
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Business\bin\Debug\Inspect.Framework.Data.pdb
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Business\bin\Debug\FluentValidation.xml
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Business\obj\Debug\Inspect.Framework.Business.csprojResolveAssemblyReference.cache
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Business\obj\Debug\Inspect.Framework.Business.csproj.CoreCompileInputs.cache
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Business\obj\Debug\Inspect.Framework.Business.dll
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Business\obj\Debug\Inspect.Framework.Business.pdb

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/TDSDiefDup.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/TDSDiefDup.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/TDSDiefDup.xsd" id="TDSDiefDup" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="TDSDiefDup">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BBDIEFDU">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_DUP_DIEF" type="xs:string" />
+              <xs:element minOccurs="0" name="SCF_DUP" type="xs:string" />
+              <xs:element minOccurs="0" name="INDI_NR_ST_VP" type="xs:boolean" />
+              <xs:element minOccurs="0" name="INDI_NM_FRM_VP" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="TDSDiefDupKey1">
+      <xs:selector xpath=".//mstns:BBDIEFDU" />
+      <xs:field xpath="mstns:ID_DUP_DIEF" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

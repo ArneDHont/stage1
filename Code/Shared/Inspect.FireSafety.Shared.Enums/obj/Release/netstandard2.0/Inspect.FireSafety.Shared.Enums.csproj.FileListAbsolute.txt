@@ -1,0 +1,9 @@
+C:\Sources\BBW\Development\Code\Shared\Inspect.FireSafety.Shared.Enums\bin\Release\netstandard2.0\Inspect.FireSafety.Shared.Enums.deps.json
+C:\Sources\BBW\Development\Code\Shared\Inspect.FireSafety.Shared.Enums\bin\Release\netstandard2.0\Inspect.FireSafety.Shared.Enums.dll
+C:\Sources\BBW\Development\Code\Shared\Inspect.FireSafety.Shared.Enums\bin\Release\netstandard2.0\Inspect.FireSafety.Shared.Enums.pdb
+C:\Sources\BBW\Development\Code\Shared\Inspect.FireSafety.Shared.Enums\obj\Release\netstandard2.0\Inspect.FireSafety.Shared.Enums.csprojResolveAssemblyReference.cache
+C:\Sources\BBW\Development\Code\Shared\Inspect.FireSafety.Shared.Enums\obj\Release\netstandard2.0\Inspect.FireSafety.Shared.Enums.csproj.CoreCompileInputs.cache
+C:\Sources\BBW\Development\Code\Shared\Inspect.FireSafety.Shared.Enums\obj\Release\netstandard2.0\Inspect.FireSafety.Shared.Enums.AssemblyInfoInputs.cache
+C:\Sources\BBW\Development\Code\Shared\Inspect.FireSafety.Shared.Enums\obj\Release\netstandard2.0\Inspect.FireSafety.Shared.Enums.AssemblyInfo.cs
+C:\Sources\BBW\Development\Code\Shared\Inspect.FireSafety.Shared.Enums\obj\Release\netstandard2.0\Inspect.FireSafety.Shared.Enums.dll
+C:\Sources\BBW\Development\Code\Shared\Inspect.FireSafety.Shared.Enums\obj\Release\netstandard2.0\Inspect.FireSafety.Shared.Enums.pdb

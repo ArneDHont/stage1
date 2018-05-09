@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TDSVastgesteldeInbreuken" targetNamespace="http://tempuri.org/TDSVastgesteldeInbreuken.xsd" xmlns:mstns="http://tempuri.org/TDSVastgesteldeInbreuken.xsd" xmlns="http://tempuri.org/TDSVastgesteldeInbreuken.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TDSVastgesteldeInbreuken" msdata:IsDataSet="true" msdata:Locale="en-US" msprop:Generator_DataSetName="TDSVastgesteldeInbreuken" msprop:Generator_UserDSName="TDSVastgesteldeInbreuken">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BBINBRVA" msprop:Generator_TableClassName="BBINBRVADataTable" msprop:Generator_TableVarName="tableBBINBRVA" msprop:Generator_TablePropName="BBINBRVA" msprop:Generator_RowDeletingName="BBINBRVARowDeleting" msprop:Generator_UserTableName="BBINBRVA" msprop:Generator_RowChangingName="BBINBRVARowChanging" msprop:Generator_RowEvHandlerName="BBINBRVARowChangeEventHandler" msprop:Generator_RowDeletedName="BBINBRVARowDeleted" msprop:Generator_RowEvArgName="BBINBRVARowChangeEvent" msprop:Generator_RowChangedName="BBINBRVARowChanged" msprop:Generator_RowClassName="BBINBRVARow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_INBRVA" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnID_INBRVA" msprop:Generator_ColumnPropNameInRow="ID_INBRVA" msprop:Generator_ColumnPropNameInTable="ID_INBRVAColumn" msprop:Generator_UserColumnName="ID_INBRVA" type="xs:int" />
+              <xs:element name="ID_REG" msprop:Generator_ColumnVarNameInTable="columnID_REG" msprop:Generator_ColumnPropNameInRow="ID_REG" msprop:Generator_ColumnPropNameInTable="ID_REGColumn" msprop:Generator_UserColumnName="ID_REG" type="xs:int" />
+              <xs:element name="ID_ART_INBR" msprop:Generator_ColumnVarNameInTable="columnID_ART_INBR" msprop:Generator_ColumnPropNameInRow="ID_ART_INBR" msprop:Generator_ColumnPropNameInTable="ID_ART_INBRColumn" msprop:Generator_UserColumnName="ID_ART_INBR" type="xs:int" minOccurs="0" />
+              <xs:element name="SNL_OK" msprop:Generator_ColumnVarNameInTable="columnSNL_OK" msprop:Generator_ColumnPropNameInRow="SNL_OK" msprop:Generator_ColumnPropNameInTable="SNL_OKColumn" msprop:Generator_UserColumnName="SNL_OK" type="xs:int" minOccurs="0" />
+              <xs:element name="SNL_REG" msprop:Generator_ColumnVarNameInTable="columnSNL_REG" msprop:Generator_ColumnPropNameInRow="SNL_REG" msprop:Generator_ColumnPropNameInTable="SNL_REGColumn" msprop:Generator_UserColumnName="SNL_REG" type="xs:int" minOccurs="0" />
+              <xs:element name="NR_ART_INBR" msprop:Generator_ColumnVarNameInTable="columnNR_ART_INBR" msprop:Generator_ColumnPropNameInRow="NR_ART_INBR" msprop:Generator_ColumnPropNameInTable="NR_ART_INBRColumn" msprop:Generator_UserColumnName="NR_ART_INBR" type="xs:string" minOccurs="0" />
+              <xs:element name="SCF_ART_INBR" msprop:Generator_ColumnVarNameInTable="columnSCF_ART_INBR" msprop:Generator_ColumnPropNameInRow="SCF_ART_INBR" msprop:Generator_ColumnPropNameInTable="SCF_ART_INBRColumn" msprop:Generator_UserColumnName="SCF_ART_INBR" type="xs:string" minOccurs="0" />
+              <xs:element name="TMS_INC" msprop:Generator_ColumnVarNameInTable="columnTMS_INC" msprop:Generator_ColumnPropNameInRow="TMS_INC" msprop:Generator_ColumnPropNameInTable="TMS_INCColumn" msprop:Generator_UserColumnName="TMS_INC" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="VLG_REG_JR_BPL" msprop:Generator_ColumnVarNameInTable="columnVLG_REG_JR_BPL" msprop:Generator_ColumnPropNameInRow="VLG_REG_JR_BPL" msprop:Generator_ColumnPropNameInTable="VLG_REG_JR_BPLColumn" msprop:Generator_UserColumnName="VLG_REG_JR_BPL" type="xs:int" minOccurs="0" />
+              <xs:element name="TMS_OPS_REG" msprop:Generator_ColumnVarNameInTable="columnTMS_OPS_REG" msprop:Generator_ColumnPropNameInRow="TMS_OPS_REG" msprop:Generator_ColumnPropNameInTable="TMS_OPS_REGColumn" msprop:Generator_UserColumnName="TMS_OPS_REG" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DatePrintLetterExt" msprop:Generator_ColumnVarNameInTable="columnDatePrintLetterExt" msprop:Generator_ColumnPropNameInRow="DatePrintLetterExt" msprop:Generator_ColumnPropNameInTable="DatePrintLetterExtColumn" msprop:Generator_UserColumnName="DatePrintLetterExt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Language" msprop:Generator_ColumnVarNameInTable="columnLanguage" msprop:Generator_ColumnPropNameInRow="Language" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInTable="LanguageColumn" msprop:Generator_UserColumnName="Language" type="xs:string" minOccurs="0" />
+              <xs:element name="Recidive" msprop:Generator_ColumnVarNameInTable="columnRecidive" msprop:Generator_ColumnPropNameInRow="Recidive" msprop:Generator_ColumnPropNameInTable="RecidiveColumn" msprop:Generator_UserColumnName="Recidive" type="xs:int" minOccurs="0" />
+              <xs:element name="KindOfSanction" msprop:Generator_ColumnVarNameInTable="columnKindOfSanction" msprop:Generator_ColumnPropNameInRow="KindOfSanction" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInTable="KindOfSanctionColumn" msprop:Generator_UserColumnName="KindOfSanction" type="xs:string" minOccurs="0" />
+              <xs:element name="SanctionID" msprop:Generator_ColumnVarNameInTable="columnSanctionID" msprop:Generator_ColumnPropNameInRow="SanctionID" msprop:Generator_ColumnPropNameInTable="SanctionIDColumn" msprop:Generator_UserColumnName="SanctionID" type="xs:int" minOccurs="0" />
+              <xs:element name="IdFirm" msprop:Generator_ColumnVarNameInTable="columnIdFirm" msprop:Generator_ColumnPropNameInRow="IdFirm" msprop:Generator_ColumnPropNameInTable="IdFirmColumn" msprop:Generator_UserColumnName="IdFirm" type="xs:int" minOccurs="0" />
+              <xs:element name="Remark" msprop:Generator_ColumnVarNameInTable="columnRemark" msprop:Generator_ColumnPropNameInRow="Remark" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInTable="RemarkColumn" msprop:Generator_UserColumnName="Remark" type="xs:string" minOccurs="0" />
+              <xs:element name="SanctionDuration" msprop:Generator_ColumnVarNameInTable="columnSanctionDuration" msprop:Generator_ColumnPropNameInRow="SanctionDuration" msprop:Generator_ColumnPropNameInTable="SanctionDurationColumn" msprop:Generator_UserColumnName="SanctionDuration" type="xs:int" minOccurs="0" />
+              <xs:element name="SanctionPeriod" msprop:Generator_ColumnVarNameInTable="columnSanctionPeriod" msprop:Generator_ColumnPropNameInRow="SanctionPeriod" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInTable="SanctionPeriodColumn" msprop:Generator_UserColumnName="SanctionPeriod" type="xs:string" minOccurs="0" />
+              <xs:element name="LastSanctionDoubledYN" msprop:Generator_ColumnVarNameInTable="columnLastSanctionDoubledYN" msprop:Generator_ColumnPropNameInRow="LastSanctionDoubledYN" msprop:Generator_ColumnPropNameInTable="LastSanctionDoubledYNColumn" msprop:Generator_UserColumnName="LastSanctionDoubledYN" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

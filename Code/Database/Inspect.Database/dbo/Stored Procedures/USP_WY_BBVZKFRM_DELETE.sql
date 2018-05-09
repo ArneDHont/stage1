@@ -1,0 +1,10 @@
+﻿
+CREATE PROC dbo.[USP_WY_BBVZKFRM_DELETE]
+  @Original_ID_FRM_VZK int --Primary Key Field
+
+AS
+SET NOCOUNT OFF
+
+DELETE FROM [BBVZKFRM]
+WHERE [ID_FRM_VZK] = @Original_ID_FRM_VZK
+

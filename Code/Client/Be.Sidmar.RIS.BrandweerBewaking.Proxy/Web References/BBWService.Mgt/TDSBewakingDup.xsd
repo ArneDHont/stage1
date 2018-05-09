@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/TDSBewakingDup.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/TDSBewakingDup.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/TDSBewakingDup.xsd" id="TDSBewakingDup" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="TDSBewakingDup">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BBBEWDUP">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_BEW_DUP" type="xs:int" />
+              <xs:element name="SCF_BEW_DUP" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="TDSBewakingDupKey1">
+      <xs:selector xpath=".//mstns:BBBEWDUP" />
+      <xs:field xpath="mstns:ID_BEW_DUP" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

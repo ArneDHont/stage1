@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TDSBewakingSnelheidSanction" targetNamespace="http://tempuri.org/TDSBewakingSnelheidSanction.xsd" xmlns:mstns="http://tempuri.org/TDSBewakingSnelheidSanction.xsd" xmlns="http://tempuri.org/TDSBewakingSnelheidSanction.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="bbwConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="bbwConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Be.Sidmar.RIS.BrandweerBewaking.BS.My.MySettings.GlobalReference.Default.bbwConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TDSBewakingSnelheidSanction" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="TDSBewakingSnelheidSanction" msprop:Generator_UserDSName="TDSBewakingSnelheidSanction">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BBINBRSanction" msprop:Generator_TableClassName="BBINBRSanctionDataTable" msprop:Generator_TableVarName="tableBBINBRSanction" msprop:Generator_TablePropName="BBINBRSanction" msprop:Generator_RowDeletingName="BBINBRSanctionRowDeleting" msprop:Generator_UserTableName="BBINBRSanction" msprop:Generator_RowChangingName="BBINBRSanctionRowChanging" msprop:Generator_RowEvHandlerName="BBINBRSanctionRowChangeEventHandler" msprop:Generator_RowDeletedName="BBINBRSanctionRowDeleted" msprop:Generator_RowEvArgName="BBINBRSanctionRowChangeEvent" msprop:Generator_RowChangedName="BBINBRSanctionRowChanged" msprop:Generator_RowClassName="BBINBRSanctionRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SanctionID" msprop:Generator_ColumnVarNameInTable="columnSanctionID" msprop:Generator_ColumnPropNameInRow="SanctionID" msprop:Generator_ColumnPropNameInTable="SanctionIDColumn" msprop:Generator_UserColumnName="SanctionID" type="xs:int" />
+              <xs:element name="SanctionDescr" msprop:Generator_ColumnVarNameInTable="columnSanctionDescr" msprop:Generator_ColumnPropNameInRow="SanctionDescr" msprop:Generator_ColumnPropNameInTable="SanctionDescrColumn" msprop:Generator_UserColumnName="SanctionDescr" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SanctionNL" msprop:Generator_ColumnVarNameInTable="columnSanctionNL" msprop:Generator_ColumnPropNameInRow="SanctionNL" msprop:Generator_ColumnPropNameInTable="SanctionNLColumn" msprop:Generator_UserColumnName="SanctionNL" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SanctionFR" msprop:Generator_ColumnVarNameInTable="columnSanctionFR" msprop:Generator_ColumnPropNameInRow="SanctionFR" msprop:Generator_ColumnPropNameInTable="SanctionFRColumn" msprop:Generator_UserColumnName="SanctionFR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SanctionEN" msprop:Generator_ColumnVarNameInTable="columnSanctionEN" msprop:Generator_ColumnPropNameInRow="SanctionEN" msprop:Generator_ColumnPropNameInTable="SanctionENColumn" msprop:Generator_UserColumnName="SanctionEN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SanctionDE" msprop:Generator_ColumnVarNameInTable="columnSanctionDE" msprop:Generator_ColumnPropNameInRow="SanctionDE" msprop:Generator_ColumnPropNameInTable="SanctionDEColumn" msprop:Generator_UserColumnName="SanctionDE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:BBINBRSanction" />
+      <xs:field xpath="mstns:SanctionID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,10 @@
+﻿
+CREATE PROC dbo.[USP_WY_BBINTVDU_DELETE]
+  @Original_ID_DU_INTV int --Primary Key Field
+
+AS
+SET NOCOUNT OFF
+
+DELETE FROM [BBINTVDU]
+WHERE [ID_DU_INTV] = @Original_ID_DU_INTV
+

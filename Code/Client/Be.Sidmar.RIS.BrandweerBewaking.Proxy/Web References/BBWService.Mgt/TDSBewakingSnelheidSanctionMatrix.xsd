@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/TDSBewakingSnelheidSanctionMatrix.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/TDSBewakingSnelheidSanctionMatrix.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/TDSBewakingSnelheidSanctionMatrix.xsd" id="TDSBewakingSnelheidSanctionMatrix" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="TDSBewakingSnelheidSanctionMatrix">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BBINBRSanctionMatrix">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SanctionMatrixID" type="xs:long" />
+              <xs:element minOccurs="0" name="SanctionMatrixDescr">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Zone" type="xs:int" />
+              <xs:element minOccurs="0" name="SpeedFrom" type="xs:int" />
+              <xs:element minOccurs="0" name="SpeedTo" type="xs:int" />
+              <xs:element minOccurs="0" name="CarMotorYN" type="xs:boolean" />
+              <xs:element minOccurs="0" name="TruckYN" type="xs:boolean" />
+              <xs:element minOccurs="0" name="Sanction1" type="xs:int" />
+              <xs:element minOccurs="0" name="Sanction2_24months" type="xs:int" />
+              <xs:element minOccurs="0" name="Sanction3_24months" type="xs:int" />
+              <xs:element minOccurs="0" name="Remark">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:BBINBRSanctionMatrix" />
+      <xs:field xpath="mstns:SanctionMatrixID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

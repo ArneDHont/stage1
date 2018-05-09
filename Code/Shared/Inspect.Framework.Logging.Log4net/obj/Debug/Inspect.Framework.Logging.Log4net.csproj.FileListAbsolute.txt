@@ -1,0 +1,10 @@
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Logging.Log4net\bin\Debug\Inspect.Framework.Logging.Log4net.dll
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Logging.Log4net\bin\Debug\Inspect.Framework.Logging.Log4net.pdb
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Logging.Log4net\bin\Debug\Inspect.Framework.Logging.dll
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Logging.Log4net\bin\Debug\log4net.dll
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Logging.Log4net\bin\Debug\Inspect.Framework.Logging.pdb
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Logging.Log4net\bin\Debug\log4net.xml
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Logging.Log4net\obj\Debug\Inspect.Framework.Logging.Log4net.csprojResolveAssemblyReference.cache
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Logging.Log4net\obj\Debug\Inspect.Framework.Logging.Log4net.csproj.CoreCompileInputs.cache
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Logging.Log4net\obj\Debug\Inspect.Framework.Logging.Log4net.dll
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Logging.Log4net\obj\Debug\Inspect.Framework.Logging.Log4net.pdb

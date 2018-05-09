@@ -1,0 +1,11 @@
+﻿CREATE TABLE [dbo].[BVLPLA] (
+    [ID_PLA]         CHAR (50)    NOT NULL,
+    [NM_PLA]         VARCHAR (50) NULL,
+    [TMS_CRE_RE]     DATETIME     NULL,
+    [ID_BRK_CRE_RE]  CHAR (8)     NULL,
+    [TMS_WY_L_RE]    DATETIME     NULL,
+    [ID_BRK_WY_L_RE] CHAR (8)     NULL,
+    [NR_WY_L_RE]     INT          NULL,
+    CONSTRAINT [BVLPLA_PK] PRIMARY KEY CLUSTERED ([ID_PLA] ASC) WITH (FILLFACTOR = 70)
+);
+

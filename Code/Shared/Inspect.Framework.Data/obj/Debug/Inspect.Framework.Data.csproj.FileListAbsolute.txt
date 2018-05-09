@@ -1,0 +1,6 @@
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Data\bin\Debug\Inspect.Framework.Data.dll
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Data\bin\Debug\Inspect.Framework.Data.pdb
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Data\obj\Debug\Inspect.Framework.Data.csproj.CoreCompileInputs.cache
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Data\obj\Debug\Inspect.Framework.Data.dll
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Data\obj\Debug\Inspect.Framework.Data.pdb
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Data\obj\Debug\Inspect.Framework.Data.csprojResolveAssemblyReference.cache

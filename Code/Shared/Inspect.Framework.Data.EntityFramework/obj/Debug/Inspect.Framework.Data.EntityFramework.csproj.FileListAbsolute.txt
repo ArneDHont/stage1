@@ -1,0 +1,13 @@
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Data.EntityFramework\bin\Debug\Inspect.Framework.Data.EntityFramework.dll.config
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Data.EntityFramework\bin\Debug\Inspect.Framework.Data.EntityFramework.dll
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Data.EntityFramework\bin\Debug\Inspect.Framework.Data.EntityFramework.pdb
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Data.EntityFramework\bin\Debug\EntityFramework.dll
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Data.EntityFramework\bin\Debug\EntityFramework.SqlServer.dll
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Data.EntityFramework\bin\Debug\Inspect.Framework.Data.dll
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Data.EntityFramework\bin\Debug\Inspect.Framework.Data.pdb
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Data.EntityFramework\bin\Debug\EntityFramework.xml
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Data.EntityFramework\bin\Debug\EntityFramework.SqlServer.xml
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Data.EntityFramework\obj\Debug\Inspect.Framework.Data.EntityFramework.csprojResolveAssemblyReference.cache
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Data.EntityFramework\obj\Debug\Inspect.Framework.Data.EntityFramework.csproj.CoreCompileInputs.cache
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Data.EntityFramework\obj\Debug\Inspect.Framework.Data.EntityFramework.dll
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Data.EntityFramework\obj\Debug\Inspect.Framework.Data.EntityFramework.pdb

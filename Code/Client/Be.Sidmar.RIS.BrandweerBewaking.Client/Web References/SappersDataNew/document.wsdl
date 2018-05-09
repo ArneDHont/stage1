@@ -1,0 +1,1196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:n1="urn:sap-com:document:sap:rfc:functions" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="urn:sap-com:document:sap:soap:functions:mc-style" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" targetNamespace="urn:sap-com:document:sap:soap:functions:mc-style" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>
+    <sidl:sidl xmlns:sidl="http://www.sap.com/2007/03/sidl" />
+  </wsdl:documentation>
+  <wsp:UsingPolicy wsdl:required="true" />
+  <wsp:Policy wsu:Id="BN_BN_Binding_T_HTTP_A_HTTP_ZHR_BAPI_SAPPERS_P_STANDARD_L">
+    <saptrnbnd:OptimizedXMLTransfer uri="http://xml.sap.com/2006/11/esi/esp/binxml" xmlns:saptrnbnd="http://www.sap.com/webas/710/soap/features/transportbinding/" wsp:Optional="true" />
+    <saptrnbnd:OptimizedMimeSerialization xmlns:saptrnbnd="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" wsp:Optional="true" />
+    <wsp:ExactlyOne xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" xmlns:sapsp="http://www.sap.com/webas/630/soap/features/security/policy" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:wst="http://docs.oasis-open.org/ws-sx/ws-trust/200512" xmlns:wsu="http://schemas.xmlsoap.org/ws/2002/07/utility" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken>
+                  <wsp:Policy>
+                    <sp:HttpBasicAuthentication />
+                  </wsp:Policy>
+                </sp:HttpsToken>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic128Rsa15 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+      </wsp:All>
+    </wsp:ExactlyOne>
+    <sapcentraladmin:CentralAdministration xmlns:sapcentraladmin="http://www.sap.com/webas/700/soap/features/CentralAdministration/" wsp:Optional="true">
+      <sapcentraladmin:ProfileType>Local</sapcentraladmin:ProfileType>
+      <sapcentraladmin:ProfileName>P_STANDARD</sapcentraladmin:ProfileName>
+      <sapcentraladmin:ProfileVersion>1</sapcentraladmin:ProfileVersion>
+    </sapcentraladmin:CentralAdministration>
+    <wsaw:UsingAddressing xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsp:Optional="true" />
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="IF_IF_Zhr_BAPI_SAPPERS">
+    <sapsession:Session xmlns:sapsession="http://www.sap.com/webas/630/soap/features/session/">
+      <sapsession:enableSession>false</sapsession:enableSession>
+    </sapsession:Session>
+    <sapcentraladmin:CentralAdministration xmlns:sapcentraladmin="http://www.sap.com/webas/700/soap/features/CentralAdministration/" wsp:Optional="true">
+      <sapcentraladmin:BusinessApplicationID>4D11EE0CF2290049E10080008B355780</sapcentraladmin:BusinessApplicationID>
+    </sapcentraladmin:CentralAdministration>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="OP_IF_OP_ZBapiSappersGetlist">
+    <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+    <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+    <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+    <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="OP_IF_OP_ZBapiSappersGetlist2">
+    <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+    <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+    <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+    <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="OP_IF_OP_ZBapiPresentGetlist">
+    <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+    <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+    <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+    <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="OP_IF_OP_ZBapiTopItemListToday">
+    <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+    <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+    <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+    <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="OP_IF_OP_ZBapiTopListToday">
+    <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+    <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+    <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+    <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="OP_IF_OP_ZBapiSappersbGetlist">
+    <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+    <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+    <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+    <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="OP_IF_OP_ZBapiOrgitemGetlist">
+    <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+    <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+    <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+    <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="OP_IF_OP_ZBapiRbvGetlist">
+    <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+    <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+    <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+    <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="OP_IF_OP_ZBapiOrgtopGetlist">
+    <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+    <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+    <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+    <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema attributeFormDefault="qualified" targetNamespace="urn:sap-com:document:sap:rfc:functions">
+      <xsd:simpleType name="char1">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="1" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char10">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="10" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char12">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="12" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char14">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="14" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char15">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="15" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char18">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="18" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char2">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="2" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char20">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="20" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char220">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="220" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char3">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="3" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char30">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="30" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char32">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="32" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char4">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="4" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char40">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="40" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char5">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="5" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char50">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="50" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char6">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="6" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char60">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="60" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char7">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="7" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char8">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="8" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="date10">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="10" />
+          <xsd:pattern value="\d\d\d\d-\d\d-\d\d" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="decimal7.2">
+        <xsd:restriction base="xsd:decimal">
+          <xsd:totalDigits value="7" />
+          <xsd:fractionDigits value="2" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="lang">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="1" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="numeric1">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="1" />
+          <xsd:pattern value="\d*" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="numeric11">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="11" />
+          <xsd:pattern value="\d*" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="numeric2">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="2" />
+          <xsd:pattern value="\d*" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="numeric3">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="3" />
+          <xsd:pattern value="\d*" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="numeric4">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="4" />
+          <xsd:pattern value="\d*" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="numeric5">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="5" />
+          <xsd:pattern value="\d*" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="numeric6">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="6" />
+          <xsd:pattern value="\d*" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="numeric8">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="8" />
+          <xsd:pattern value="\d*" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="BAPIRETURN">
+        <xsd:sequence>
+          <xsd:element name="TYPE" type="n1:char1" />
+          <xsd:element name="CODE" type="n1:char5" />
+          <xsd:element name="MESSAGE" type="n1:char220" />
+          <xsd:element name="LOG_NO" type="n1:char20" />
+          <xsd:element name="LOG_MSG_NO" type="n1:numeric6" />
+          <xsd:element name="MESSAGE_V1" type="n1:char50" />
+          <xsd:element name="MESSAGE_V2" type="n1:char50" />
+          <xsd:element name="MESSAGE_V3" type="n1:char50" />
+          <xsd:element name="MESSAGE_V4" type="n1:char50" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns:n0="urn:sap-com:document:sap:rfc:functions" attributeFormDefault="qualified" targetNamespace="urn:sap-com:document:sap:soap:functions:mc-style">
+      <xsd:import namespace="urn:sap-com:document:sap:rfc:functions" />
+      <xsd:simpleType name="char1">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="1" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char10">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="10" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char12">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="12" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char14">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="14" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char18">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="18" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char2">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="2" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char3">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="3" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char30">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="30" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char4">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="4" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char40">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="40" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char5">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="5" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char6">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="6" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char60">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="60" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char7">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="7" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char8">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="8" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="numeric1">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="1" />
+          <xsd:pattern value="\d*" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="numeric2">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="2" />
+          <xsd:pattern value="\d*" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="numeric5">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="5" />
+          <xsd:pattern value="\d*" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="numeric6">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="6" />
+          <xsd:pattern value="\d*" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="numeric8">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="8" />
+          <xsd:pattern value="\d*" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="Zpersno">
+        <xsd:sequence>
+          <xsd:element name="Pernr" type="n0:numeric8" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ZSAPPERS_BAPI">
+        <xsd:sequence>
+          <xsd:element name="PERNR" type="tns:numeric8" />
+          <xsd:element name="WERKS" type="tns:char4" />
+          <xsd:element name="PERSG" type="tns:char1" />
+          <xsd:element name="PERSK" type="tns:char2" />
+          <xsd:element name="BUKRS" type="tns:char4" />
+          <xsd:element name="ABKRS" type="tns:char2" />
+          <xsd:element name="MASSN" type="tns:char2" />
+          <xsd:element name="MASSG" type="tns:char2" />
+          <xsd:element name="STAT2" type="tns:char1" />
+          <xsd:element name="KPL" type="tns:char3" />
+          <xsd:element name="BY_FIE" type="tns:char2" />
+          <xsd:element name="COD_FIE" type="tns:char2" />
+          <xsd:element name="PLANS" type="tns:numeric8" />
+          <xsd:element name="PCT_DU_WRN_FIE" type="tns:numeric5" />
+          <xsd:element name="STELL" type="tns:numeric8" />
+          <xsd:element name="SCF_KRT_FIE" type="tns:char8" />
+          <xsd:element name="SCF_FIE" type="tns:char40" />
+          <xsd:element name="ORGEH" type="tns:numeric8" />
+          <xsd:element name="NR_ST_CHEF_RHS" type="tns:numeric8" />
+          <xsd:element name="NR_ST_HFD_AFD" type="tns:numeric8" />
+          <xsd:element name="NR_FIE_CHEF_RHS" type="tns:numeric8" />
+          <xsd:element name="SACHZ" type="tns:char3" />
+          <xsd:element name="ZZLEVK" type="tns:char8" />
+          <xsd:element name="ZZLEVO" type="tns:char30" />
+          <xsd:element name="ZZCODE" type="tns:char2" />
+          <xsd:element name="ATEXT" type="tns:char5" />
+          <xsd:element name="VORNA_KLN" type="tns:char40" />
+          <xsd:element name="NACHN_KLN" type="tns:char40" />
+          <xsd:element name="VORNA" type="tns:char40" />
+          <xsd:element name="NACHN" type="tns:char40" />
+          <xsd:element name="RUFNM_KLN" type="tns:char40" />
+          <xsd:element name="RUFNM" type="tns:char40" />
+          <xsd:element name="GESCH" type="tns:char1" />
+          <xsd:element name="GBDAT" type="tns:char10" />
+          <xsd:element name="DT_GBR_TCH" type="tns:char10" />
+          <xsd:element name="GBORT" type="tns:char40" />
+          <xsd:element name="SPRSL" type="tns:char1" />
+          <xsd:element name="GBLND" type="tns:char3" />
+          <xsd:element name="PERID" type="tns:char8" />
+          <xsd:element name="NATIO" type="tns:char3" />
+          <xsd:element name="BEIDN" type="tns:char12" />
+          <xsd:element name="BEIDD" type="tns:char10" />
+          <xsd:element name="BEWVN" type="tns:char12" />
+          <xsd:element name="BEWVD" type="tns:char10" />
+          <xsd:element name="BEVVN" type="tns:char12" />
+          <xsd:element name="BEVVD" type="tns:char10" />
+          <xsd:element name="FAMST" type="tns:char1" />
+          <xsd:element name="FAMDT" type="tns:char10" />
+          <xsd:element name="FANAM" type="tns:char40" />
+          <xsd:element name="FAVOR" type="tns:char40" />
+          <xsd:element name="FASEX" type="tns:char1" />
+          <xsd:element name="FGBDT" type="tns:char10" />
+          <xsd:element name="ANZKD" type="tns:numeric2" />
+          <xsd:element name="LAND1" type="tns:char3" />
+          <xsd:element name="STRAS" type="tns:char60" />
+          <xsd:element name="HSNMR" type="tns:char10" />
+          <xsd:element name="POSTA" type="tns:char10" />
+          <xsd:element name="AD" type="tns:char60" />
+          <xsd:element name="PSTLZ" type="tns:char10" />
+          <xsd:element name="ORT01" type="tns:char40" />
+          <xsd:element name="TELNR" type="tns:char14" />
+          <xsd:element name="SCHKZ" type="tns:char8" />
+          <xsd:element name="SCHKZ_VORIG" type="tns:char8" />
+          <xsd:element name="ZTERF" type="tns:numeric1" />
+          <xsd:element name="TEILK" type="tns:char1" />
+          <xsd:element name="EMPCT" type="tns:numeric6" />
+          <xsd:element name="BESTE" type="tns:char1" />
+          <xsd:element name="BERGM" type="tns:char1" />
+          <xsd:element name="BEREG" type="tns:char1" />
+          <xsd:element name="BANKN" type="tns:char18" />
+          <xsd:element name="WAERS" type="tns:char5" />
+          <xsd:element name="ZLSCH" type="tns:char1" />
+          <xsd:element name="CTTYP" type="tns:char2" />
+          <xsd:element name="DT_BG_CTR_WRN" type="tns:char10" />
+          <xsd:element name="CTEDT" type="tns:char10" />
+          <xsd:element name="BEGPC" type="tns:char7" />
+          <xsd:element name="BEUWG" type="tns:numeric5" />
+          <xsd:element name="ZDAIN" type="tns:char10" />
+          <xsd:element name="EINDT" type="tns:char10" />
+          <xsd:element name="BEANC" type="tns:char10" />
+          <xsd:element name="ZDAAN" type="tns:char10" />
+          <xsd:element name="DT_UIT_DNS" type="tns:char10" />
+          <xsd:element name="DT_BPNS" type="tns:char10" />
+          <xsd:element name="DT_PNS" type="tns:char10" />
+          <xsd:element name="DT_OVL" type="tns:char10" />
+          <xsd:element name="DT_BG_SBO" type="tns:char10" />
+          <xsd:element name="DT_BG_ABR_LPB" type="tns:char10" />
+          <xsd:element name="DT_END_ABR_LPB" type="tns:char10" />
+          <xsd:element name="PNALT" type="tns:char12" />
+          <xsd:element name="GEBNR" type="tns:char6" />
+          <xsd:element name="ZIMNR" type="tns:char6" />
+          <xsd:element name="TEL01" type="tns:char5" />
+          <xsd:element name="TEL02" type="tns:char5" />
+          <xsd:element name="ZZPVAK" type="tns:char12" />
+          <xsd:element name="ZZFXNR" type="tns:char5" />
+          <xsd:element name="ZZPL1" type="tns:char12" />
+          <xsd:element name="ZZPL2" type="tns:char12" />
+          <xsd:element name="ZZPL3" type="tns:char12" />
+          <xsd:element name="ZAUSW" type="tns:numeric8" />
+          <xsd:element name="ZGRP1" type="tns:char3" />
+          <xsd:element name="ZGRP2" type="tns:char3" />
+          <xsd:element name="ZGRP3" type="tns:char3" />
+          <xsd:element name="ZGRP4" type="tns:char3" />
+          <xsd:element name="ZGRP5" type="tns:char3" />
+          <xsd:element name="NR_TEL_BUUR_WRN" type="tns:char14" />
+          <xsd:element name="NR_BIP_WRN" type="tns:char5" />
+          <xsd:element name="KRT_IND" type="tns:char4" />
+          <xsd:element name="TOP" type="tns:char8" />
+          <xsd:element name="DIREK" type="tns:char8" />
+          <xsd:element name="AFDEL" type="tns:char8" />
+          <xsd:element name="SECT" type="tns:char8" />
+          <xsd:element name="TITULATUUR" type="tns:char1" />
+          <xsd:element name="RSZPN" type="tns:char10" />
+          <xsd:element name="SLART" type="tns:char2" />
+          <xsd:element name="AUSBI" type="tns:char8" />
+          <xsd:element name="SLTP1" type="tns:char5" />
+          <xsd:element name="DT_KEU_FIE_L" type="tns:char10" />
+          <xsd:element name="ZZAFR" type="tns:char1" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Zsappers">
+        <xsd:sequence>
+          <xsd:element name="Pernr" type="n0:numeric8" />
+          <xsd:element name="Werks" type="n0:char4" />
+          <xsd:element name="Persg" type="n0:char1" />
+          <xsd:element name="Persk" type="n0:char2" />
+          <xsd:element name="Bukrs" type="n0:char4" />
+          <xsd:element name="Abkrs" type="n0:char2" />
+          <xsd:element name="Massn" type="n0:char2" />
+          <xsd:element name="Massg" type="n0:char2" />
+          <xsd:element name="Stat2" type="n0:char1" />
+          <xsd:element name="Kpl" type="n0:char3" />
+          <xsd:element name="ByFie" type="n0:char2" />
+          <xsd:element name="CodFie" type="n0:char2" />
+          <xsd:element name="Plans" type="n0:numeric8" />
+          <xsd:element name="PctDuWrnFie" type="n0:numeric5" />
+          <xsd:element name="Stell" type="n0:numeric8" />
+          <xsd:element name="ScfKrtFie" type="n0:char8" />
+          <xsd:element name="ScfFie" type="n0:char40" />
+          <xsd:element name="Orgeh" type="n0:numeric8" />
+          <xsd:element name="NrStChefRhs" type="n0:numeric8" />
+          <xsd:element name="NrStHfdAfd" type="n0:numeric8" />
+          <xsd:element name="NrFieChefRhs" type="n0:numeric8" />
+          <xsd:element name="Sachz" type="n0:char3" />
+          <xsd:element name="Zzlevk" type="n0:char8" />
+          <xsd:element name="Zzlevo" type="n0:char30" />
+          <xsd:element name="Zzcode" type="n0:char2" />
+          <xsd:element name="Atext" type="n0:char5" />
+          <xsd:element name="VornaKln" type="n0:char40" />
+          <xsd:element name="NachnKln" type="n0:char40" />
+          <xsd:element name="Vorna" type="n0:char40" />
+          <xsd:element name="Nachn" type="n0:char40" />
+          <xsd:element name="RufnmKln" type="n0:char40" />
+          <xsd:element name="Rufnm" type="n0:char40" />
+          <xsd:element name="Gesch" type="n0:char1" />
+          <xsd:element name="Gbdat" type="n0:char10" />
+          <xsd:element name="DtGbrTch" type="n0:char10" />
+          <xsd:element name="Gbort" type="n0:char40" />
+          <xsd:element name="Sprsl" type="n0:char1" />
+          <xsd:element name="Gblnd" type="n0:char3" />
+          <xsd:element name="Perid" type="n0:char8" />
+          <xsd:element name="Natio" type="n0:char3" />
+          <xsd:element name="Beidn" type="n0:char12" />
+          <xsd:element name="Beidd" type="n0:char10" />
+          <xsd:element name="Bewvn" type="n0:char12" />
+          <xsd:element name="Bewvd" type="n0:char10" />
+          <xsd:element name="Bevvn" type="n0:char12" />
+          <xsd:element name="Bevvd" type="n0:char10" />
+          <xsd:element name="Famst" type="n0:char1" />
+          <xsd:element name="Famdt" type="n0:char10" />
+          <xsd:element name="Fanam" type="n0:char40" />
+          <xsd:element name="Favor" type="n0:char40" />
+          <xsd:element name="Fasex" type="n0:char1" />
+          <xsd:element name="Fgbdt" type="n0:char10" />
+          <xsd:element name="Anzkd" type="n0:numeric2" />
+          <xsd:element name="Land1" type="n0:char3" />
+          <xsd:element name="Stras" type="n0:char60" />
+          <xsd:element name="Hsnmr" type="n0:char10" />
+          <xsd:element name="Posta" type="n0:char10" />
+          <xsd:element name="Ad" type="n0:char60" />
+          <xsd:element name="Pstlz" type="n0:char10" />
+          <xsd:element name="Ort01" type="n0:char40" />
+          <xsd:element name="Telnr" type="n0:char14" />
+          <xsd:element name="Schkz" type="n0:char8" />
+          <xsd:element name="SchkzVorig" type="n0:char8" />
+          <xsd:element name="Zterf" type="n0:numeric1" />
+          <xsd:element name="Teilk" type="n0:char1" />
+          <xsd:element name="Empct" type="n0:numeric6" />
+          <xsd:element name="Beste" type="n0:char1" />
+          <xsd:element name="Bergm" type="n0:char1" />
+          <xsd:element name="Bereg" type="n0:char1" />
+          <xsd:element name="Bankn" type="n0:char18" />
+          <xsd:element name="Waers" type="n0:char5" />
+          <xsd:element name="Zlsch" type="n0:char1" />
+          <xsd:element name="Cttyp" type="n0:char2" />
+          <xsd:element name="DtBgCtrWrn" type="n0:char10" />
+          <xsd:element name="Ctedt" type="n0:char10" />
+          <xsd:element name="Begpc" type="n0:char7" />
+          <xsd:element name="Beuwg" type="n0:numeric5" />
+          <xsd:element name="Zdain" type="n0:char10" />
+          <xsd:element name="Eindt" type="n0:char10" />
+          <xsd:element name="Beanc" type="n0:char10" />
+          <xsd:element name="Zdaan" type="n0:char10" />
+          <xsd:element name="DtUitDns" type="n0:char10" />
+          <xsd:element name="DtBpns" type="n0:char10" />
+          <xsd:element name="DtPns" type="n0:char10" />
+          <xsd:element name="DtOvl" type="n0:char10" />
+          <xsd:element name="DtBgSbo" type="n0:char10" />
+          <xsd:element name="DtBgAbrLpb" type="n0:char10" />
+          <xsd:element name="DtEndAbrLpb" type="n0:char10" />
+          <xsd:element name="Pnalt" type="n0:char12" />
+          <xsd:element name="Gebnr" type="n0:char6" />
+          <xsd:element name="Zimnr" type="n0:char6" />
+          <xsd:element name="Tel01" type="n0:char5" />
+          <xsd:element name="Tel02" type="n0:char5" />
+          <xsd:element name="Zzpvak" type="n0:char12" />
+          <xsd:element name="Zzfxnr" type="n0:char5" />
+          <xsd:element name="Zzpl1" type="n0:char12" />
+          <xsd:element name="Zzpl2" type="n0:char12" />
+          <xsd:element name="Zzpl3" type="n0:char12" />
+          <xsd:element name="Zausw" type="n0:numeric8" />
+          <xsd:element name="Zgrp1" type="n0:char3" />
+          <xsd:element name="Zgrp2" type="n0:char3" />
+          <xsd:element name="Zgrp3" type="n0:char3" />
+          <xsd:element name="Zgrp4" type="n0:char3" />
+          <xsd:element name="Zgrp5" type="n0:char3" />
+          <xsd:element name="NrTelBuurWrn" type="n0:char14" />
+          <xsd:element name="NrBipWrn" type="n0:char5" />
+          <xsd:element name="KrtInd" type="n0:char4" />
+          <xsd:element name="Top" type="n0:char8" />
+          <xsd:element name="Direk" type="n0:char8" />
+          <xsd:element name="Afdel" type="n0:char8" />
+          <xsd:element name="Sect" type="n0:char8" />
+          <xsd:element name="Titulatuur" type="n0:char1" />
+          <xsd:element name="Rszpn" type="n0:char10" />
+          <xsd:element name="Slart" type="n0:char2" />
+          <xsd:element name="Ausbi" type="n0:char8" />
+          <xsd:element name="Sltp1" type="n0:char5" />
+          <xsd:element name="DtKeuFieL" type="n0:char10" />
+          <xsd:element name="Zzafr" type="n0:char1" />
+          <xsd:element name="Zbrsz" type="n0:char1" />
+          <xsd:element name="Zbezlim" type="n0:char1" />
+          <xsd:element name="Zbgelim" type="n0:char10" />
+          <xsd:element name="Zenelim" type="n0:char10" />
+          <xsd:element name="Zuitlim" type="n0:char1" />
+          <xsd:element name="Zsrtlim" type="n0:char10" />
+          <xsd:element name="Ze101" type="n0:char1" />
+          <xsd:element name="Zbge101" type="n0:char10" />
+          <xsd:element name="Zene101" type="n0:char10" />
+          <xsd:element name="Zarbk" type="n0:char1" />
+          <xsd:element name="Zbgarbk" type="n0:char10" />
+          <xsd:element name="Zenarbk" type="n0:char10" />
+          <xsd:element name="ZzverantwAg" type="n0:char1" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Bapireturn">
+        <xsd:sequence>
+          <xsd:element name="Type" type="n0:char1" />
+          <xsd:element name="Code" type="n0:char5" />
+          <xsd:element name="Message" type="n0:char220" />
+          <xsd:element name="LogNo" type="n0:char20" />
+          <xsd:element name="LogMsgNo" type="n0:numeric6" />
+          <xsd:element name="MessageV1" type="n0:char50" />
+          <xsd:element name="MessageV2" type="n0:char50" />
+          <xsd:element name="MessageV3" type="n0:char50" />
+          <xsd:element name="MessageV4" type="n0:char50" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Zorgan">
+        <xsd:sequence>
+          <xsd:element name="Top" type="n0:char8" />
+          <xsd:element name="Other" type="n0:char8" />
+          <xsd:element name="Description" type="n0:char40" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Zpresent">
+        <xsd:sequence>
+          <xsd:element name="Pernr" type="n0:numeric8" />
+          <xsd:element name="Datum" type="n0:date10" />
+          <xsd:element name="Awart" type="n0:char4" />
+          <xsd:element name="Beguz" type="n0:char6" />
+          <xsd:element name="Enduz" type="n0:char6" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Zconge">
+        <xsd:sequence>
+          <xsd:element name="Pernr" type="n0:numeric8" />
+          <xsd:element name="Anz01" type="n0:decimal7.2" />
+          <xsd:element name="Kve01" type="n0:decimal7.2" />
+          <xsd:element name="Anz02" type="n0:decimal7.2" />
+          <xsd:element name="Kve02" type="n0:decimal7.2" />
+          <xsd:element name="Anz03" type="n0:decimal7.2" />
+          <xsd:element name="Kve03" type="n0:decimal7.2" />
+          <xsd:element name="Anz04" type="n0:decimal7.2" />
+          <xsd:element name="Kve04" type="n0:decimal7.2" />
+          <xsd:element name="Anz05" type="n0:decimal7.2" />
+          <xsd:element name="Kve05" type="n0:decimal7.2" />
+          <xsd:element name="Anz06" type="n0:decimal7.2" />
+          <xsd:element name="Kve06" type="n0:decimal7.2" />
+          <xsd:element name="Anz07" type="n0:decimal7.2" />
+          <xsd:element name="Kve07" type="n0:decimal7.2" />
+          <xsd:element name="Anz08" type="n0:decimal7.2" />
+          <xsd:element name="Kve08" type="n0:decimal7.2" />
+          <xsd:element name="Anz09" type="n0:decimal7.2" />
+          <xsd:element name="Kve09" type="n0:decimal7.2" />
+          <xsd:element name="Anz10" type="n0:decimal7.2" />
+          <xsd:element name="Kve10" type="n0:decimal7.2" />
+          <xsd:element name="Anz11" type="n0:decimal7.2" />
+          <xsd:element name="Kve11" type="n0:decimal7.2" />
+          <xsd:element name="Anz12" type="n0:decimal7.2" />
+          <xsd:element name="Kve12" type="n0:decimal7.2" />
+          <xsd:element name="Anz13" type="n0:decimal7.2" />
+          <xsd:element name="Kve13" type="n0:decimal7.2" />
+          <xsd:element name="Anz14" type="n0:decimal7.2" />
+          <xsd:element name="Kve14" type="n0:decimal7.2" />
+          <xsd:element name="Anz15" type="n0:decimal7.2" />
+          <xsd:element name="Kve15" type="n0:decimal7.2" />
+          <xsd:element name="Anz16" type="n0:decimal7.2" />
+          <xsd:element name="Kve16" type="n0:decimal7.2" />
+          <xsd:element name="Anz17" type="n0:decimal7.2" />
+          <xsd:element name="Kve17" type="n0:decimal7.2" />
+          <xsd:element name="Anz18" type="n0:decimal7.2" />
+          <xsd:element name="Kve18" type="n0:decimal7.2" />
+          <xsd:element name="Anz19" type="n0:decimal7.2" />
+          <xsd:element name="Kve19" type="n0:decimal7.2" />
+          <xsd:element name="Anz20" type="n0:decimal7.2" />
+          <xsd:element name="Kve20" type="n0:decimal7.2" />
+          <xsd:element name="Anz21" type="n0:decimal7.2" />
+          <xsd:element name="Kve21" type="n0:decimal7.2" />
+          <xsd:element name="Anz22" type="n0:decimal7.2" />
+          <xsd:element name="Kve22" type="n0:decimal7.2" />
+          <xsd:element name="Anz23" type="n0:decimal7.2" />
+          <xsd:element name="Kve23" type="n0:decimal7.2" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Bapiret2">
+        <xsd:sequence>
+          <xsd:element name="Type" type="n0:char1" />
+          <xsd:element name="Id" type="n0:char20" />
+          <xsd:element name="Number" type="n0:numeric3" />
+          <xsd:element name="Message" type="n0:char220" />
+          <xsd:element name="LogNo" type="n0:char20" />
+          <xsd:element name="LogMsgNo" type="n0:numeric6" />
+          <xsd:element name="MessageV1" type="n0:char50" />
+          <xsd:element name="MessageV2" type="n0:char50" />
+          <xsd:element name="MessageV3" type="n0:char50" />
+          <xsd:element name="MessageV4" type="n0:char50" />
+          <xsd:element name="Parameter" type="n0:char32" />
+          <xsd:element name="Row" type="xsd:int" />
+          <xsd:element name="Field" type="n0:char30" />
+          <xsd:element name="System" type="n0:char10" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Zporgtopitem">
+        <xsd:sequence>
+          <xsd:element name="Top" type="n0:char8" />
+          <xsd:element name="Item" type="n0:char12" />
+          <xsd:element name="Description" type="n0:char40" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Zporgtop">
+        <xsd:sequence>
+          <xsd:element name="Top" type="n0:char8" />
+          <xsd:element name="Description" type="n0:char40" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Zsappersb">
+        <xsd:sequence>
+          <xsd:element name="Pernr" type="n0:numeric8" />
+          <xsd:element name="Rszrr" type="n0:numeric11" />
+          <xsd:element name="Zznmd" type="n0:numeric4" />
+          <xsd:element name="Wrkom" type="n0:numeric1" />
+          <xsd:element name="Barem" type="n0:char3" />
+          <xsd:element name="Zzlid" type="n0:char1" />
+          <xsd:element name="Bvaka" type="n0:char15" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TableOfZpersno">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:Zpersno" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TABLE_OF_ZSAPPERS_BAPI">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:ZSAPPERS_BAPI" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TableOfZsappers">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:Zsappers" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TableOfZorgan">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:Zorgan" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TableOfZpresent">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:Zpresent" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TableOfZconge">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:Zconge" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TableOfBapiret2">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:Bapiret2" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TableOfZporgtopitem">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:Zporgtopitem" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TableOfZporgtop">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:Zporgtop" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TableOfZsappersb">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:Zsappersb" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ZBapiSappersGetlist">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="Actief" type="n0:char1" />
+            <xsd:element name="Persno" type="tns:TableOfZpersno" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZBapiSappersGetlistResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Bapireturn" type="n0:BAPIRETURN" />
+            <xsd:element name="Datbest" type="n0:date10" />
+            <xsd:element name="Persno" type="tns:TableOfZpersno" />
+            <xsd:element name="Sappers" type="tns:TABLE_OF_ZSAPPERS_BAPI" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZBapiSappersGetlist2">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="Actief" type="n0:char1" />
+            <xsd:element name="Persno" type="tns:TableOfZpersno" />
+            <xsd:element name="Sappers" type="tns:TableOfZsappers" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZBapiSappersGetlist2Response">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Bapireturn" type="tns:Bapireturn" />
+            <xsd:element name="Datbest" type="n0:date10" />
+            <xsd:element name="Persno" type="tns:TableOfZpersno" />
+            <xsd:element name="Sappers" type="tns:TableOfZsappers" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZBapiOrgitemGetlist">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Soort" type="n0:char8" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZBapiOrgitemGetlistResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="OrgotherList" type="tns:TableOfZorgan" />
+            <xsd:element name="Return" type="tns:Bapireturn" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZBapiOrgtopGetlist">
+        <xsd:complexType>
+          <xsd:sequence />
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZBapiOrgtopGetlistResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="OrgtopList" type="tns:TableOfZorgan" />
+            <xsd:element name="Return" type="tns:Bapireturn" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZBapiPresentGetlist">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="Actief" type="n0:char1" />
+            <xsd:element name="Begda" type="n0:date10" />
+            <xsd:element name="Endda" type="n0:date10" />
+            <xsd:element name="Persno" type="tns:TableOfZpersno" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZBapiPresentGetlistResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Bapireturn" type="tns:Bapireturn" />
+            <xsd:element name="Persno" type="tns:TableOfZpersno" />
+            <xsd:element name="Present" type="tns:TableOfZpresent" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZBapiRbvGetlist">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Persno" type="tns:TableOfZpersno" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZBapiRbvGetlistResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Bapireturn" type="tns:Bapireturn" />
+            <xsd:element name="Conge" type="tns:TableOfZconge" />
+            <xsd:element name="Persno" type="tns:TableOfZpersno" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZBapiTopItemListToday">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="Itemtype" type="n0:char8" />
+            <xsd:element minOccurs="0" name="Language" type="n0:lang" />
+            <xsd:element minOccurs="0" name="LanguageIso" type="n0:char2" />
+            <xsd:element name="Return" type="tns:TableOfBapiret2" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZBapiTopItemListTodayResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Return" type="tns:TableOfBapiret2" />
+            <xsd:element name="Topitemlist" type="tns:TableOfZporgtopitem" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZBapiTopListToday">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="Language" type="n0:lang" />
+            <xsd:element minOccurs="0" name="LanguageIso" type="n0:char2" />
+            <xsd:element name="Return" type="tns:TableOfBapiret2" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZBapiTopListTodayResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Return" type="tns:TableOfBapiret2" />
+            <xsd:element name="Toplist" type="tns:TableOfZporgtop" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZBapiSappersbGetlist">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="Actief" type="n0:char1" />
+            <xsd:element name="Persno" type="tns:TableOfZpersno" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZBapiSappersbGetlistResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Bapireturn" type="tns:Bapireturn" />
+            <xsd:element name="Persno" type="tns:TableOfZpersno" />
+            <xsd:element name="Sappersb" type="tns:TableOfZsappersb" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ZBapiSappersGetlist">
+    <wsdl:part name="parameters" element="tns:ZBapiSappersGetlist" />
+  </wsdl:message>
+  <wsdl:message name="ZBapiSappersGetlistResponse">
+    <wsdl:part name="parameter" element="tns:ZBapiSappersGetlistResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZBapiSappersGetlist2">
+    <wsdl:part name="parameters" element="tns:ZBapiSappersGetlist2" />
+  </wsdl:message>
+  <wsdl:message name="ZBapiSappersGetlist2Response">
+    <wsdl:part name="parameter" element="tns:ZBapiSappersGetlist2Response" />
+  </wsdl:message>
+  <wsdl:message name="ZBapiOrgitemGetlist">
+    <wsdl:part name="parameters" element="tns:ZBapiOrgitemGetlist" />
+  </wsdl:message>
+  <wsdl:message name="ZBapiOrgitemGetlistResponse">
+    <wsdl:part name="parameter" element="tns:ZBapiOrgitemGetlistResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZBapiOrgtopGetlist">
+    <wsdl:part name="parameters" element="tns:ZBapiOrgtopGetlist" />
+  </wsdl:message>
+  <wsdl:message name="ZBapiOrgtopGetlistResponse">
+    <wsdl:part name="parameter" element="tns:ZBapiOrgtopGetlistResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZBapiPresentGetlist">
+    <wsdl:part name="parameters" element="tns:ZBapiPresentGetlist" />
+  </wsdl:message>
+  <wsdl:message name="ZBapiPresentGetlistResponse">
+    <wsdl:part name="parameter" element="tns:ZBapiPresentGetlistResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZBapiRbvGetlist">
+    <wsdl:part name="parameters" element="tns:ZBapiRbvGetlist" />
+  </wsdl:message>
+  <wsdl:message name="ZBapiRbvGetlistResponse">
+    <wsdl:part name="parameter" element="tns:ZBapiRbvGetlistResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZBapiTopItemListToday">
+    <wsdl:part name="parameters" element="tns:ZBapiTopItemListToday" />
+  </wsdl:message>
+  <wsdl:message name="ZBapiTopItemListTodayResponse">
+    <wsdl:part name="parameter" element="tns:ZBapiTopItemListTodayResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZBapiTopListToday">
+    <wsdl:part name="parameters" element="tns:ZBapiTopListToday" />
+  </wsdl:message>
+  <wsdl:message name="ZBapiTopListTodayResponse">
+    <wsdl:part name="parameter" element="tns:ZBapiTopListTodayResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZBapiSappersbGetlist">
+    <wsdl:part name="parameters" element="tns:ZBapiSappersbGetlist" />
+  </wsdl:message>
+  <wsdl:message name="ZBapiSappersbGetlistResponse">
+    <wsdl:part name="parameter" element="tns:ZBapiSappersbGetlistResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Zhr_BAPI_SAPPERS">
+    <wsp:Policy>
+      <wsp:PolicyReference URI="#IF_IF_Zhr_BAPI_SAPPERS" />
+    </wsp:Policy>
+    <wsdl:operation name="ZBapiSappersGetlist">
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_IF_OP_ZBapiSappersGetlist" />
+      </wsp:Policy>
+      <wsdl:input message="tns:ZBapiSappersGetlist" />
+      <wsdl:output message="tns:ZBapiSappersGetlistResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBapiSappersGetlist2">
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_IF_OP_ZBapiSappersGetlist2" />
+      </wsp:Policy>
+      <wsdl:input message="tns:ZBapiSappersGetlist2" />
+      <wsdl:output message="tns:ZBapiSappersGetlist2Response" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBapiOrgitemGetlist">
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_IF_OP_ZBapiOrgitemGetlist" />
+      </wsp:Policy>
+      <wsdl:input message="tns:ZBapiOrgitemGetlist" />
+      <wsdl:output message="tns:ZBapiOrgitemGetlistResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBapiOrgtopGetlist">
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_IF_OP_ZBapiOrgtopGetlist" />
+      </wsp:Policy>
+      <wsdl:input message="tns:ZBapiOrgtopGetlist" />
+      <wsdl:output message="tns:ZBapiOrgtopGetlistResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBapiPresentGetlist">
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_IF_OP_ZBapiPresentGetlist" />
+      </wsp:Policy>
+      <wsdl:input message="tns:ZBapiPresentGetlist" />
+      <wsdl:output message="tns:ZBapiPresentGetlistResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBapiRbvGetlist">
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_IF_OP_ZBapiRbvGetlist" />
+      </wsp:Policy>
+      <wsdl:input message="tns:ZBapiRbvGetlist" />
+      <wsdl:output message="tns:ZBapiRbvGetlistResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBapiTopItemListToday">
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_IF_OP_ZBapiTopItemListToday" />
+      </wsp:Policy>
+      <wsdl:input message="tns:ZBapiTopItemListToday" />
+      <wsdl:output message="tns:ZBapiTopItemListTodayResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBapiTopListToday">
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_IF_OP_ZBapiTopListToday" />
+      </wsp:Policy>
+      <wsdl:input message="tns:ZBapiTopListToday" />
+      <wsdl:output message="tns:ZBapiTopListTodayResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBapiSappersbGetlist">
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_IF_OP_ZBapiSappersbGetlist" />
+      </wsp:Policy>
+      <wsdl:input message="tns:ZBapiSappersbGetlist" />
+      <wsdl:output message="tns:ZBapiSappersbGetlistResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Binding_T_HTTP_A_HTTP_ZHR_BAPI_SAPPERS_P_STANDARD_L" type="tns:Zhr_BAPI_SAPPERS">
+    <wsp:Policy>
+      <wsp:PolicyReference URI="#BN_BN_Binding_T_HTTP_A_HTTP_ZHR_BAPI_SAPPERS_P_STANDARD_L" />
+    </wsp:Policy>
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ZBapiSappersGetlist">
+      <soap:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:Zhr_BAPI_SAPPERS:ZBapiSappersGetlistRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBapiSappersGetlist2">
+      <soap:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:Zhr_BAPI_SAPPERS:ZBapiSappersGetlist2Request" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBapiOrgitemGetlist">
+      <soap:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:Zhr_BAPI_SAPPERS:ZBapiOrgitemGetlistRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBapiOrgtopGetlist">
+      <soap:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:Zhr_BAPI_SAPPERS:ZBapiOrgtopGetlistRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBapiPresentGetlist">
+      <soap:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:Zhr_BAPI_SAPPERS:ZBapiPresentGetlistRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBapiRbvGetlist">
+      <soap:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:Zhr_BAPI_SAPPERS:ZBapiRbvGetlistRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBapiTopItemListToday">
+      <soap:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:Zhr_BAPI_SAPPERS:ZBapiTopItemListTodayRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBapiTopListToday">
+      <soap:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:Zhr_BAPI_SAPPERS:ZBapiTopListTodayRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBapiSappersbGetlist">
+      <soap:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:Zhr_BAPI_SAPPERS:ZBapiSappersbGetlistRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service_ZHR_BAPI_SAPPERS_P_STANDARD">
+    <wsdl:port name="Binding_T_HTTP_A_HTTP_ZHR_BAPI_SAPPERS_P_STANDARD_L" binding="tns:Binding_T_HTTP_A_HTTP_ZHR_BAPI_SAPPERS_P_STANDARD_L">
+      <soap:address location="http://hr-dvlp.sap.sidmar.agn/sap/bc/srt/pm/sap/zhr_bapi_sappers/200/local/p_standard/1/binding_t_http_a_http_zhr_bapi_sappers_p_standard_l" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

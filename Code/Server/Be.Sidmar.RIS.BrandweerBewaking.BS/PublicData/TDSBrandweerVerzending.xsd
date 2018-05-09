@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TDSBrandweerVerzending" targetNamespace="http://tempuri.org/TDSBrandweerVerzending.xsd" xmlns:mstns="http://tempuri.org/TDSBrandweerVerzending.xsd" xmlns="http://tempuri.org/TDSBrandweerVerzending.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="bbwConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="bbwConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Be.Sidmar.RIS.BrandweerBewaking.BS.My.MySettings.GlobalReference.Default.bbwConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TDSBrandweerVerzending" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="TDSBrandweerVerzending" msprop:Generator_UserDSName="TDSBrandweerVerzending">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Verzending" msprop:Generator_TableClassName="VerzendingDataTable" msprop:Generator_TableVarName="tableVerzending" msprop:Generator_TablePropName="Verzending" msprop:Generator_RowDeletingName="VerzendingRowDeleting" msprop:Generator_UserTableName="Verzending" msprop:Generator_RowChangingName="VerzendingRowChanging" msprop:Generator_RowEvHandlerName="VerzendingRowChangeEventHandler" msprop:Generator_RowDeletedName="VerzendingRowDeleted" msprop:Generator_RowEvArgName="VerzendingRowChangeEvent" msprop:Generator_RowChangedName="VerzendingRowChanged" msprop:Generator_RowClassName="VerzendingRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="VerzendingID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnVerzendingID" msprop:Generator_ColumnPropNameInRow="VerzendingID" msprop:Generator_ColumnPropNameInTable="VerzendingIDColumn" msprop:Generator_UserColumnName="VerzendingID" type="xs:int" />
+              <xs:element name="TypeMatID" msprop:Generator_ColumnVarNameInTable="columnTypeMatID" msprop:Generator_ColumnPropNameInRow="TypeMatID" msprop:Generator_ColumnPropNameInTable="TypeMatIDColumn" msprop:Generator_UserColumnName="TypeMatID" type="xs:int" minOccurs="0" />
+              <xs:element name="MateriaalVolgNr" msprop:Generator_ColumnVarNameInTable="columnMateriaalVolgNr" msprop:Generator_ColumnPropNameInRow="MateriaalVolgNr" msprop:Generator_ColumnPropNameInTable="MateriaalVolgNrColumn" msprop:Generator_UserColumnName="MateriaalVolgNr" type="xs:int" minOccurs="0" />
+              <xs:element name="LeverancierID" msprop:Generator_ColumnVarNameInTable="columnLeverancierID" msprop:Generator_ColumnPropNameInRow="LeverancierID" msprop:Generator_ColumnPropNameInTable="LeverancierIDColumn" msprop:Generator_UserColumnName="LeverancierID" type="xs:int" minOccurs="0" />
+              <xs:element name="DatumVerstuurd" msprop:Generator_ColumnVarNameInTable="columnDatumVerstuurd" msprop:Generator_ColumnPropNameInRow="DatumVerstuurd" msprop:Generator_ColumnPropNameInTable="DatumVerstuurdColumn" msprop:Generator_UserColumnName="DatumVerstuurd" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DatumTerug" msprop:Generator_ColumnVarNameInTable="columnDatumTerug" msprop:Generator_ColumnPropNameInRow="DatumTerug" msprop:Generator_ColumnPropNameInTable="DatumTerugColumn" msprop:Generator_UserColumnName="DatumTerug" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="HerkeurdYN" msprop:Generator_ColumnVarNameInTable="columnHerkeurdYN" msprop:Generator_ColumnPropNameInRow="HerkeurdYN" msprop:Generator_ColumnPropNameInTable="HerkeurdYNColumn" msprop:Generator_UserColumnName="HerkeurdYN" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Opmerking" msprop:Generator_ColumnVarNameInTable="columnOpmerking" msprop:Generator_ColumnPropNameInRow="Opmerking" msprop:Generator_ColumnPropNameInTable="OpmerkingColumn" msprop:Generator_UserColumnName="Opmerking" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Verzending" />
+      <xs:field xpath="mstns:VerzendingID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Inspect.FireSafety.Mobile.ControlRound.Views.EquipmentDetailPage"
+             xmlns:local="clr-namespace:Inspect.FireSafety.Mobile.ControlRound.ViewModels;assembly=Inspect.FireSafety.Mobile"
+             xmlns:convert="clr-namespace:Inspect.Mobile.Framework.Xamarin.Converters;assembly=Inspect.Mobile.Framework.Xamarin"
+             NavigationPage.HasBackButton="False"
+             >
+
+    <ContentPage.Resources>
+        <ResourceDictionary>            
+            <Style  TargetType="Label">
+               <Setter Property="FontSize" Value="20"/>
+            </Style>            
+            <local:EquipmentDetailViewModel x:Key="ViewModel"/>
+            <convert:DoubleConverter x:Key="stringToDouble"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.BindingContext>
+        <StaticResource Key="ViewModel"/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout VerticalOptions="FillAndExpand" Margin="16,15,0,0">                
+                <Label Text="Naam-type:" FontAttributes="Bold" />
+                <Label Text="{Binding SelectedItem.Equipment.EquipmentLocation.Name}" Margin="18,0,16,0" />                
+                <Label  Text="{Binding SelectedItem.Equipment.EquipmentType.Name}"  Margin="18,0,16,0" />
+                <StackLayout Orientation="Horizontal">
+                    <Label  Text="QR-code:" FontAttributes="Bold" />
+                    <Label  Text="{Binding SelectedItem.Equipment.EquipmentIdentifications[0].Value}"  Margin="0,0,16,0" />
+                </StackLayout>            
+                <Label  Text="Plaats omschrijving:" FontAttributes="Bold" />
+                <Label  Text="{Binding SelectedItem.Equipment.EquipmentLocation.Description}" Margin="18,0,16,0" />
+                <StackLayout Orientation="Horizontal">
+                    <Label  Text="Laatste nazicht:" FontAttributes="Bold" />
+                    <Label  Text="{Binding SelectedItem.Equipment.DateVisualInspection, StringFormat='{0:dd/MM/yyyy}'}" Margin="0,0,16,0"  />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label  Text="Status:" FontAttributes="Bold" />
+                    <Label  Text="{Binding SelectedItem.Status}" TextColor="{Binding SelectedItem.Color}" Margin="0,0,16,0"  />
+                </StackLayout>                
+                <Label  Text="Gewicht" FontAttributes="Bold" IsVisible="{Binding IsCo2}"/>
+                <Entry  Placeholder="Geef het gewicht in kg" IsVisible="{Binding IsCo2}" Text="{Binding Weight, Converter={StaticResource stringToDouble}}" Keyboard="Numeric"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand" IsVisible="{Binding IsVisible}">
+                <Button Text="OK"  Image="ic_done_white_36dp.png" HorizontalOptions="FillAndExpand" Command="{Binding OkCommand}" Style="{StaticResource ButtonDetail}" Margin="5,0,0,10"/>
+                <Button Text="Niet OK" Image="ic_close_white_36dp.png" HorizontalOptions="FillAndExpand" Command="{Binding NotOkCommand}" Style="{StaticResource ButtonDetail}" Margin="0,0,5,10" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="ic_history_white_48dp.png" Command="{Binding HistoryCommand}"/>
+        <ToolbarItem Icon="edit.png" Command="{Binding EditCommand}"/>
+    </ContentPage.ToolbarItems>
+</ContentPage>

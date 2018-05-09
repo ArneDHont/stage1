@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/HRMService.Firma/Services" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/HRMService.Firma/Services" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/HRMService.Firma/Services">
+      <s:import namespace="http://tempuri.org/tdsFirma.xsd" />
+      <s:import schemaLocation="http://wffrsprod.sidmar.be/HRMService.Firma/Services.asmx?schema=tdsFirma" namespace="http://tempuri.org/tdsFirma.xsd" />
+      <s:element name="GetFirma">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Firma" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFirmaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFirmaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/tdsFirma.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListChildren">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Firma" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListChildrenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListChildrenResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/tdsFirma.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListParent">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetListParentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListParentResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/tdsFirma.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListParentHasActiveEmployees">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetListParentHasActiveEmployeesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListParentHasActiveEmployeesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/tdsFirma.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListFirma">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetListFirmaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListFirmaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/tdsFirma.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListFirmaActive">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetListFirmaActiveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListFirmaActiveResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/tdsFirma.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListFirmaActiveByRegio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="regio" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListFirmaActiveByRegioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListFirmaActiveByRegioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/tdsFirma.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListFirmaAll">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetListFirmaAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListFirmaAllResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/tdsFirma.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchFirmaAll">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FirmaNr" nillable="true" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="Firmanaam" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsActief" nillable="true" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="Regio" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchFirmaAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchFirmaAllResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/tdsFirma.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateParent">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateParentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateParentResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/tdsFirma.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateFirma">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="firma" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="firmanaam" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="parent" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateFirmaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateFirmaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/tdsFirma.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SyncFirmas">
+        <s:complexType />
+      </s:element>
+      <s:element name="SyncFirmasResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ActivateFirma">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="firmaNrs" type="tns:ArrayOfLong" />
+            <s:element minOccurs="1" maxOccurs="1" name="newValue" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="regio" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLong">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="long" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ActivateFirmaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCompanyWithEmailAddresses">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="companyNbr" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCompanyWithEmailAddressesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCompanyWithEmailAddressesResult" type="tns:CompanyWithEmailAddresses" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CompanyWithEmailAddresses">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CompanyNbr" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="CompanyNbrAce" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CompanyName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmailAddresses" type="tns:ArrayOfEmailAddresses" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfEmailAddresses">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EmailAddresses" nillable="true" type="tns:EmailAddresses" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EmailAddresses">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ApplicationId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetFirmaSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFirma" />
+  </wsdl:message>
+  <wsdl:message name="GetFirmaSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFirmaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListChildrenSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListChildren" />
+  </wsdl:message>
+  <wsdl:message name="GetListChildrenSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListChildrenResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListParentSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListParent" />
+  </wsdl:message>
+  <wsdl:message name="GetListParentSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListParentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListParentHasActiveEmployeesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListParentHasActiveEmployees" />
+  </wsdl:message>
+  <wsdl:message name="GetListParentHasActiveEmployeesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListParentHasActiveEmployeesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListFirmaSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListFirma" />
+  </wsdl:message>
+  <wsdl:message name="GetListFirmaSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListFirmaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListFirmaActiveSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListFirmaActive" />
+  </wsdl:message>
+  <wsdl:message name="GetListFirmaActiveSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListFirmaActiveResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListFirmaActiveByRegioSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListFirmaActiveByRegio" />
+  </wsdl:message>
+  <wsdl:message name="GetListFirmaActiveByRegioSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListFirmaActiveByRegioResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListFirmaAllSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListFirmaAll" />
+  </wsdl:message>
+  <wsdl:message name="GetListFirmaAllSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListFirmaAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchFirmaAllSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchFirmaAll" />
+  </wsdl:message>
+  <wsdl:message name="SearchFirmaAllSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchFirmaAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateParentSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateParent" />
+  </wsdl:message>
+  <wsdl:message name="UpdateParentSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateParentResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateFirmaSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateFirma" />
+  </wsdl:message>
+  <wsdl:message name="CreateFirmaSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateFirmaResponse" />
+  </wsdl:message>
+  <wsdl:message name="SyncFirmasSoapIn">
+    <wsdl:part name="parameters" element="tns:SyncFirmas" />
+  </wsdl:message>
+  <wsdl:message name="SyncFirmasSoapOut">
+    <wsdl:part name="parameters" element="tns:SyncFirmasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActivateFirmaSoapIn">
+    <wsdl:part name="parameters" element="tns:ActivateFirma" />
+  </wsdl:message>
+  <wsdl:message name="ActivateFirmaSoapOut">
+    <wsdl:part name="parameters" element="tns:ActivateFirmaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCompanyWithEmailAddressesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCompanyWithEmailAddresses" />
+  </wsdl:message>
+  <wsdl:message name="GetCompanyWithEmailAddressesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCompanyWithEmailAddressesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServicesSoap">
+    <wsdl:operation name="GetFirma">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lees gegevens van een firma</wsdl:documentation>
+      <wsdl:input message="tns:GetFirmaSoapIn" />
+      <wsdl:output message="tns:GetFirmaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListChildren">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Geef een lijst met de kinderen van de parentfirma (inclusief parent)</wsdl:documentation>
+      <wsdl:input message="tns:GetListChildrenSoapIn" />
+      <wsdl:output message="tns:GetListChildrenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListParent">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Geef een lijst alle parents</wsdl:documentation>
+      <wsdl:input message="tns:GetListParentSoapIn" />
+      <wsdl:output message="tns:GetListParentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListParentHasActiveEmployees">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Geef een lijst van alle parents met actieve werknemers</wsdl:documentation>
+      <wsdl:input message="tns:GetListParentHasActiveEmployeesSoapIn" />
+      <wsdl:output message="tns:GetListParentHasActiveEmployeesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListFirma">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Geef een lijst van alle actieve firma's, is dus het equivalent van GetListFirmaActive</wsdl:documentation>
+      <wsdl:input message="tns:GetListFirmaSoapIn" />
+      <wsdl:output message="tns:GetListFirmaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListFirmaActive">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Geef een lijst van alle actieve firma's (t.t.z. waarvan IsActief = true)</wsdl:documentation>
+      <wsdl:input message="tns:GetListFirmaActiveSoapIn" />
+      <wsdl:output message="tns:GetListFirmaActiveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListFirmaActiveByRegio">
+      <wsdl:input message="tns:GetListFirmaActiveByRegioSoapIn" />
+      <wsdl:output message="tns:GetListFirmaActiveByRegioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListFirmaAll">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Geef een lijst van alle firma's</wsdl:documentation>
+      <wsdl:input message="tns:GetListFirmaAllSoapIn" />
+      <wsdl:output message="tns:GetListFirmaAllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchFirmaAll">
+      <wsdl:input message="tns:SearchFirmaAllSoapIn" />
+      <wsdl:output message="tns:SearchFirmaAllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateParent">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">update firmanaam en parent (gegevens uit SAP)</wsdl:documentation>
+      <wsdl:input message="tns:UpdateParentSoapIn" />
+      <wsdl:output message="tns:UpdateParentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateFirma">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">creatie record ashr_firma met firma, firmanaam en parent</wsdl:documentation>
+      <wsdl:input message="tns:CreateFirmaSoapIn" />
+      <wsdl:output message="tns:CreateFirmaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SyncFirmas">
+      <wsdl:input message="tns:SyncFirmasSoapIn" />
+      <wsdl:output message="tns:SyncFirmasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActivateFirma">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Activate firma for regio. 'G' for Gent, 'W' for Luik</wsdl:documentation>
+      <wsdl:input message="tns:ActivateFirmaSoapIn" />
+      <wsdl:output message="tns:ActivateFirmaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyWithEmailAddresses">
+      <wsdl:input message="tns:GetCompanyWithEmailAddressesSoapIn" />
+      <wsdl:output message="tns:GetCompanyWithEmailAddressesSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServicesSoap" type="tns:ServicesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetFirma">
+      <soap:operation soapAction="http://tempuri.org/HRMService.Firma/Services/GetFirma" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListChildren">
+      <soap:operation soapAction="http://tempuri.org/HRMService.Firma/Services/GetListChildren" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListParent">
+      <soap:operation soapAction="http://tempuri.org/HRMService.Firma/Services/GetListParent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListParentHasActiveEmployees">
+      <soap:operation soapAction="http://tempuri.org/HRMService.Firma/Services/GetListParentHasActiveEmployees" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListFirma">
+      <soap:operation soapAction="http://tempuri.org/HRMService.Firma/Services/GetListFirma" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListFirmaActive">
+      <soap:operation soapAction="http://tempuri.org/HRMService.Firma/Services/GetListFirmaActive" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListFirmaActiveByRegio">
+      <soap:operation soapAction="http://tempuri.org/HRMService.Firma/Services/GetListFirmaActiveByRegio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListFirmaAll">
+      <soap:operation soapAction="http://tempuri.org/HRMService.Firma/Services/GetListFirmaAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchFirmaAll">
+      <soap:operation soapAction="http://tempuri.org/HRMService.Firma/Services/SearchFirmaAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateParent">
+      <soap:operation soapAction="http://tempuri.org/HRMService.Firma/Services/UpdateParent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateFirma">
+      <soap:operation soapAction="http://tempuri.org/HRMService.Firma/Services/CreateFirma" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncFirmas">
+      <soap:operation soapAction="http://tempuri.org/HRMService.Firma/Services/SyncFirmas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActivateFirma">
+      <soap:operation soapAction="http://tempuri.org/HRMService.Firma/Services/ActivateFirma" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyWithEmailAddresses">
+      <soap:operation soapAction="http://tempuri.org/HRMService.Firma/Services/GetCompanyWithEmailAddresses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServicesSoap12" type="tns:ServicesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetFirma">
+      <soap12:operation soapAction="http://tempuri.org/HRMService.Firma/Services/GetFirma" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListChildren">
+      <soap12:operation soapAction="http://tempuri.org/HRMService.Firma/Services/GetListChildren" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListParent">
+      <soap12:operation soapAction="http://tempuri.org/HRMService.Firma/Services/GetListParent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListParentHasActiveEmployees">
+      <soap12:operation soapAction="http://tempuri.org/HRMService.Firma/Services/GetListParentHasActiveEmployees" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListFirma">
+      <soap12:operation soapAction="http://tempuri.org/HRMService.Firma/Services/GetListFirma" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListFirmaActive">
+      <soap12:operation soapAction="http://tempuri.org/HRMService.Firma/Services/GetListFirmaActive" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListFirmaActiveByRegio">
+      <soap12:operation soapAction="http://tempuri.org/HRMService.Firma/Services/GetListFirmaActiveByRegio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListFirmaAll">
+      <soap12:operation soapAction="http://tempuri.org/HRMService.Firma/Services/GetListFirmaAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchFirmaAll">
+      <soap12:operation soapAction="http://tempuri.org/HRMService.Firma/Services/SearchFirmaAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateParent">
+      <soap12:operation soapAction="http://tempuri.org/HRMService.Firma/Services/UpdateParent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateFirma">
+      <soap12:operation soapAction="http://tempuri.org/HRMService.Firma/Services/CreateFirma" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncFirmas">
+      <soap12:operation soapAction="http://tempuri.org/HRMService.Firma/Services/SyncFirmas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActivateFirma">
+      <soap12:operation soapAction="http://tempuri.org/HRMService.Firma/Services/ActivateFirma" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyWithEmailAddresses">
+      <soap12:operation soapAction="http://tempuri.org/HRMService.Firma/Services/GetCompanyWithEmailAddresses" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Services">
+    <wsdl:port name="ServicesSoap" binding="tns:ServicesSoap">
+      <soap:address location="http://wffrsprod.sidmar.be/HRMService.Firma/Services.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServicesSoap12" binding="tns:ServicesSoap12">
+      <soap12:address location="http://wffrsprod.sidmar.be/HRMService.Firma/Services.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

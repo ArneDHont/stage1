@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/tdsFirma.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/tdsFirma.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/tdsFirma.xsd" id="tdsFirma" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:Locale="en-US" name="tdsFirma">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="sapReturn">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="meldingstype" type="xs:string" />
+              <xs:element minOccurs="0" name="meldingsklasse" type="xs:string" />
+              <xs:element minOccurs="0" name="meldingsnummer" type="xs:string" />
+              <xs:element minOccurs="0" name="meldingstekst" type="xs:string" />
+              <xs:element minOccurs="0" name="meldingsvariable1" type="xs:string" />
+              <xs:element minOccurs="0" name="meldingsvariable2" type="xs:string" />
+              <xs:element minOccurs="0" name="meldingsvariable3" type="xs:string" />
+              <xs:element minOccurs="0" name="meldingsvariable4" type="xs:string" />
+              <xs:element minOccurs="0" name="SAPsysteem" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Firma">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="firmanummer" type="xs:long" />
+              <xs:element minOccurs="0" name="firmanaam" type="xs:string" />
+              <xs:element minOccurs="0" name="parent" type="xs:long" />
+              <xs:element minOccurs="0" name="parentnaam" type="xs:string" />
+              <xs:element minOccurs="0" name="Straat">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Postcode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Plaats">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Landcode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="IsActiefGent" type="xs:boolean" />
+              <xs:element minOccurs="0" name="IsActiefLuik" type="xs:boolean" />
+              <xs:element minOccurs="0" name="IsRealis" type="xs:boolean" />
+              <xs:element minOccurs="0" name="IsGeblokkeerd" type="xs:boolean" />
+              <xs:element msdata:Caption="AssuranceLoi" minOccurs="0" name="IsAssuranceLoi" type="xs:boolean" />
+              <xs:element minOccurs="0" name="TypeVeiligheidsCertificaat">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="VervaldatumVeiligheidsCertificaat" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="IsInSAP" type="xs:boolean" />
+              <xs:element minOccurs="0" name="FirmaNrACE" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

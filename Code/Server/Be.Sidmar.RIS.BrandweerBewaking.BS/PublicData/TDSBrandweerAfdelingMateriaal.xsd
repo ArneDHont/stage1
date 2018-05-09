@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TDSBrandweerAfdelingMateriaal" targetNamespace="http://tempuri.org/TDSBrandweerAfdelingMateriaal.xsd" xmlns:mstns="http://tempuri.org/TDSBrandweerAfdelingMateriaal.xsd" xmlns="http://tempuri.org/TDSBrandweerAfdelingMateriaal.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TDSBrandweerAfdelingMateriaal" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="TDSBrandweerAfdelingMateriaal" msprop:Generator_UserDSName="TDSBrandweerAfdelingMateriaal">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="AfdelingMateriaal" msprop:Generator_TableClassName="AfdelingMateriaalDataTable" msprop:Generator_TableVarName="tableAfdelingMateriaal" msprop:Generator_TablePropName="AfdelingMateriaal" msprop:Generator_RowDeletingName="AfdelingMateriaalRowDeleting" msprop:Generator_RowChangingName="AfdelingMateriaalRowChanging" msprop:Generator_RowEvHandlerName="AfdelingMateriaalRowChangeEventHandler" msprop:Generator_RowDeletedName="AfdelingMateriaalRowDeleted" msprop:Generator_UserTableName="AfdelingMateriaal" msprop:Generator_RowChangedName="AfdelingMateriaalRowChanged" msprop:Generator_RowEvArgName="AfdelingMateriaalRowChangeEvent" msprop:Generator_RowClassName="AfdelingMateriaalRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TypeMatID" msprop:Generator_ColumnVarNameInTable="columnTypeMatID" msprop:Generator_ColumnPropNameInRow="TypeMatID" msprop:Generator_ColumnPropNameInTable="TypeMatIDColumn" msprop:Generator_UserColumnName="TypeMatID" type="xs:int" />
+              <xs:element name="TypeMatOmschr" msprop:Generator_ColumnVarNameInTable="columnTypeMatOmschr" msprop:Generator_ColumnPropNameInRow="TypeMatOmschr" msprop:Generator_ColumnPropNameInTable="TypeMatOmschrColumn" msprop:Generator_UserColumnName="TypeMatOmschr" type="xs:string" minOccurs="0" />
+              <xs:element name="MateriaalVolgNr" msprop:Generator_ColumnVarNameInTable="columnMateriaalVolgNr" msprop:Generator_ColumnPropNameInRow="MateriaalVolgNr" msprop:Generator_ColumnPropNameInTable="MateriaalVolgNrColumn" msprop:Generator_UserColumnName="MateriaalVolgNr" type="xs:int" />
+              <xs:element name="SoortTypeMatOmschr" msprop:Generator_ColumnVarNameInTable="columnSoortTypeMatOmschr" msprop:Generator_ColumnPropNameInRow="SoortTypeMatOmschr" msprop:Generator_ColumnPropNameInTable="SoortTypeMatOmschrColumn" msprop:Generator_UserColumnName="SoortTypeMatOmschr" type="xs:string" minOccurs="0" />
+              <xs:element name="AfdelingCode" msprop:Generator_ColumnVarNameInTable="columnAfdelingCode" msprop:Generator_ColumnPropNameInRow="AfdelingCode" msprop:Generator_ColumnPropNameInTable="AfdelingCodeColumn" msprop:Generator_UserColumnName="AfdelingCode" type="xs:string" minOccurs="0" />
+              <xs:element name="LocatieZone" msprop:Generator_ColumnVarNameInTable="columnLocatieZone" msprop:Generator_ColumnPropNameInRow="LocatieZone" msprop:Generator_ColumnPropNameInTable="LocatieZoneColumn" msprop:Generator_UserColumnName="LocatieZone" type="xs:string" minOccurs="0" />
+              <xs:element name="LocatieOmschr" msprop:Generator_ColumnVarNameInTable="columnLocatieOmschr" msprop:Generator_ColumnPropNameInRow="LocatieOmschr" msprop:Generator_ColumnPropNameInTable="LocatieOmschrColumn" msprop:Generator_UserColumnName="LocatieOmschr" type="xs:string" minOccurs="0" />
+              <xs:element name="BeheerderAfdelingNaam" msprop:Generator_ColumnVarNameInTable="columnBeheerderAfdelingNaam" msprop:Generator_ColumnPropNameInRow="BeheerderAfdelingNaam" msprop:Generator_ColumnPropNameInTable="BeheerderAfdelingNaamColumn" msprop:Generator_UserColumnName="BeheerderAfdelingNaam" type="xs:string" minOccurs="0" />
+              <xs:element name="LocatieNr" msprop:Generator_ColumnVarNameInTable="columnLocatieNr" msprop:Generator_ColumnPropNameInRow="LocatieNr" msprop:Generator_ColumnPropNameInTable="LocatieNrColumn" msprop:Generator_UserColumnName="LocatieNr" type="xs:string" minOccurs="0" />
+              <xs:element name="VolgnummerAfdeling" msprop:Generator_ColumnVarNameInTable="columnVolgnummerAfdeling" msprop:Generator_ColumnPropNameInRow="VolgnummerAfdeling" msprop:Generator_ColumnPropNameInTable="VolgnummerAfdelingColumn" msprop:Generator_UserColumnName="VolgnummerAfdeling" type="xs:long" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:AfdelingMateriaal" />
+      <xs:field xpath="mstns:TypeMatID" />
+      <xs:field xpath="mstns:MateriaalVolgNr" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

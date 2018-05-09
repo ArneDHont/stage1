@@ -1,0 +1,17 @@
+﻿
+CREATE PROC dbo.[USP_WY_BBINBRAR_UPDATE]
+  @ID_ART_INBR int,
+  @ID_TY_INBR int,
+  @NR_ART_INBR varchar(50),
+  @SCF_ART_INBR varchar(2000),
+  @Original_ID_ART_INBR int --Primary Key Field
+
+AS
+SET NOCOUNT OFF
+
+UPDATE [BBINBRAR] SET
+  [ID_TY_INBR] = @ID_TY_INBR,
+  [NR_ART_INBR] = @NR_ART_INBR,
+  [SCF_ART_INBR] = @SCF_ART_INBR
+WHERE [ID_ART_INBR] = @Original_ID_ART_INBR
+

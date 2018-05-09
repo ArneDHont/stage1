@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/TDSAanrijding.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/TDSAanrijding.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/TDSAanrijding.xsd" id="TDSAanrijding" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:Locale="en-US" name="TDSAanrijding">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BBBYLG">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:ReadOnly="true" msdata:AutoIncrement="true" name="ID_BYLG" type="xs:int" />
+              <xs:element minOccurs="0" name="ID_INTV_BRDW" type="xs:int" />
+              <xs:element minOccurs="0" name="ID_REG" type="xs:int" />
+              <xs:element minOccurs="0" name="PLA_BYLG" type="xs:string" />
+              <xs:element minOccurs="0" name="SCF_BYLG" type="xs:string" />
+              <xs:element minOccurs="0" name="ID_DOC" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="BBBST">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:ReadOnly="true" msdata:AutoIncrement="true" name="ID_BST" type="xs:int" />
+              <xs:element minOccurs="0" name="ID_INTV_BRDW" type="xs:int" />
+              <xs:element minOccurs="0" name="ID_REG" type="xs:int" />
+              <xs:element minOccurs="0" name="ID_IND" type="xs:int" />
+              <xs:element minOccurs="0" name="NM_IND" type="xs:string" />
+              <xs:element minOccurs="0" name="VNM_IND" type="xs:string" />
+              <xs:element minOccurs="0" name="AD_EMAL_IND" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="BBOGVTSP">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_REG" type="xs:int" />
+              <xs:element minOccurs="0" name="ID_MLD" type="xs:int" />
+              <xs:element minOccurs="0" name="SCF_LNG_OGV" type="xs:string" />
+              <xs:element minOccurs="0" name="ID_OGV_VAST" type="xs:int" />
+              <xs:element minOccurs="0" name="INF_EX" type="xs:string" />
+              <xs:element minOccurs="0" name="PLA_OGV" type="xs:string" />
+              <xs:element minOccurs="0" name="SCF_STA" type="xs:string" />
+              <xs:element minOccurs="0" name="NM_IND" type="xs:string" />
+              <xs:element minOccurs="0" name="VNM_IND" type="xs:string" />
+              <xs:element minOccurs="0" name="ZBH" type="xs:string" />
+              <xs:element minOccurs="0" name="WND_RIC" type="xs:string" />
+              <xs:element minOccurs="0" name="WND_KR" type="xs:string" />
+              <xs:element minOccurs="0" name="GBEU" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="BBOGVSTA">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_REG" type="xs:int" />
+              <xs:element name="ID_STA" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="BBBTROGV">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:ReadOnly="true" msdata:AutoIncrement="true" name="ID_BTRK_OGV" type="xs:int" />
+              <xs:element name="ID_REG" type="xs:int" />
+              <xs:element minOccurs="0" name="ID_IND_BTRK" type="xs:int" />
+              <xs:element minOccurs="0" name="ID_TY_BTRK" type="xs:int" />
+              <xs:element minOccurs="0" name="ID_BRK_TSP" type="xs:int" />
+              <xs:element minOccurs="0" name="ID_FRM_VZK" type="xs:int" />
+              <xs:element minOccurs="0" name="NR_POLIS" type="xs:string" />
+              <xs:element minOccurs="0" name="ROMP_LTSL" type="xs:string" />
+              <xs:element minOccurs="0" name="MAT_LTSL" type="xs:string" />
+              <xs:element minOccurs="0" name="KAR_TSP" type="xs:boolean" />
+              <xs:element minOccurs="0" name="Q_IND_TSP_BRTK" type="xs:string" />
+              <xs:element minOccurs="0" name="INDI_TRL_VKM_TSP" type="xs:boolean" />
+              <xs:element minOccurs="0" name="SCF_Q_KG_VKM_TSP" type="xs:string" />
+              <xs:element minOccurs="0" name="RB_NR" type="xs:string" />
+              <xs:element minOccurs="0" name="RB_CAT" type="xs:string" />
+              <xs:element minOccurs="0" name="RB_DAT_UITG" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="RB_PL_UITG" type="xs:string" />
+              <xs:element minOccurs="0" name="BTW_NR" type="xs:string" />
+              <xs:element minOccurs="0" name="HD_NM_VN" type="xs:string" />
+              <xs:element minOccurs="0" name="ID_TSP" type="xs:int" />
+              <xs:element minOccurs="0" name="NM_IND" type="xs:string" />
+              <xs:element minOccurs="0" name="VNM_IND" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="BBBEWREG">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_REG" type="xs:int" />
+              <xs:element minOccurs="0" name="ID_OPS" type="xs:int" />
+              <xs:element minOccurs="0" name="ID_TY_REG" type="xs:int" />
+              <xs:element minOccurs="0" name="TMS_OPS_REG" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="TMS_INC" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="SCF_REG">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="PLA_INC">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="VLG_REG_JR_BPL" type="xs:int" />
+              <xs:element minOccurs="0" name="DT_VZ_RAP_NW" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DT_OK" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DT_VZ_BST" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="OPM_OPS">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="OPM_CHEF_PO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="OPM_HFD_BRW">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DT_OPS_RAP_INTV" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="SAP_SUPPLIER_ID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DT_CHIP" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="OPM_CHIP">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CHIP_YN" type="xs:boolean" />
+              <xs:element minOccurs="0" name="VeraLink" type="xs:string" />
+              <xs:element minOccurs="0" name="VeraReference" type="xs:string" />
+              <xs:element minOccurs="0" default="false" name="VerslagContractantYN" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:BBBYLG" />
+      <xs:field xpath="mstns:ID_BYLG" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="BBBST_Constraint1">
+      <xs:selector xpath=".//mstns:BBBST" />
+      <xs:field xpath="mstns:ID_BST" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="TDSAanrijdingKey1">
+      <xs:selector xpath=".//mstns:BBOGVTSP" />
+      <xs:field xpath="mstns:ID_REG" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="BBOGVSTA_Constraint1">
+      <xs:selector xpath=".//mstns:BBOGVSTA" />
+      <xs:field xpath="mstns:ID_REG" />
+      <xs:field xpath="mstns:ID_STA" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="BBBTROGV_Constraint1">
+      <xs:selector xpath=".//mstns:BBBTROGV" />
+      <xs:field xpath="mstns:ID_BTRK_OGV" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="BBBEWREG_Constraint1">
+      <xs:selector xpath=".//mstns:BBBEWREG" />
+      <xs:field xpath="mstns:ID_REG" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

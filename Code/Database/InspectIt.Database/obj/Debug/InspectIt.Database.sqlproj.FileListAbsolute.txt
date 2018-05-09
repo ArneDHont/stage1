@@ -1,0 +1,9 @@
+C:\Sources\BBW\Development\Code\Database\InspectIt.Database\bin\Debug\InspectIt.Database.dacpac
+C:\Sources\BBW\Development\Code\Database\InspectIt.Database\bin\Debug\InspectIt.Database.dll
+C:\Sources\BBW\Development\Code\Database\InspectIt.Database\bin\Debug\InspectIt.Database.pdb
+C:\Sources\BBW\Development\Code\Database\InspectIt.Database\obj\Debug\Model.xml
+C:\Sources\BBW\Development\Code\Database\InspectIt.Database\obj\Debug\refactor.xml
+C:\Sources\BBW\Development\Code\Database\InspectIt.Database\obj\Debug\postdeploy.sql
+C:\Sources\BBW\Development\Code\Database\InspectIt.Database\obj\Debug\predeploy.sql
+C:\Sources\BBW\Development\Code\Database\InspectIt.Database\obj\Debug\InspectIt.Database.dll
+C:\Sources\BBW\Development\Code\Database\InspectIt.Database\obj\Debug\InspectIt.Database.pdb

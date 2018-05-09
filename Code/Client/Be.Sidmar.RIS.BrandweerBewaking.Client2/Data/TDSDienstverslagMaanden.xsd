@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TDSDienstverslagMaanden" targetNamespace="http://tempuri.org/TDSDienstverslagMaanden.xsd" xmlns:mstns="http://tempuri.org/TDSDienstverslagMaanden.xsd" xmlns="http://tempuri.org/TDSDienstverslagMaanden.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TDSDienstverslagMaanden" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="TDSDienstverslagMaanden" msprop:Generator_UserDSName="TDSDienstverslagMaanden">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Maanden" msprop:Generator_TableClassName="MaandenDataTable" msprop:Generator_TableVarName="tableMaanden" msprop:Generator_TablePropName="Maanden" msprop:Generator_RowDeletingName="MaandenRowDeleting" msprop:Generator_UserTableName="Maanden" msprop:Generator_RowChangingName="MaandenRowChanging" msprop:Generator_RowEvHandlerName="MaandenRowChangeEventHandler" msprop:Generator_RowDeletedName="MaandenRowDeleted" msprop:Generator_RowEvArgName="MaandenRowChangeEvent" msprop:Generator_RowChangedName="MaandenRowChanged" msprop:Generator_RowClassName="MaandenRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Jaar" msprop:Generator_ColumnVarNameInTable="columnJaar" msprop:Generator_ColumnPropNameInRow="Jaar" msprop:Generator_ColumnPropNameInTable="JaarColumn" msprop:Generator_UserColumnName="Jaar" type="xs:short" />
+              <xs:element name="Maand" msprop:Generator_ColumnVarNameInTable="columnMaand" msprop:Generator_ColumnPropNameInRow="Maand" msprop:Generator_ColumnPropNameInTable="MaandColumn" msprop:Generator_UserColumnName="Maand" type="xs:short" />
+              <xs:element name="JaarMaand" msprop:Generator_ColumnVarNameInTable="columnJaarMaand" msprop:Generator_ColumnPropNameInRow="JaarMaand" msprop:Generator_ColumnPropNameInTable="JaarMaandColumn" msprop:Generator_UserColumnName="JaarMaand" type="xs:int" minOccurs="0" />
+              <xs:element name="FormattedValue" msprop:Generator_ColumnVarNameInTable="columnFormattedValue" msprop:Generator_ColumnPropNameInRow="FormattedValue" msprop:Generator_ColumnPropNameInTable="FormattedValueColumn" msprop:Generator_UserColumnName="FormattedValue" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Maanden" />
+      <xs:field xpath="mstns:Jaar" />
+      <xs:field xpath="mstns:Maand" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

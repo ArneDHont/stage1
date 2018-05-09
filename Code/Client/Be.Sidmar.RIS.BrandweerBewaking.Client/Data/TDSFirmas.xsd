@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TDSFirmas" targetNamespace="http://tempuri.org/TDSFirmas.xsd" xmlns:mstns="http://tempuri.org/TDSFirmas.xsd" xmlns="http://tempuri.org/TDSFirmas.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="bbwConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="bbwConnectionString1 (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Be.Sidmar.RIS.BrandweerBewaking.Client.My.MySettings.GlobalReference.Default.bbwConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TDSFirmas" msdata:IsDataSet="true" msdata:Locale="en-US" msprop:Generator_DataSetName="TDSFirmas" msprop:Generator_UserDSName="TDSFirmas">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BBFRM" msprop:Generator_TableClassName="BBFRMDataTable" msprop:Generator_TableVarName="tableBBFRM" msprop:Generator_RowChangedName="BBFRMRowChanged" msprop:Generator_TablePropName="BBFRM" msprop:Generator_RowDeletingName="BBFRMRowDeleting" msprop:Generator_RowChangingName="BBFRMRowChanging" msprop:Generator_RowEvHandlerName="BBFRMRowChangeEventHandler" msprop:Generator_RowDeletedName="BBFRMRowDeleted" msprop:Generator_RowClassName="BBFRMRow" msprop:Generator_UserTableName="BBFRM" msprop:Generator_RowEvArgName="BBFRMRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_FRM" msprop:Generator_ColumnVarNameInTable="columnID_FRM" msprop:Generator_ColumnPropNameInRow="ID_FRM" msprop:Generator_ColumnPropNameInTable="ID_FRMColumn" msprop:Generator_UserColumnName="ID_FRM" type="xs:int" />
+              <xs:element name="NM_FRM" msprop:Generator_ColumnVarNameInTable="columnNM_FRM" msprop:Generator_ColumnPropNameInRow="NM_FRM" msprop:Generator_ColumnPropNameInTable="NM_FRMColumn" msprop:Generator_UserColumnName="NM_FRM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="STRA_FRM" msprop:Generator_ColumnVarNameInTable="columnSTRA_FRM" msprop:Generator_ColumnPropNameInRow="STRA_FRM" msprop:Generator_ColumnPropNameInTable="STRA_FRMColumn" msprop:Generator_UserColumnName="STRA_FRM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PO_COD_PLA_FRM" msprop:Generator_ColumnVarNameInTable="columnPO_COD_PLA_FRM" msprop:Generator_ColumnPropNameInRow="PO_COD_PLA_FRM" msprop:Generator_ColumnPropNameInTable="PO_COD_PLA_FRMColumn" msprop:Generator_UserColumnName="PO_COD_PLA_FRM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PLA_FRM" msprop:Generator_ColumnVarNameInTable="columnPLA_FRM" msprop:Generator_ColumnPropNameInRow="PLA_FRM" msprop:Generator_ColumnPropNameInTable="PLA_FRMColumn" msprop:Generator_UserColumnName="PLA_FRM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NR_IND_FRM_SAP" msprop:Generator_ColumnVarNameInTable="columnNR_IND_FRM_SAP" msprop:Generator_ColumnPropNameInRow="NR_IND_FRM_SAP" msprop:Generator_ColumnPropNameInTable="NR_IND_FRM_SAPColumn" msprop:Generator_UserColumnName="NR_IND_FRM_SAP" type="xs:int" minOccurs="0" />
+              <xs:element name="NM_FRM_SAP" msprop:Generator_ColumnVarNameInTable="columnNM_FRM_SAP" msprop:Generator_ColumnPropNameInRow="NM_FRM_SAP" msprop:Generator_ColumnPropNameInTable="NM_FRM_SAPColumn" msprop:Generator_UserColumnName="NM_FRM_SAP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ContactPersonMail_FRS" msprop:Generator_ColumnVarNameInTable="columnContactPersonMail_FRS" msprop:Generator_ColumnPropNameInRow="ContactPersonMail_FRS" msprop:Generator_ColumnPropNameInTable="ContactPersonMail_FRSColumn" msprop:Generator_UserColumnName="ContactPersonMail_FRS" type="xs:string" minOccurs="0" />
+              <xs:element name="BBW_FirmEmailContacts" msprop:Generator_ColumnVarNameInTable="columnBBW_FirmEmailContacts" msprop:Generator_ColumnPropNameInRow="BBW_FirmEmailContacts" msprop:Generator_ColumnPropNameInTable="BBW_FirmEmailContactsColumn" msprop:Generator_UserColumnName="BBW_FirmEmailContacts" type="xs:string" minOccurs="0" />
+              <xs:element name="BBW_FirmRemark" msprop:Generator_ColumnVarNameInTable="columnBBW_FirmRemark" msprop:Generator_ColumnPropNameInRow="BBW_FirmRemark" msprop:Generator_ColumnPropNameInTable="BBW_FirmRemarkColumn" msprop:Generator_UserColumnName="BBW_FirmRemark" type="xs:string" minOccurs="0" />
+              <xs:element name="BBW_FirmLanguage" msprop:Generator_ColumnVarNameInTable="columnBBW_FirmLanguage" msprop:Generator_ColumnPropNameInRow="BBW_FirmLanguage" msprop:Generator_ColumnPropNameInTable="BBW_FirmLanguageColumn" msprop:Generator_UserColumnName="BBW_FirmLanguage" type="xs:string" minOccurs="0" />
+              <xs:element name="DateCreatedFirm" msprop:Generator_ColumnVarNameInTable="columnDateCreatedFirm" msprop:Generator_ColumnPropNameInRow="DateCreatedFirm" msprop:Generator_ColumnPropNameInTable="DateCreatedFirmColumn" msprop:Generator_UserColumnName="DateCreatedFirm" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:BBFRM" />
+      <xs:field xpath="mstns:ID_FRM" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

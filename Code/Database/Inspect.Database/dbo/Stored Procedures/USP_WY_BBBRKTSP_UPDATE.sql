@@ -1,0 +1,13 @@
+﻿
+CREATE PROC dbo.[USP_WY_BBBRKTSP_UPDATE]
+  @ID_BRK_TSP int,
+  @SCF_BRK_TSP varchar(20)=NULL,
+  @Original_ID_BRK_TSP int --Primary Key Field
+
+AS
+SET NOCOUNT OFF
+
+UPDATE [BBBRKTSP] SET
+  [SCF_BRK_TSP] = @SCF_BRK_TSP
+WHERE [ID_BRK_TSP] = @Original_ID_BRK_TSP
+

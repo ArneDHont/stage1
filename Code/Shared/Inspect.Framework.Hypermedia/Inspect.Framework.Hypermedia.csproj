@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup Label="Globals">
+    <SccProjectName>%24/Be.Gent.PreventionSecurity/BrandweerBewaking/Development/Code/Shared/Inspect.Framework.Hypermedia</SccProjectName>
+    <SccProvider>{4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}</SccProvider>
+    <SccAuxPath>http://wftfsprod.sidmar.be:8080/tfs/inf</SccAuxPath>
+    <SccLocalPath>.</SccLocalPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{279768B3-4659-4691-AB15-FFFD09C6DDB8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Inspect.Framework.Hypermedia</RootNamespace>
+    <AssemblyName>Inspect.Framework.Hypermedia</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile44</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="CollectionRepresentation.cs" />
+    <Compile Include="ConflictRepresentation.cs" />
+    <Compile Include="ContentWebApiResponse.cs" />
+    <Compile Include="CreatedRepresentation.cs" />
+    <Compile Include="EmbeddedRepresentationCollection.cs" />
+    <Compile Include="IContentResponse.cs" />
+    <Compile Include="IWebApiClient.cs" />
+    <Compile Include="IWebApiResponse.cs" />
+    <Compile Include="Json\EmbeddedRepresentationCollectionJsonConverter.cs" />
+    <Compile Include="Json\KebabCaseNamingStrategy.cs" />
+    <Compile Include="Json\KebabCasePropertyNamesContractResolver.cs" />
+    <Compile Include="Json\LinkCollectionJsonConverter.cs" />
+    <Compile Include="Link.cs" />
+    <Compile Include="LinkCollection.cs" />
+    <Compile Include="NamedRelationCollection.cs" />
+    <Compile Include="NamedRelationEntry.cs" />
+    <Compile Include="OptionsRepresentation.cs" />
+    <Compile Include="Representation.cs" />
+    <Compile Include="Resources\Strings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UnprocessableEntityRepresentation.cs" />
+    <Compile Include="ValidationErrorRepresentation.cs" />
+    <Compile Include="WebApiClient.cs" />
+    <Compile Include="WebApiException.cs" />
+    <Compile Include="WebApiResponse.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\References\Newtonsoft.Json.11.0.1\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Strings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+</Project>

@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Include>
+  <!-- This include file describe the variables that will be used in the wxs files-->
+
+  <!-- Change the values containing 'xxx' -->
+  <!-- The UCM variables will be updated during the TFS build process -->
+  <?define UCMVersion = "1.0.0" ?>
+  <?define UCMInstance = "BBW" ?>
+  <?define UCMEnvironment = "DVLP" ?>
+
+  <?define AppName = "Clients" ?>  <!-- The name of your client component -->
+  <?define ProductName = "$(var.UCMInstance).$(var.AppName).Setup_$(var.UCMEnvironment)_V$(var.UCMVersion)" ?>
+  <?define ProductTitle = "$(var.ProductName)" ?>
+  <?define PackageDirectory = "$(var.ProductName)" ?>
+  
+  <?define Manufacturer = "ArcelorMittal" ?>
+  <?define Description = "An application of $(var.UCMInstance)" ?>
+  <?define Comments = "$(var.Description)" ?>    
+  <?define UpgradeCode = "{90129FD1-EA87-4682-8891-B3A9D5934040}" ?>
+
+  <?define DefaultLocation = "[ProgramFilesFolder]\[Manufacturer]" ?>
+
+  <?define Compressed = "no" ?>
+</Include>

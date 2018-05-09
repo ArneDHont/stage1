@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TDSDienstverslagAfdelingen" targetNamespace="http://tempuri.org/TDSDienstverslagAfdelingen.xsd" xmlns:mstns="http://tempuri.org/TDSDienstverslagAfdelingen.xsd" xmlns="http://tempuri.org/TDSDienstverslagAfdelingen.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TDSDienstverslagAfdelingen" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="TDSDienstverslagAfdelingen" msprop:Generator_UserDSName="TDSDienstverslagAfdelingen">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Afdelingen" msprop:Generator_TableClassName="AfdelingenDataTable" msprop:Generator_TableVarName="tableAfdelingen" msprop:Generator_TablePropName="Afdelingen" msprop:Generator_RowDeletingName="AfdelingenRowDeleting" msprop:Generator_UserTableName="Afdelingen" msprop:Generator_RowChangingName="AfdelingenRowChanging" msprop:Generator_RowEvHandlerName="AfdelingenRowChangeEventHandler" msprop:Generator_RowDeletedName="AfdelingenRowDeleted" msprop:Generator_RowEvArgName="AfdelingenRowChangeEvent" msprop:Generator_RowChangedName="AfdelingenRowChanged" msprop:Generator_RowClassName="AfdelingenRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AfdelingId" msprop:Generator_ColumnVarNameInTable="columnAfdelingId" msprop:Generator_ColumnPropNameInRow="AfdelingId" msprop:Generator_ColumnPropNameInTable="AfdelingIdColumn" msprop:Generator_UserColumnName="AfdelingId" type="xs:int" />
+              <xs:element name="AfdelingCode" msprop:Generator_ColumnVarNameInTable="columnAfdelingCode" msprop:Generator_ColumnPropNameInRow="AfdelingCode" msprop:Generator_ColumnPropNameInTable="AfdelingCodeColumn" msprop:Generator_UserColumnName="AfdelingCode" type="xs:string" minOccurs="0" />
+              <xs:element name="AfdelingNaam" msprop:Generator_ColumnVarNameInTable="columnAfdelingNaam" msprop:Generator_ColumnPropNameInRow="AfdelingNaam" msprop:Generator_ColumnPropNameInTable="AfdelingNaamColumn" msprop:Generator_UserColumnName="AfdelingNaam" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Afdelingen" />
+      <xs:field xpath="mstns:AfdelingId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/TDSBrandweerMateriaalControleLijst.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/TDSBrandweerMateriaalControleLijst.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/TDSBrandweerMateriaalControleLijst.xsd" id="TDSBrandweerMateriaalControleLijst" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="TDSBrandweerMateriaalControleLijst">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ControleLijst">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="TypeMateriaal" type="xs:string" />
+              <xs:element minOccurs="0" name="TypeBlustoestel" type="xs:string" />
+              <xs:element minOccurs="0" name="Afdeling" type="xs:string" />
+              <xs:element minOccurs="0" name="Zone" type="xs:string" />
+              <xs:element minOccurs="0" name="Nr" type="xs:string" />
+              <xs:element minOccurs="0" name="Status" type="xs:string" />
+              <xs:element minOccurs="0" name="NaamBeheerderAfdeling" type="xs:string" />
+              <xs:element minOccurs="0" name="Gecontroleerd" type="xs:boolean" />
+              <xs:element minOccurs="0" name="DatumControle" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="VorigGewicht" type="xs:float" />
+              <xs:element minOccurs="0" name="NieuwGewicht" type="xs:float" />
+              <xs:element name="TypeMatID" type="xs:int" />
+              <xs:element name="MateriaalVolgNr" type="xs:int" />
+              <xs:element minOccurs="0" name="LocatieOmschr" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:ControleLijst" />
+      <xs:field xpath="mstns:TypeMatID" />
+      <xs:field xpath="mstns:MateriaalVolgNr" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="0cb17b2d-c6d1-47d4-a346-408be848808e" ChangeDateTime="02/26/2018 13:32:23">
+    <Property Name="ElementName" Value="[db_Inspect].[FeedBackType].[De]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[db_Inspect].[FeedBackType]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Description" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f7b0f696-e3e8-49fd-bc7e-6a87678391e0" ChangeDateTime="02/26/2018 13:55:44">
+    <Property Name="ElementName" Value="[db_inspect].[TypeMateriaalFeedbackLink].[Equipment]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[db_inspect].[TypeMateriaalFeedbackLink]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="EquipmentTypeId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="92a0c202-9691-41ea-a167-75b3b282fa1b" ChangeDateTime="02/27/2018 07:39:30">
+    <Property Name="ElementName" Value="[db_Inspect].[FeedbackType].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[db_Inspect].[FeedbackType]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="FeedbackId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="111ec642-e65d-447f-b782-1cd452b2b929" ChangeDateTime="03/06/2018 08:10:54">
+    <Property Name="ElementName" Value="[dbo].[bmMateriaal].[IX_bmMateriaal_Column]" />
+    <Property Name="ElementType" Value="SqlIndex" />
+    <Property Name="ParentElementName" Value="[dbo].[bmMateriaal]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[IX_bmMateriaal_EquipmentId]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="bb72bb09-e130-457e-a965-f5b072c00e7f" ChangeDateTime="03/07/2018 08:57:49">
+    <Property Name="ElementName" Value="[dbo].[InspectionEquipmentFeedback].[status]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[InspectionEquipmentFeedback]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Status" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="af594549-6b1f-4ac1-a185-9599a20f524e" ChangeDateTime="03/07/2018 08:58:40">
+    <Property Name="ElementName" Value="[dbo].[InspectionEquipmentFeedback].[Equipment_id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[InspectionEquipmentFeedback]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Equipment_Id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="6ea9f57b-5ebe-4333-b77f-52cf3ca02104" ChangeDateTime="03/07/2018 09:02:32">
+    <Property Name="ElementName" Value="[dbo].[InspectionEquipmentFeedback].[UserCompleted]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[InspectionEquipmentFeedback]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="UserCompleted_Id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="773ac050-c4bf-4fac-8052-7540cf1d0ccc" ChangeDateTime="03/07/2018 09:03:36">
+    <Property Name="ElementName" Value="[dbo].[InspectionEquipmentFeedback].[Locatie_Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[InspectionEquipmentFeedback]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Locatie_Name" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="907aab2d-b901-4faa-80e1-57858d6874d1" ChangeDateTime="03/07/2018 09:03:47">
+    <Property Name="ElementName" Value="[dbo].[InspectionEquipmentFeedback].[Locatie_Name]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[InspectionEquipmentFeedback]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Locatie_Description" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f5b171b9-7545-4010-8070-f67b48066092" ChangeDateTime="03/13/2018 11:51:09">
+    <Property Name="ElementName" Value="[db_Inspect].[InspectionEquipmentFeedback].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[db_Inspect].[InspectionEquipmentFeedback]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="InspectionEquipmentFeedbackId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="d12d1107-f928-4d32-86c7-76516f16b94d" ChangeDateTime="03/13/2018 11:51:14">
+    <Property Name="ElementName" Value="[db_Inspect].[InspectionEquipmentFeedback].[Equipment_Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[db_Inspect].[InspectionEquipmentFeedback]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="EquipmentId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="4feb1439-41cc-4e4b-9d57-9e99d490d45b" ChangeDateTime="03/13/2018 11:51:40">
+    <Property Name="ElementName" Value="[db_Inspect].[InspectionEquipmentFeedback].[FeedbackType_Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[db_Inspect].[InspectionEquipmentFeedback]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="FeedbackTypeId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="ba53682b-72dd-48f6-a382-343e7dac1b01" ChangeDateTime="03/13/2018 11:51:52">
+    <Property Name="ElementName" Value="[db_Inspect].[InspectionEquipmentFeedback].[UserCompleted_Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[db_Inspect].[InspectionEquipmentFeedback]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="UserCompletedId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="559965bd-bc26-4cc1-af38-344c54d15510" ChangeDateTime="03/13/2018 11:51:59">
+    <Property Name="ElementName" Value="[db_Inspect].[InspectionEquipmentFeedback].[Locatie_Name]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[db_Inspect].[InspectionEquipmentFeedback]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="EquipmentLocationName" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f155ce06-7b39-4249-9169-793d8feb8d71" ChangeDateTime="03/13/2018 11:52:07">
+    <Property Name="ElementName" Value="[db_Inspect].[InspectionEquipmentFeedback].[Locatie_Description]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[db_Inspect].[InspectionEquipmentFeedback]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="EquipmentLocationDescription" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="5da2e0db-f368-40f5-87d9-345c92a80298" ChangeDateTime="03/13/2018 12:15:33">
+    <Property Name="ElementName" Value="[db_Inspect].[InspectionEquipmentFeedback].[UserCompletedId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[db_Inspect].[InspectionEquipmentFeedback]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="UserId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="783c7c39-bc72-4f55-8275-847c9f917015" ChangeDateTime="03/14/2018 12:40:27">
+    <Property Name="ElementName" Value="[db_Inspect].[FeedbackType].[FeedbackId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[db_Inspect].[FeedbackType]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="FeedbackTypeId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="fb826810-d1e2-43b9-b56b-4a676513a7dc" ChangeDateTime="03/15/2018 09:57:48">
+    <Property Name="ElementName" Value="[dbo].[OrganisationUnitExtensions].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[OrganisationUnitExtensions]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="OrganisationUnitId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="d9d18886-4587-41d6-9c05-ce32b97625f7" ChangeDateTime="03/28/2018 07:45:47">
+    <Property Name="ElementName" Value="[dbo].[InspectionEquipmentFeedbackAttachment].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[InspectionEquipmentFeedbackAttachment]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="InspectionEquipmentFeedbackId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="c7f38187-e264-4bfa-8a6a-91bbac53b278" ChangeDateTime="03/28/2018 08:06:34">
+    <Property Name="ElementName" Value="[db_Inspect].[Attachment].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[db_Inspect].[Attachment]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="AttachmentId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="e6b6b45c-90c9-45df-9118-25795cc4d73d" ChangeDateTime="03/28/2018 08:15:07">
+    <Property Name="ElementName" Value="[dbo].[AttachmentBinary].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[AttachmentBinary]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="AttachmentId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f8c50af4-90b3-436e-9372-a6f39e814c03" ChangeDateTime="03/29/2018 09:57:43">
+    <Property Name="ElementName" Value="[dbo].[InspectionSummary].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[InspectionSummary]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="InspectionSummaryId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="2a02640c-0c48-4654-bb4d-f10e111caa47" ChangeDateTime="04/09/2018 10:41:32">
+    <Property Name="ElementName" Value="[db_Inspect].[InspectionEquipmentFeedback].[UserId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[db_Inspect].[InspectionEquipmentFeedback]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="OperatorId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="2a7085d3-d8b2-4533-9ba0-0a155e1a93cd" ChangeDateTime="05/07/2018 12:05:23">
+    <Property Name="ElementName" Value="[dbo].[BBBWPLG].[MailAdress]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[BBBWPLG]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="PLG_Mail" />
+  </Operation>
+</Operations>

@@ -1,0 +1,35 @@
+﻿
+CREATE PROC dbo.[USP_WY_BBINBRRG_INSERT]
+  @ID_REG int,
+  @ID_BEW_DUP int,
+  @ID_INBR int,
+  @ID_FRM int,
+  @ID_TSP int,
+  @VKLR_INBR varchar(3000),
+  @OPM_EX_INBR_VSF varchar(3000),
+  @ID_INBR_IND_TY int
+
+AS
+SET NOCOUNT OFF
+
+INSERT INTO [BBINBRRG] (
+  [ID_REG],
+  [ID_BEW_DUP],
+  [ID_INBR],
+  [ID_FRM],
+  [ID_TSP],
+  [VKLR_INBR],
+  [OPM_EX_INBR_VSF],
+  [ID_INBR_IND_TY]
+)
+VALUES (
+  @ID_REG,
+  @ID_BEW_DUP,
+  @ID_INBR,
+  @ID_FRM,
+  @ID_TSP,
+  @VKLR_INBR,
+  @OPM_EX_INBR_VSF,
+  @ID_INBR_IND_TY
+)
+

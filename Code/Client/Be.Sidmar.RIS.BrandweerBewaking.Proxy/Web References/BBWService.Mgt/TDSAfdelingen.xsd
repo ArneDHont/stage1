@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/TDSAfdelingen.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/TDSAfdelingen.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/TDSAfdelingen.xsd" id="TDSAfdelingen" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="TDSAfdelingen">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BBAFD">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_AFD" type="xs:int" />
+              <xs:element minOccurs="0" name="SCF_AFD" type="xs:string" />
+              <xs:element minOccurs="0" name="KRT_AFD" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="TDSAfdelingenKey1">
+      <xs:selector xpath=".//mstns:BBAFD" />
+      <xs:field xpath="mstns:ID_AFD" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

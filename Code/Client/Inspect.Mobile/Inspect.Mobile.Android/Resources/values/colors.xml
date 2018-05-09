@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <!-- ArcelorMittal Color Pallette -->
+  <color name="white">#ffffff</color>
+  <color name="black">#000000</color>
+  <color name="light_grey">#efefef</color>
+  <color name="light_orange">#fe673d</color>
+  <color name="dark_orange">#fe3700</color>
+  <color name="middle_grey">#696969</color>
+  <color name="dark_grey">#4e4e4e</color>
+  <color name="alert_green">#80b313</color>
+  <color name="alert_green">#f47e00</color>
+  <color name="alert_light_pink">#f04288</color>
+  <color name="alert_dark_pink">#e41356</color>
+  <color name="alert_blue">#00779e</color>
+  
+
+  <!-- ArcelorMittal Light Theme-->
+  <color name="theme_light_text_primary">@color/dark_grey</color>
+  <color name="theme_light_text_secondary">#4A4e4e4e</color> <!-- dark_grey 74% -->
+  <color name="theme_light_text_disabled">#2D4e4e4e</color> <!-- dark_grey 45% -->
+  <color name="theme_light_text">@color/middle_grey</color>
+  <color name="theme_light_text_orange">@color/dark_orange</color>
+
+  <color name="theme_light_primary">@color/dark_grey</color>
+  <color name="theme_light_accent">@color/dark_orange</color>
+  <!-- Black is more default and readable
+  <color name="theme_light_mobile_bar">#d9d9d9</color> -->
+  <color name="theme_light_mobile_bar">@color/black</color>
+  <color name="theme_light_background">@color/white</color>
+  <color name="theme_light_background_default">@color/light_grey</color>
+  <color name="theme_light_background_selected">@color/light_grey</color>
+  <color name="theme_light_background_dialog">@color/white</color>
+   
+</resources>

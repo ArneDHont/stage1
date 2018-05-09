@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="TDSVerbruiksArtikelen" targetNamespace="http://tempuri.org/TDSVerbruiksArtikelen.xsd"
+	elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/TDSVerbruiksArtikelen.xsd"
+	xmlns:mstns="http://tempuri.org/TDSVerbruiksArtikelen.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="TDSVerbruiksArtikelen" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="BBBRKART">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ID_ART_BRK" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="ID_GR_ART" type="xs:int" minOccurs="0" />
+							<xs:element name="ID_EH" type="xs:string" minOccurs="0" />
+							<xs:element name="NR_ART_BRK_SAP" type="xs:string" minOccurs="0" />
+							<xs:element name="SCF_ART" type="xs:string" minOccurs="0" />
+							<xs:element name="STK_ACT_ART" type="xs:int" minOccurs="0" />
+							<xs:element name="STK_MIN_ART" type="xs:int" minOccurs="0" />
+							<xs:element name="STK_MAX_ART" type="xs:double" minOccurs="0" />
+							<xs:element name="PR_EH_ART_INTV" type="xs:double" minOccurs="0" />
+							<xs:element name="DT_WY_L" type="xs:dateTime" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="TDSVerbruiksArtikelenKey2" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:BBBRKART" />
+			<xs:field xpath="mstns:ID_ART_BRK" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

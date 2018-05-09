@@ -1,0 +1,17 @@
+﻿
+CREATE PROC dbo.[USP_WY_BBREGTY_INSERT]
+  @ID_TY_REG int,
+  @SCF_TY_REG varchar(30)=NULL
+
+AS
+SET NOCOUNT OFF
+
+INSERT INTO [BBREGTY] (
+  [ID_TY_REG],
+  [SCF_TY_REG]
+)
+VALUES (
+  @ID_TY_REG,
+  @SCF_TY_REG
+)
+

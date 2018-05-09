@@ -1,0 +1,13 @@
+﻿
+CREATE PROC dbo.[USP_WY_BBTYBTRK_UPDATE]
+  @ID_TY_BTRK char(10),
+  @SCF_TY_BTRK char(10)=NULL,
+  @Original_ID_TY_BTRK char(10) --Primary Key Field
+
+AS
+SET NOCOUNT OFF
+
+UPDATE [BBTYBTRK] SET
+  [SCF_TY_BTRK] = @SCF_TY_BTRK
+WHERE [ID_TY_BTRK] = @Original_ID_TY_BTRK
+

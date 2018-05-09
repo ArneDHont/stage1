@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/TDSBrandweerMateriaal.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/TDSBrandweerMateriaal.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/TDSBrandweerMateriaal.xsd" id="TDSBrandweerMateriaal" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="TDSBrandweerMateriaal">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BrandweerMateriaal">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TypeMatID" type="xs:int" />
+              <xs:element name="MateriaalVolgNr" type="xs:int" />
+              <xs:element minOccurs="0" name="TypeMatOmschr">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SoortTypeMatOmschr">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="FabricatieNr">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="AfdelingCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="LocatieZone">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="LocatieNr">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="LocatieOmschr">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="NaamLeverancier">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="BeheerderAfdelingNaam">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="LeveringsDatum" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="VisueleControleFreq" type="xs:short" />
+              <xs:element minOccurs="0" name="DatumVisueleKeuring" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="Status" type="xs:string" />
+              <xs:element minOccurs="0" name="DatumPoederControle" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DatumHervullingNaGebruik" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="HervullingGemeld" type="xs:string" />
+              <xs:element minOccurs="0" name="BrandblusCodeomschr" type="xs:string" />
+              <xs:element minOccurs="0" name="GroteControleFreq" type="xs:short" />
+              <xs:element minOccurs="0" name="DatumLaatsteKeuring" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DatumVolgendeKeuring" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="VervangenDoor" type="xs:int" />
+              <xs:element minOccurs="0" name="DatumHerkeuringLeverancier" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="VolgnummerAfdeling" type="xs:long" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:BrandweerMateriaal" />
+      <xs:field xpath="mstns:TypeMatID" />
+      <xs:field xpath="mstns:MateriaalVolgNr" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

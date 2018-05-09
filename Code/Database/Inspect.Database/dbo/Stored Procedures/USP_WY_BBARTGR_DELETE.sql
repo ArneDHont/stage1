@@ -1,0 +1,10 @@
+﻿
+CREATE PROC dbo.[USP_WY_BBARTGR_DELETE]
+  @Original_ID_GR_ART int --Primary Key Field
+
+AS
+SET NOCOUNT OFF
+
+DELETE FROM [BBARTGR]
+WHERE [ID_GR_ART] = @Original_ID_GR_ART
+

@@ -1,0 +1,1 @@
+﻿In this assembly you should add the wrapper for the Bindings Assembly 'Com.Panasonic.Toughpad.Android'

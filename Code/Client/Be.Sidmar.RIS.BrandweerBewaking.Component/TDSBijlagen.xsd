@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TDSBijlagen" targetNamespace="http://tempuri.org/TDSBijlagen.xsd" xmlns:mstns="http://tempuri.org/TDSBijlagen.xsd" xmlns="http://tempuri.org/TDSBijlagen.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TDSBijlagen" msdata:IsDataSet="true" msdata:Locale="en-US" msprop:Generator_DataSetName="TDSBijlagen" msprop:Generator_UserDSName="TDSBijlagen">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BBBYLG" msprop:Generator_TableClassName="BBBYLGDataTable" msprop:Generator_TableVarName="tableBBBYLG" msprop:Generator_TablePropName="BBBYLG" msprop:Generator_RowDeletingName="BBBYLGRowDeleting" msprop:Generator_UserTableName="BBBYLG" msprop:Generator_RowChangingName="BBBYLGRowChanging" msprop:Generator_RowEvHandlerName="BBBYLGRowChangeEventHandler" msprop:Generator_RowDeletedName="BBBYLGRowDeleted" msprop:Generator_RowEvArgName="BBBYLGRowChangeEvent" msprop:Generator_RowChangedName="BBBYLGRowChanged" msprop:Generator_RowClassName="BBBYLGRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_BYLG" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnID_BYLG" msprop:Generator_ColumnPropNameInRow="ID_BYLG" msprop:Generator_ColumnPropNameInTable="ID_BYLGColumn" msprop:Generator_UserColumnName="ID_BYLG" type="xs:int" />
+              <xs:element name="ID_INTV_BRDW" msprop:Generator_ColumnVarNameInTable="columnID_INTV_BRDW" msprop:Generator_ColumnPropNameInRow="ID_INTV_BRDW" msprop:Generator_ColumnPropNameInTable="ID_INTV_BRDWColumn" msprop:Generator_UserColumnName="ID_INTV_BRDW" type="xs:int" minOccurs="0" />
+              <xs:element name="ID_REG" msprop:Generator_ColumnVarNameInTable="columnID_REG" msprop:Generator_ColumnPropNameInRow="ID_REG" msprop:Generator_ColumnPropNameInTable="ID_REGColumn" msprop:Generator_UserColumnName="ID_REG" type="xs:int" minOccurs="0" />
+              <xs:element name="PLA_BYLG" msprop:Generator_ColumnVarNameInTable="columnPLA_BYLG" msprop:Generator_ColumnPropNameInRow="PLA_BYLG" msprop:Generator_ColumnPropNameInTable="PLA_BYLGColumn" msprop:Generator_UserColumnName="PLA_BYLG" type="xs:string" minOccurs="0" />
+              <xs:element name="SCF_BYLG" msprop:Generator_ColumnVarNameInTable="columnSCF_BYLG" msprop:Generator_ColumnPropNameInRow="SCF_BYLG" msprop:Generator_ColumnPropNameInTable="SCF_BYLGColumn" msprop:Generator_UserColumnName="SCF_BYLG" type="xs:string" minOccurs="0" />
+              <xs:element name="ID_DOC" msprop:Generator_ColumnVarNameInTable="columnID_DOC" msprop:Generator_ColumnPropNameInRow="ID_DOC" msprop:Generator_ColumnPropNameInTable="ID_DOCColumn" msprop:Generator_UserColumnName="ID_DOC" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="TDSBijlagenKey2" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:BBBYLG" />
+      <xs:field xpath="mstns:ID_BYLG" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

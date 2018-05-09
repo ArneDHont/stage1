@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TDSInkoopFirmaCHIP" targetNamespace="http://tempuri.org/TDSInkoopFirmaCHIP.xsd" xmlns:mstns="http://tempuri.org/TDSInkoopFirmaCHIP.xsd" xmlns="http://tempuri.org/TDSInkoopFirmaCHIP.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="bbwConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="bbwConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Be.Sidmar.RIS.BrandweerBewaking.BS.My.MySettings.GlobalReference.Default.bbwConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TDSInkoopFirmaCHIP" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="TDSInkoopFirmaCHIP" msprop:Generator_UserDSName="TDSInkoopFirmaCHIP">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vw_IKP_firmaCHIP" msprop:Generator_TableClassName="vw_IKP_firmaCHIPDataTable" msprop:Generator_TableVarName="tablevw_IKP_firmaCHIP" msprop:Generator_TablePropName="vw_IKP_firmaCHIP" msprop:Generator_RowDeletingName="vw_IKP_firmaCHIPRowDeleting" msprop:Generator_RowChangingName="vw_IKP_firmaCHIPRowChanging" msprop:Generator_RowEvHandlerName="vw_IKP_firmaCHIPRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_IKP_firmaCHIPRowDeleted" msprop:Generator_UserTableName="vw_IKP_firmaCHIP" msprop:Generator_RowChangedName="vw_IKP_firmaCHIPRowChanged" msprop:Generator_RowEvArgName="vw_IKP_firmaCHIPRowChangeEvent" msprop:Generator_RowClassName="vw_IKP_firmaCHIPRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_REG" msprop:Generator_ColumnVarNameInTable="columnID_REG" msprop:Generator_ColumnPropNameInRow="ID_REG" msprop:Generator_ColumnPropNameInTable="ID_REGColumn" msprop:Generator_UserColumnName="ID_REG" type="xs:int" minOccurs="0" />
+              <xs:element name="SCF_TY_REG" msprop:Generator_ColumnVarNameInTable="columnSCF_TY_REG" msprop:Generator_ColumnPropNameInRow="SCF_TY_REG" msprop:Generator_ColumnPropNameInTable="SCF_TY_REGColumn" msprop:Generator_UserColumnName="SCF_TY_REG" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ID_OPS" msprop:Generator_ColumnVarNameInTable="columnID_OPS" msprop:Generator_ColumnPropNameInRow="ID_OPS" msprop:Generator_ColumnPropNameInTable="ID_OPSColumn" msprop:Generator_UserColumnName="ID_OPS" type="xs:int" minOccurs="0" />
+              <xs:element name="TMS_INC" msprop:Generator_ColumnVarNameInTable="columnTMS_INC" msprop:Generator_ColumnPropNameInRow="TMS_INC" msprop:Generator_ColumnPropNameInTable="TMS_INCColumn" msprop:Generator_UserColumnName="TMS_INC" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SCF_REG" msprop:Generator_ColumnVarNameInTable="columnSCF_REG" msprop:Generator_ColumnPropNameInRow="SCF_REG" msprop:Generator_ColumnPropNameInTable="SCF_REGColumn" msprop:Generator_UserColumnName="SCF_REG" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PLA_INC" msprop:Generator_ColumnVarNameInTable="columnPLA_INC" msprop:Generator_ColumnPropNameInRow="PLA_INC" msprop:Generator_ColumnPropNameInTable="PLA_INCColumn" msprop:Generator_UserColumnName="PLA_INC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Volgnr" msprop:Generator_ColumnVarNameInTable="columnVolgnr" msprop:Generator_ColumnPropNameInRow="Volgnr" msprop:Generator_ColumnPropNameInTable="VolgnrColumn" msprop:Generator_UserColumnName="Volgnr" type="xs:int" minOccurs="0" />
+              <xs:element name="Firma_InbrRegl" msprop:Generator_ColumnVarNameInTable="columnFirma_InbrRegl" msprop:Generator_ColumnPropNameInRow="Firma_InbrRegl" msprop:Generator_ColumnPropNameInTable="Firma_InbrReglColumn" msprop:Generator_UserColumnName="Firma_InbrRegl" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Firma_Diverse" msprop:Generator_ColumnVarNameInTable="columnFirma_Diverse" msprop:Generator_ColumnPropNameInRow="Firma_Diverse" msprop:Generator_ColumnPropNameInTable="Firma_DiverseColumn" msprop:Generator_UserColumnName="Firma_Diverse" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SAP_SUPPLIER_ID" msprop:Generator_ColumnVarNameInTable="columnSAP_SUPPLIER_ID" msprop:Generator_ColumnPropNameInRow="SAP_SUPPLIER_ID" msprop:Generator_ColumnPropNameInTable="SAP_SUPPLIER_IDColumn" msprop:Generator_UserColumnName="SAP_SUPPLIER_ID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DT_CHIP" msprop:Generator_ColumnVarNameInTable="columnDT_CHIP" msprop:Generator_ColumnPropNameInRow="DT_CHIP" msprop:Generator_ColumnPropNameInTable="DT_CHIPColumn" msprop:Generator_UserColumnName="DT_CHIP" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="OPM_CHIP" msprop:Generator_ColumnVarNameInTable="columnOPM_CHIP" msprop:Generator_ColumnPropNameInRow="OPM_CHIP" msprop:Generator_ColumnPropNameInTable="OPM_CHIPColumn" msprop:Generator_UserColumnName="OPM_CHIP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CHIP_YN" msprop:Generator_ColumnVarNameInTable="columnCHIP_YN" msprop:Generator_ColumnPropNameInRow="CHIP_YN" msprop:Generator_ColumnPropNameInTable="CHIP_YNColumn" msprop:Generator_UserColumnName="CHIP_YN" type="xs:boolean" minOccurs="0" />
+              <xs:element name="OPM_IKP" msprop:Generator_ColumnVarNameInTable="columnOPM_IKP" msprop:Generator_ColumnPropNameInRow="OPM_IKP" msprop:Generator_ColumnPropNameInTable="OPM_IKPColumn" msprop:Generator_UserColumnName="OPM_IKP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TMS_IKP_SENDMAIL" msprop:Generator_ColumnVarNameInTable="columnTMS_IKP_SENDMAIL" msprop:Generator_ColumnPropNameInRow="TMS_IKP_SENDMAIL" msprop:Generator_ColumnPropNameInTable="TMS_IKP_SENDMAILColumn" msprop:Generator_UserColumnName="TMS_IKP_SENDMAIL" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="OPM_PEB" msprop:Generator_ColumnVarNameInTable="columnOPM_PEB" msprop:Generator_ColumnPropNameInRow="OPM_PEB" msprop:Generator_ColumnPropNameInTable="OPM_PEBColumn" msprop:Generator_UserColumnName="OPM_PEB" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TMS_PEB_SENDMAIL" msprop:Generator_ColumnVarNameInTable="columnTMS_PEB_SENDMAIL" msprop:Generator_ColumnPropNameInRow="TMS_PEB_SENDMAIL" msprop:Generator_ColumnPropNameInTable="TMS_PEB_SENDMAILColumn" msprop:Generator_UserColumnName="TMS_PEB_SENDMAIL" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="VeraReference" msprop:Generator_ColumnVarNameInTable="columnVeraReference" msprop:Generator_ColumnPropNameInRow="VeraReference" msprop:Generator_ColumnPropNameInTable="VeraReferenceColumn" msprop:Generator_UserColumnName="VeraReference" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VerslagContractantYN" msprop:Generator_ColumnVarNameInTable="columnVerslagContractantYN" msprop:Generator_ColumnPropNameInRow="VerslagContractantYN" msprop:Generator_ColumnPropNameInTable="VerslagContractantYNColumn" msprop:Generator_UserColumnName="VerslagContractantYN" type="xs:boolean" minOccurs="0" />
+              <xs:element name="VKLR_INBR" msprop:Generator_ColumnVarNameInTable="columnVKLR_INBR" msprop:Generator_ColumnPropNameInRow="VKLR_INBR" msprop:Generator_ColumnPropNameInTable="VKLR_INBRColumn" msprop:Generator_UserColumnName="VKLR_INBR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OPM_EX_INBR_VSF" msprop:Generator_ColumnVarNameInTable="columnOPM_EX_INBR_VSF" msprop:Generator_ColumnPropNameInRow="OPM_EX_INBR_VSF" msprop:Generator_ColumnPropNameInTable="OPM_EX_INBR_VSFColumn" msprop:Generator_UserColumnName="OPM_EX_INBR_VSF" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Diverse_KorteOmschr" msprop:Generator_ColumnVarNameInTable="columnDiverse_KorteOmschr" msprop:Generator_ColumnPropNameInRow="Diverse_KorteOmschr" msprop:Generator_ColumnPropNameInTable="Diverse_KorteOmschrColumn" msprop:Generator_UserColumnName="Diverse_KorteOmschr" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Diverse_LangeOmschr" msprop:Generator_ColumnVarNameInTable="columnDiverse_LangeOmschr" msprop:Generator_ColumnPropNameInRow="Diverse_LangeOmschr" msprop:Generator_ColumnPropNameInTable="Diverse_LangeOmschrColumn" msprop:Generator_UserColumnName="Diverse_LangeOmschr" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:vw_IKP_firmaCHIP" />
+      <xs:field xpath="mstns:ID_REG" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

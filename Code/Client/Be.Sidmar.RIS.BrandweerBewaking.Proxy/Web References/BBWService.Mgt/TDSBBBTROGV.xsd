@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/TDSBBBTROGV.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/TDSBBBTROGV.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/TDSBBBTROGV.xsd" id="TDSBBBTROGV" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="TDSBBBTROGV">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BBBTROGV">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:ReadOnly="true" msdata:AutoIncrement="true" name="ID_BTRK_OGV" type="xs:int" />
+              <xs:element name="ID_REG" type="xs:int" />
+              <xs:element minOccurs="0" name="ID_IND_BTRK" type="xs:int" />
+              <xs:element minOccurs="0" name="ID_TY_BTRK" type="xs:int" />
+              <xs:element minOccurs="0" name="ID_BRK_TSP" type="xs:int" />
+              <xs:element minOccurs="0" name="ID_FRM_VZK" type="xs:int" />
+              <xs:element minOccurs="0" name="NR_POLIS" type="xs:string" />
+              <xs:element minOccurs="0" name="ROMP_LTSL" type="xs:string" />
+              <xs:element minOccurs="0" name="MAT_LTSL" type="xs:string" />
+              <xs:element minOccurs="0" name="KAR_TSP" type="xs:boolean" />
+              <xs:element minOccurs="0" name="Q_IND_TSP_BRTK" type="xs:string" />
+              <xs:element minOccurs="0" name="INDI_TRL_VKM_TSP" type="xs:boolean" />
+              <xs:element minOccurs="0" name="SCF_Q_KG_VKM_TSP" type="xs:string" />
+              <xs:element minOccurs="0" name="RB_NR" type="xs:string" />
+              <xs:element minOccurs="0" name="RB_CAT" type="xs:string" />
+              <xs:element minOccurs="0" name="RB_DAT_UITG" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="RB_PL_UITG" type="xs:string" />
+              <xs:element minOccurs="0" name="BTW_NR" type="xs:string" />
+              <xs:element minOccurs="0" name="HD_NM_VN" type="xs:string" />
+              <xs:element minOccurs="0" name="ID_TSP" type="xs:int" />
+              <xs:element minOccurs="0" name="NM_IND" type="xs:string" />
+              <xs:element minOccurs="0" name="VNM_IND" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

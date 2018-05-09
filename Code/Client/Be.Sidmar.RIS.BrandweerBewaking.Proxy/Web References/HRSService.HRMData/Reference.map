@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://wfhrsprod.sidmar.be/HRSService.HRMData/Services.asmx?disco" filename="Services.disco" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://wfhrsprod.sidmar.be/HRSService.HRMData/Services.asmx?schema=TDSEntranceExam" filename="TDSEntranceExam.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://wfhrsprod.sidmar.be/HRSService.HRMData/Services.asmx?schema=TDSdspers" filename="TDSdspers.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://wfhrsprod.sidmar.be/HRSService.HRMData/Services.asmx?schema=TDSPBMData" filename="TDSPBMData.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://wfhrsprod.sidmar.be/HRSService.HRMData/Services.asmx?schema=TDSwerknemer" filename="TDSwerknemer.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://wfhrsprod.sidmar.be/HRSService.HRMData/Services.asmx?wsdl" filename="Services.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>

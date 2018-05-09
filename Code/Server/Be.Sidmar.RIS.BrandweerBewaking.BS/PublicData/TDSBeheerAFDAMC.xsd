@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TDSBeheerAFDAMC" targetNamespace="http://tempuri.org/TDSBeheerAFDAMC.xsd" xmlns:mstns="http://tempuri.org/TDSBeheerAFDAMC.xsd" xmlns="http://tempuri.org/TDSBeheerAFDAMC.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TDSBeheerAFDAMC" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="TDSBeheerAFDAMC" msprop:Generator_DataSetName="TDSBeheerAFDAMC">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BBAFDAMC" msprop:Generator_UserTableName="BBAFDAMC" msprop:Generator_RowDeletedName="BBAFDAMCRowDeleted" msprop:Generator_RowChangedName="BBAFDAMCRowChanged" msprop:Generator_RowClassName="BBAFDAMCRow" msprop:Generator_RowChangingName="BBAFDAMCRowChanging" msprop:Generator_RowEvArgName="BBAFDAMCRowChangeEvent" msprop:Generator_RowEvHandlerName="BBAFDAMCRowChangeEventHandler" msprop:Generator_TableClassName="BBAFDAMCDataTable" msprop:Generator_TableVarName="tableBBAFDAMC" msprop:Generator_RowDeletingName="BBAFDAMCRowDeleting" msprop:Generator_TablePropName="BBAFDAMC">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_AFD" msprop:Generator_UserColumnName="ID_AFD" msprop:Generator_ColumnVarNameInTable="columnID_AFD" msprop:Generator_ColumnPropNameInRow="ID_AFD" msprop:Generator_ColumnPropNameInTable="ID_AFDColumn" type="xs:int" />
+              <xs:element name="ID_IND" msprop:Generator_UserColumnName="ID_IND" msprop:Generator_ColumnVarNameInTable="columnID_IND" msprop:Generator_ColumnPropNameInRow="ID_IND" msprop:Generator_ColumnPropNameInTable="ID_INDColumn" type="xs:int" />
+              <xs:element name="MAIL" msprop:Generator_UserColumnName="MAIL" msprop:Generator_ColumnVarNameInTable="columnMAIL" msprop:Generator_ColumnPropNameInRow="MAIL" msprop:Generator_ColumnPropNameInTable="MAILColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NM_IND" msprop:Generator_UserColumnName="NM_IND" msprop:Generator_ColumnPropNameInRow="NM_IND" msprop:Generator_ColumnVarNameInTable="columnNM_IND" msprop:Generator_ColumnPropNameInTable="NM_INDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="VNM_IND" msprop:Generator_UserColumnName="VNM_IND" msprop:Generator_ColumnPropNameInRow="VNM_IND" msprop:Generator_ColumnVarNameInTable="columnVNM_IND" msprop:Generator_ColumnPropNameInTable="VNM_INDColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:BBAFDAMC" />
+      <xs:field xpath="mstns:ID_AFD" />
+      <xs:field xpath="mstns:ID_IND" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

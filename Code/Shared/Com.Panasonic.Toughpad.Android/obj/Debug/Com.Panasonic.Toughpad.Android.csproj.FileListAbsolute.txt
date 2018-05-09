@@ -1,0 +1,6 @@
+C:\Sources\BBW\Development\Code\Shared\Com.Panasonic.Toughpad.Android\bin\Debug\Com.Panasonic.Toughpad.Android.dll
+C:\Sources\BBW\Development\Code\Shared\Com.Panasonic.Toughpad.Android\bin\Debug\Com.Panasonic.Toughpad.Android.pdb
+C:\Sources\BBW\Development\Code\Shared\Com.Panasonic.Toughpad.Android\obj\Debug\Com.Panasonic.Toughpad.Android.csproj.CoreCompileInputs.cache
+C:\Sources\BBW\Development\Code\Shared\Com.Panasonic.Toughpad.Android\obj\Debug\Com.Panasonic.Toughpad.Android.dll
+C:\Sources\BBW\Development\Code\Shared\Com.Panasonic.Toughpad.Android\obj\Debug\Com.Panasonic.Toughpad.Android.pdb
+C:\Sources\BBW\Development\Code\Shared\Com.Panasonic.Toughpad.Android\obj\Debug\Com.Panasonic.Toughpad.Android.csprojResolveAssemblyReference.cache

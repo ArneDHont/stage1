@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/TDSIntvArt.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/TDSIntvArt.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/TDSIntvArt.xsd" id="TDSIntvArt" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="TDSIntvArt">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BBINTART">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_ART_INTV" type="xs:int" />
+              <xs:element minOccurs="0" name="ID_EH" type="xs:string" />
+              <xs:element minOccurs="0" name="ID_GR_ART" type="xs:int" />
+              <xs:element minOccurs="0" name="SCF_ART_INTV" type="xs:string" />
+              <xs:element minOccurs="0" name="PR_EH_ART_INTV" type="xs:double" />
+              <xs:element minOccurs="0" name="TSP_DU_INTV" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="TDSIntvArtKey1">
+      <xs:selector xpath=".//mstns:BBINTART" />
+      <xs:field xpath="mstns:ID_ART_INTV" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

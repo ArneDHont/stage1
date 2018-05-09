@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TDSBBBestemmelingen" targetNamespace="http://tempuri.org/TDSBBBestemmelingen.xsd" xmlns:mstns="http://tempuri.org/TDSBBBestemmelingen.xsd" xmlns="http://tempuri.org/TDSBBBestemmelingen.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TDSBBBestemmelingen" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="TDSBBBestemmelingen" msprop:Generator_UserDSName="TDSBBBestemmelingen">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BBBST" msprop:Generator_TableClassName="BBBSTDataTable" msprop:Generator_TableVarName="tableBBBST" msprop:Generator_TablePropName="BBBST" msprop:Generator_RowDeletingName="BBBSTRowDeleting" msprop:Generator_UserTableName="BBBST" msprop:Generator_RowChangingName="BBBSTRowChanging" msprop:Generator_RowEvHandlerName="BBBSTRowChangeEventHandler" msprop:Generator_RowDeletedName="BBBSTRowDeleted" msprop:Generator_RowEvArgName="BBBSTRowChangeEvent" msprop:Generator_RowChangedName="BBBSTRowChanged" msprop:Generator_RowClassName="BBBSTRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_BST" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnID_BST" msprop:Generator_ColumnPropNameInRow="ID_BST" msprop:Generator_ColumnPropNameInTable="ID_BSTColumn" msprop:Generator_UserColumnName="ID_BST" type="xs:int" />
+              <xs:element name="ID_INTV_BRDW" msprop:Generator_ColumnVarNameInTable="columnID_INTV_BRDW" msprop:Generator_ColumnPropNameInRow="ID_INTV_BRDW" msprop:Generator_ColumnPropNameInTable="ID_INTV_BRDWColumn" msprop:Generator_UserColumnName="ID_INTV_BRDW" type="xs:int" minOccurs="0" />
+              <xs:element name="ID_REG" msprop:Generator_ColumnVarNameInTable="columnID_REG" msprop:Generator_ColumnPropNameInRow="ID_REG" msprop:Generator_ColumnPropNameInTable="ID_REGColumn" msprop:Generator_UserColumnName="ID_REG" type="xs:int" minOccurs="0" />
+              <xs:element name="ID_IND" msprop:Generator_ColumnVarNameInTable="columnID_IND" msprop:Generator_ColumnPropNameInRow="ID_IND" msprop:Generator_ColumnPropNameInTable="ID_INDColumn" msprop:Generator_UserColumnName="ID_IND" type="xs:int" minOccurs="0" />
+              <xs:element name="NM_IND" msprop:Generator_ColumnVarNameInTable="columnNM_IND" msprop:Generator_ColumnPropNameInRow="NM_IND" msprop:Generator_ColumnPropNameInTable="NM_INDColumn" msprop:Generator_UserColumnName="NM_IND" type="xs:string" minOccurs="0" />
+              <xs:element name="VNM_IND" msprop:Generator_ColumnVarNameInTable="columnVNM_IND" msprop:Generator_ColumnPropNameInRow="VNM_IND" msprop:Generator_ColumnPropNameInTable="VNM_INDColumn" msprop:Generator_UserColumnName="VNM_IND" type="xs:string" minOccurs="0" />
+              <xs:element name="AD_EMAL_IND" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="AD_EMAL_IND" msprop:Generator_ColumnVarNameInTable="columnAD_EMAL_IND" msprop:Generator_ColumnPropNameInTable="AD_EMAL_INDColumn" msprop:Generator_UserColumnName="AD_EMAL_IND" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="TDSBBBestemmelingenKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:BBBST" />
+      <xs:field xpath="mstns:ID_BST" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

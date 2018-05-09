@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/TDSInbrArt.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/TDSInbrArt.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/TDSInbrArt.xsd" id="TDSInbrArt" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:Locale="en-US" name="TDSInbrArt">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BBINBRAR">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_ART_INBR" type="xs:int" />
+              <xs:element minOccurs="0" name="ID_TY_INBR" type="xs:int" />
+              <xs:element minOccurs="0" name="NR_ART_INBR" type="xs:string" />
+              <xs:element minOccurs="0" name="SCF_ART_INBR" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Table1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_ART_INBR" type="xs:int" />
+              <xs:element minOccurs="0" name="ID_TY_INBR" type="xs:int" />
+              <xs:element minOccurs="0" name="NR_ART_INBR" type="xs:string" />
+              <xs:element minOccurs="0" name="SCF_ART_INBR" type="xs:string" />
+              <xs:element minOccurs="0" name="SCF_TY_INBR" type="xs:string" />
+              <xs:element minOccurs="0" name="SCF_CLS_INBR" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="TDSInbrArtKey1">
+      <xs:selector xpath=".//mstns:BBINBRAR" />
+      <xs:field xpath="mstns:ID_ART_INBR" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

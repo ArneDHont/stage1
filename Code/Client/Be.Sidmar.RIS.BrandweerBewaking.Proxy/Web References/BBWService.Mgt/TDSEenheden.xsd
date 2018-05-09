@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/TDSEenheden.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/TDSEenheden.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/TDSEenheden.xsd" id="TDSEenheden" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="TDSEenheden">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BBEH">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_EH" type="xs:string" />
+              <xs:element minOccurs="0" name="SCF_EH" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="TDSEenhedenKey1">
+      <xs:selector xpath=".//mstns:BBEH" />
+      <xs:field xpath="mstns:ID_EH" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

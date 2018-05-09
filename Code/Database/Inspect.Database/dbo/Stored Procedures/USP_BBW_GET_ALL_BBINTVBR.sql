@@ -1,0 +1,20 @@
+﻿-- Doel: Ophalen alle brandweerinterventies
+-- Auteur: Rajiv Blancke - Koen Heye 31/03/2006
+
+CREATE    PROCEDURE [dbo].[USP_BBW_GET_ALL_BBINTVBR]
+
+AS
+	SET NOCOUNT OFF;
+	
+	/* tijd toevoegen */
+	select ID_INTV_BRDW, BBINTVBR.ID_TY_INTV,  SCF_TY_INTV, VLG_TY_INTV_JR, VLG_TY_INTV_AFD As VolgnrAfd, year(TMS_INTV) as 'YEAR', TMS_INTV  ,KRT_AFD, PLA_INTV, 
+	SCF_BR_TY_INTV, SCF_BR_RD_INTV, INDI_BRD_BLUS_AFD, INDI_BRD_BLUS_SID, 
+	INDI_BRDW_SID_OPR, INDI_RAP_INC_OTV, DT_VZ_RAP_NW, DT_OK, DT_VZ_BST,
+	f.FireCauseExtraInfoId, f.FireCauseExtraInfo, BBINTVBR.VeraReference, BBINTVBR.VerslagContractantYN
+	from BBINTVBR
+	join BBINTVTY on BBINTVBR.ID_TY_INTV = BBINTVTY.ID_TY_INTV
+	join BBAFD on BBAFD.ID_AFD = BBINTVBR.ID_AFD
+	join BBBRTY on BBBRTY.ID_BR_TY_INTV = BBINTVBR.ID_BR_TY_INTV
+	join BBBRRD on BBBRRD.ID_BR_RD_INTV = BBINTVBR.ID_BR_RD_INTV
+	join BBFireCauseExtraInfo f on f.FireCauseExtraInfoId = BBINTVBR.FireCauseExtraInfoId
+	order by BBINTVBR.ID_INTV_BRDW

@@ -1,0 +1,9 @@
+C:\Sources\BBW\Development\Code\Shared\Inspect.Mobile.Framework.Android\bin\Debug\netstandard2.0\Inspect.Mobile.Framework.Android.deps.json
+C:\Sources\BBW\Development\Code\Shared\Inspect.Mobile.Framework.Android\bin\Debug\netstandard2.0\Inspect.Mobile.Framework.Android.dll
+C:\Sources\BBW\Development\Code\Shared\Inspect.Mobile.Framework.Android\bin\Debug\netstandard2.0\Inspect.Mobile.Framework.Android.pdb
+C:\Sources\BBW\Development\Code\Shared\Inspect.Mobile.Framework.Android\obj\Debug\netstandard2.0\Inspect.Mobile.Framework.Android.csproj.CoreCompileInputs.cache
+C:\Sources\BBW\Development\Code\Shared\Inspect.Mobile.Framework.Android\obj\Debug\netstandard2.0\Inspect.Mobile.Framework.Android.AssemblyInfoInputs.cache
+C:\Sources\BBW\Development\Code\Shared\Inspect.Mobile.Framework.Android\obj\Debug\netstandard2.0\Inspect.Mobile.Framework.Android.AssemblyInfo.cs
+C:\Sources\BBW\Development\Code\Shared\Inspect.Mobile.Framework.Android\obj\Debug\netstandard2.0\Inspect.Mobile.Framework.Android.dll
+C:\Sources\BBW\Development\Code\Shared\Inspect.Mobile.Framework.Android\obj\Debug\netstandard2.0\Inspect.Mobile.Framework.Android.pdb
+C:\Sources\BBW\Development\Code\Shared\Inspect.Mobile.Framework.Android\obj\Debug\netstandard2.0\Inspect.Mobile.Framework.Android.csprojResolveAssemblyReference.cache

@@ -1,0 +1,19 @@
+﻿
+
+CREATE PROC dbo.[USP_WY_BBOGVSTA_INSERT]
+  @ID_REG int,
+  @ID_STA int
+
+AS
+SET NOCOUNT OFF
+
+INSERT INTO [BBOGVSTA] (
+  [ID_REG],
+  [ID_STA]
+)
+VALUES (
+  @ID_REG,
+  @ID_STA
+)
+
+

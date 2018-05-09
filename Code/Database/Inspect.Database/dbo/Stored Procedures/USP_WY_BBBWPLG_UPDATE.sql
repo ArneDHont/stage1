@@ -1,0 +1,13 @@
+﻿
+CREATE PROC dbo.[USP_WY_BBBWPLG_UPDATE]
+  @ID_PLG_IND int,
+  @SCF_PLG_IND varchar(50)=NULL,
+  @Original_ID_PLG_IND int --Primary Key Field
+
+AS
+SET NOCOUNT OFF
+
+UPDATE [BBBWPLG] SET
+  [SCF_PLG_IND] = @SCF_PLG_IND
+WHERE [ID_PLG_IND] = @Original_ID_PLG_IND
+

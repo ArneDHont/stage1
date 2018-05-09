@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Inspect.FireSafety.Mobile.ControlRound.Views.EquipmentHistoryPage"
+             xmlns:local="clr-namespace:Inspect.FireSafety.Mobile.ControlRound.ViewModels;assembly=Inspect.FireSafety.Mobile"
+             xmlns:extra="clr-namespace:Inspect.Mobile.Framework.Xamarin.Extra;assembly=Inspect.Mobile.Framework.Xamarin"
+             NavigationPage.HasBackButton="True"
+             >
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:EquipmentHistoryViewModel x:Key="ViewModel"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.BindingContext>
+        <StaticResource Key="ViewModel"/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Er is nog geen historiek" IsVisible="{Binding LabelVisible}" Margin="15,10,0,0" />
+            <extra:BetterListView  IsVisible="{Binding ListVisible}"  ItemsSource="{Binding EquipmentFeedbackItems}" HasUnevenRows="True" SelectedItem="{Binding SelectedItem}" ItemClickCommand="{Binding ItemClickCommand}">
+                <extra:BetterListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout Orientation="Vertical" Margin="15,3,15,3" VerticalOptions="CenterAndExpand" BackgroundColor="{Binding BackgroundColor}">
+                                    <StackLayout Orientation="Horizontal"  Margin="0,10,0,10">
+                                        <Label Text="{Binding TimeCompleted , StringFormat='{0:dd/MM/yyyy H:mm:ss}'}" />
+                                        <Label Text="{Binding Status}" HorizontalTextAlignment="End" HorizontalOptions="EndAndExpand"/>
+                                    </StackLayout>
+                                    <StackLayout IsVisible="{Binding IsVisible}">
+                                        <StackLayout Orientation="Horizontal"  Margin="0,10,0,10">
+                                            <Label Text="Gecontroleerd door :" />
+                                            <Label Text="{Binding Operator.FirstName}" HorizontalTextAlignment="End" HorizontalOptions="EndAndExpand"/>
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal"  Margin="0,10,0,10" IsVisible="{Binding FeedbackVisible}">
+                                            <Label Text="Feedback:" />
+                                            <Label Text="{Binding FeedbackType.Description}" HorizontalTextAlignment="End" HorizontalOptions="EndAndExpand"/>
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal"  Margin="0,10,0,10" IsVisible="{Binding RemarkVisible}">
+                                            <Label Text="Opmerkingen::" />
+                                            <Label Text="{Binding Remark}" HorizontalTextAlignment="End" HorizontalOptions="EndAndExpand"/>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </extra:BetterListView.ItemTemplate>
+            </extra:BetterListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

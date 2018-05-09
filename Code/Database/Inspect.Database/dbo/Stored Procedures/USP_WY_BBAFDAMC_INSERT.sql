@@ -1,0 +1,15 @@
+﻿CREATE PROC [dbo].[USP_WY_BBAFDAMC_INSERT]
+  @ID_AFD int,
+  @ID_IND int
+
+AS
+SET NOCOUNT OFF
+
+INSERT INTO [BBAFDAMC] (
+  [ID_AFD],
+  [ID_IND]
+)
+VALUES (
+  @ID_AFD,
+  @ID_IND
+)

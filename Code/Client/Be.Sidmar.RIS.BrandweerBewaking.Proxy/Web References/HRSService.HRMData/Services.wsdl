@@ -1,0 +1,1335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://tempuri.org/TDSdspers.xsd" />
+      <s:import namespace="http://tempuri.org/TDSPBMData.xsd" />
+      <s:import namespace="http://tempuri.org/TDSEntranceExam.xsd" />
+      <s:import namespace="http://tempuri.org/TDSwerknemer.xsd" />
+      <s:import schemaLocation="http://wfhrsprod.sidmar.be/HRSService.HRMData/Services.asmx?schema=TDSdspers" namespace="http://tempuri.org/TDSdspers.xsd" />
+      <s:import schemaLocation="http://wfhrsprod.sidmar.be/HRSService.HRMData/Services.asmx?schema=TDSEntranceExam" namespace="http://tempuri.org/TDSEntranceExam.xsd" />
+      <s:import schemaLocation="http://wfhrsprod.sidmar.be/HRSService.HRMData/Services.asmx?schema=TDSPBMData" namespace="http://tempuri.org/TDSPBMData.xsd" />
+      <s:import schemaLocation="http://wfhrsprod.sidmar.be/HRSService.HRMData/Services.asmx?schema=TDSwerknemer" namespace="http://tempuri.org/TDSwerknemer.xsd" />
+      <s:element name="GetPersonDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="aPerNr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPersonDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPersonDetailResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/TDSdspers.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPersonDetailBySidUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sidUser" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPersonDetailBySidUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPersonDetailBySidUserResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/TDSdspers.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPbmData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sStamnrs" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPbmDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPbmDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/TDSPBMData.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPbmDataNieuwePersoneelsleden">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="vanafDatum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="afdelingen" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPbmDataNieuwePersoneelsledenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPbmDataNieuwePersoneelsledenResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/TDSPBMData.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="a4LetterAbbr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmailResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPhoto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="aPerNr" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPhotoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPhotoResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPersonsSearchBy_Name">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="aName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="aFirstName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="aInclRetired" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPersonsSearchBy_NameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPersonsSearchBy_NameResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/TDSdspers.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSidUsersSearchByName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="aName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="aFirstName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSidUsersSearchByNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSidUsersSearchByNameResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/TDSdspers.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPersonsSearchBy_NameSoundex">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="aName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="aFirstName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="aInclRetired" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPersonsSearchBy_NameSoundexResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPersonsSearchBy_NameSoundexResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/TDSdspers.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPersonsSearchBy_BirthDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="aBirthDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPersonsSearchBy_BirthDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPersonsSearchBy_BirthDateResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/TDSdspers.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPersonsSearchBy_BadgeNr">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="aBadgeNr" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPersonsSearchBy_BadgeNrResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPersonsSearchBy_BadgeNrResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/TDSdspers.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEntranceExam">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetEntranceExamResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEntranceExamResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/TDSEntranceExam.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPersonsSearchBy_NameSoundex_Union_BirthDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="aName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="aFirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="aBirthDate" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="aInclRetired" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPersonsSearchBy_NameSoundex_Union_BirthDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPersonsSearchBy_NameSoundex_Union_BirthDateResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/TDSdspers.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateDSPERSLimosaRemark">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="aNrInd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="aLimosaYN" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="aLimosaDtValidStart" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="aLimosaDtValidEnd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="aRemarkBadgeAppl" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateDSPERSLimosaRemarkResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateDSPERSLimosaRemarkResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFirmParentName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="aFirmNr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFirmParentNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFirmParentNameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEntranceExamSearchByNameSoundex">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="aName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="aFirstName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEntranceExamSearchByNameSoundexResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEntranceExamSearchByNameSoundexResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/TDSEntranceExam.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEntranceExamSearchByBirthDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="aBirthDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEntranceExamSearchByBirthDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEntranceExamSearchByBirthDateResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/TDSEntranceExam.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EntranceExam_Update">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="astrName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="astrFirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="adtBirthDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="astrBirthPlace" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="astrStreet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="astrStreetNr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="astrPostalCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="astrCity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="astrFirm" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="adtDateSession1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="adtDateSession2" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="alngSuccesfulYN" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="astrRemark" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="alngBadgeExamID" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EntranceExam_UpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EntranceExam_UpdateResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EntranceExam_Insert">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="astrName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="astrFirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="adtBirthDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="astrBirthPlace" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="astrStreet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="astrStreetNr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="astrPostalCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="astrCity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="astrFirm" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="adtDateSession1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="adtDateSession2" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="alngSuccesfulYN" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="astrRemark" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EntranceExam_InsertResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EntranceExam_InsertResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertNewEmployeeHRM">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dsWN">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/TDSwerknemer.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertNewEmployeeHRMResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateEmployeeHRM">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dsWN">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/TDSwerknemer.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateEmployeeHRMResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DeleteEmployeeHRM">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="employeeNr" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteEmployeeHRMResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="InsertNewEmployeeEMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dsWN">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/TDSwerknemer.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertNewEmployeeEMSResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAfdelingshoofdDB2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="aPerNr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAfdelingshoofdDB2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAfdelingshoofdDB2Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDirectChefs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="stamNr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDirectChefsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDirectChefsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSchedule">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="stamNr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetScheduleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetScheduleResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTimeOff">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="stamNr" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="startDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTimeOffResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTimeOffResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetPersonDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPersonDetail" />
+  </wsdl:message>
+  <wsdl:message name="GetPersonDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPersonDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPersonDetailBySidUserSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPersonDetailBySidUser" />
+  </wsdl:message>
+  <wsdl:message name="GetPersonDetailBySidUserSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPersonDetailBySidUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPbmDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPbmData" />
+  </wsdl:message>
+  <wsdl:message name="GetPbmDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPbmDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPbmDataNieuwePersoneelsledenSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPbmDataNieuwePersoneelsleden" />
+  </wsdl:message>
+  <wsdl:message name="GetPbmDataNieuwePersoneelsledenSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPbmDataNieuwePersoneelsledenResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEmailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmail" />
+  </wsdl:message>
+  <wsdl:message name="GetEmailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPhotoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPhoto" />
+  </wsdl:message>
+  <wsdl:message name="GetPhotoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPhotoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPersonsSearchBy_NameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPersonsSearchBy_Name" />
+  </wsdl:message>
+  <wsdl:message name="GetPersonsSearchBy_NameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPersonsSearchBy_NameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSidUsersSearchByNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSidUsersSearchByName" />
+  </wsdl:message>
+  <wsdl:message name="GetSidUsersSearchByNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSidUsersSearchByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPersonsSearchBy_NameSoundexSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPersonsSearchBy_NameSoundex" />
+  </wsdl:message>
+  <wsdl:message name="GetPersonsSearchBy_NameSoundexSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPersonsSearchBy_NameSoundexResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPersonsSearchBy_BirthDateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPersonsSearchBy_BirthDate" />
+  </wsdl:message>
+  <wsdl:message name="GetPersonsSearchBy_BirthDateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPersonsSearchBy_BirthDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPersonsSearchBy_BadgeNrSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPersonsSearchBy_BadgeNr" />
+  </wsdl:message>
+  <wsdl:message name="GetPersonsSearchBy_BadgeNrSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPersonsSearchBy_BadgeNrResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEntranceExamSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEntranceExam" />
+  </wsdl:message>
+  <wsdl:message name="GetEntranceExamSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEntranceExamResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPersonsSearchBy_NameSoundex_Union_BirthDateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPersonsSearchBy_NameSoundex_Union_BirthDate" />
+  </wsdl:message>
+  <wsdl:message name="GetPersonsSearchBy_NameSoundex_Union_BirthDateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPersonsSearchBy_NameSoundex_Union_BirthDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDSPERSLimosaRemarkSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateDSPERSLimosaRemark" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDSPERSLimosaRemarkSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateDSPERSLimosaRemarkResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFirmParentNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFirmParentName" />
+  </wsdl:message>
+  <wsdl:message name="GetFirmParentNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFirmParentNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEntranceExamSearchByNameSoundexSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEntranceExamSearchByNameSoundex" />
+  </wsdl:message>
+  <wsdl:message name="GetEntranceExamSearchByNameSoundexSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEntranceExamSearchByNameSoundexResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEntranceExamSearchByBirthDateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEntranceExamSearchByBirthDate" />
+  </wsdl:message>
+  <wsdl:message name="GetEntranceExamSearchByBirthDateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEntranceExamSearchByBirthDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="EntranceExam_UpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:EntranceExam_Update" />
+  </wsdl:message>
+  <wsdl:message name="EntranceExam_UpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:EntranceExam_UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="EntranceExam_InsertSoapIn">
+    <wsdl:part name="parameters" element="tns:EntranceExam_Insert" />
+  </wsdl:message>
+  <wsdl:message name="EntranceExam_InsertSoapOut">
+    <wsdl:part name="parameters" element="tns:EntranceExam_InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertNewEmployeeHRMSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertNewEmployeeHRM" />
+  </wsdl:message>
+  <wsdl:message name="InsertNewEmployeeHRMSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertNewEmployeeHRMResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateEmployeeHRMSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateEmployeeHRM" />
+  </wsdl:message>
+  <wsdl:message name="UpdateEmployeeHRMSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateEmployeeHRMResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteEmployeeHRMSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteEmployeeHRM" />
+  </wsdl:message>
+  <wsdl:message name="DeleteEmployeeHRMSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteEmployeeHRMResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertNewEmployeeEMSSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertNewEmployeeEMS" />
+  </wsdl:message>
+  <wsdl:message name="InsertNewEmployeeEMSSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertNewEmployeeEMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAfdelingshoofdDB2SoapIn">
+    <wsdl:part name="parameters" element="tns:GetAfdelingshoofdDB2" />
+  </wsdl:message>
+  <wsdl:message name="GetAfdelingshoofdDB2SoapOut">
+    <wsdl:part name="parameters" element="tns:GetAfdelingshoofdDB2Response" />
+  </wsdl:message>
+  <wsdl:message name="GetDirectChefsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDirectChefs" />
+  </wsdl:message>
+  <wsdl:message name="GetDirectChefsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDirectChefsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetScheduleSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSchedule" />
+  </wsdl:message>
+  <wsdl:message name="GetScheduleSoapOut">
+    <wsdl:part name="parameters" element="tns:GetScheduleResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTimeOffSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTimeOff" />
+  </wsdl:message>
+  <wsdl:message name="GetTimeOffSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTimeOffResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServicesSoap">
+    <wsdl:operation name="GetPersonDetail">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the detail of a person (by aPernr, eg. 96696 or 00096696, 00706116)</wsdl:documentation>
+      <wsdl:input message="tns:GetPersonDetailSoapIn" />
+      <wsdl:output message="tns:GetPersonDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonDetailBySidUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the detail of a person (by siduser)</wsdl:documentation>
+      <wsdl:input message="tns:GetPersonDetailBySidUserSoapIn" />
+      <wsdl:output message="tns:GetPersonDetailBySidUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPbmData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">PBM data</wsdl:documentation>
+      <wsdl:input message="tns:GetPbmDataSoapIn" />
+      <wsdl:output message="tns:GetPbmDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPbmDataNieuwePersoneelsleden">
+      <wsdl:input message="tns:GetPbmDataNieuwePersoneelsledenSoapIn" />
+      <wsdl:output message="tns:GetPbmDataNieuwePersoneelsledenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmail">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the email a person (by siduser, eg. NACO, DUMI)</wsdl:documentation>
+      <wsdl:input message="tns:GetEmailSoapIn" />
+      <wsdl:output message="tns:GetEmailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPhoto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the photo of a person (by aPernr, eg. 00096696, 00706116)</wsdl:documentation>
+      <wsdl:input message="tns:GetPhotoSoapIn" />
+      <wsdl:output message="tns:GetPhotoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonsSearchBy_Name">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Search persons by Name and/or firstname</wsdl:documentation>
+      <wsdl:input message="tns:GetPersonsSearchBy_NameSoapIn" />
+      <wsdl:output message="tns:GetPersonsSearchBy_NameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSidUsersSearchByName">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Search siduser by Name and/or firstname</wsdl:documentation>
+      <wsdl:input message="tns:GetSidUsersSearchByNameSoapIn" />
+      <wsdl:output message="tns:GetSidUsersSearchByNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonsSearchBy_NameSoundex">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Search persons by sounds like (soundex) name and/or firstname</wsdl:documentation>
+      <wsdl:input message="tns:GetPersonsSearchBy_NameSoundexSoapIn" />
+      <wsdl:output message="tns:GetPersonsSearchBy_NameSoundexSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonsSearchBy_BirthDate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Search persons by Birthdate (yyyy-mm-dd)</wsdl:documentation>
+      <wsdl:input message="tns:GetPersonsSearchBy_BirthDateSoapIn" />
+      <wsdl:output message="tns:GetPersonsSearchBy_BirthDateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonsSearchBy_BadgeNr">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Search persons by Badgenr</wsdl:documentation>
+      <wsdl:input message="tns:GetPersonsSearchBy_BadgeNrSoapIn" />
+      <wsdl:output message="tns:GetPersonsSearchBy_BadgeNrSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntranceExam">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get all records from table bew_EntranceExam</wsdl:documentation>
+      <wsdl:input message="tns:GetEntranceExamSoapIn" />
+      <wsdl:output message="tns:GetEntranceExamSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonsSearchBy_NameSoundex_Union_BirthDate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Search persons by sounds like (soundex) name and/or firstname UNION birthdate</wsdl:documentation>
+      <wsdl:input message="tns:GetPersonsSearchBy_NameSoundex_Union_BirthDateSoapIn" />
+      <wsdl:output message="tns:GetPersonsSearchBy_NameSoundex_Union_BirthDateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDSPERSLimosaRemark">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Update fields (Limosa, remark) in table DSPERS (aNrInd eg. 00096696, dates yyyy-MM-dd)</wsdl:documentation>
+      <wsdl:input message="tns:UpdateDSPERSLimosaRemarkSoapIn" />
+      <wsdl:output message="tns:UpdateDSPERSLimosaRemarkSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFirmParentName">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get parent firm name  of a firmnr (eg. 72533, 303090) (parent firm printed on badge)</wsdl:documentation>
+      <wsdl:input message="tns:GetFirmParentNameSoapIn" />
+      <wsdl:output message="tns:GetFirmParentNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntranceExamSearchByNameSoundex">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Search table bew_EntranceExam by Name-FirstName</wsdl:documentation>
+      <wsdl:input message="tns:GetEntranceExamSearchByNameSoundexSoapIn" />
+      <wsdl:output message="tns:GetEntranceExamSearchByNameSoundexSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntranceExamSearchByBirthDate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Search table bew_EntranceExam by BirthDate (yyyy-mm-dd)</wsdl:documentation>
+      <wsdl:input message="tns:GetEntranceExamSearchByBirthDateSoapIn" />
+      <wsdl:output message="tns:GetEntranceExamSearchByBirthDateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EntranceExam_Update">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Update table bew_EntranceExam (update)</wsdl:documentation>
+      <wsdl:input message="tns:EntranceExam_UpdateSoapIn" />
+      <wsdl:output message="tns:EntranceExam_UpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EntranceExam_Insert">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Insert new record in table bew_EntranceExam (insert)</wsdl:documentation>
+      <wsdl:input message="tns:EntranceExam_InsertSoapIn" />
+      <wsdl:output message="tns:EntranceExam_InsertSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertNewEmployeeHRM">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Insert new employee on his 1st working day (so he is available in Wie doet wat and Werkvuurvergunning)</wsdl:documentation>
+      <wsdl:input message="tns:InsertNewEmployeeHRMSoapIn" />
+      <wsdl:output message="tns:InsertNewEmployeeHRMSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEmployeeHRM">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Update employee when he receives a new badge (update of firm)</wsdl:documentation>
+      <wsdl:input message="tns:UpdateEmployeeHRMSoapIn" />
+      <wsdl:output message="tns:UpdateEmployeeHRMSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEmployeeHRM">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Delete employee when he is put out of service</wsdl:documentation>
+      <wsdl:input message="tns:DeleteEmployeeHRMSoapIn" />
+      <wsdl:output message="tns:DeleteEmployeeHRMSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertNewEmployeeEMS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Insert new employee on his 1st working day (so he is available in Wie doet wat and Werkvuurvergunning)</wsdl:documentation>
+      <wsdl:input message="tns:InsertNewEmployeeEMSSoapIn" />
+      <wsdl:output message="tns:InsertNewEmployeeEMSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAfdelingshoofdDB2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">BBW - get afdelingshoofd</wsdl:documentation>
+      <wsdl:input message="tns:GetAfdelingshoofdDB2SoapIn" />
+      <wsdl:output message="tns:GetAfdelingshoofdDB2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDirectChefs">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Direct Chefs</wsdl:documentation>
+      <wsdl:input message="tns:GetDirectChefsSoapIn" />
+      <wsdl:output message="tns:GetDirectChefsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSchedule">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Schedule</wsdl:documentation>
+      <wsdl:input message="tns:GetScheduleSoapIn" />
+      <wsdl:output message="tns:GetScheduleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTimeOff">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get list with al allowed vacation for employee</wsdl:documentation>
+      <wsdl:input message="tns:GetTimeOffSoapIn" />
+      <wsdl:output message="tns:GetTimeOffSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServicesSoap" type="tns:ServicesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPersonDetail">
+      <soap:operation soapAction="http://tempuri.org/GetPersonDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonDetailBySidUser">
+      <soap:operation soapAction="http://tempuri.org/GetPersonDetailBySidUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPbmData">
+      <soap:operation soapAction="http://tempuri.org/GetPbmData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPbmDataNieuwePersoneelsleden">
+      <soap:operation soapAction="http://tempuri.org/GetPbmDataNieuwePersoneelsleden" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmail">
+      <soap:operation soapAction="http://tempuri.org/GetEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhoto">
+      <soap:operation soapAction="http://tempuri.org/GetPhoto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonsSearchBy_Name">
+      <soap:operation soapAction="http://tempuri.org/GetPersonsSearchBy_Name" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSidUsersSearchByName">
+      <soap:operation soapAction="http://tempuri.org/GetSidUsersSearchByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonsSearchBy_NameSoundex">
+      <soap:operation soapAction="http://tempuri.org/GetPersonsSearchBy_NameSoundex" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonsSearchBy_BirthDate">
+      <soap:operation soapAction="http://tempuri.org/GetPersonsSearchBy_BirthDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonsSearchBy_BadgeNr">
+      <soap:operation soapAction="http://tempuri.org/GetPersonsSearchBy_BadgeNr" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntranceExam">
+      <soap:operation soapAction="http://tempuri.org/GetEntranceExam" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonsSearchBy_NameSoundex_Union_BirthDate">
+      <soap:operation soapAction="http://tempuri.org/GetPersonsSearchBy_NameSoundex_Union_BirthDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDSPERSLimosaRemark">
+      <soap:operation soapAction="http://tempuri.org/UpdateDSPERSLimosaRemark" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFirmParentName">
+      <soap:operation soapAction="http://tempuri.org/GetFirmParentName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntranceExamSearchByNameSoundex">
+      <soap:operation soapAction="http://tempuri.org/GetEntranceExamSearchByNameSoundex" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntranceExamSearchByBirthDate">
+      <soap:operation soapAction="http://tempuri.org/GetEntranceExamSearchByBirthDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EntranceExam_Update">
+      <soap:operation soapAction="http://tempuri.org/EntranceExam_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EntranceExam_Insert">
+      <soap:operation soapAction="http://tempuri.org/EntranceExam_Insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertNewEmployeeHRM">
+      <soap:operation soapAction="http://tempuri.org/InsertNewEmployeeHRM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEmployeeHRM">
+      <soap:operation soapAction="http://tempuri.org/UpdateEmployeeHRM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEmployeeHRM">
+      <soap:operation soapAction="http://tempuri.org/DeleteEmployeeHRM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertNewEmployeeEMS">
+      <soap:operation soapAction="http://tempuri.org/InsertNewEmployeeEMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAfdelingshoofdDB2">
+      <soap:operation soapAction="http://tempuri.org/GetAfdelingshoofdDB2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDirectChefs">
+      <soap:operation soapAction="http://tempuri.org/GetDirectChefs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSchedule">
+      <soap:operation soapAction="http://tempuri.org/GetSchedule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTimeOff">
+      <soap:operation soapAction="http://tempuri.org/GetTimeOff" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServicesSoap12" type="tns:ServicesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPersonDetail">
+      <soap12:operation soapAction="http://tempuri.org/GetPersonDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonDetailBySidUser">
+      <soap12:operation soapAction="http://tempuri.org/GetPersonDetailBySidUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPbmData">
+      <soap12:operation soapAction="http://tempuri.org/GetPbmData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPbmDataNieuwePersoneelsleden">
+      <soap12:operation soapAction="http://tempuri.org/GetPbmDataNieuwePersoneelsleden" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmail">
+      <soap12:operation soapAction="http://tempuri.org/GetEmail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhoto">
+      <soap12:operation soapAction="http://tempuri.org/GetPhoto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonsSearchBy_Name">
+      <soap12:operation soapAction="http://tempuri.org/GetPersonsSearchBy_Name" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSidUsersSearchByName">
+      <soap12:operation soapAction="http://tempuri.org/GetSidUsersSearchByName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonsSearchBy_NameSoundex">
+      <soap12:operation soapAction="http://tempuri.org/GetPersonsSearchBy_NameSoundex" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonsSearchBy_BirthDate">
+      <soap12:operation soapAction="http://tempuri.org/GetPersonsSearchBy_BirthDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonsSearchBy_BadgeNr">
+      <soap12:operation soapAction="http://tempuri.org/GetPersonsSearchBy_BadgeNr" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntranceExam">
+      <soap12:operation soapAction="http://tempuri.org/GetEntranceExam" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonsSearchBy_NameSoundex_Union_BirthDate">
+      <soap12:operation soapAction="http://tempuri.org/GetPersonsSearchBy_NameSoundex_Union_BirthDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDSPERSLimosaRemark">
+      <soap12:operation soapAction="http://tempuri.org/UpdateDSPERSLimosaRemark" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFirmParentName">
+      <soap12:operation soapAction="http://tempuri.org/GetFirmParentName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntranceExamSearchByNameSoundex">
+      <soap12:operation soapAction="http://tempuri.org/GetEntranceExamSearchByNameSoundex" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntranceExamSearchByBirthDate">
+      <soap12:operation soapAction="http://tempuri.org/GetEntranceExamSearchByBirthDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EntranceExam_Update">
+      <soap12:operation soapAction="http://tempuri.org/EntranceExam_Update" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EntranceExam_Insert">
+      <soap12:operation soapAction="http://tempuri.org/EntranceExam_Insert" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertNewEmployeeHRM">
+      <soap12:operation soapAction="http://tempuri.org/InsertNewEmployeeHRM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEmployeeHRM">
+      <soap12:operation soapAction="http://tempuri.org/UpdateEmployeeHRM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEmployeeHRM">
+      <soap12:operation soapAction="http://tempuri.org/DeleteEmployeeHRM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertNewEmployeeEMS">
+      <soap12:operation soapAction="http://tempuri.org/InsertNewEmployeeEMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAfdelingshoofdDB2">
+      <soap12:operation soapAction="http://tempuri.org/GetAfdelingshoofdDB2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDirectChefs">
+      <soap12:operation soapAction="http://tempuri.org/GetDirectChefs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSchedule">
+      <soap12:operation soapAction="http://tempuri.org/GetSchedule" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTimeOff">
+      <soap12:operation soapAction="http://tempuri.org/GetTimeOff" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Services">
+    <wsdl:port name="ServicesSoap" binding="tns:ServicesSoap">
+      <soap:address location="http://wfhrsprod.sidmar.be/HRSService.HRMData/Services.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServicesSoap12" binding="tns:ServicesSoap12">
+      <soap12:address location="http://wfhrsprod.sidmar.be/HRSService.HRMData/Services.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

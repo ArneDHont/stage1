@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:local="clr-namespace:Inspect.Core.Mobile.NetworkStatus;assembly=Inspect.Core.Mobile"
+             x:Class="Inspect.Core.Mobile.NetworkStatus.NetworkStatusPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:NetworkStatusViewModel x:Key="ViewModel" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.BindingContext>
+        <StaticResource Key="ViewModel"/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <Grid>
+            <Grid>
+                <Button Text="Navigate" Command="{Binding Path=NavigateCommand}"
+                        VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+            </Grid>
+            <BoxView IsVisible="{Binding IsBusy}" Color="DarkGray" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"  Opacity="0.5" />
+            <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" 
+                               VerticalOptions="Center" HorizontalOptions="Center" />
+        </Grid>
+    </ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Order="Primary" Text="Test 1"/>
+        <ToolbarItem Order="Secondary" Text="Test 2"/>
+    </ContentPage.ToolbarItems>
+</ContentPage>

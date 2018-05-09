@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<prj:Project xmlns:prj="http://schemas.microsoft.com/developer/msbuild/2003" xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+
+  <prj:PropertyGroup>
+    <!-- for project files, use always a remove and insert combination to get the right xml namespaces -->
+    <!-- in order that click once packages are created, be sure that the nodes PublisherName + ProductName + GenerateManifests or ApplicationManifest are present in the project file -->
+	
+	<!-- Always specify the ApplicationVersion to enforce the right UCM version in the manifest. -->
+	<!--   Use the token UCM.FileVersion or UCM.AssemblyVersion -->
+	<prj:ApplicationVersion xdt:Transform="Remove"/>
+	<ApplicationVersion xdt:Transform="Insert">{UCM.FileVersion}</ApplicationVersion>
+
+	<!-- Specify only the ProductName and PublisherName for your startup client -->
+	<!--   Use the environment token when deploying multiple environments on the same box -->
+	<!--   This will result in multiple packages in the Add/Remove programs list (when install option is set to true) -->
+	<prj:ProductName xdt:Transform="Remove"/>
+	<ProductName xdt:Transform="Insert">Be.Sidmar.RIS.BrandweerBewaking.Main_{UCM.Environment}</ProductName>
+	<prj:PublisherName xdt:Transform="Remove"/>
+	<PublisherName xdt:Transform="Insert">ArcelorMittal</PublisherName>
+
+	<!-- the application manifest for trust or use the manifest for trust. -->
+	<prj:UseApplicationTrust xdt:Transform="Remove"/>
+	<UseApplicationTrust xdt:Transform="Insert">false</UseApplicationTrust>	
+	
+	<!-- Specify the urls for the startup client -->
+	<prj:PublishUrl xdt:Transform="Remove"/>
+	<PublishUrl  xdt:Transform="Insert">http://{WF.NTW.NAME.CO}/BBWClients.ClickOnceClient/</PublishUrl>
+	<prj:UpdateUrl xdt:Transform="Remove"/>
+	<UpdateUrl  xdt:Transform="Insert">http://{WF.NTW.NAME.CO}/BBWClients.ClickOnceClient/</UpdateUrl>
+	<prj:SupportUrl xdt:Transform="Remove"/>
+	<SupportUrl  xdt:Transform="Insert">http://{WF.NTW.NAME.CO}/BBWClients.ClickOnceClient/</SupportUrl>
+
+	<!-- When signing is enabled, use a environment specific certificate installed on the build machine -->
+	<!--   for Ghent, set SignManifests to true and set ManifestKeyFile -->
+	<prj:SignManifests xdt:Transform="Remove"/>
+	<SignManifests xdt:Transform="Insert">true</SignManifests>	
+	<!--   use a key file per environment to be able to run the application for different environments on the same box (for example QA and PROD) -->
+	<prj:ManifestKeyFile xdt:Transform="Remove"/>
+	<ManifestKeyFile xdt:Transform="Insert">{UCM.Certificates}\ArcelorMittal Ghent - {UCM.Environment}.pfx</ManifestKeyFile>	
+	
+	<!-- If Install parameter is true, the application will be installed on the user’s Start menu, and can be removed by using the Add or Remove Programs dialog box -->
+	<!--   for Ghent, set Install to false because start menu option will be managed via SCCM -->
+	<prj:Install xdt:Transform="Remove"/>
+	<Install xdt:Transform="Insert">false</Install>	
+	
+    <!-- For .Net framework 2.0 to 3.5 to remove application manifest in projects-->
+	<prj:NoWin32Manifest xdt:Transform="Remove"/>
+	<NoWin32Manifest xdt:Transform="Insert">true</NoWin32Manifest>	
+	
+  </prj:PropertyGroup>
+  
+</prj:Project>

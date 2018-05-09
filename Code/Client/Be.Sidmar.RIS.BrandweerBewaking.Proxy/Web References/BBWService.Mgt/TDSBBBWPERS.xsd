@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/TDSBBBWPERS.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/TDSBBBWPERS.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/TDSBBBWPERS.xsd" id="TDSBBBWPERS" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="TDSBBBWPERS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BBBWPERS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_IND" type="xs:int" />
+              <xs:element minOccurs="0" name="ID_PLG_IND" type="xs:int" />
+              <xs:element minOccurs="0" name="BRDW" type="xs:boolean" />
+              <xs:element minOccurs="0" name="WAK" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="TDSBBBWPERSKey1">
+      <xs:selector xpath=".//mstns:BBBWPERS" />
+      <xs:field xpath="mstns:ID_IND" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Inspect.FireSafety.Mobile.ControlRound.Views.ControlOverviewPage"
+             xmlns:local="clr-namespace:Inspect.FireSafety.Mobile.ControlRound.ViewModels;assembly=Inspect.FireSafety.Mobile"
+             xmlns:extra="clr-namespace:Inspect.Mobile.Framework.Xamarin.Extra;assembly=Inspect.Mobile.Framework.Xamarin"
+             xmlns:convert="clr-namespace:Inspect.Mobile.Framework.Xamarin.Converters;assembly=Inspect.Mobile.Framework.Xamarin"
+             NavigationPage.HasBackButton="False"
+             >
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:ControlOverviewViewModel x:Key="ViewModel"/>
+            <convert:NegateBooleanConverter x:Key="inverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.BindingContext>
+        <StaticResource Key="ViewModel"/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand"  >
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+                <Grid Padding="0" ColumnSpacing="0" RowSpacing="0" HorizontalOptions="FillAndExpand" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Clicked="OnButtonClicked" x:Name="ToScan"    Text="te scannen" Margin="-5,-5,-5,-5"  HorizontalOptions="FillAndExpand" Grid.Row="0" Grid.Column="0" Style="{StaticResource ButtonDetail}" Command="{Binding FilterCommand}" CommandParameter="ToScan"></Button>
+                    <Button  Clicked="OnButtonClicked" x:Name="scanned" Text="gescand"  Margin="-5,-5,-5,-5" HorizontalOptions="FillAndExpand" Grid.Row="0" Grid.Column="1" Style="{StaticResource ButtonDetail}" Command="{Binding FilterCommand}" CommandParameter="Scanned"></Button>
+                    <Button Clicked="OnButtonClicked" x:Name="Ok"       Text="ok"  Margin="-5,-5,-5,-5" HorizontalOptions="FillAndExpand" Grid.Row="0" Grid.Column="2" Style="{StaticResource ButtonDetail}" Command="{Binding FilterCommand}" CommandParameter="Ok"></Button>
+                    <Button Clicked="OnButtonClicked" x:Name="NotOk"    Text="niet ok"  Margin="-5,-5,-5,-5" HorizontalOptions="FillAndExpand" Grid.Row="0" Grid.Column="3" Style="{StaticResource ButtonDetail}"  Command="{Binding FilterCommand}" CommandParameter="NotOK" ></Button>
+                </Grid>
+            </StackLayout>
+            <StackLayout VerticalOptions="FillAndExpand" >
+                <ProgressBar  Progress="{Binding ControleProgress}" Margin="0,-12,0,0"></ProgressBar>
+                <Label  Text="er zijn geen toestellen in deze zone" IsVisible="{Binding LabelVisible}" Margin="15,10,0,0"/>
+                <extra:BetterListView   IsVisible="{Binding ListVisible}" VerticalOptions="FillAndExpand" Margin="0,-6,0,0" ItemsSource="{Binding DisplayedDevices}"    ItemClickCommand="{Binding ItemClickCommand}" SelectedItem="{Binding SelectedItem}"  >
+                    <extra:BetterListView.ItemTemplate >
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                                    <Label Text="{Binding Equipment.EquipmentLocation.Name}" TextColor="{Binding Color}" Margin="15,0,0,0"   />
+                                    <Label Text=":" TextColor="{Binding Color}"  />
+                                    <Label Text="{Binding Equipment.EquipmentType.Name}" TextColor="{Binding Color}" />
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </extra:BetterListView.ItemTemplate>
+                </extra:BetterListView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+    <ContentPage.ToolbarItems >
+        <ToolbarItem Icon="ic_stop_white_48dp.png" Command="{Binding StopCommand}"  />
+        <ToolbarItem Text="{Binding TotalString}" Order="Primary"/>
+        <ToolbarItem Icon="qrCode.png" Command="{Binding ScanCommand}" />
+        <ToolbarItem Icon="pin_pad_64.png" Command="{Binding TypeCommand}" />
+    </ContentPage.ToolbarItems>
+</ContentPage>

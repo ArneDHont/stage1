@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <!-- Include package specific configuration -->
+  <?include $(sys.CURRENTDIR)\Configuration.wxi?>
+  <Fragment>
+      <Property Id="ARPINSTALLLOCATION" Value="dummyValue"  />
+
+      <InstallUISequence >
+        <Custom Action="PreventDowngrading" After="FindRelatedProducts">NEWPRODUCTFOUND</Custom>
+        <Custom Action="SetTARGETDIR" After="CostInitialize" />
+        <Custom Action="AMSetARPINSTALLLOCATION" After="CostInitialize">NOT Installed</Custom>
+ 	    </InstallUISequence>
+
+      <InstallExecuteSequence >
+        <Custom Action="PreventDowngrading" After="FindRelatedProducts">NEWPRODUCTFOUND</Custom>
+        <RemoveExistingProducts After="InstallFinalize" />
+        <Custom Action="SetTARGETDIR" After="CostInitialize" />
+        <Custom Action="AMSetARPINSTALLLOCATION" After="RemoveFiles">NOT Installed</Custom>
+      </InstallExecuteSequence>
+      
+      <CustomAction Id="SetTARGETDIR" Property="TARGETDIR" Value="$(var.DefaultLocation)" />
+	    <CustomAction Id="PreventDowngrading" Error="Newer version already installed"  />
+      <CustomAction Id="AMSetARPINSTALLLOCATION" Property="ARPINSTALLLOCATION" Value="[INSTALLDIR]"  />
+      
+      <UIRef Id = "WixUI_Common"/>
+      <UI Id="WixUI_WinArcelorMittal">
+
+        <Property Id="WixUI_Mode" Value="Custom" />
+        <Property Id="WIXUI_INSTALLDIR" Value="INSTALLDIR" />
+
+        <TextStyle Id="WixUI_Font_Normal" FaceName="Tahoma" Size="8" />
+        <TextStyle Id="WixUI_Font_Bigger" FaceName="Tahoma" Size="12" />
+        <TextStyle Id="WixUI_Font_Title" FaceName="Tahoma" Size="9" Bold="yes" />
+
+        <Property Id="DefaultUIFont" Value="WixUI_Font_Normal" />
+
+        <DialogRef Id="ErrorDlg" />
+        <DialogRef Id="FatalError" />
+        <DialogRef Id="FilesInUse" />
+        <DialogRef Id="MsiRMFilesInUse" />
+        <DialogRef Id="ProgressDlg" />
+        <DialogRef Id="ResumeDlg" />
+        <DialogRef Id="UserExit" />
+        <DialogRef Id="WelcomeDlg" />
+        <DialogRef Id="MaintenanceTypeDlg" />
+
+        <Publish Dialog="ExitDialog" Control="Finish" Event="EndDialog" Value="Return" Order="999">1</Publish>
+        <Publish Dialog="MaintenanceWelcomeDlg" Control="Next" Event="NewDialog" Value="MaintenanceTypeDlg">1</Publish>
+        <Publish Dialog="MaintenanceTypeDlg" Control="RepairButton" Event="NewDialog" Value="VerifyReadyDlg">1</Publish>
+        <Publish Dialog="MaintenanceTypeDlg" Control="RemoveButton" Event="NewDialog" Value="VerifyReadyDlg">1</Publish>
+        <Publish Dialog="MaintenanceTypeDlg" Control="Back" Event="NewDialog" Value="MaintenanceWelcomeDlg">1</Publish>
+        <Publish Dialog="WelcomeDlg" Control="Next" Event="NewDialog" Value="InstallDirDlg">1</Publish>
+        <Publish Dialog="InstallDirDlg" Control="Back" Event="NewDialog" Value="WelcomeDlg" Order="2">1</Publish>
+        <Publish Dialog="InstallDirDlg" Control="Next" Event="NewDialog" Value="VerifyReadyDlg" Order="2">1</Publish>
+        <Publish Dialog="InstallDirDlg" Control="ChangeFolder" Property="_BrowseProperty" Value="[WIXUI_INSTALLDIR]" Order="1">1</Publish>
+        <Publish Dialog="InstallDirDlg" Control="ChangeFolder" Event="SpawnDialog" Value="BrowseDlg" Order="2">1</Publish>
+        <Publish Dialog="VerifyReadyDlg" Control="Back" Event="NewDialog" Value="InstallDirDlg" Order="3">1</Publish>
+
+        <Property Id="ARPNOMODIFY" Value="1" />
+      </UI>
+    </Fragment>
+</Wix>

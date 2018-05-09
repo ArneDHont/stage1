@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ED2C7E68-5502-4006-969D-DB3C79A0EF60}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Inspect.FireSafety.Business</RootNamespace>
+    <AssemblyName>Inspect.FireSafety.Business</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentValidation, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\..\References\FluentValidation.7.4.0\lib\net45\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attachment\AttachmentBusinessComponent.cs" />
+    <Compile Include="Attachment\IAttachmentBusinessComponent.cs" />
+    <Compile Include="Equipment\VisualInspectionDateSpecification.cs" />
+    <Compile Include="InspectionEquipmentFeedbacks\InspectionEquipmentFeedbackBusinessComponent.cs" />
+    <Compile Include="InspectionEquipmentFeedbacks\InspectionEquipmentFeedbackSpecification.cs" />
+    <Compile Include="InspectionEquipmentFeedbacks\IInspectionEquipmentFeedbackBusinessComponent.cs" />
+    <Compile Include="EquipmentTypes\EquipmentTypeBusinessComponent.cs" />
+    <Compile Include="EquipmentTypes\EquipmentTypeIdSpecification.cs" />
+    <Compile Include="EquipmentTypes\IEquipmentTypeBusinessComponent.cs" />
+    <Compile Include="EquipmentTypes\CodeSpecification.cs" />
+    <Compile Include="Equipment\EquipmentBusinessComponent.cs" />
+    <Compile Include="Equipment\EquipmentIdSpecification.cs" />
+    <Compile Include="Equipment\IEquipmentBusinessComponent.cs" />
+    <Compile Include="FeedbackTypes\FeedbackTypeBusinessComponent.cs" />
+    <Compile Include="FeedbackTypes\FeedbackTypeSecification.cs" />
+    <Compile Include="FeedbackTypes\IFeedbackTypeBusinessComponent.cs" />
+    <Compile Include="InspectionSummary\IInspectionSummaryBusinessComponent.cs" />
+    <Compile Include="InspectionSummary\InspectionSummaryBusinessComponent.cs" />
+    <Compile Include="InspectionSummary\Mail\EquipmentReportItem.cs" />
+    <Compile Include="InspectionSummary\Mail\IMailConfiguration.cs" />
+    <Compile Include="InspectionSummary\Mail\MailSettings.cs" />
+    <Compile Include="InspectionSummary\Mail\MailService.cs" />
+    <Compile Include="Locations\ILocationBusinessComponent.cs" />
+    <Compile Include="Locations\LocationBusinessComponent.cs" />
+    <Compile Include="Locations\LocationIdSpecification.cs" />
+    <Compile Include="OrganisationUnits\IOrganisationUnitBusinessComponent.cs" />
+    <Compile Include="OrganisationUnits\OrganisationUnitBusinessComponent.cs" />
+    <Compile Include="OrganisationUnits\OrganisationUnitIdSpecification.cs" />
+    <Compile Include="Properties\MailSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>MailSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Users\IUserBusinessComponent.cs" />
+    <Compile Include="Users\UserBusinessComponent.cs" />
+    <Compile Include="Users\UserSpecification.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Inspect.FireSafety.Shared.Entities\Inspect.FireSafety.Shared.Entities.csproj">
+      <Project>{7317582f-2097-4485-a411-c34fd0567e09}</Project>
+      <Name>Inspect.FireSafety.Shared.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shared\Inspect.Framework.Business\Inspect.Framework.Business.csproj">
+      <Project>{35511315-0e2f-4989-91c4-35c2a6ee9b14}</Project>
+      <Name>Inspect.Framework.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shared\Inspect.Framework.Data\Inspect.Framework.Data.csproj">
+      <Project>{c77644f8-72f0-4d2b-98dd-be8b2156e881}</Project>
+      <Name>Inspect.Framework.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shared\Inspect.Mobile.Framework.Xamarin\Inspect.Mobile.Framework.Xamarin.csproj">
+      <Project>{EAA62B1D-F4E4-4700-BC3E-9B9A9BE30A69}</Project>
+      <Name>Inspect.Mobile.Framework.Xamarin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Inspect.FireSafety.Data\Inspect.FireSafety.Data.csproj">
+      <Project>{6226583c-a6a5-4d1a-b84d-21eb221e8bc9}</Project>
+      <Name>Inspect.FireSafety.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\MailSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>MailSettings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

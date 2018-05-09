@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="INSTALLDIR">
+            <Component Id="cmpED7EF73DF2EE6C3410E969D23C921182" Guid="{B916871B-92B3-409C-9F31-3EC3DABB68E9}">
+                <File Id="fil80B73CE63B5E8747E4216E3776342C9B" KeyPath="yes" Source="$(var.myProjectOutput.PackagePath)\Global.asax" />
+            </Component>
+            <Component Id="cmp67C20F14BE3D40DEAFEC435B2AAB730D" Guid="{FEA5A339-0A02-42F8-95A6-58CA57190D99}">
+                <File Id="fil85A126993AA0B0EF5F5ACEE66422C04A" KeyPath="yes" Source="$(var.myProjectOutput.PackagePath)\Services.asmx" />
+            </Component>
+            <Component Id="cmpBBEA411EA9EAD9509FF4D3DF3D005CAF" Guid="{ED898759-5923-4EC4-9C1F-3FD58DCFFEB7}">
+                <File Id="fil3F19783C3EC6BAFCC97DF9D8C90C256A" KeyPath="yes" Source="$(var.myProjectOutput.PackagePath)\Web.config" />
+            </Component>
+            
+            <Directory Id="dirA5528701EE26FFBF346CCE20EE8ACE99" Name="bin">
+                <Component Id="cmp15E3EB2D763A6AD7F3138261834895DF" Guid="{FFACB1E2-9D13-4BB1-9547-66189A8CB1FC}">
+                    <File Id="fil9804C0D66230539FECCF0048D61D3A3D" KeyPath="yes" Source="$(var.myProjectOutput.PackagePath)\bin\ADF.Data.dll" />
+                </Component>
+                <Component Id="cmpF5384A4270D1FB953CC9A15F4340985B" Guid="{5DC97A46-7A36-4183-B83F-73A666581DA8}">
+                    <File Id="filA6B37946054728B13F30F7E3BFFD6540" KeyPath="yes" Source="$(var.myProjectOutput.PackagePath)\bin\ADF.EnterpriseServices.dll" />
+                </Component>
+                <Component Id="cmp413CFAD09E77DA6B9D731BA11339B3FB" Guid="{1C91D7A4-C9BF-449F-87F5-3D4418F5DC01}">
+                    <File Id="fil7A5F2F493F87F07FB8F768A75C451158" KeyPath="yes" Source="$(var.myProjectOutput.PackagePath)\bin\ADF.System.dll" />
+                </Component>
+                <Component Id="cmp476BB3350A396DBBCD98261EEA11774D" Guid="{3D6552E0-D28D-4D2E-B22F-97A50A2C25D5}">
+                    <File Id="fil4A9FD0DB39B13EC882A4FCBBF18F620C" KeyPath="yes" Source="$(var.myProjectOutput.PackagePath)\bin\ADF.System.Extensions.dll" />
+                </Component>
+                <Component Id="cmpE6A483587B0FC31F668D57FFCA316AEA" Guid="{9A384E50-C408-48FB-9AAD-38D0BB7B1D35}">
+                    <File Id="fil88BDE2D3B0DE05499EA8E960E5DEFE48" KeyPath="yes" Source="$(var.myProjectOutput.PackagePath)\bin\Be.Sidmar.RIS.BrandweerBewaking.BS.dll" />
+                </Component>
+                <Component Id="cmp3F787844B66FA588966B88A050AB82FA" Guid="{E7A87AAF-0382-424D-8D90-D21E5E2178F6}">
+                    <File Id="fil630617CB8A840CA30818016F303EC501" KeyPath="yes" Source="$(var.myProjectOutput.PackagePath)\bin\Be.Sidmar.RIS.BrandweerBewaking.BS.pdb" />
+                </Component>
+                <Component Id="cmpC27E8CEC2A14C95E82E2DF699DCD197C" Guid="{A591E855-3304-43A1-8407-B9026F53BC5E}">
+                    <File Id="fil4ABDBBFB60539EBEBEC5D3FAFA0343FE" KeyPath="yes" Source="$(var.myProjectOutput.PackagePath)\bin\Be.Sidmar.RIS.BrandweerBewaking.BS2.dll" />
+                </Component>
+                <Component Id="cmp2AD7B8DC02DF7D6DA5AD8ADC04B62EE4" Guid="{CD79888C-E7A0-4548-90B4-33018636C009}">
+                    <File Id="filEA0539FE8BB35A29D03ABC92B14E526E" KeyPath="yes" Source="$(var.myProjectOutput.PackagePath)\bin\Be.Sidmar.RIS.BrandweerBewaking.BS2.pdb" />
+                </Component>
+                <Component Id="cmpCD79BB9FF53699F4645C5D29063CD7A2" Guid="{9BBAF641-1C29-4259-85B8-D3099C0C33FB}">
+                    <File Id="fil46566CCE1C40C6563419A1DDF493BC1B" KeyPath="yes" Source="$(var.myProjectOutput.PackagePath)\bin\Be.Sidmar.RIS.BrandweerBewaking.Services.Management.dll" />
+                </Component>
+                <Component Id="cmpECBD50116C7AF51D46C21C6148E41541" Guid="{9A7B1132-BC5C-43FA-BE8B-DD5035685408}">
+                    <File Id="filD0978AE44AE3745FA1A381A146CF16C0" KeyPath="yes" Source="$(var.myProjectOutput.PackagePath)\bin\Be.Sidmar.RIS.BrandweerBewaking.Services.Management.pdb" />
+                </Component>
+                
+                <Component Id="cmpC33ED962D1A63C5C46623381CFB40807" Guid="{CE6CBA97-D391-44C0-A1AB-DEA458F7132D}">
+                    <File Id="filDAFFFD154AB9F256F263456602F14342" KeyPath="yes" Source="$(var.myProjectOutput.PackagePath)\bin\log4net.dll" />
+                </Component>
+                <Directory Id="dirB32FA9D9C7195BE87385CE69400ACF9B" Name="nl">
+                    <Component Id="cmp199C5D73E37F6EA45B3DD7216B7B140B" Guid="{6A21A653-FF42-488A-A8AA-B62CD3711D11}">
+                        <File Id="fil9B8C9880C4DD85142AB006A8A74DC59F" KeyPath="yes" Source="$(var.myProjectOutput.PackagePath)\bin\nl\ADF.Data.resources.dll" />
+                    </Component>
+                    <Component Id="cmpA09F99DB58019FD8A0A5BFCF59E82A80" Guid="{52103985-0259-4B5C-A39C-9C40347EB53C}">
+                        <File Id="fil35718C64FD6091C00AF39B060C5902A7" KeyPath="yes" Source="$(var.myProjectOutput.PackagePath)\bin\nl\ADF.System.resources.dll" />
+                    </Component>
+                </Directory>
+            </Directory>
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="myProjectOutputFiles">
+            <ComponentRef Id="cmpED7EF73DF2EE6C3410E969D23C921182" />
+            <ComponentRef Id="cmp67C20F14BE3D40DEAFEC435B2AAB730D" />
+            <ComponentRef Id="cmpBBEA411EA9EAD9509FF4D3DF3D005CAF" />
+            
+            <ComponentRef Id="cmp15E3EB2D763A6AD7F3138261834895DF" />
+            <ComponentRef Id="cmpF5384A4270D1FB953CC9A15F4340985B" />
+            <ComponentRef Id="cmp413CFAD09E77DA6B9D731BA11339B3FB" />
+            <ComponentRef Id="cmp476BB3350A396DBBCD98261EEA11774D" />
+            <ComponentRef Id="cmpE6A483587B0FC31F668D57FFCA316AEA" />
+            <ComponentRef Id="cmp3F787844B66FA588966B88A050AB82FA" />
+            <ComponentRef Id="cmpC27E8CEC2A14C95E82E2DF699DCD197C" />
+            <ComponentRef Id="cmp2AD7B8DC02DF7D6DA5AD8ADC04B62EE4" />
+            <ComponentRef Id="cmpCD79BB9FF53699F4645C5D29063CD7A2" />
+            <ComponentRef Id="cmpECBD50116C7AF51D46C21C6148E41541" />
+            
+            <ComponentRef Id="cmpC33ED962D1A63C5C46623381CFB40807" />
+            <ComponentRef Id="cmp199C5D73E37F6EA45B3DD7216B7B140B" />
+            <ComponentRef Id="cmpA09F99DB58019FD8A0A5BFCF59E82A80" />
+        </ComponentGroup>
+    </Fragment>
+</Wix>

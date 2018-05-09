@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Be.Sidmar.RIS.BrandweerBewaking.BS", "..\..\Be.Sidmar.RIS.BrandweerBewaking.BS\Be.Sidmar.RIS.BrandweerBewaking.BS.vbproj", "{8718D31D-EE90-4B87-94A9-E9260A13A6B1}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Be.Sidmar.RIS.BrandweerBewaking.Services.Management", "..\..\Be.Sidmar.RIS.BrandweerBewaking.Services.Management\Be.Sidmar.RIS.BrandweerBewaking.Services.Management.vbproj", "{77600353-33BE-46C1-A8A3-6F584908F963}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Be.Sidmar.RIS.BrandweerBewaking.BS2", "..\..\Be.Sidmar.RIS.BrandweerBewaking.BS2\Be.Sidmar.RIS.BrandweerBewaking.BS2.vbproj", "{819BE803-C6B8-4F23-B750-769292B958DE}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://wftfsprod.sidmar.be:8080/tfs/inf
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ..\\..\\Be.Sidmar.RIS.BrandweerBewaking.BS\\Be.Sidmar.RIS.BrandweerBewaking.BS.vbproj
+		SccProjectName1 = ../../Be.Sidmar.RIS.BrandweerBewaking.BS
+		SccLocalPath1 = ..\\..\\Be.Sidmar.RIS.BrandweerBewaking.BS
+		SccProjectUniqueName2 = ..\\..\\Be.Sidmar.RIS.BrandweerBewaking.Services.Management\\Be.Sidmar.RIS.BrandweerBewaking.Services.Management.vbproj
+		SccProjectName2 = ../../Be.Sidmar.RIS.BrandweerBewaking.Services.Management
+		SccLocalPath2 = ..\\..\\Be.Sidmar.RIS.BrandweerBewaking.Services.Management
+		SccProjectUniqueName3 = ..\\..\\Be.Sidmar.RIS.BrandweerBewaking.BS2\\Be.Sidmar.RIS.BrandweerBewaking.BS2.vbproj
+		SccProjectName3 = ../../Be.Sidmar.RIS.BrandweerBewaking.BS2
+		SccLocalPath3 = ..\\..\\Be.Sidmar.RIS.BrandweerBewaking.BS2
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8718D31D-EE90-4B87-94A9-E9260A13A6B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8718D31D-EE90-4B87-94A9-E9260A13A6B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8718D31D-EE90-4B87-94A9-E9260A13A6B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8718D31D-EE90-4B87-94A9-E9260A13A6B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77600353-33BE-46C1-A8A3-6F584908F963}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77600353-33BE-46C1-A8A3-6F584908F963}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77600353-33BE-46C1-A8A3-6F584908F963}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77600353-33BE-46C1-A8A3-6F584908F963}.Release|Any CPU.Build.0 = Release|Any CPU
+		{819BE803-C6B8-4F23-B750-769292B958DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{819BE803-C6B8-4F23-B750-769292B958DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{819BE803-C6B8-4F23-B750-769292B958DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{819BE803-C6B8-4F23-B750-769292B958DE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

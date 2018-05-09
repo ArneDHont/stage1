@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/TDSDienstVerslagDetail.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/TDSDienstVerslagDetail.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/TDSDienstVerslagDetail.xsd" id="TDSDienstVerslagDetail" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="TDSDienstVerslagDetail">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Header">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DagVerslagID" type="xs:int" />
+              <xs:element minOccurs="0" name="Datum" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="PloegoversteID" type="xs:string" />
+              <xs:element minOccurs="0" name="PloegID" type="xs:int" />
+              <xs:element minOccurs="0" name="Opmerkingen" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Detail">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DagVerslagActieID" type="xs:int" />
+              <xs:element minOccurs="0" name="DagVerslagID" type="xs:int" />
+              <xs:element minOccurs="0" name="WerknemerID" type="xs:string" />
+              <xs:element minOccurs="0" name="ActieCodeID" type="xs:int" />
+              <xs:element minOccurs="0" name="AantalUur" type="xs:int" />
+              <xs:element minOccurs="0" name="AantalMinuten" type="xs:int" />
+              <xs:element minOccurs="0" name="OpleidingAfdelingID" type="xs:int" />
+              <xs:element minOccurs="0" name="OpleidingAantalPersonen" type="xs:short" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Werknemer">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="WerknemerId" type="xs:int" />
+              <xs:element minOccurs="0" name="WerknemerNaam" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:Header" />
+      <xs:field xpath="mstns:DagVerslagID" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="Detail_Constraint1">
+      <xs:selector xpath=".//mstns:Detail" />
+      <xs:field xpath="mstns:DagVerslagActieID" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="Werknemer_Constraint1">
+      <xs:selector xpath=".//mstns:Werknemer" />
+      <xs:field xpath="mstns:WerknemerId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

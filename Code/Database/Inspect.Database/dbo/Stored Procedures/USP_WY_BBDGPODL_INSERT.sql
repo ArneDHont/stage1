@@ -1,0 +1,25 @@
+﻿
+
+CREATE PROC dbo.[USP_WY_BBDGPODL_INSERT]
+  @ID_DG_PO_DL int,
+  @SCF_DG_PO_DL varchar(50),
+  @INV_PO bit,
+  @VLG int
+
+AS
+SET NOCOUNT OFF
+
+INSERT INTO [BBDGPODL] (
+  [ID_DG_PO_DL],
+  [SCF_DG_PO_DL],
+  [INV_PO],
+  [VLG]
+)
+VALUES (
+  @ID_DG_PO_DL,
+  @SCF_DG_PO_DL,
+  @INV_PO,
+  @VLG
+)
+
+

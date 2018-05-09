@@ -1,0 +1,10 @@
+﻿
+CREATE PROC dbo.[USP_WY_BBSCADAN_DELETE]
+  @Original_ID_OBJ_SCAD int --Primary Key Field
+
+AS
+SET NOCOUNT OFF
+
+DELETE FROM [BBSCADAN]
+WHERE [ID_OBJ_SCAD] = @Original_ID_OBJ_SCAD
+

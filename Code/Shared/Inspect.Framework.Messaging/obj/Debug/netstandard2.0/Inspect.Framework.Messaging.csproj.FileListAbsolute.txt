@@ -1,0 +1,9 @@
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Messaging\bin\Debug\netstandard2.0\Inspect.Framework.Messaging.deps.json
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Messaging\bin\Debug\netstandard2.0\Inspect.Framework.Messaging.dll
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Messaging\bin\Debug\netstandard2.0\Inspect.Framework.Messaging.pdb
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Messaging\obj\Debug\netstandard2.0\Inspect.Framework.Messaging.csproj.CoreCompileInputs.cache
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Messaging\obj\Debug\netstandard2.0\Inspect.Framework.Messaging.AssemblyInfoInputs.cache
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Messaging\obj\Debug\netstandard2.0\Inspect.Framework.Messaging.AssemblyInfo.cs
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Messaging\obj\Debug\netstandard2.0\Inspect.Framework.Messaging.dll
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Messaging\obj\Debug\netstandard2.0\Inspect.Framework.Messaging.pdb
+C:\Sources\BBW\Development\Code\Shared\Inspect.Framework.Messaging\obj\Debug\netstandard2.0\Inspect.Framework.Messaging.csprojResolveAssemblyReference.cache

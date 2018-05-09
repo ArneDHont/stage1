@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TDSBrandweerVerzendingLijst" targetNamespace="http://tempuri.org/TDSBrandweerVerzendingLijst.xsd" xmlns:mstns="http://tempuri.org/TDSBrandweerVerzendingLijst.xsd" xmlns="http://tempuri.org/TDSBrandweerVerzendingLijst.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TDSBrandweerVerzendingLijst" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="TDSBrandweerVerzendingLijst" msprop:Generator_UserDSName="TDSBrandweerVerzendingLijst">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Verzending" msprop:Generator_TableClassName="VerzendingDataTable" msprop:Generator_TableVarName="tableVerzending" msprop:Generator_TablePropName="Verzending" msprop:Generator_RowDeletingName="VerzendingRowDeleting" msprop:Generator_UserTableName="Verzending" msprop:Generator_RowChangingName="VerzendingRowChanging" msprop:Generator_RowEvHandlerName="VerzendingRowChangeEventHandler" msprop:Generator_RowDeletedName="VerzendingRowDeleted" msprop:Generator_RowEvArgName="VerzendingRowChangeEvent" msprop:Generator_RowChangedName="VerzendingRowChanged" msprop:Generator_RowClassName="VerzendingRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
+              <xs:element name="TypeMateriaal" msprop:Generator_ColumnVarNameInTable="columnTypeMateriaal" msprop:Generator_ColumnPropNameInRow="TypeMateriaal" msprop:Generator_ColumnPropNameInTable="TypeMateriaalColumn" msprop:Generator_UserColumnName="TypeMateriaal" type="xs:string" minOccurs="0" />
+              <xs:element name="SoortMateriaal" msprop:Generator_ColumnVarNameInTable="columnSoortMateriaal" msprop:Generator_ColumnPropNameInRow="SoortMateriaal" msprop:Generator_ColumnPropNameInTable="SoortMateriaalColumn" msprop:Generator_UserColumnName="SoortMateriaal" type="xs:string" minOccurs="0" />
+              <xs:element name="Afdeling" msprop:Generator_ColumnVarNameInTable="columnAfdeling" msprop:Generator_ColumnPropNameInRow="Afdeling" msprop:Generator_ColumnPropNameInTable="AfdelingColumn" msprop:Generator_UserColumnName="Afdeling" type="xs:string" minOccurs="0" />
+              <xs:element name="Zone" msprop:Generator_ColumnVarNameInTable="columnZone" msprop:Generator_ColumnPropNameInRow="Zone" msprop:Generator_ColumnPropNameInTable="ZoneColumn" msprop:Generator_UserColumnName="Zone" type="xs:string" minOccurs="0" />
+              <xs:element name="Nr" msprop:Generator_ColumnVarNameInTable="columnNr" msprop:Generator_ColumnPropNameInRow="Nr" msprop:Generator_ColumnPropNameInTable="NrColumn" msprop:Generator_UserColumnName="Nr" type="xs:string" minOccurs="0" />
+              <xs:element name="Volgnr" msprop:Generator_ColumnVarNameInTable="columnVolgnr" msprop:Generator_ColumnPropNameInRow="Volgnr" msprop:Generator_ColumnPropNameInTable="VolgnrColumn" msprop:Generator_UserColumnName="Volgnr" type="xs:int" />
+              <xs:element name="Verstuurd" msprop:Generator_ColumnVarNameInTable="columnVerstuurd" msprop:Generator_ColumnPropNameInRow="Verstuurd" msprop:Generator_ColumnPropNameInTable="VerstuurdColumn" msprop:Generator_UserColumnName="Verstuurd" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Terug" msprop:Generator_ColumnVarNameInTable="columnTerug" msprop:Generator_ColumnPropNameInRow="Terug" msprop:Generator_ColumnPropNameInTable="TerugColumn" msprop:Generator_UserColumnName="Terug" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Herkeurd" msprop:Generator_ColumnVarNameInTable="columnHerkeurd" msprop:Generator_ColumnPropNameInRow="Herkeurd" msprop:Generator_ColumnPropNameInTable="HerkeurdColumn" msprop:Generator_UserColumnName="Herkeurd" type="xs:boolean" minOccurs="0" />
+              <xs:element name="FabricatieNr" msprop:Generator_ColumnVarNameInTable="columnFabricatieNr" msprop:Generator_ColumnPropNameInRow="FabricatieNr" msprop:Generator_ColumnPropNameInTable="FabricatieNrColumn" msprop:Generator_UserColumnName="FabricatieNr" type="xs:string" minOccurs="0" />
+              <xs:element name="Leverancier" msprop:Generator_ColumnVarNameInTable="columnLeverancier" msprop:Generator_ColumnPropNameInRow="Leverancier" msprop:Generator_ColumnPropNameInTable="LeverancierColumn" msprop:Generator_UserColumnName="Leverancier" type="xs:string" minOccurs="0" />
+              <xs:element name="Opmerking" msprop:Generator_ColumnVarNameInTable="columnOpmerking" msprop:Generator_ColumnPropNameInRow="Opmerking" msprop:Generator_ColumnPropNameInTable="OpmerkingColumn" msprop:Generator_UserColumnName="Opmerking" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Verzending" />
+      <xs:field xpath="mstns:Id" />
+      <xs:field xpath="mstns:Volgnr" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

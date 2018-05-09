@@ -1,0 +1,17 @@
+﻿
+CREATE PROC dbo.[USP_WY_BBARTGR_INSERT]
+  @ID_GR_ART int,
+  @SCF_GR_ART varchar(30)=NULL
+
+AS
+SET NOCOUNT OFF
+
+INSERT INTO [BBARTGR] (
+  [ID_GR_ART],
+  [SCF_GR_ART]
+)
+VALUES (
+  @ID_GR_ART,
+  @SCF_GR_ART
+)
+

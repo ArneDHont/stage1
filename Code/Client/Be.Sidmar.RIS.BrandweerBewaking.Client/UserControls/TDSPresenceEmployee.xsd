@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TDSPresenceEmployee" targetNamespace="http://tempuri.org/TDSPresenceEmployee.xsd" xmlns:mstns="http://tempuri.org/TDSPresenceEmployee.xsd" xmlns="http://tempuri.org/TDSPresenceEmployee.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TDSPresenceEmployee" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="TDSPresenceEmployee" msprop:Generator_DataSetName="TDSPresenceEmployee">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ZPRESENT" msprop:Generator_UserTableName="ZPRESENT" msprop:Generator_RowDeletedName="ZPRESENTRowDeleted" msprop:Generator_TableClassName="ZPRESENTDataTable" msprop:Generator_RowChangedName="ZPRESENTRowChanged" msprop:Generator_RowClassName="ZPRESENTRow" msprop:Generator_RowChangingName="ZPRESENTRowChanging" msprop:Generator_RowEvArgName="ZPRESENTRowChangeEvent" msprop:Generator_RowEvHandlerName="ZPRESENTRowChangeEventHandler" msprop:Generator_TablePropName="ZPRESENT" msprop:Generator_TableVarName="tableZPRESENT" msprop:Generator_RowDeletingName="ZPRESENTRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PERNR" msdata:Caption="NR_IND" msprop:Generator_UserColumnName="PERNR" msprop:Generator_ColumnPropNameInRow="PERNR" msprop:Generator_ColumnVarNameInTable="columnPERNR" msprop:Generator_ColumnPropNameInTable="PERNRColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DATUM" msdata:Caption="Date" msprop:Generator_UserColumnName="DATUM" msprop:Generator_ColumnPropNameInRow="DATUM" msprop:Generator_ColumnVarNameInTable="columnDATUM" msprop:Generator_ColumnPropNameInTable="DATUMColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="AWART" msdata:Caption="AbsenceCode" msprop:Generator_UserColumnName="AWART" msprop:Generator_ColumnPropNameInRow="AWART" msprop:Generator_ColumnVarNameInTable="columnAWART" msprop:Generator_ColumnPropNameInTable="AWARTColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BEGUZ" msdata:Caption="BeginHour" msprop:Generator_UserColumnName="BEGUZ" msprop:Generator_ColumnPropNameInRow="BEGUZ" msprop:Generator_ColumnVarNameInTable="columnBEGUZ" msprop:Generator_ColumnPropNameInTable="BEGUZColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ENDUZ" msdata:Caption="EndHour" msprop:Generator_UserColumnName="ENDUZ" msprop:Generator_ColumnPropNameInRow="ENDUZ" msprop:Generator_ColumnVarNameInTable="columnENDUZ" msprop:Generator_ColumnPropNameInTable="ENDUZColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

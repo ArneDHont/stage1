@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/TDSDagverslagInlichtingType.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/TDSDagverslagInlichtingType.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/TDSDagverslagInlichtingType.xsd" id="TDSDagverslagInlichtingType" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="TDSDagverslagInlichtingType">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BBDGPODL">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_DG_PO_DL" type="xs:int" />
+              <xs:element minOccurs="0" name="SCF_DG_PO_DL" type="xs:string" />
+              <xs:element minOccurs="0" name="INV_PO" type="xs:boolean" />
+              <xs:element minOccurs="0" name="VLG" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="TDSDagverslagInlichtingTypeKey1">
+      <xs:selector xpath=".//mstns:BBDGPODL" />
+      <xs:field xpath="mstns:ID_DG_PO_DL" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

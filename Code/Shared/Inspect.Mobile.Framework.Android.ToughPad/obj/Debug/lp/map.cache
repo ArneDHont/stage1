@@ -1,0 +1,9 @@
+Com.Panasonic.Toughpad.Android
+Inspect.Mobile.Framework.Xamarin
+System.Runtime
+netstandard
+Inspect.Framework.Hypermedia
+Newtonsoft.Json
+System.Diagnostics.Tools
+System.Resources.ResourceManager
+System.Reflection.Extensions

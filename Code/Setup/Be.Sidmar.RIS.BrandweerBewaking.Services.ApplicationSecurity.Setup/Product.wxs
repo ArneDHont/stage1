@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ArcelorMittal Wix template for RAD compliant web deployments -->
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+
+  <!-- Include package specific configuration -->
+  <?include $(sys.CURRENTDIR)\Configuration.wxi?>
+
+  <Product Id="*"  Name="$(var.ProductName)" Manufacturer="$(var.Manufacturer)" Version="$(var.UCMVersion)"
+                   UpgradeCode="$(var.UpgradeCode)" Language="1033" Codepage="Windows-1252">
+
+    <Package Id="*" Description="$(var.Description)" Comments="$(var.Comments)" Manufacturer="$(var.Manufacturer)"
+                    InstallerVersion="200" Languages="1033" 
+                    Compressed="$(var.Compressed)" InstallScope="perMachine" InstallPrivileges="elevated"/>
+
+    <MediaTemplate EmbedCab="yes" />
+
+    <!-- Set the custom properties -->
+    <Property Id="TARGETASPNETVERSION" Value="$(var.ASPNetVersion)"  />
+    <Property Id="VSDFrameworkVersion" Value="v2.0"  />
+   
+    <!-- Use the ArcelorMittal Web UI to select website and web directory -->
+    <UIRef Id="WixUI_WebArcelorMittal"/>
+
+    <!-- Include the project output -->	
+    <Feature Id="ProductFeature" Title="$(var.ProductTitle)" Level="1">
+      <ComponentGroupRef Id="myProjectOutputFiles" />
+    </Feature>
+
+    <!-- The install folder and target virt directory will be set via ArcelorMittal custom action based on the selected website -->
+    <!-- There is not need to configure IIS since this will be done by RAD during the activation step -->
+    <Directory Id="TARGETDIR" Name = "SourceDir">
+      <Directory Id="INSTALLDIR" Name = "$(var.WebDirectory)" >
+        <!-- The project output will be dropped in this folder -->
+      </Directory >
+    </Directory >
+  </Product>
+</Wix>

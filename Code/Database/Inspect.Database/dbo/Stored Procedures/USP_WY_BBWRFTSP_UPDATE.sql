@@ -1,0 +1,13 @@
+﻿
+CREATE PROC dbo.[USP_WY_BBWRFTSP_UPDATE]
+  @ID_WRF_TSP int,
+  @SCF_WRF_TSP varchar(50)=NULL,
+  @Original_ID_WRF_TSP int --Primary Key Field
+
+AS
+SET NOCOUNT OFF
+
+UPDATE [BBWRFTSP] SET
+  [SCF_WRF_TSP] = @SCF_WRF_TSP
+WHERE [ID_WRF_TSP] = @Original_ID_WRF_TSP
+

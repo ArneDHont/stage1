@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SSO.Server" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SSO.Server" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://wfssoprod.sidmar.be/SSOService/UserManagementService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="ArrayOfUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="User" nillable="true" type="tns:User" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUser" nillable="true" type="tns:ArrayOfUser" />
+  <xs:complexType name="User">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BadPwdCount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodePage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DistinguishedName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GivenName" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Groups" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element minOccurs="0" name="SAMAccountName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserAccountControl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WhenChanged" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="WhenCreated" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="User" nillable="true" type="tns:User" />
+  <xs:complexType name="ArrayOfUserProfile">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserProfile" nillable="true" type="tns:UserProfile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserProfile" nillable="true" type="tns:ArrayOfUserProfile" />
+  <xs:complexType name="UserProfile">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApplicatieSummary" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Applicaties" nillable="true" type="tns:ArrayOfApplicatie" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirmaNaam" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirmaNr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Naam" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NaamSummary" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProfielId" type="xs:long" />
+      <xs:element minOccurs="0" name="SiteSummary" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sites" nillable="true" type="tns:ArrayOfSite" />
+      <xs:element minOccurs="0" name="StatusSummary" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Voornaam" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserProfile" nillable="true" type="tns:UserProfile" />
+  <xs:complexType name="ArrayOfApplicatie">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Applicatie" nillable="true" type="tns:Applicatie" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfApplicatie" nillable="true" type="tns:ArrayOfApplicatie" />
+  <xs:complexType name="Applicatie">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Applicatie" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApplicatieId" type="xs:long" />
+      <xs:element minOccurs="0" name="EmailAdressen" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Applicatie" nillable="true" type="tns:Applicatie" />
+  <xs:complexType name="ArrayOfSite">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Site" nillable="true" type="tns:Site" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSite" nillable="true" type="tns:ArrayOfSite" />
+  <xs:complexType name="Site">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IsHoofdSite" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Site" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SiteId" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Site" nillable="true" type="tns:Site" />
+</xs:schema>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="TDSScadObjecten" targetNamespace="http://tempuri.org/TDSScadObjecten.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/TDSScadObjecten.xsd" xmlns:mstns="http://tempuri.org/TDSScadObjecten.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="TDSScadObjecten" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="BBSCADAN">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ID_OBJ_SCAD" type="xs:int" />
+							<xs:element name="SCF_OBJ_SCAD" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="TDSScadObjectenKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:BBSCADAN" />
+			<xs:field xpath="mstns:ID_OBJ_SCAD" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

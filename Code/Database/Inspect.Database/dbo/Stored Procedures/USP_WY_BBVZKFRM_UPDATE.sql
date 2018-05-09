@@ -1,0 +1,17 @@
+﻿
+CREATE PROC dbo.[USP_WY_BBVZKFRM_UPDATE]
+  @ID_FRM_VZK int,
+  @NM_FRM_VZK varchar(100)=NULL,
+  @AD_FRM_VZK varchar(200)=NULL,
+  @PLA_FRM_VZK varchar(100)=NULL,
+  @Original_ID_FRM_VZK int --Primary Key Field
+
+AS
+SET NOCOUNT OFF
+
+UPDATE [BBVZKFRM] SET
+  [NM_FRM_VZK] = @NM_FRM_VZK,
+  [AD_FRM_VZK] = @AD_FRM_VZK,
+  [PLA_FRM_VZK] = @PLA_FRM_VZK
+WHERE [ID_FRM_VZK] = @Original_ID_FRM_VZK
+

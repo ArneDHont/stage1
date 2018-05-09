@@ -1,0 +1,10 @@
+﻿
+CREATE PROC dbo.[USP_WY_BBINTART_DELETE]
+  @Original_ID_ART_INTV int --Primary Key Field
+
+AS
+SET NOCOUNT OFF
+
+DELETE FROM [BBINTART]
+WHERE [ID_ART_INTV] = @Original_ID_ART_INTV
+

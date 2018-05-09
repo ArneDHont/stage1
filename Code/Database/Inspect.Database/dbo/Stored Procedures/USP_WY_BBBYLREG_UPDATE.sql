@@ -1,0 +1,15 @@
+﻿
+CREATE PROC dbo.[USP_WY_BBBYLREG_UPDATE]
+  @ID_BYLG_REG int,
+  @ID_REG int=NULL,
+  @PLA_BYLG varchar(50)=NULL,
+  @Original_ID_BYLG_REG int --Primary Key Field
+
+AS
+SET NOCOUNT OFF
+
+UPDATE [BBBYLREG] SET
+  [ID_REG] = @ID_REG,
+  [PLA_BYLG] = @PLA_BYLG
+WHERE [ID_BYLG_REG] = @Original_ID_BYLG_REG
+

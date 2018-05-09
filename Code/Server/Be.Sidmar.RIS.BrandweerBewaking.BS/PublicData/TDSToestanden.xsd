@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="TDSToestanden" targetNamespace="http://tempuri.org/TDSToestanden.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/TDSToestanden.xsd" xmlns:mstns="http://tempuri.org/TDSToestanden.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="TDSToestanden" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="BBSTA">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ID_STA" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="ID_TY_STA" type="xs:int" minOccurs="0" />
+							<xs:element name="SCF_STA" type="xs:string" minOccurs="0" />
+							<xs:element name="ID_TY_STA1" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="SCF_TY_STA" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="TDSToestandenKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:BBSTA" />
+			<xs:field xpath="mstns:ID_STA" />
+			<xs:field xpath="mstns:ID_TY_STA1" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

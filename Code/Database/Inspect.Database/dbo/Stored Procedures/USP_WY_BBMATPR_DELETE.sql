@@ -1,0 +1,10 @@
+﻿
+CREATE PROC dbo.[USP_WY_BBMATPR_DELETE]
+  @Original_ID_PR_MAT int --Primary Key Field
+
+AS
+SET NOCOUNT OFF
+
+DELETE FROM [BBMATPR]
+WHERE [ID_PR_MAT] = @Original_ID_PR_MAT
+

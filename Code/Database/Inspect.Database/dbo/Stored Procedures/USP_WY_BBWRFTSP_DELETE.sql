@@ -1,0 +1,10 @@
+﻿
+CREATE PROC dbo.[USP_WY_BBWRFTSP_DELETE]
+  @Original_ID_WRF_TSP int --Primary Key Field
+
+AS
+SET NOCOUNT OFF
+
+DELETE FROM [BBWRFTSP]
+WHERE [ID_WRF_TSP] = @Original_ID_WRF_TSP
+

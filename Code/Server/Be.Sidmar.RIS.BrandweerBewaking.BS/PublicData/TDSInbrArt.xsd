@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TDSInbrArt" targetNamespace="http://tempuri.org/TDSInbrArt.xsd" xmlns:mstns="http://tempuri.org/TDSInbrArt.xsd" xmlns="http://tempuri.org/TDSInbrArt.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TDSInbrArt" msdata:IsDataSet="true" msdata:Locale="en-US" msprop:Generator_DataSetName="TDSInbrArt" msprop:Generator_UserDSName="TDSInbrArt">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BBINBRAR" msprop:Generator_TableClassName="BBINBRARDataTable" msprop:Generator_TableVarName="tableBBINBRAR" msprop:Generator_TablePropName="BBINBRAR" msprop:Generator_RowDeletingName="BBINBRARRowDeleting" msprop:Generator_UserTableName="BBINBRAR" msprop:Generator_RowChangingName="BBINBRARRowChanging" msprop:Generator_RowEvHandlerName="BBINBRARRowChangeEventHandler" msprop:Generator_RowDeletedName="BBINBRARRowDeleted" msprop:Generator_RowEvArgName="BBINBRARRowChangeEvent" msprop:Generator_RowChangedName="BBINBRARRowChanged" msprop:Generator_RowClassName="BBINBRARRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_ART_INBR" msprop:Generator_ColumnVarNameInTable="columnID_ART_INBR" msprop:Generator_ColumnPropNameInRow="ID_ART_INBR" msprop:Generator_ColumnPropNameInTable="ID_ART_INBRColumn" msprop:Generator_UserColumnName="ID_ART_INBR" type="xs:int" />
+              <xs:element name="ID_TY_INBR" msprop:Generator_ColumnVarNameInTable="columnID_TY_INBR" msprop:Generator_ColumnPropNameInRow="ID_TY_INBR" msprop:Generator_ColumnPropNameInTable="ID_TY_INBRColumn" msprop:Generator_UserColumnName="ID_TY_INBR" type="xs:int" minOccurs="0" />
+              <xs:element name="NR_ART_INBR" msprop:Generator_ColumnVarNameInTable="columnNR_ART_INBR" msprop:Generator_ColumnPropNameInRow="NR_ART_INBR" msprop:Generator_ColumnPropNameInTable="NR_ART_INBRColumn" msprop:Generator_UserColumnName="NR_ART_INBR" type="xs:string" minOccurs="0" />
+              <xs:element name="SCF_ART_INBR" msprop:Generator_ColumnVarNameInTable="columnSCF_ART_INBR" msprop:Generator_ColumnPropNameInRow="SCF_ART_INBR" msprop:Generator_ColumnPropNameInTable="SCF_ART_INBRColumn" msprop:Generator_UserColumnName="SCF_ART_INBR" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Table1" msprop:Generator_TableClassName="Table1DataTable" msprop:Generator_TableVarName="tableTable1" msprop:Generator_TablePropName="Table1" msprop:Generator_RowDeletingName="Table1RowDeleting" msprop:Generator_UserTableName="Table1" msprop:Generator_RowChangingName="Table1RowChanging" msprop:Generator_RowEvHandlerName="Table1RowChangeEventHandler" msprop:Generator_RowDeletedName="Table1RowDeleted" msprop:Generator_RowEvArgName="Table1RowChangeEvent" msprop:Generator_RowChangedName="Table1RowChanged" msprop:Generator_RowClassName="Table1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_ART_INBR" msprop:Generator_ColumnVarNameInTable="columnID_ART_INBR" msprop:Generator_ColumnPropNameInRow="ID_ART_INBR" msprop:Generator_ColumnPropNameInTable="ID_ART_INBRColumn" msprop:Generator_UserColumnName="ID_ART_INBR" type="xs:int" />
+              <xs:element name="ID_TY_INBR" msprop:Generator_ColumnVarNameInTable="columnID_TY_INBR" msprop:Generator_ColumnPropNameInRow="ID_TY_INBR" msprop:Generator_ColumnPropNameInTable="ID_TY_INBRColumn" msprop:Generator_UserColumnName="ID_TY_INBR" type="xs:int" minOccurs="0" />
+              <xs:element name="NR_ART_INBR" msprop:Generator_ColumnVarNameInTable="columnNR_ART_INBR" msprop:Generator_ColumnPropNameInRow="NR_ART_INBR" msprop:Generator_ColumnPropNameInTable="NR_ART_INBRColumn" msprop:Generator_UserColumnName="NR_ART_INBR" type="xs:string" minOccurs="0" />
+              <xs:element name="SCF_ART_INBR" msprop:Generator_ColumnVarNameInTable="columnSCF_ART_INBR" msprop:Generator_ColumnPropNameInRow="SCF_ART_INBR" msprop:Generator_ColumnPropNameInTable="SCF_ART_INBRColumn" msprop:Generator_UserColumnName="SCF_ART_INBR" type="xs:string" minOccurs="0" />
+              <xs:element name="SCF_TY_INBR" msprop:Generator_ColumnVarNameInTable="columnSCF_TY_INBR" msprop:Generator_ColumnPropNameInRow="SCF_TY_INBR" msprop:Generator_ColumnPropNameInTable="SCF_TY_INBRColumn" msprop:Generator_UserColumnName="SCF_TY_INBR" type="xs:string" minOccurs="0" />
+              <xs:element name="SCF_CLS_INBR" msprop:Generator_ColumnVarNameInTable="columnSCF_CLS_INBR" msprop:Generator_ColumnPropNameInRow="SCF_CLS_INBR" msprop:Generator_ColumnPropNameInTable="SCF_CLS_INBRColumn" msprop:Generator_UserColumnName="SCF_CLS_INBR" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="TDSInbrArtKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:BBINBRAR" />
+      <xs:field xpath="mstns:ID_ART_INBR" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

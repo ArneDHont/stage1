@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/TDSVastgesteldeInbreuken.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/TDSVastgesteldeInbreuken.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/TDSVastgesteldeInbreuken.xsd" id="TDSVastgesteldeInbreuken" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:Locale="en-US" name="TDSVastgesteldeInbreuken">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BBINBRVA">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:ReadOnly="true" msdata:AutoIncrement="true" name="ID_INBRVA" type="xs:int" />
+              <xs:element name="ID_REG" type="xs:int" />
+              <xs:element minOccurs="0" name="ID_ART_INBR" type="xs:int" />
+              <xs:element minOccurs="0" name="SNL_OK" type="xs:int" />
+              <xs:element minOccurs="0" name="SNL_REG" type="xs:int" />
+              <xs:element minOccurs="0" name="NR_ART_INBR" type="xs:string" />
+              <xs:element minOccurs="0" name="SCF_ART_INBR" type="xs:string" />
+              <xs:element minOccurs="0" name="TMS_INC" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="VLG_REG_JR_BPL" type="xs:int" />
+              <xs:element minOccurs="0" name="TMS_OPS_REG" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DatePrintLetterExt" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="Language" type="xs:string" />
+              <xs:element minOccurs="0" name="Recidive" type="xs:int" />
+              <xs:element minOccurs="0" name="KindOfSanction" type="xs:string" />
+              <xs:element minOccurs="0" name="SanctionID" type="xs:int" />
+              <xs:element minOccurs="0" name="IdFirm" type="xs:int" />
+              <xs:element minOccurs="0" name="Remark" type="xs:string" />
+              <xs:element minOccurs="0" name="SanctionDuration" type="xs:int" />
+              <xs:element minOccurs="0" name="SanctionPeriod" type="xs:string" />
+              <xs:element minOccurs="0" name="LastSanctionDoubledYN" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,10 @@
+C:\Sources\BBW\Development\Code\Shared\Inspect.FireSafety.Shared.Entities\bin\Debug\Inspect.FireSafety.Shared.Entities.dll
+C:\Sources\BBW\Development\Code\Shared\Inspect.FireSafety.Shared.Entities\bin\Debug\Inspect.FireSafety.Shared.Entities.pdb
+C:\Sources\BBW\Development\Code\Shared\Inspect.FireSafety.Shared.Entities\bin\Debug\FluentValidation.dll
+C:\Sources\BBW\Development\Code\Shared\Inspect.FireSafety.Shared.Entities\bin\Debug\Inspect.Framework.Data.dll
+C:\Sources\BBW\Development\Code\Shared\Inspect.FireSafety.Shared.Entities\bin\Debug\Inspect.Framework.Data.pdb
+C:\Sources\BBW\Development\Code\Shared\Inspect.FireSafety.Shared.Entities\bin\Debug\FluentValidation.xml
+C:\Sources\BBW\Development\Code\Shared\Inspect.FireSafety.Shared.Entities\obj\Debug\Inspect.FireSafety.Shared.Entities.csprojResolveAssemblyReference.cache
+C:\Sources\BBW\Development\Code\Shared\Inspect.FireSafety.Shared.Entities\obj\Debug\Inspect.FireSafety.Shared.Entities.csproj.CoreCompileInputs.cache
+C:\Sources\BBW\Development\Code\Shared\Inspect.FireSafety.Shared.Entities\obj\Debug\Inspect.FireSafety.Shared.Entities.dll
+C:\Sources\BBW\Development\Code\Shared\Inspect.FireSafety.Shared.Entities\obj\Debug\Inspect.FireSafety.Shared.Entities.pdb

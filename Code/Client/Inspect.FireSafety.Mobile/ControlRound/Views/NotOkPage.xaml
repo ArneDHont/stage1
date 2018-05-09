@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Inspect.FireSafety.Mobile.ControlRound.Views.NotOkPage"
+             xmlns:local="clr-namespace:Inspect.FireSafety.Mobile.ControlRound.ViewModels;assembly=Inspect.FireSafety.Mobile"
+             xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+             xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             NavigationPage.HasBackButton="False"             
+             >
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:NotOkViewModel x:Key="ViewModel"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.BindingContext>
+        <StaticResource Key="ViewModel"/>
+    </ContentPage.BindingContext>
+    <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" >
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Padding="20">
+            <Label Text="Selecteer probleem"/>
+            <Picker ItemsSource="{Binding FeedbackTypes}" ItemDisplayBinding="{Binding Description}"  Title="Selecteer het probleem" SelectedItem="{Binding FeedbackType}"></Picker>
+            <Label Text="Opmerkingen" />
+            <Entry Placeholder="Opmerkingen...."  Text="{Binding Remarks}"/>
+
+            <StackLayout Orientation="Horizontal">
+                <Switch IsToggled="{Binding Vera }" HorizontalOptions="Start" />
+                <Label Text="Vera rapport aanmaken" />
+            </StackLayout>
+
+            <flv:FlowListView  FlowLastTappedItem="{Binding Photo}"  FlowItemTappedCommand="{Binding PictureViewCommand}"   VerticalOptions="Start" FlowItemsSource="{Binding Photos}"  HasUnevenRows="True"  FlowColumnCount="3" FlowColumnExpand="None" >
+                <flv:FlowListView.FlowColumnTemplate>
+                    <DataTemplate>
+                        <Grid Padding="2">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <ffimageloading:CachedImage  
+							DownsampleToViewSize="True" DownsampleWidth="200"
+							LoadingPlaceholder="loading.png" ErrorPlaceholder="error.png"
+							Source="{Binding Path}"/>
+                        </Grid>
+                    </DataTemplate>
+                </flv:FlowListView.FlowColumnTemplate>
+            </flv:FlowListView>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+            <Button Text="cancel" Image="ic_cancel_white_36dp.png" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand" Style="{StaticResource ButtonDetail}" Margin="5,0,0,10"/>
+            <Button Text="opslaan" Image="ic_save_white_36dp.png" Command="{Binding SaveCommand}" IsEnabled="{Binding CodeSelected}" HorizontalOptions="FillAndExpand"  Style="{StaticResource ButtonDetail}" Margin="0,0,5,10"/>
+        </StackLayout>
+    </StackLayout>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="ic_add_a_photo_white_48dp.png" Command="{Binding TakePhoto}"/>
+    </ContentPage.ToolbarItems>
+
+</ContentPage>

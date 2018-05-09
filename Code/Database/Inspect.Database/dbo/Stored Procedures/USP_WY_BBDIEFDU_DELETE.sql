@@ -1,0 +1,10 @@
+﻿
+CREATE PROC dbo.[USP_WY_BBDIEFDU_DELETE]
+  @Original_ID_DUP_DIEF varchar(30) --Primary Key Field
+
+AS
+SET NOCOUNT OFF
+
+DELETE FROM [BBDIEFDU]
+WHERE [ID_DUP_DIEF] = @Original_ID_DUP_DIEF
+

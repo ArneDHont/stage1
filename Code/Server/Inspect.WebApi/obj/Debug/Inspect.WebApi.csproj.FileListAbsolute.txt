@@ -1,0 +1,17 @@
+C:\Sources\BBW\Development\Code\Server\Inspect.WebApi\bin\Debug\Inspect.WebApi.dll.config
+C:\Sources\BBW\Development\Code\Server\Inspect.WebApi\bin\Debug\Inspect.WebApi.dll
+C:\Sources\BBW\Development\Code\Server\Inspect.WebApi\bin\Debug\Inspect.WebApi.pdb
+C:\Sources\BBW\Development\Code\Server\Inspect.WebApi\bin\Debug\AutoMapper.dll
+C:\Sources\BBW\Development\Code\Server\Inspect.WebApi\bin\Debug\Inspect.Framework.Hypermedia.dll
+C:\Sources\BBW\Development\Code\Server\Inspect.WebApi\bin\Debug\Newtonsoft.Json.dll
+C:\Sources\BBW\Development\Code\Server\Inspect.WebApi\bin\Debug\System.Net.Http.Formatting.dll
+C:\Sources\BBW\Development\Code\Server\Inspect.WebApi\bin\Debug\System.Web.Http.dll
+C:\Sources\BBW\Development\Code\Server\Inspect.WebApi\bin\Debug\Inspect.Framework.Hypermedia.pdb
+C:\Sources\BBW\Development\Code\Server\Inspect.WebApi\bin\Debug\AutoMapper.xml
+C:\Sources\BBW\Development\Code\Server\Inspect.WebApi\bin\Debug\Newtonsoft.Json.xml
+C:\Sources\BBW\Development\Code\Server\Inspect.WebApi\bin\Debug\System.Net.Http.Formatting.xml
+C:\Sources\BBW\Development\Code\Server\Inspect.WebApi\bin\Debug\System.Web.Http.xml
+C:\Sources\BBW\Development\Code\Server\Inspect.WebApi\obj\Debug\Inspect.WebApi.csprojResolveAssemblyReference.cache
+C:\Sources\BBW\Development\Code\Server\Inspect.WebApi\obj\Debug\Inspect.WebApi.csproj.CoreCompileInputs.cache
+C:\Sources\BBW\Development\Code\Server\Inspect.WebApi\obj\Debug\Inspect.WebApi.dll
+C:\Sources\BBW\Development\Code\Server\Inspect.WebApi\obj\Debug\Inspect.WebApi.pdb

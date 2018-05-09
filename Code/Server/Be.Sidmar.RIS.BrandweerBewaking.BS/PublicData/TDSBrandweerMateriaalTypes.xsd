@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TDSBrandweerMateriaalTypes" targetNamespace="http://tempuri.org/TDSBrandweerMateriaalTypes.xsd" xmlns:mstns="http://tempuri.org/TDSBrandweerMateriaalTypes.xsd" xmlns="http://tempuri.org/TDSBrandweerMateriaalTypes.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="bbwConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="bbwConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Be.Sidmar.RIS.BrandweerBewaking.BS.My.MySettings.GlobalReference.Default.bbwConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TDSBrandweerMateriaalTypes" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="TDSBrandweerMateriaalTypes" msprop:Generator_UserDSName="TDSBrandweerMateriaalTypes">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BrandweerMateriaalTypes" msprop:Generator_TableClassName="BrandweerMateriaalTypesDataTable" msprop:Generator_TableVarName="tableBrandweerMateriaalTypes" msprop:Generator_TablePropName="BrandweerMateriaalTypes" msprop:Generator_RowDeletingName="BrandweerMateriaalTypesRowDeleting" msprop:Generator_UserTableName="BrandweerMateriaalTypes" msprop:Generator_RowChangingName="BrandweerMateriaalTypesRowChanging" msprop:Generator_RowEvHandlerName="BrandweerMateriaalTypesRowChangeEventHandler" msprop:Generator_RowDeletedName="BrandweerMateriaalTypesRowDeleted" msprop:Generator_RowEvArgName="BrandweerMateriaalTypesRowChangeEvent" msprop:Generator_RowChangedName="BrandweerMateriaalTypesRowChanged" msprop:Generator_RowClassName="BrandweerMateriaalTypesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TypeMatID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnTypeMatID" msprop:Generator_ColumnPropNameInRow="TypeMatID" msprop:Generator_ColumnPropNameInTable="TypeMatIDColumn" msprop:Generator_UserColumnName="TypeMatID" type="xs:int" />
+              <xs:element name="TypeMatOmschr" msprop:Generator_ColumnVarNameInTable="columnTypeMatOmschr" msprop:Generator_ColumnPropNameInRow="TypeMatOmschr" msprop:Generator_ColumnPropNameInTable="TypeMatOmschrColumn" msprop:Generator_UserColumnName="TypeMatOmschr" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="KleineControleFreq" msprop:Generator_ColumnVarNameInTable="columnKleineControleFreq" msprop:Generator_ColumnPropNameInRow="KleineControleFreq" msprop:Generator_ColumnPropNameInTable="KleineControleFreqColumn" msprop:Generator_UserColumnName="KleineControleFreq" type="xs:unsignedByte" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:BrandweerMateriaalTypes" />
+      <xs:field xpath="mstns:TypeMatID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

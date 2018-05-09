@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TDSBBAFDAMC" targetNamespace="http://tempuri.org/TDSBBAFDAMC.xsd" xmlns:mstns="http://tempuri.org/TDSBBAFDAMC.xsd" xmlns="http://tempuri.org/TDSBBAFDAMC.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="bbwConnectionString" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="bbwConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Be.Sidmar.RIS.BrandweerBewaking.Client.My.MySettings.GlobalReference.Default.bbwConnectionString" Provider="System.Data.SqlClient">
+          </Connection>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TDSBBAFDAMC" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="TDSBBAFDAMC" msprop:Generator_DataSetName="TDSBBAFDAMC">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BBAFDAMC" msprop:Generator_UserTableName="BBAFDAMC" msprop:Generator_RowDeletedName="BBAFDAMCRowDeleted" msprop:Generator_TableClassName="BBAFDAMCDataTable" msprop:Generator_RowChangedName="BBAFDAMCRowChanged" msprop:Generator_RowClassName="BBAFDAMCRow" msprop:Generator_RowChangingName="BBAFDAMCRowChanging" msprop:Generator_RowEvArgName="BBAFDAMCRowChangeEvent" msprop:Generator_RowEvHandlerName="BBAFDAMCRowChangeEventHandler" msprop:Generator_TablePropName="BBAFDAMC" msprop:Generator_TableVarName="tableBBAFDAMC" msprop:Generator_RowDeletingName="BBAFDAMCRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_AFD" msprop:Generator_UserColumnName="ID_AFD" msprop:Generator_ColumnPropNameInRow="ID_AFD" msprop:Generator_ColumnVarNameInTable="columnID_AFD" msprop:Generator_ColumnPropNameInTable="ID_AFDColumn" type="xs:int" />
+              <xs:element name="ID_IND" msprop:Generator_UserColumnName="ID_IND" msprop:Generator_ColumnPropNameInRow="ID_IND" msprop:Generator_ColumnVarNameInTable="columnID_IND" msprop:Generator_ColumnPropNameInTable="ID_INDColumn" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:BBAFDAMC" />
+      <xs:field xpath="mstns:ID_AFD" />
+      <xs:field xpath="mstns:ID_IND" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

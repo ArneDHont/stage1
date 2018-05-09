@@ -1,0 +1,1262 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<api>
+  <package name="com.panasonic.toughpad.android.api">
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="ToughpadApi" static="false" visibility="public">
+      <method abstract="false" deprecated="not deprecated" final="false" name="destroy" native="false" return="void" static="true" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getClientVersion" native="false" return="int" static="true" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getServerVersion" native="false" return="int" static="true" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getToughpadApi" native="false" return="com.panasonic.toughpad.android.contract.IToughpadApi" static="true" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="initialize" native="false" return="void" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context"></parameter>
+        <parameter name="p1" type="com.panasonic.toughpad.android.api.ToughpadApiListener"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isAlreadyInitialized" native="false" return="boolean" static="true" synchronized="false" visibility="public"></method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="ToughpadApi.1" static="true" visibility="">
+      <implements name="android.content.ServiceConnection" name-generic-aware="android.content.ServiceConnection"></implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onServiceConnected" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.ComponentName"></parameter>
+        <parameter name="p1" type="android.os.IBinder"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onServiceDisconnected" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.ComponentName"></parameter>
+      </method>
+    </class>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="ToughpadApiListener" static="false" visibility="public">
+      <method abstract="true" deprecated="not deprecated" final="false" name="onApiConnected" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="onApiDisconnected" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+    </interface>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Version" static="false" visibility="">
+      <field deprecated="not deprecated" final="true" name="VERSION" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false"></field>
+    </class>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="package-info" static="false" visibility="" />
+  </package>
+  <package name="com.panasonic.toughpad.android.api.appbtn">
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="AppButtonManager" static="false" visibility="public">
+      <method abstract="false" deprecated="not deprecated" final="false" name="hasButtonControl" native="false" return="boolean" static="true" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isButtonAvailable" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+      </method>
+      <field deprecated="not deprecated" final="true" name="ACTION_APPBUTTON" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;com.panasonic.toughpad.android.api.appbutton.intent.APPBUTTON&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="BUTTON_A1" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="BUTTON_A2" static="true" transient="false" type="int" type-generic-aware="int" value="2" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="BUTTON_A3" static="true" transient="false" type="int" type-generic-aware="int" value="3" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="BUTTON_SIDE" static="true" transient="false" type="int" type-generic-aware="int" value="5" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="BUTTON_USER" static="true" transient="false" type="int" type-generic-aware="int" value="4" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="EXTRA_APPBUTTON_BUTTON" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;button&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="EXTRA_APPBUTTON_STATE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;state&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="EXTRA_APPBUTTON_STATE_DOWN" static="true" transient="false" type="int" type-generic-aware="int" value="0" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="EXTRA_APPBUTTON_STATE_UP" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false"></field>
+    </class>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="package-info" static="false" visibility="" />
+  </package>
+  <package name="com.panasonic.toughpad.android.api.barcode">
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="BarcodeData" static="false" visibility="public">
+      <implements name="android.os.Parcelable" name-generic-aware="android.os.Parcelable"></implements>
+      <constructor deprecated="not deprecated" final="false" name="BarcodeData" static="false" type="com.panasonic.toughpad.android.api.barcode.BarcodeData" visibility="public">
+        <parameter name="p0" type="byte[]"></parameter>
+        <parameter name="p1" type="java.lang.String"></parameter>
+        <parameter name="p2" type="java.lang.String"></parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="describeContents" native="false" return="int" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getBinaryData" native="false" return="byte[]" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getEncoding" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getSymbology" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getTextData" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="writeToParcel" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.os.Parcel"></parameter>
+        <parameter name="p1" type="int"></parameter>
+      </method>
+      <field deprecated="not deprecated" final="true" name="CREATOR" static="true" transient="false" type="android.os.Parcelable.Creator" type-generic-aware="android.os.Parcelable.Creator&lt;com.panasonic.toughpad.android.api.barcode.BarcodeData&gt;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_ANKERCODE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;ankercode&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_AUSTRALIA_POST" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;australiapost&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_AZTEC" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;aztec&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_BOOKLANDEAN" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;booklandean&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_BPO" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;bpo&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_CANADA_POST" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;canadapost&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_CCA_EAN128" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;ccaean128&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_CCA_EAN13" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;ccaean13&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_CCA_EAN8" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;ccaean8&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_CCA_RSS14" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;ccarss14&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_CCA_RSSEXPANDED" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;ccarssexpanded&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_CCA_RSSLIMITED" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;ccarsslimited&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_CCA_UPCA" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;ccaupca&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_CCA_UPCE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;ccaupce&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_CCB_EAN128" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;ccbean128&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_CCB_EAN13" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;ccbean13&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_CCB_EAN8" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;ccbean8&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_CCB_RSS14" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;ccbrss14&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_CCB_RSSEXPANDED" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;ccbrssexpanded&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_CCB_RSSLIMITED" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;ccbrsslimited&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_CCB_UPCA" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;ccbupca&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_CCB_UPCE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;ccbupce&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_CHINESE2OF5" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;chinese2of5&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_CODABAR" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;codabar&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_CODABLOCK" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;codablock&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_CODE1" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;code1&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_CODE11" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;code11&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_CODE128" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;code128&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_CODE16K" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;code16k&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_CODE32" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;code32&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_CODE39" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;code39&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_CODE49" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;code49&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_CODE93" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;code93&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_COUPONCODE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;couponcode&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_DATAMATRIX" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;datamatrix&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_DISCRETE2OF5" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;discrete2of5&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_DUTCH_POST" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;dutchpost&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_EAN128" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;ean128&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_EAN13" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;ean13&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_EAN13_SUPPLEMENTAL2" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;ean13supplemental2&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_EAN13_SUPPLEMENTAL5" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;ean13supplemental5&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_EAN8" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;ean8&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_EAN8_SUPPLEMENTAL2" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;ean8supplemental2&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_EAN8_SUPPLEMENTAL5" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;ean8supplemental5&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_EAN_UPC" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;ean_upc&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_GS1COMPOSITE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;gs1composite&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_HANXIN" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;hanxin&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_IATA2OF5" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;iata2of5&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_INFOMAIL" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;infomail&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_INTELLEGENT_MAIL" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;intellegentmail&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_INTERLEAVED2OF5" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;interleaved2of5&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_ISBT128" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;isbt128&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_ISBT128_CON" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;isbt123con&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_ISSN_EAN" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;issnean&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_JAPAN_POST" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;japanpost&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_KOREAN_POST" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;koreanpost&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_MACRO_MICRO_PDF" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;macromicropdf&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_MACRO_PDF" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;macropdf&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_MATRIX2OF5" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;matrix2of5&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_MAXICODE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;maxicode&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_MICRO_PDF" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;micropdf&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_MICRO_PDF_CCA" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;micropdfcca&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_MICRO_QRCODE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;microqrcode&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_MSI" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;msi&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_NW7" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;nw7&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_PDF417" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;pdf417&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_PLANET" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;planet&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_PLESSEYCODE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;plesseycode&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_POSTNET" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;postnet&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_QRCODE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;qrcode&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_RSS14" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;rss14&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_RSSEXPANDED" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;rssexpanded&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_RSSLIMITED" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;rsslimited&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_SCANLET" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;scanlet&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_SIGNATURE_CAPTURE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;signaturecapture&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_SWEDEN_POST" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;swedenpost&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_TELEPEN" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;telepen&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_TLC39" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;tlc39&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_TRIOPTICCODE39" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;triopticcode39&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_UCC_COUPON" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;ucccoupon&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_UK_POST" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;ukpost&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_UNKNOWN" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;unknown&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_UPCA" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;upca&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_UPCA_SUPPLEMENTAL2" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;upcasupplemental2&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_UPCA_SUPPLEMENTAL5" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;upcasupplemental5&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_UPCD" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;upcd&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_UPCE0" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;upce0&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_UPCE0_SUPPLEMENTAL2" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;upce0supplemental2&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_UPCE0_SUPPLEMENTAL5" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;upceosupplemental5&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_UPCE1" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;upce1&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_UPCE1_SUPPLEMENTAL2" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;upce1supplemental2&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_UPCE1_SUPPLEMENTAL5" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;upce1supplemental5&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="SYMBOLOGY_USPS4CB" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;usps4cb&quot;" visibility="public" volatile="false"></field>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="BarcodeData.1" static="true" visibility="">
+      <implements name="android.os.Parcelable.Creator" name-generic-aware="android.os.Parcelable.Creator&lt;com.panasonic.toughpad.android.api.barcode.BarcodeData&gt;"></implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="createFromParcel" native="false" return="com.panasonic.toughpad.android.api.barcode.BarcodeData" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.os.Parcel"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="newArray" native="false" return="com.panasonic.toughpad.android.api.barcode.BarcodeData[]" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Exception" extends-generic-aware="java.lang.Exception" final="false" name="BarcodeException" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="BarcodeException" static="false" type="com.panasonic.toughpad.android.api.barcode.BarcodeException" visibility="public">
+        <parameter name="p0" type="java.lang.String"></parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="BarcodeException" static="false" type="com.panasonic.toughpad.android.api.barcode.BarcodeException" visibility="public">
+        <parameter name="p0" type="java.lang.Throwable"></parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="BarcodeException" static="false" type="com.panasonic.toughpad.android.api.barcode.BarcodeException" visibility="public">
+        <parameter name="p0" type="java.lang.String"></parameter>
+        <parameter name="p1" type="java.lang.Throwable"></parameter>
+      </constructor>
+    </class>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="BarcodeListener" static="false" visibility="public">
+      <method abstract="true" deprecated="not deprecated" final="false" name="onRead" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.panasonic.toughpad.android.api.barcode.BarcodeReader"></parameter>
+        <parameter name="p1" type="com.panasonic.toughpad.android.api.barcode.BarcodeData"></parameter>
+      </method>
+    </interface>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="BarcodeReader" static="false" visibility="public">
+      <method abstract="true" deprecated="not deprecated" final="false" name="addBarcodeListener" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.panasonic.toughpad.android.api.barcode.BarcodeListener"></parameter>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="clearBarcodeListener" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="disable" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <exception name="BarcodeException" type="com.panasonic.toughpad.android.api.barcode.BarcodeException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="enable" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="long"></parameter>
+        <exception name="BarcodeException" type="com.panasonic.toughpad.android.api.barcode.BarcodeException"></exception>
+        <exception name="TimeoutException" type="java.util.concurrent.TimeoutException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="getBarcodeType" native="false" return="int" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="getBatteryCharge" native="false" return="int" static="false" synchronized="false" visibility="public">
+        <exception name="BarcodeException" type="com.panasonic.toughpad.android.api.barcode.BarcodeException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="getDeviceFirmwareVersion" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+        <exception name="BarcodeException" type="com.panasonic.toughpad.android.api.barcode.BarcodeException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="getDeviceName" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="getDeviceSerialNumber" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+        <exception name="BarcodeException" type="com.panasonic.toughpad.android.api.barcode.BarcodeException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="isBatteryCharging" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <exception name="BarcodeException" type="com.panasonic.toughpad.android.api.barcode.BarcodeException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="isEnabled" native="false" return="boolean" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="isExternal" native="false" return="boolean" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="isHardwareTriggerAvailable" native="false" return="boolean" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="isHardwareTriggerEnabled" native="false" return="boolean" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="pressSoftwareTrigger" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="boolean"></parameter>
+        <exception name="BarcodeException" type="com.panasonic.toughpad.android.api.barcode.BarcodeException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="removeBarcodeListener" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.panasonic.toughpad.android.api.barcode.BarcodeListener"></parameter>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="setHardwareTriggerEnabled" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="boolean"></parameter>
+        <exception name="BarcodeException" type="com.panasonic.toughpad.android.api.barcode.BarcodeException"></exception>
+      </method>
+      <field deprecated="not deprecated" final="true" name="BARCODE_TYPE_CAMERA" static="true" transient="false" type="int" type-generic-aware="int" value="3" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="BARCODE_TYPE_ONE_DIMENSIONAL" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="BARCODE_TYPE_TWO_DIMENSIONAL" static="true" transient="false" type="int" type-generic-aware="int" value="2" visibility="public" volatile="false"></field>
+    </interface>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="BarcodeReaderManager" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="BarcodeReaderManager" static="false" type="com.panasonic.toughpad.android.api.barcode.BarcodeReaderManager" visibility="public"></constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getBarcodeReaders" native="false" return="java.util.List&lt;com.panasonic.toughpad.android.api.barcode.BarcodeReader&gt;" static="true" synchronized="false" visibility="public"></method>
+    </class>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="package-info" static="false" visibility="" />
+  </package>
+  <package name="com.panasonic.toughpad.android.api.cradle">
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="Cradle" static="false" visibility="public">
+      <method abstract="false" deprecated="not deprecated" final="false" name="getCradleType" native="false" return="int" static="true" synchronized="false" visibility="public"></method>
+      <field deprecated="not deprecated" final="true" name="ACTION_CRADLE_CHANGED" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;com.panasonic.toughpad.android.api.cradle.intent.CRADLE_CHANGED&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="CRADLE_TYPE_COMMUNICATION" static="true" transient="false" type="int" type-generic-aware="int" value="2" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="CRADLE_TYPE_ERROR" static="true" transient="false" type="int" type-generic-aware="int" value="-1" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="CRADLE_TYPE_NONE" static="true" transient="false" type="int" type-generic-aware="int" value="0" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="CRADLE_TYPE_NORMAL" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="EXTRA_CRADLE_TYPE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;cradleType&quot;" visibility="public" volatile="false"></field>
+    </class>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="package-info" static="false" visibility="" />
+  </package>
+  <package name="com.panasonic.toughpad.android.api.magstripe">
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="MagStripeData" static="false" visibility="public">
+      <implements name="android.os.Parcelable" name-generic-aware="android.os.Parcelable"></implements>
+      <constructor deprecated="not deprecated" final="false" name="MagStripeData" static="false" type="com.panasonic.toughpad.android.api.magstripe.MagStripeData" visibility="protected">
+        <parameter name="p0" type="android.os.Parcel"></parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="MagStripeData" static="false" type="com.panasonic.toughpad.android.api.magstripe.MagStripeData" visibility="public">
+        <parameter name="p0" type="java.lang.String[]"></parameter>
+        <parameter name="p1" type="java.lang.String[]"></parameter>
+        <parameter name="p2" type="byte[]"></parameter>
+        <parameter name="p3" type="boolean"></parameter>
+        <parameter name="p4" type="boolean"></parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="describeContents" native="false" return="int" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getMaskedTrackData" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getRawData" native="false" return="byte[]" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getTrackData" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isGoodSwipe" native="false" return="boolean" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isTrackDataEncrypted" native="false" return="boolean" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="readFromParcel" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.os.Parcel"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="writeToParcel" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.os.Parcel"></parameter>
+        <parameter name="p1" type="int"></parameter>
+      </method>
+      <field deprecated="not deprecated" final="true" name="CREATOR" static="true" transient="false" type="android.os.Parcelable.Creator" type-generic-aware="android.os.Parcelable.Creator&lt;com.panasonic.toughpad.android.api.magstripe.MagStripeData&gt;" visibility="public" volatile="false"></field>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="MagStripeData.1" static="true" visibility="">
+      <implements name="android.os.Parcelable.Creator" name-generic-aware="android.os.Parcelable.Creator&lt;com.panasonic.toughpad.android.api.magstripe.MagStripeData&gt;"></implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="createFromParcel" native="false" return="com.panasonic.toughpad.android.api.magstripe.MagStripeData" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.os.Parcel"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="newArray" native="false" return="com.panasonic.toughpad.android.api.magstripe.MagStripeData[]" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Exception" extends-generic-aware="java.lang.Exception" final="false" name="MagStripeException" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="MagStripeException" static="false" type="com.panasonic.toughpad.android.api.magstripe.MagStripeException" visibility="public">
+        <parameter name="p0" type="java.lang.String"></parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="MagStripeException" static="false" type="com.panasonic.toughpad.android.api.magstripe.MagStripeException" visibility="public">
+        <parameter name="p0" type="java.lang.Throwable"></parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="MagStripeException" static="false" type="com.panasonic.toughpad.android.api.magstripe.MagStripeException" visibility="public"></constructor>
+    </class>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="MagStripeListener" static="false" visibility="public">
+      <method abstract="true" deprecated="not deprecated" final="false" name="onRead" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.panasonic.toughpad.android.api.magstripe.MagStripeReader"></parameter>
+        <parameter name="p1" type="com.panasonic.toughpad.android.api.magstripe.MagStripeData"></parameter>
+      </method>
+    </interface>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="MagStripeReader" static="false" visibility="public">
+      <method abstract="true" deprecated="not deprecated" final="false" name="addMagStripeListener" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.panasonic.toughpad.android.api.magstripe.MagStripeListener"></parameter>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="clearMagStripeListeners" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="disable" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <exception name="MagStripeException" type="com.panasonic.toughpad.android.api.magstripe.MagStripeException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="enable" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="long"></parameter>
+        <exception name="MagStripeException" type="com.panasonic.toughpad.android.api.magstripe.MagStripeException"></exception>
+        <exception name="TimeoutException" type="java.util.concurrent.TimeoutException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="getBatteryCharge" native="false" return="int" static="false" synchronized="false" visibility="public">
+        <exception name="MagStripeException" type="com.panasonic.toughpad.android.api.magstripe.MagStripeException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="getDeviceFirmwareVersion" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+        <exception name="MagStripeException" type="com.panasonic.toughpad.android.api.magstripe.MagStripeException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="getDeviceName" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="getDeviceSerialNumber" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+        <exception name="MagStripeException" type="com.panasonic.toughpad.android.api.magstripe.MagStripeException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="isBatteryCharging" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <exception name="MagStripeException" type="com.panasonic.toughpad.android.api.magstripe.MagStripeException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="isEnabled" native="false" return="boolean" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="isExternal" native="false" return="boolean" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="removeMagStripeRListener" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.panasonic.toughpad.android.api.magstripe.MagStripeListener"></parameter>
+      </method>
+    </interface>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="MagStripeReaderManager" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="MagStripeReaderManager" static="false" type="com.panasonic.toughpad.android.api.magstripe.MagStripeReaderManager" visibility="public"></constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getMagStripeReaders" native="false" return="java.util.List&lt;com.panasonic.toughpad.android.api.magstripe.MagStripeReader&gt;" static="true" synchronized="false" visibility="public"></method>
+    </class>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="package-info" static="false" visibility="" />
+  </package>
+  <package name="com.panasonic.toughpad.android.api.magstripe.magtek">
+    <class abstract="false" deprecated="not deprecated" extends="com.panasonic.toughpad.android.api.magstripe.MagStripeData" extends-generic-aware="com.panasonic.toughpad.android.api.magstripe.MagStripeData" final="false" name="MagTekMagStripeData" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="MagTekMagStripeData" static="false" type="com.panasonic.toughpad.android.api.magstripe.magtek.MagTekMagStripeData" visibility="public">
+        <parameter name="p0" type="java.lang.String[]"></parameter>
+        <parameter name="p1" type="java.lang.String[]"></parameter>
+        <parameter name="p2" type="byte[]"></parameter>
+        <parameter name="p3" type="boolean"></parameter>
+        <parameter name="p4" type="boolean"></parameter>
+        <parameter name="p5" type="byte"></parameter>
+        <parameter name="p6" type="java.lang.String"></parameter>
+        <parameter name="p7" type="java.lang.String"></parameter>
+        <parameter name="p8" type="java.lang.String"></parameter>
+        <parameter name="p9" type="java.lang.String"></parameter>
+        <parameter name="p10" type="int"></parameter>
+        <parameter name="p11" type="java.lang.String"></parameter>
+        <parameter name="p12" type="java.lang.String"></parameter>
+        <parameter name="p13" type="java.lang.String"></parameter>
+        <parameter name="p14" type="java.lang.String"></parameter>
+        <parameter name="p15" type="java.lang.String"></parameter>
+        <parameter name="p16" type="java.lang.String"></parameter>
+        <parameter name="p17" type="java.lang.String"></parameter>
+        <parameter name="p18" type="java.lang.String"></parameter>
+        <parameter name="p19" type="java.lang.String"></parameter>
+        <parameter name="p20" type="java.lang.String"></parameter>
+        <parameter name="p21" type="java.lang.String"></parameter>
+        <parameter name="p22" type="java.lang.String"></parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="MagTekMagStripeData" static="false" type="com.panasonic.toughpad.android.api.magstripe.magtek.MagTekMagStripeData" visibility="public">
+        <parameter name="p0" type="android.os.Parcel"></parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getCardName" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getCardServiceCode" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getCardStatus" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getEncodeType" native="false" return="byte" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getEncryptedCount" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getEncryptionStatus" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getExperationDate" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getFirmware" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getIIN" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getKSN" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getLast4Digits" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getMSRSerialNumber" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getMagnePrint" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getMagnePrintStatus" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getMaskedPAN" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getPANLength" native="false" return="int" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getSessionId" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getTrackDecodeStatus" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public"></method>
+      <field deprecated="not deprecated" final="true" name="CREATOR" static="true" transient="false" type="android.os.Parcelable.Creator" type-generic-aware="android.os.Parcelable.Creator&lt;com.panasonic.toughpad.android.api.magstripe.magtek.MagTekMagStripeData&gt;" visibility="public" volatile="false"></field>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="MagTekMagStripeData.1" static="true" visibility="">
+      <implements name="android.os.Parcelable.Creator" name-generic-aware="android.os.Parcelable.Creator&lt;com.panasonic.toughpad.android.api.magstripe.magtek.MagTekMagStripeData&gt;"></implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="createFromParcel" native="false" return="com.panasonic.toughpad.android.api.magstripe.magtek.MagTekMagStripeData" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.os.Parcel"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="newArray" native="false" return="com.panasonic.toughpad.android.api.magstripe.magtek.MagTekMagStripeData[]" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+      </method>
+    </class>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="package-info" static="false" visibility="" />
+  </package>
+  <package name="com.panasonic.toughpad.android.api.pwrmgmt">
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="PortPowerManager" static="false" visibility="public">
+      <method abstract="false" deprecated="not deprecated" final="false" name="isPortAvailable" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isSelectiveSuspend" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isVBUSSupply" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setSelectiveSuspend" native="false" return="void" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+        <parameter name="p1" type="boolean"></parameter>
+        <exception name="IllegalArgumentException" type="java.lang.IllegalArgumentException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setVBUSSupply" native="false" return="void" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+        <parameter name="p1" type="boolean"></parameter>
+        <exception name="IllegalArgumentException" type="java.lang.IllegalArgumentException"></exception>
+      </method>
+      <field deprecated="not deprecated" final="true" name="PORT_GADGET" static="true" transient="false" type="int" type-generic-aware="int" value="2" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="PORT_MICRO_USB" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false"></field>
+    </class>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="package-info" static="false" visibility="" />
+  </package>
+  <package name="com.panasonic.toughpad.android.api.serial">
+    <interface abstract="true" deprecated="not deprecated" final="false" name="SerialPort" static="false" visibility="public">
+      <method abstract="true" deprecated="not deprecated" final="false" name="disable" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="enable" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+        <parameter name="p1" type="int"></parameter>
+        <parameter name="p2" type="int"></parameter>
+        <parameter name="p3" type="int"></parameter>
+        <parameter name="p4" type="int"></parameter>
+        <exception name="IOException" type="java.io.IOException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="getDeviceName" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="getInputStream" native="false" return="java.io.InputStream" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="getOutputStream" native="false" return="java.io.OutputStream" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="isEnabled" native="false" return="boolean" static="false" synchronized="false" visibility="public"></method>
+      <field deprecated="not deprecated" final="true" name="BAUDRATE_115200" static="true" transient="false" type="int" type-generic-aware="int" value="17" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="BAUDRATE_1200" static="true" transient="false" type="int" type-generic-aware="int" value="9" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="BAUDRATE_1800" static="true" transient="false" type="int" type-generic-aware="int" value="10" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="BAUDRATE_19200" static="true" transient="false" type="int" type-generic-aware="int" value="14" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="BAUDRATE_2400" static="true" transient="false" type="int" type-generic-aware="int" value="11" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="BAUDRATE_300" static="true" transient="false" type="int" type-generic-aware="int" value="7" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="BAUDRATE_38400" static="true" transient="false" type="int" type-generic-aware="int" value="15" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="BAUDRATE_4800" static="true" transient="false" type="int" type-generic-aware="int" value="12" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="BAUDRATE_57600" static="true" transient="false" type="int" type-generic-aware="int" value="16" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="BAUDRATE_600" static="true" transient="false" type="int" type-generic-aware="int" value="8" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="BAUDRATE_9600" static="true" transient="false" type="int" type-generic-aware="int" value="13" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="DATASIZE_5" static="true" transient="false" type="int" type-generic-aware="int" value="0" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="DATASIZE_6" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="DATASIZE_7" static="true" transient="false" type="int" type-generic-aware="int" value="2" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="DATASIZE_8" static="true" transient="false" type="int" type-generic-aware="int" value="3" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="FLOWCONTROL_NONE" static="true" transient="false" type="int" type-generic-aware="int" value="0" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="FLOWCONTROL_RTS_CTS" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="FLOWCONTROL_XON_XOFF" static="true" transient="false" type="int" type-generic-aware="int" value="3" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="PARITY_EVEN" static="true" transient="false" type="int" type-generic-aware="int" value="2" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="PARITY_NONE" static="true" transient="false" type="int" type-generic-aware="int" value="0" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="PARITY_ODD" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="STOPBITS_1" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="STOPBITS_2" static="true" transient="false" type="int" type-generic-aware="int" value="2" visibility="public" volatile="false"></field>
+    </interface>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="SerialPortManager" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="SerialPortManager" static="false" type="com.panasonic.toughpad.android.api.serial.SerialPortManager" visibility="public"></constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getSerialPorts" native="false" return="java.util.List&lt;com.panasonic.toughpad.android.api.serial.SerialPort&gt;" static="true" synchronized="false" visibility="public"></method>
+    </class>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="package-info" static="false" visibility="" />
+  </package>
+  <package name="com.panasonic.toughpad.android.apitocontract">
+    <class abstract="false" deprecated="not deprecated" extends="com.panasonic.toughpad.android.contract.IBarcodeListener.Stub" extends-generic-aware="com.panasonic.toughpad.android.contract.IBarcodeListener.Stub" final="true" name="BarcodeReaderApiToContract" static="false" visibility="public">
+      <implements name="com.panasonic.toughpad.android.api.barcode.BarcodeReader" name-generic-aware="com.panasonic.toughpad.android.api.barcode.BarcodeReader"></implements>
+      <constructor deprecated="not deprecated" final="false" name="BarcodeReaderApiToContract" static="false" type="com.panasonic.toughpad.android.apitocontract.BarcodeReaderApiToContract" visibility="public">
+        <parameter name="p0" type="com.panasonic.toughpad.android.contract.IBarcodeReader"></parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="addBarcodeListener" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.panasonic.toughpad.android.api.barcode.BarcodeListener"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="clearBarcodeListener" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="disable" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <exception name="BarcodeException" type="com.panasonic.toughpad.android.api.barcode.BarcodeException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="enable" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="long"></parameter>
+        <exception name="BarcodeException" type="com.panasonic.toughpad.android.api.barcode.BarcodeException"></exception>
+        <exception name="TimeoutException" type="java.util.concurrent.TimeoutException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getBarcodeType" native="false" return="int" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getBatteryCharge" native="false" return="int" static="false" synchronized="false" visibility="public">
+        <exception name="BarcodeException" type="com.panasonic.toughpad.android.api.barcode.BarcodeException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getDeviceFirmwareVersion" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+        <exception name="BarcodeException" type="com.panasonic.toughpad.android.api.barcode.BarcodeException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getDeviceName" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getDeviceSerialNumber" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+        <exception name="BarcodeException" type="com.panasonic.toughpad.android.api.barcode.BarcodeException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isBatteryCharging" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <exception name="BarcodeException" type="com.panasonic.toughpad.android.api.barcode.BarcodeException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isEnabled" native="false" return="boolean" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isExternal" native="false" return="boolean" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isHardwareTriggerAvailable" native="false" return="boolean" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isHardwareTriggerEnabled" native="false" return="boolean" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onRead" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.panasonic.toughpad.android.contract.IBarcodeReader"></parameter>
+        <parameter name="p1" type="com.panasonic.toughpad.android.api.barcode.BarcodeData"></parameter>
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="pressSoftwareTrigger" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="boolean"></parameter>
+        <exception name="BarcodeException" type="com.panasonic.toughpad.android.api.barcode.BarcodeException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="removeBarcodeListener" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.panasonic.toughpad.android.api.barcode.BarcodeListener"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setHardwareTriggerEnabled" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="boolean"></parameter>
+        <exception name="BarcodeException" type="com.panasonic.toughpad.android.api.barcode.BarcodeException"></exception>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="com.panasonic.toughpad.android.contract.IMagStripeListener.Stub" extends-generic-aware="com.panasonic.toughpad.android.contract.IMagStripeListener.Stub" final="false" name="MagStripeReaderApiToContract" static="false" visibility="public">
+      <implements name="com.panasonic.toughpad.android.api.magstripe.MagStripeReader" name-generic-aware="com.panasonic.toughpad.android.api.magstripe.MagStripeReader"></implements>
+      <constructor deprecated="not deprecated" final="false" name="MagStripeReaderApiToContract" static="false" type="com.panasonic.toughpad.android.apitocontract.MagStripeReaderApiToContract" visibility="public">
+        <parameter name="p0" type="com.panasonic.toughpad.android.contract.IMagStripeReader"></parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="addMagStripeListener" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.panasonic.toughpad.android.api.magstripe.MagStripeListener"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="clearMagStripeListeners" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="disable" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <exception name="MagStripeException" type="com.panasonic.toughpad.android.api.magstripe.MagStripeException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="enable" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="long"></parameter>
+        <exception name="MagStripeException" type="com.panasonic.toughpad.android.api.magstripe.MagStripeException"></exception>
+        <exception name="TimeoutException" type="java.util.concurrent.TimeoutException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getBatteryCharge" native="false" return="int" static="false" synchronized="false" visibility="public">
+        <exception name="MagStripeException" type="com.panasonic.toughpad.android.api.magstripe.MagStripeException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getDeviceFirmwareVersion" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+        <exception name="MagStripeException" type="com.panasonic.toughpad.android.api.magstripe.MagStripeException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getDeviceName" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getDeviceSerialNumber" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+        <exception name="MagStripeException" type="com.panasonic.toughpad.android.api.magstripe.MagStripeException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isBatteryCharging" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <exception name="MagStripeException" type="com.panasonic.toughpad.android.api.magstripe.MagStripeException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isEnabled" native="false" return="boolean" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isExternal" native="false" return="boolean" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onRead" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.panasonic.toughpad.android.contract.IMagStripeReader"></parameter>
+        <parameter name="p1" type="com.panasonic.toughpad.android.api.magstripe.MagStripeData"></parameter>
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="removeMagStripeRListener" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.panasonic.toughpad.android.api.magstripe.MagStripeListener"></parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="SerialPortApiToContract" static="false" visibility="public">
+      <implements name="com.panasonic.toughpad.android.api.serial.SerialPort" name-generic-aware="com.panasonic.toughpad.android.api.serial.SerialPort"></implements>
+      <constructor deprecated="not deprecated" final="false" name="SerialPortApiToContract" static="false" type="com.panasonic.toughpad.android.apitocontract.SerialPortApiToContract" visibility="public">
+        <parameter name="p0" type="com.panasonic.toughpad.android.contract.ISerialPort"></parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="disable" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="enable" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+        <parameter name="p1" type="int"></parameter>
+        <parameter name="p2" type="int"></parameter>
+        <parameter name="p3" type="int"></parameter>
+        <parameter name="p4" type="int"></parameter>
+        <exception name="IOException" type="java.io.IOException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getDeviceName" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getInputStream" native="false" return="java.io.InputStream" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getOutputStream" native="false" return="java.io.OutputStream" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isEnabled" native="false" return="boolean" static="false" synchronized="false" visibility="public"></method>
+    </class>
+  </package>
+  <package name="com.panasonic.toughpad.android.contract">
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.IllegalStateException" extends-generic-aware="java.lang.IllegalStateException" final="false" name="CheckedExceptionWrapper" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="CheckedExceptionWrapper" static="false" type="com.panasonic.toughpad.android.contract.CheckedExceptionWrapper" visibility="public">
+        <parameter name="p0" type="java.lang.Exception"></parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="CheckedExceptionWrapper" static="false" type="com.panasonic.toughpad.android.contract.CheckedExceptionWrapper" visibility="public"></constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="resolveException" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <typeParameters>
+          <typeParameter name="T">
+            <genericConstraints>
+              <genericConstraint type="java.lang.Exception" />
+            </genericConstraints>
+          </typeParameter>
+        </typeParameters>
+        <parameter name="p0" type="java.lang.IllegalStateException"></parameter>
+        <parameter name="p1" type="java.lang.Class&lt;T&gt;"></parameter>
+        <exception name="Exception" type="java.lang.Exception"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="resolveExceptionAlways" native="false" return="U" static="true" synchronized="false" visibility="public">
+        <typeParameters>
+          <typeParameter name="U" />
+          <typeParameter name="T">
+            <genericConstraints>
+              <genericConstraint type="java.lang.Exception" />
+            </genericConstraints>
+          </typeParameter>
+        </typeParameters>
+        <parameter name="p0" type="java.lang.IllegalStateException"></parameter>
+        <parameter name="p1" type="java.lang.Class&lt;T&gt;"></parameter>
+        <exception name="Exception" type="java.lang.Exception"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="serializeException" native="false" return="java.lang.String" static="true" synchronized="false" visibility="protected">
+        <parameter name="p0" type="java.lang.Exception"></parameter>
+      </method>
+    </class>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="IAppButtonManager" static="false" visibility="public">
+      <implements name="android.os.IInterface" name-generic-aware="android.os.IInterface"></implements>
+      <method abstract="true" deprecated="not deprecated" final="false" name="hasButtonControl" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="isButtonAvailable" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+    </interface>
+    <class abstract="true" deprecated="not deprecated" extends="android.os.Binder" extends-generic-aware="android.os.Binder" final="false" name="IAppButtonManager.Stub" static="true" visibility="public">
+      <implements name="com.panasonic.toughpad.android.contract.IAppButtonManager" name-generic-aware="com.panasonic.toughpad.android.contract.IAppButtonManager"></implements>
+      <constructor deprecated="not deprecated" final="false" name="IAppButtonManager.Stub" static="false" type="com.panasonic.toughpad.android.contract.IAppButtonManager.Stub" visibility="public"></constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="asBinder" native="false" return="android.os.IBinder" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="asInterface" native="false" return="com.panasonic.toughpad.android.contract.IAppButtonManager" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.os.IBinder"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onTransact" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+        <parameter name="p1" type="android.os.Parcel"></parameter>
+        <parameter name="p2" type="android.os.Parcel"></parameter>
+        <parameter name="p3" type="int"></parameter>
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="IAppButtonManager.Stub.Proxy" static="true" visibility="">
+      <implements name="com.panasonic.toughpad.android.contract.IAppButtonManager" name-generic-aware="com.panasonic.toughpad.android.contract.IAppButtonManager"></implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="asBinder" native="false" return="android.os.IBinder" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getInterfaceDescriptor" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="hasButtonControl" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isButtonAvailable" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+    </class>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="IBarcodeListener" static="false" visibility="public">
+      <implements name="android.os.IInterface" name-generic-aware="android.os.IInterface"></implements>
+      <method abstract="true" deprecated="not deprecated" final="false" name="onRead" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.panasonic.toughpad.android.contract.IBarcodeReader"></parameter>
+        <parameter name="p1" type="com.panasonic.toughpad.android.api.barcode.BarcodeData"></parameter>
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+    </interface>
+    <class abstract="true" deprecated="not deprecated" extends="android.os.Binder" extends-generic-aware="android.os.Binder" final="false" name="IBarcodeListener.Stub" static="true" visibility="public">
+      <implements name="com.panasonic.toughpad.android.contract.IBarcodeListener" name-generic-aware="com.panasonic.toughpad.android.contract.IBarcodeListener"></implements>
+      <constructor deprecated="not deprecated" final="false" name="IBarcodeListener.Stub" static="false" type="com.panasonic.toughpad.android.contract.IBarcodeListener.Stub" visibility="public"></constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="asBinder" native="false" return="android.os.IBinder" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="asInterface" native="false" return="com.panasonic.toughpad.android.contract.IBarcodeListener" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.os.IBinder"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onTransact" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+        <parameter name="p1" type="android.os.Parcel"></parameter>
+        <parameter name="p2" type="android.os.Parcel"></parameter>
+        <parameter name="p3" type="int"></parameter>
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="IBarcodeListener.Stub.Proxy" static="true" visibility="">
+      <implements name="com.panasonic.toughpad.android.contract.IBarcodeListener" name-generic-aware="com.panasonic.toughpad.android.contract.IBarcodeListener"></implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="asBinder" native="false" return="android.os.IBinder" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getInterfaceDescriptor" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onRead" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.panasonic.toughpad.android.contract.IBarcodeReader"></parameter>
+        <parameter name="p1" type="com.panasonic.toughpad.android.api.barcode.BarcodeData"></parameter>
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+    </class>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="IBarcodeReader" static="false" visibility="public">
+      <implements name="android.os.IInterface" name-generic-aware="android.os.IInterface"></implements>
+      <method abstract="true" deprecated="not deprecated" final="false" name="disable" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="enable" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="long"></parameter>
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="getBarcodeType" native="false" return="int" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="getBatteryCharge" native="false" return="int" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="getDeviceFirmwareVersion" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="getDeviceName" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="getDeviceSerialNumber" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="isBatteryCharging" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="isEnabled" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="isExternal" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="isHardwareTriggerAvailable" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="isHardwareTriggerEnabled" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="pressSoftwareTrigger" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="boolean"></parameter>
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="setBarcodeListener" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.panasonic.toughpad.android.contract.IBarcodeListener"></parameter>
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="setHardwareTriggerEnabled" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="boolean"></parameter>
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+    </interface>
+    <class abstract="true" deprecated="not deprecated" extends="android.os.Binder" extends-generic-aware="android.os.Binder" final="false" name="IBarcodeReader.Stub" static="true" visibility="public">
+      <implements name="com.panasonic.toughpad.android.contract.IBarcodeReader" name-generic-aware="com.panasonic.toughpad.android.contract.IBarcodeReader"></implements>
+      <constructor deprecated="not deprecated" final="false" name="IBarcodeReader.Stub" static="false" type="com.panasonic.toughpad.android.contract.IBarcodeReader.Stub" visibility="public"></constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="asBinder" native="false" return="android.os.IBinder" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="asInterface" native="false" return="com.panasonic.toughpad.android.contract.IBarcodeReader" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.os.IBinder"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onTransact" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+        <parameter name="p1" type="android.os.Parcel"></parameter>
+        <parameter name="p2" type="android.os.Parcel"></parameter>
+        <parameter name="p3" type="int"></parameter>
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="IBarcodeReader.Stub.Proxy" static="true" visibility="">
+      <implements name="com.panasonic.toughpad.android.contract.IBarcodeReader" name-generic-aware="com.panasonic.toughpad.android.contract.IBarcodeReader"></implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="asBinder" native="false" return="android.os.IBinder" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="disable" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="enable" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="long"></parameter>
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getBarcodeType" native="false" return="int" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getBatteryCharge" native="false" return="int" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getDeviceFirmwareVersion" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getDeviceName" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getDeviceSerialNumber" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getInterfaceDescriptor" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isBatteryCharging" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isEnabled" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isExternal" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isHardwareTriggerAvailable" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isHardwareTriggerEnabled" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="pressSoftwareTrigger" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="boolean"></parameter>
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setBarcodeListener" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.panasonic.toughpad.android.contract.IBarcodeListener"></parameter>
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setHardwareTriggerEnabled" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="boolean"></parameter>
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+    </class>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="IBarcodeReaderManager" static="false" visibility="public">
+      <implements name="android.os.IInterface" name-generic-aware="android.os.IInterface"></implements>
+      <method abstract="true" deprecated="not deprecated" final="false" name="getBarcodeReaders" native="false" return="java.util.List&lt;android.os.IBinder&gt;" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+    </interface>
+    <class abstract="true" deprecated="not deprecated" extends="android.os.Binder" extends-generic-aware="android.os.Binder" final="false" name="IBarcodeReaderManager.Stub" static="true" visibility="public">
+      <implements name="com.panasonic.toughpad.android.contract.IBarcodeReaderManager" name-generic-aware="com.panasonic.toughpad.android.contract.IBarcodeReaderManager"></implements>
+      <constructor deprecated="not deprecated" final="false" name="IBarcodeReaderManager.Stub" static="false" type="com.panasonic.toughpad.android.contract.IBarcodeReaderManager.Stub" visibility="public"></constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="asBinder" native="false" return="android.os.IBinder" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="asInterface" native="false" return="com.panasonic.toughpad.android.contract.IBarcodeReaderManager" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.os.IBinder"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onTransact" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+        <parameter name="p1" type="android.os.Parcel"></parameter>
+        <parameter name="p2" type="android.os.Parcel"></parameter>
+        <parameter name="p3" type="int"></parameter>
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="IBarcodeReaderManager.Stub.Proxy" static="true" visibility="">
+      <implements name="com.panasonic.toughpad.android.contract.IBarcodeReaderManager" name-generic-aware="com.panasonic.toughpad.android.contract.IBarcodeReaderManager"></implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="asBinder" native="false" return="android.os.IBinder" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getBarcodeReaders" native="false" return="java.util.List&lt;android.os.IBinder&gt;" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getInterfaceDescriptor" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public"></method>
+    </class>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="ICradle" static="false" visibility="public">
+      <implements name="android.os.IInterface" name-generic-aware="android.os.IInterface"></implements>
+      <method abstract="true" deprecated="not deprecated" final="false" name="getCradleType" native="false" return="int" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+    </interface>
+    <class abstract="true" deprecated="not deprecated" extends="android.os.Binder" extends-generic-aware="android.os.Binder" final="false" name="ICradle.Stub" static="true" visibility="public">
+      <implements name="com.panasonic.toughpad.android.contract.ICradle" name-generic-aware="com.panasonic.toughpad.android.contract.ICradle"></implements>
+      <constructor deprecated="not deprecated" final="false" name="ICradle.Stub" static="false" type="com.panasonic.toughpad.android.contract.ICradle.Stub" visibility="public"></constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="asBinder" native="false" return="android.os.IBinder" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="asInterface" native="false" return="com.panasonic.toughpad.android.contract.ICradle" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.os.IBinder"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onTransact" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+        <parameter name="p1" type="android.os.Parcel"></parameter>
+        <parameter name="p2" type="android.os.Parcel"></parameter>
+        <parameter name="p3" type="int"></parameter>
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="ICradle.Stub.Proxy" static="true" visibility="">
+      <implements name="com.panasonic.toughpad.android.contract.ICradle" name-generic-aware="com.panasonic.toughpad.android.contract.ICradle"></implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="asBinder" native="false" return="android.os.IBinder" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getCradleType" native="false" return="int" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getInterfaceDescriptor" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public"></method>
+    </class>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="IMagStripeListener" static="false" visibility="public">
+      <implements name="android.os.IInterface" name-generic-aware="android.os.IInterface"></implements>
+      <method abstract="true" deprecated="not deprecated" final="false" name="onRead" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.panasonic.toughpad.android.contract.IMagStripeReader"></parameter>
+        <parameter name="p1" type="com.panasonic.toughpad.android.api.magstripe.MagStripeData"></parameter>
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+    </interface>
+    <class abstract="true" deprecated="not deprecated" extends="android.os.Binder" extends-generic-aware="android.os.Binder" final="false" name="IMagStripeListener.Stub" static="true" visibility="public">
+      <implements name="com.panasonic.toughpad.android.contract.IMagStripeListener" name-generic-aware="com.panasonic.toughpad.android.contract.IMagStripeListener"></implements>
+      <constructor deprecated="not deprecated" final="false" name="IMagStripeListener.Stub" static="false" type="com.panasonic.toughpad.android.contract.IMagStripeListener.Stub" visibility="public"></constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="asBinder" native="false" return="android.os.IBinder" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="asInterface" native="false" return="com.panasonic.toughpad.android.contract.IMagStripeListener" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.os.IBinder"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onTransact" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+        <parameter name="p1" type="android.os.Parcel"></parameter>
+        <parameter name="p2" type="android.os.Parcel"></parameter>
+        <parameter name="p3" type="int"></parameter>
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="IMagStripeListener.Stub.Proxy" static="true" visibility="">
+      <implements name="com.panasonic.toughpad.android.contract.IMagStripeListener" name-generic-aware="com.panasonic.toughpad.android.contract.IMagStripeListener"></implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="asBinder" native="false" return="android.os.IBinder" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getInterfaceDescriptor" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onRead" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.panasonic.toughpad.android.contract.IMagStripeReader"></parameter>
+        <parameter name="p1" type="com.panasonic.toughpad.android.api.magstripe.MagStripeData"></parameter>
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+    </class>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="IMagStripeReader" static="false" visibility="public">
+      <implements name="android.os.IInterface" name-generic-aware="android.os.IInterface"></implements>
+      <method abstract="true" deprecated="not deprecated" final="false" name="disable" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="enable" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="long"></parameter>
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="getBatteryCharge" native="false" return="int" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="getDeviceFirmwareVersion" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="getDeviceName" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="getDeviceSerialNumber" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="isBatteryCharging" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="isEnabled" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="isExternal" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="setMagStripeListener" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.panasonic.toughpad.android.contract.IMagStripeListener"></parameter>
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+    </interface>
+    <class abstract="true" deprecated="not deprecated" extends="android.os.Binder" extends-generic-aware="android.os.Binder" final="false" name="IMagStripeReader.Stub" static="true" visibility="public">
+      <implements name="com.panasonic.toughpad.android.contract.IMagStripeReader" name-generic-aware="com.panasonic.toughpad.android.contract.IMagStripeReader"></implements>
+      <constructor deprecated="not deprecated" final="false" name="IMagStripeReader.Stub" static="false" type="com.panasonic.toughpad.android.contract.IMagStripeReader.Stub" visibility="public"></constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="asBinder" native="false" return="android.os.IBinder" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="asInterface" native="false" return="com.panasonic.toughpad.android.contract.IMagStripeReader" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.os.IBinder"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onTransact" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+        <parameter name="p1" type="android.os.Parcel"></parameter>
+        <parameter name="p2" type="android.os.Parcel"></parameter>
+        <parameter name="p3" type="int"></parameter>
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="IMagStripeReader.Stub.Proxy" static="true" visibility="">
+      <implements name="com.panasonic.toughpad.android.contract.IMagStripeReader" name-generic-aware="com.panasonic.toughpad.android.contract.IMagStripeReader"></implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="asBinder" native="false" return="android.os.IBinder" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="disable" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="enable" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="long"></parameter>
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getBatteryCharge" native="false" return="int" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getDeviceFirmwareVersion" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getDeviceName" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getDeviceSerialNumber" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getInterfaceDescriptor" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isBatteryCharging" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isEnabled" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isExternal" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setMagStripeListener" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.panasonic.toughpad.android.contract.IMagStripeListener"></parameter>
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+    </class>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="IMagStripeReaderManager" static="false" visibility="public">
+      <implements name="android.os.IInterface" name-generic-aware="android.os.IInterface"></implements>
+      <method abstract="true" deprecated="not deprecated" final="false" name="getMagStripeReaders" native="false" return="java.util.List&lt;android.os.IBinder&gt;" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+    </interface>
+    <class abstract="true" deprecated="not deprecated" extends="android.os.Binder" extends-generic-aware="android.os.Binder" final="false" name="IMagStripeReaderManager.Stub" static="true" visibility="public">
+      <implements name="com.panasonic.toughpad.android.contract.IMagStripeReaderManager" name-generic-aware="com.panasonic.toughpad.android.contract.IMagStripeReaderManager"></implements>
+      <constructor deprecated="not deprecated" final="false" name="IMagStripeReaderManager.Stub" static="false" type="com.panasonic.toughpad.android.contract.IMagStripeReaderManager.Stub" visibility="public"></constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="asBinder" native="false" return="android.os.IBinder" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="asInterface" native="false" return="com.panasonic.toughpad.android.contract.IMagStripeReaderManager" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.os.IBinder"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onTransact" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+        <parameter name="p1" type="android.os.Parcel"></parameter>
+        <parameter name="p2" type="android.os.Parcel"></parameter>
+        <parameter name="p3" type="int"></parameter>
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="IMagStripeReaderManager.Stub.Proxy" static="true" visibility="">
+      <implements name="com.panasonic.toughpad.android.contract.IMagStripeReaderManager" name-generic-aware="com.panasonic.toughpad.android.contract.IMagStripeReaderManager"></implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="asBinder" native="false" return="android.os.IBinder" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getInterfaceDescriptor" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getMagStripeReaders" native="false" return="java.util.List&lt;android.os.IBinder&gt;" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+    </class>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="IPortPowerManager" static="false" visibility="public">
+      <implements name="android.os.IInterface" name-generic-aware="android.os.IInterface"></implements>
+      <method abstract="true" deprecated="not deprecated" final="false" name="isPortAvailable" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="isSelectiveSuspend" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="isVBUSSupply" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="setSelectiveSuspend" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+        <parameter name="p1" type="boolean"></parameter>
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="setVBUSSupply" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+        <parameter name="p1" type="boolean"></parameter>
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+    </interface>
+    <class abstract="true" deprecated="not deprecated" extends="android.os.Binder" extends-generic-aware="android.os.Binder" final="false" name="IPortPowerManager.Stub" static="true" visibility="public">
+      <implements name="com.panasonic.toughpad.android.contract.IPortPowerManager" name-generic-aware="com.panasonic.toughpad.android.contract.IPortPowerManager"></implements>
+      <constructor deprecated="not deprecated" final="false" name="IPortPowerManager.Stub" static="false" type="com.panasonic.toughpad.android.contract.IPortPowerManager.Stub" visibility="public"></constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="asBinder" native="false" return="android.os.IBinder" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="asInterface" native="false" return="com.panasonic.toughpad.android.contract.IPortPowerManager" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.os.IBinder"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onTransact" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+        <parameter name="p1" type="android.os.Parcel"></parameter>
+        <parameter name="p2" type="android.os.Parcel"></parameter>
+        <parameter name="p3" type="int"></parameter>
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="IPortPowerManager.Stub.Proxy" static="true" visibility="">
+      <implements name="com.panasonic.toughpad.android.contract.IPortPowerManager" name-generic-aware="com.panasonic.toughpad.android.contract.IPortPowerManager"></implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="asBinder" native="false" return="android.os.IBinder" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getInterfaceDescriptor" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isPortAvailable" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isSelectiveSuspend" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isVBUSSupply" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setSelectiveSuspend" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+        <parameter name="p1" type="boolean"></parameter>
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setVBUSSupply" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+        <parameter name="p1" type="boolean"></parameter>
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+    </class>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="ISerialPort" static="false" visibility="public">
+      <implements name="android.os.IInterface" name-generic-aware="android.os.IInterface"></implements>
+      <method abstract="true" deprecated="not deprecated" final="false" name="disable" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="enable" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+        <parameter name="p1" type="int"></parameter>
+        <parameter name="p2" type="int"></parameter>
+        <parameter name="p3" type="int"></parameter>
+        <parameter name="p4" type="int"></parameter>
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="getDeviceName" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="getReadFd" native="false" return="android.os.ParcelFileDescriptor" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="getWriteFd" native="false" return="android.os.ParcelFileDescriptor" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="isEnabled" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+    </interface>
+    <class abstract="true" deprecated="not deprecated" extends="android.os.Binder" extends-generic-aware="android.os.Binder" final="false" name="ISerialPort.Stub" static="true" visibility="public">
+      <implements name="com.panasonic.toughpad.android.contract.ISerialPort" name-generic-aware="com.panasonic.toughpad.android.contract.ISerialPort"></implements>
+      <constructor deprecated="not deprecated" final="false" name="ISerialPort.Stub" static="false" type="com.panasonic.toughpad.android.contract.ISerialPort.Stub" visibility="public"></constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="asBinder" native="false" return="android.os.IBinder" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="asInterface" native="false" return="com.panasonic.toughpad.android.contract.ISerialPort" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.os.IBinder"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onTransact" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+        <parameter name="p1" type="android.os.Parcel"></parameter>
+        <parameter name="p2" type="android.os.Parcel"></parameter>
+        <parameter name="p3" type="int"></parameter>
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="ISerialPort.Stub.Proxy" static="true" visibility="">
+      <implements name="com.panasonic.toughpad.android.contract.ISerialPort" name-generic-aware="com.panasonic.toughpad.android.contract.ISerialPort"></implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="asBinder" native="false" return="android.os.IBinder" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="disable" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="enable" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+        <parameter name="p1" type="int"></parameter>
+        <parameter name="p2" type="int"></parameter>
+        <parameter name="p3" type="int"></parameter>
+        <parameter name="p4" type="int"></parameter>
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getDeviceName" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getInterfaceDescriptor" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getReadFd" native="false" return="android.os.ParcelFileDescriptor" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getWriteFd" native="false" return="android.os.ParcelFileDescriptor" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isEnabled" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+    </class>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="ISerialPortManager" static="false" visibility="public">
+      <implements name="android.os.IInterface" name-generic-aware="android.os.IInterface"></implements>
+      <method abstract="true" deprecated="not deprecated" final="false" name="getSerialPorts" native="false" return="java.util.List&lt;android.os.IBinder&gt;" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+    </interface>
+    <class abstract="true" deprecated="not deprecated" extends="android.os.Binder" extends-generic-aware="android.os.Binder" final="false" name="ISerialPortManager.Stub" static="true" visibility="public">
+      <implements name="com.panasonic.toughpad.android.contract.ISerialPortManager" name-generic-aware="com.panasonic.toughpad.android.contract.ISerialPortManager"></implements>
+      <constructor deprecated="not deprecated" final="false" name="ISerialPortManager.Stub" static="false" type="com.panasonic.toughpad.android.contract.ISerialPortManager.Stub" visibility="public"></constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="asBinder" native="false" return="android.os.IBinder" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="asInterface" native="false" return="com.panasonic.toughpad.android.contract.ISerialPortManager" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.os.IBinder"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onTransact" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+        <parameter name="p1" type="android.os.Parcel"></parameter>
+        <parameter name="p2" type="android.os.Parcel"></parameter>
+        <parameter name="p3" type="int"></parameter>
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="ISerialPortManager.Stub.Proxy" static="true" visibility="">
+      <implements name="com.panasonic.toughpad.android.contract.ISerialPortManager" name-generic-aware="com.panasonic.toughpad.android.contract.ISerialPortManager"></implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="asBinder" native="false" return="android.os.IBinder" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getInterfaceDescriptor" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getSerialPorts" native="false" return="java.util.List&lt;android.os.IBinder&gt;" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+    </class>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="IToughpadApi" static="false" visibility="public">
+      <implements name="android.os.IInterface" name-generic-aware="android.os.IInterface"></implements>
+      <method abstract="true" deprecated="not deprecated" final="false" name="getAppButtonManager" native="false" return="com.panasonic.toughpad.android.contract.IAppButtonManager" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="getBarcodeReaderManager" native="false" return="com.panasonic.toughpad.android.contract.IBarcodeReaderManager" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="getCradle" native="false" return="com.panasonic.toughpad.android.contract.ICradle" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="getMagStripeReaderManager" native="false" return="com.panasonic.toughpad.android.contract.IMagStripeReaderManager" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="getPortPowerManager" native="false" return="com.panasonic.toughpad.android.contract.IPortPowerManager" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="getSerialPortManager" native="false" return="com.panasonic.toughpad.android.contract.ISerialPortManager" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="getVersion" native="false" return="int" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+    </interface>
+    <class abstract="true" deprecated="not deprecated" extends="android.os.Binder" extends-generic-aware="android.os.Binder" final="false" name="IToughpadApi.Stub" static="true" visibility="public">
+      <implements name="com.panasonic.toughpad.android.contract.IToughpadApi" name-generic-aware="com.panasonic.toughpad.android.contract.IToughpadApi"></implements>
+      <constructor deprecated="not deprecated" final="false" name="IToughpadApi.Stub" static="false" type="com.panasonic.toughpad.android.contract.IToughpadApi.Stub" visibility="public"></constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="asBinder" native="false" return="android.os.IBinder" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="asInterface" native="false" return="com.panasonic.toughpad.android.contract.IToughpadApi" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.os.IBinder"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onTransact" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+        <parameter name="p1" type="android.os.Parcel"></parameter>
+        <parameter name="p2" type="android.os.Parcel"></parameter>
+        <parameter name="p3" type="int"></parameter>
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="IToughpadApi.Stub.Proxy" static="true" visibility="">
+      <implements name="com.panasonic.toughpad.android.contract.IToughpadApi" name-generic-aware="com.panasonic.toughpad.android.contract.IToughpadApi"></implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="asBinder" native="false" return="android.os.IBinder" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getAppButtonManager" native="false" return="com.panasonic.toughpad.android.contract.IAppButtonManager" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getBarcodeReaderManager" native="false" return="com.panasonic.toughpad.android.contract.IBarcodeReaderManager" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getCradle" native="false" return="com.panasonic.toughpad.android.contract.ICradle" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getInterfaceDescriptor" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getMagStripeReaderManager" native="false" return="com.panasonic.toughpad.android.contract.IMagStripeReaderManager" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getPortPowerManager" native="false" return="com.panasonic.toughpad.android.contract.IPortPowerManager" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getSerialPortManager" native="false" return="com.panasonic.toughpad.android.contract.ISerialPortManager" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getVersion" native="false" return="int" static="false" synchronized="false" visibility="public">
+        <exception name="RemoteException" type="android.os.RemoteException"></exception>
+      </method>
+    </class>
+  </package>
+</api>

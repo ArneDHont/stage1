@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Inspect.FireSafety.Mobile.ControlRound.Views.WelcomePage"
+             xmlns:local="clr-namespace:Inspect.FireSafety.Mobile.ControlRound.ViewModels;assembly=Inspect.FireSafety.Mobile"
+             xmlns:convert="clr-namespace:Inspect.Mobile.Framework.Xamarin.Converters;assembly=Inspect.Mobile.Framework.Xamarin"
+             NavigationPage.HasBackButton="False"
+             >
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:WelcomeViewModel x:Key="ViewModel"/>
+            <convert:NegateBooleanConverter x:Key="inverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.BindingContext>
+        <StaticResource Key="ViewModel"/>
+    </ContentPage.BindingContext>
+    <ContentView.Content>
+        <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <Label Text="Welkom" FontFamily="Droid Sans Regular" FontSize="24" TextColor="#FE3700"></Label>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="{Binding Operator.FirstName}" FontFamily="Droid Sans Regular" FontSize="24" TextColor="#FE3700" Margin="0,6,0,0"/>
+                <Button  Image="delete.png"  BackgroundColor="#ffffff" Command="{Binding LogoutCommand}" CommandParameter="{Binding Operator }"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" >
+                <Label Text="{Binding BackupOperator.FirstName}" FontFamily="Droid Sans Regular" FontSize="24" TextColor="#FE3700" IsVisible="{Binding AddVisable ,Converter={StaticResource inverter}}"/>
+                <Button  Image="delete.png"  BackgroundColor="#ffffff" Command="{Binding LogoutCommand}" CommandParameter="{Binding BackupOperator }" IsVisible="{Binding AddVisable ,Converter={StaticResource inverter}}"/>
+                <Button Image="add_user_button.png" BackgroundColor="#ffffff" Command="{Binding AddUser}" IsVisible="{Binding AddVisable}"  />
+            </StackLayout>
+            <Button Text="toevoegen controle ronde" Command="{Binding ControlCommand}"></Button>
+        </StackLayout>
+    </ContentView.Content>
+    <ContentPage.ToolbarItems >
+        <ToolbarItem Icon="qrCode.png" Command="{Binding ScanCommand}" />
+        <ToolbarItem Icon="pin_pad_64.png" Command="{Binding TypeCommand}" />
+    </ContentPage.ToolbarItems>
+</ContentPage>

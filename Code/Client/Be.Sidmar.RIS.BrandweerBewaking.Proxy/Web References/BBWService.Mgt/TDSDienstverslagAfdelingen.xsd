@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/TDSDienstverslagAfdelingen.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/TDSDienstverslagAfdelingen.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/TDSDienstverslagAfdelingen.xsd" id="TDSDienstverslagAfdelingen" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="TDSDienstverslagAfdelingen">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Afdelingen">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AfdelingId" type="xs:int" />
+              <xs:element minOccurs="0" name="AfdelingCode" type="xs:string" />
+              <xs:element minOccurs="0" name="AfdelingNaam" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:Afdelingen" />
+      <xs:field xpath="mstns:AfdelingId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

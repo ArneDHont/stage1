@@ -1,0 +1,24 @@
+﻿
+CREATE PROC dbo.[USP_WY_BBMATPR_INSERT]
+  @ID_PR_MAT int,
+  @ID_INTV_BRDW int=NULL,
+  @ID_ART_INTV int=NULL,
+  @Q_ART int=NULL,
+  @PR_TOT_ART float=NULL
+
+AS
+SET NOCOUNT OFF
+
+INSERT INTO [BBMATPR] (
+  [ID_INTV_BRDW],
+  [ID_ART_INTV],
+  [Q_ART],
+  [PR_TOT_ART]
+)
+VALUES (
+  @ID_INTV_BRDW,
+  @ID_ART_INTV,
+  @Q_ART,
+  @PR_TOT_ART
+)
+

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://svsim045.sidmar.be/DocService.DocInfo/BBWServices.asmx?wsdl" docRef="http://svsim045.sidmar.be/DocService.DocInfo/BBWServices.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://svsim045.sidmar.be/DocService.DocInfo/BBWServices.asmx" xmlns:q1="http://tempuri.org/Be.Sidmar.Documentum.POC.Services/BBWServices" binding="q1:BBWServicesSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://svsim045.sidmar.be/DocService.DocInfo/BBWServices.asmx" xmlns:q2="http://tempuri.org/Be.Sidmar.Documentum.POC.Services/BBWServices" binding="q2:BBWServicesSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

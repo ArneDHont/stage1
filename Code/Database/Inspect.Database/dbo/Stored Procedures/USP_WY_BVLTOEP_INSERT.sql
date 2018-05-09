@@ -1,0 +1,32 @@
+﻿
+CREATE PROC dbo.[USP_WY_BVLTOEP_INSERT]
+  @ID_TOEP char(50),
+  @NM_TOEP varchar(50)=NULL,
+  @TMS_CRE_RE datetime=NULL,
+  @ID_BRK_CRE_RE char(8)=NULL,
+  @TMS_WY_L_RE datetime=NULL,
+  @ID_BRK_WY_L_RE char(8)=NULL,
+  @NR_WY_L_RE int=NULL
+
+AS
+SET NOCOUNT OFF
+
+INSERT INTO [BVLTOEP] (
+  [ID_TOEP],
+  [NM_TOEP],
+  [TMS_CRE_RE],
+  [ID_BRK_CRE_RE],
+  [TMS_WY_L_RE],
+  [ID_BRK_WY_L_RE],
+  [NR_WY_L_RE]
+)
+VALUES (
+  @ID_TOEP,
+  @NM_TOEP,
+  @TMS_CRE_RE,
+  @ID_BRK_CRE_RE,
+  @TMS_WY_L_RE,
+  @ID_BRK_WY_L_RE,
+  @NR_WY_L_RE
+)
+

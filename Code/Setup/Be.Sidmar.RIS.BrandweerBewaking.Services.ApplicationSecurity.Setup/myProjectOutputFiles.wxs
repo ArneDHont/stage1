@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="INSTALLDIR">
+            <Component Id="cmpED7EF73DF2EE6C3410E969D23C921182" Guid="{1CE5914C-017E-4386-ADCA-847EB2D33383}">
+                <File Id="fil80B73CE63B5E8747E4216E3776342C9B" KeyPath="yes" Source="$(var.myProjectOutput.PackagePath)\Global.asax" />
+            </Component>
+            <Component Id="cmp67C20F14BE3D40DEAFEC435B2AAB730D" Guid="{EFB1A0E7-7FB4-4C95-A8E7-E850679004DE}">
+                <File Id="fil85A126993AA0B0EF5F5ACEE66422C04A" KeyPath="yes" Source="$(var.myProjectOutput.PackagePath)\Services.asmx" />
+            </Component>
+            <Component Id="cmpBBEA411EA9EAD9509FF4D3DF3D005CAF" Guid="{5944EDAA-1EB8-4EB8-81E0-F3BDA1079E8A}">
+                <File Id="fil3F19783C3EC6BAFCC97DF9D8C90C256A" KeyPath="yes" Source="$(var.myProjectOutput.PackagePath)\Web.config" />
+            </Component>
+            <Directory Id="dirA5528701EE26FFBF346CCE20EE8ACE99" Name="bin">
+                <Component Id="cmp15E3EB2D763A6AD7F3138261834895DF" Guid="{3533AE08-EEB4-46F4-88EA-4EF592843CC0}">
+                    <File Id="fil9804C0D66230539FECCF0048D61D3A3D" KeyPath="yes" Source="$(var.myProjectOutput.PackagePath)\bin\ADF.Data.dll" />
+                </Component>
+                <Component Id="cmpF5384A4270D1FB953CC9A15F4340985B" Guid="{378F3740-6E7C-4FED-85A0-DF9192C4C325}">
+                    <File Id="filA6B37946054728B13F30F7E3BFFD6540" KeyPath="yes" Source="$(var.myProjectOutput.PackagePath)\bin\ADF.EnterpriseServices.dll" />
+                </Component>
+                <Component Id="cmp5FDB4A8BB4184C46A80232D5CE8F152B" Guid="{5527161E-DCFA-430D-9104-69D4BD660E57}">
+                    <File Id="filB1DB4FDC2C649FF96C5CD43A9F0C7148" KeyPath="yes" Source="$(var.myProjectOutput.PackagePath)\bin\ADF.Security.ApplicationSecurity.dll" />
+                </Component>
+                <Component Id="cmpA818696F8543DBA6D518C3D90D969C10" Guid="{21686CA5-E7AC-4F52-9BEA-06A9CB009E37}">
+                    <File Id="fil1775B966E096DC8080F397B7B8F981D0" KeyPath="yes" Source="$(var.myProjectOutput.PackagePath)\bin\ADF.Security.Common.dll" />
+                </Component>
+                <Component Id="cmp413CFAD09E77DA6B9D731BA11339B3FB" Guid="{F85C93EC-B8CE-4549-A26C-5D34F18E0FB0}">
+                    <File Id="fil7A5F2F493F87F07FB8F768A75C451158" KeyPath="yes" Source="$(var.myProjectOutput.PackagePath)\bin\ADF.System.dll" />
+                </Component>
+                <Component Id="cmp476BB3350A396DBBCD98261EEA11774D" Guid="{350D6D6C-6738-4081-919B-5EFBC53165B4}">
+                    <File Id="fil4A9FD0DB39B13EC882A4FCBBF18F620C" KeyPath="yes" Source="$(var.myProjectOutput.PackagePath)\bin\ADF.System.Extensions.dll" />
+                </Component>
+                <Component Id="cmpFBE9BE6EDDED2CF50AB61BE5AFCE26D4" Guid="{CEACBD65-E941-4FE4-BE67-58EE3ABAD14B}">
+                    <File Id="fil509F37968DD13CB0F82A1AFBC61B5FC3" KeyPath="yes" Source="$(var.myProjectOutput.PackagePath)\bin\Be.Sidmar.RIS.BrandweerBewaking.Services.ApplicationSecurity.dll" />
+                </Component>
+                
+                <Component Id="cmpC33ED962D1A63C5C46623381CFB40807" Guid="{F54F5323-EF5C-4B5F-BE36-738CC37C3FF6}">
+                    <File Id="filDAFFFD154AB9F256F263456602F14342" KeyPath="yes" Source="$(var.myProjectOutput.PackagePath)\bin\log4net.dll" />
+                </Component>
+                <Directory Id="dirB32FA9D9C7195BE87385CE69400ACF9B" Name="nl">
+                    <Component Id="cmp199C5D73E37F6EA45B3DD7216B7B140B" Guid="{036BFAD4-4AA1-41C4-8CE5-9898B4444ECC}">
+                        <File Id="fil9B8C9880C4DD85142AB006A8A74DC59F" KeyPath="yes" Source="$(var.myProjectOutput.PackagePath)\bin\nl\ADF.Data.resources.dll" />
+                    </Component>
+                    <Component Id="cmpA09F99DB58019FD8A0A5BFCF59E82A80" Guid="{9C4F5586-1E2F-4E4F-8058-C28A10B528E9}">
+                        <File Id="fil35718C64FD6091C00AF39B060C5902A7" KeyPath="yes" Source="$(var.myProjectOutput.PackagePath)\bin\nl\ADF.System.resources.dll" />
+                    </Component>
+                </Directory>
+            </Directory>
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="myProjectOutputFiles">
+            <ComponentRef Id="cmpED7EF73DF2EE6C3410E969D23C921182" />
+            <ComponentRef Id="cmp67C20F14BE3D40DEAFEC435B2AAB730D" />
+            <ComponentRef Id="cmpBBEA411EA9EAD9509FF4D3DF3D005CAF" />
+            <ComponentRef Id="cmp15E3EB2D763A6AD7F3138261834895DF" />
+            <ComponentRef Id="cmpF5384A4270D1FB953CC9A15F4340985B" />
+            <ComponentRef Id="cmp5FDB4A8BB4184C46A80232D5CE8F152B" />
+            <ComponentRef Id="cmpA818696F8543DBA6D518C3D90D969C10" />
+            <ComponentRef Id="cmp413CFAD09E77DA6B9D731BA11339B3FB" />
+            <ComponentRef Id="cmp476BB3350A396DBBCD98261EEA11774D" />
+            <ComponentRef Id="cmpFBE9BE6EDDED2CF50AB61BE5AFCE26D4" />
+            
+            <ComponentRef Id="cmpC33ED962D1A63C5C46623381CFB40807" />
+            <ComponentRef Id="cmp199C5D73E37F6EA45B3DD7216B7B140B" />
+            <ComponentRef Id="cmpA09F99DB58019FD8A0A5BFCF59E82A80" />
+        </ComponentGroup>
+    </Fragment>
+</Wix>

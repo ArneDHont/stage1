@@ -1,0 +1,15 @@
+﻿
+CREATE PROC dbo.[USP_WY_BBOGVBTR_UPDATE]
+  @ID_BTRK_OGV int,
+  @ID_BTRK int=NULL,
+  @ID_REG int=NULL,
+  @Original_ID_BTRK_OGV int --Primary Key Field
+
+AS
+SET NOCOUNT OFF
+
+UPDATE [BBOGVBTR] SET
+  [ID_BTRK] = @ID_BTRK,
+  [ID_REG] = @ID_REG
+WHERE [ID_BTRK_OGV] = @Original_ID_BTRK_OGV
+

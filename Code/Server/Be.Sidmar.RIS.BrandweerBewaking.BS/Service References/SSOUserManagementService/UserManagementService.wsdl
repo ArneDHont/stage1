@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="UserManagementService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://wfssoprod.sidmar.be/SSOService/UserManagementService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://wfssoprod.sidmar.be/SSOService/UserManagementService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://wfssoprod.sidmar.be/SSOService/UserManagementService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SSO.Server" />
+      <xsd:import schemaLocation="http://wfssoprod.sidmar.be/SSOService/UserManagementService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IUserManagementService_CreateAuthorizationRequestNewUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAuthorizationRequestNewUser" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_CreateAuthorizationRequestNewUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAuthorizationRequestNewUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_CreateAuthorizationRequestNewPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAuthorizationRequestNewPassword" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_CreateAuthorizationRequestNewPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAuthorizationRequestNewPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_SetNewPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetNewPassword" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_SetNewPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetNewPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_CreateNewUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateNewUser" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_CreateNewUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateNewUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_SendMail_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendMail" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_SendMail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendMailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_GetUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsers" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_GetUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_SetEmailForUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetEmailForUser" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_SetEmailForUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetEmailForUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_SetDescriptionForUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetDescriptionForUser" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_SetDescriptionForUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetDescriptionForUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_SetNeverExpiresForUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetNeverExpiresForUsers" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_SetNeverExpiresForUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetNeverExpiresForUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_LogExceptionClientSide_InputMessage">
+    <wsdl:part name="parameters" element="tns:LogExceptionClientSide" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_LogExceptionClientSide_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogExceptionClientSideResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_GetUsersByGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersByGroup" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_GetUsersByGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersByGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_UpdateGroupsForUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateGroupsForUser" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_UpdateGroupsForUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateGroupsForUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_InsertNewUserRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertNewUserRequest" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_InsertNewUserRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertNewUserRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_ConfirmNewUserRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConfirmNewUserRequest" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_ConfirmNewUserRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConfirmNewUserRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_GetUserProfiles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserProfiles" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_GetUserProfiles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserProfilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_GetUserProfilesByGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserProfilesByGroup" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_GetUserProfilesByGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserProfilesByGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_InitiateSyncRealisContacts_InputMessage">
+    <wsdl:part name="parameters" element="tns:InitiateSyncRealisContacts" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_InitiateSyncRealisContacts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InitiateSyncRealisContactsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IUserManagementService">
+    <wsdl:operation name="CreateAuthorizationRequestNewUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/CreateAuthorizationRequestNewUser" message="tns:IUserManagementService_CreateAuthorizationRequestNewUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/CreateAuthorizationRequestNewUserResponse" message="tns:IUserManagementService_CreateAuthorizationRequestNewUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateAuthorizationRequestNewPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/CreateAuthorizationRequestNewPassword" message="tns:IUserManagementService_CreateAuthorizationRequestNewPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/CreateAuthorizationRequestNewPasswordResponse" message="tns:IUserManagementService_CreateAuthorizationRequestNewPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetNewPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/SetNewPassword" message="tns:IUserManagementService_SetNewPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/SetNewPasswordResponse" message="tns:IUserManagementService_SetNewPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateNewUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/CreateNewUser" message="tns:IUserManagementService_CreateNewUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/CreateNewUserResponse" message="tns:IUserManagementService_CreateNewUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/SendMail" message="tns:IUserManagementService_SendMail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/SendMailResponse" message="tns:IUserManagementService_SendMail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/GetUsers" message="tns:IUserManagementService_GetUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/GetUsersResponse" message="tns:IUserManagementService_GetUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetEmailForUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/SetEmailForUser" message="tns:IUserManagementService_SetEmailForUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/SetEmailForUserResponse" message="tns:IUserManagementService_SetEmailForUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetDescriptionForUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/SetDescriptionForUser" message="tns:IUserManagementService_SetDescriptionForUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/SetDescriptionForUserResponse" message="tns:IUserManagementService_SetDescriptionForUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetNeverExpiresForUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/SetNeverExpiresForUsers" message="tns:IUserManagementService_SetNeverExpiresForUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/SetNeverExpiresForUsersResponse" message="tns:IUserManagementService_SetNeverExpiresForUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LogExceptionClientSide">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/LogExceptionClientSide" message="tns:IUserManagementService_LogExceptionClientSide_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/LogExceptionClientSideResponse" message="tns:IUserManagementService_LogExceptionClientSide_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersByGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/GetUsersByGroup" message="tns:IUserManagementService_GetUsersByGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/GetUsersByGroupResponse" message="tns:IUserManagementService_GetUsersByGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGroupsForUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/UpdateGroupsForUser" message="tns:IUserManagementService_UpdateGroupsForUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/UpdateGroupsForUserResponse" message="tns:IUserManagementService_UpdateGroupsForUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertNewUserRequest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/InsertNewUserRequest" message="tns:IUserManagementService_InsertNewUserRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/InsertNewUserRequestResponse" message="tns:IUserManagementService_InsertNewUserRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmNewUserRequest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/ConfirmNewUserRequest" message="tns:IUserManagementService_ConfirmNewUserRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/ConfirmNewUserRequestResponse" message="tns:IUserManagementService_ConfirmNewUserRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserProfiles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/GetUserProfiles" message="tns:IUserManagementService_GetUserProfiles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/GetUserProfilesResponse" message="tns:IUserManagementService_GetUserProfiles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserProfilesByGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/GetUserProfilesByGroup" message="tns:IUserManagementService_GetUserProfilesByGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/GetUserProfilesByGroupResponse" message="tns:IUserManagementService_GetUserProfilesByGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InitiateSyncRealisContacts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/InitiateSyncRealisContacts" message="tns:IUserManagementService_InitiateSyncRealisContacts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/InitiateSyncRealisContactsResponse" message="tns:IUserManagementService_InitiateSyncRealisContacts_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IUserManagementService" type="tns:IUserManagementService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateAuthorizationRequestNewUser">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/CreateAuthorizationRequestNewUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAuthorizationRequestNewPassword">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/CreateAuthorizationRequestNewPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetNewPassword">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/SetNewPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateNewUser">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/CreateNewUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMail">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/SendMail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/GetUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetEmailForUser">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/SetEmailForUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetDescriptionForUser">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/SetDescriptionForUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetNeverExpiresForUsers">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/SetNeverExpiresForUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogExceptionClientSide">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/LogExceptionClientSide" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersByGroup">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/GetUsersByGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGroupsForUser">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/UpdateGroupsForUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertNewUserRequest">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/InsertNewUserRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmNewUserRequest">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/ConfirmNewUserRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserProfiles">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/GetUserProfiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserProfilesByGroup">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/GetUserProfilesByGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InitiateSyncRealisContacts">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/InitiateSyncRealisContacts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UserManagementService">
+    <wsdl:port name="BasicHttpBinding_IUserManagementService" binding="tns:BasicHttpBinding_IUserManagementService">
+      <soap:address location="http://wfssoprod.sidmar.be/SSOService/UserManagementService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

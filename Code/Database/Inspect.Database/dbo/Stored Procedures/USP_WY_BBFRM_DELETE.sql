@@ -1,0 +1,10 @@
+﻿
+CREATE PROC dbo.[USP_WY_BBFRM_DELETE]
+  @Original_ID_FRM float --Primary Key Field
+
+AS
+SET NOCOUNT OFF
+
+DELETE FROM [BBFRM]
+WHERE [ID_FRM] = @Original_ID_FRM
+

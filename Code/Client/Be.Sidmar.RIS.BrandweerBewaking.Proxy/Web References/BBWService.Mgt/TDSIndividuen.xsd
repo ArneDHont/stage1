@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/TDSIndividuen.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/TDSIndividuen.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/TDSIndividuen.xsd" id="TDSIndividuen" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:Locale="en-US" name="TDSIndividuen">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BBIND">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_IND" type="xs:int" />
+              <xs:element minOccurs="0" name="ID_TY_IND" type="xs:int" />
+              <xs:element minOccurs="0" name="ID_FRM_IND_TK" type="xs:int" />
+              <xs:element minOccurs="0" name="NM_IND" type="xs:string" />
+              <xs:element minOccurs="0" name="VNM_IND" type="xs:string" />
+              <xs:element minOccurs="0" name="AD_IND" type="xs:string" />
+              <xs:element minOccurs="0" name="PO_COD_WNPL_IND" type="xs:string" />
+              <xs:element minOccurs="0" name="WNPL_IND" type="xs:string" />
+              <xs:element minOccurs="0" name="PLA_GBR_IND" type="xs:string" />
+              <xs:element minOccurs="0" name="DT_GBR_IND" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="AD_EMAL_IND" type="xs:string" />
+              <xs:element minOccurs="0" name="ID_GSL_IND" type="xs:int" />
+              <xs:element minOccurs="0" name="BST_IND" type="xs:boolean" />
+              <xs:element minOccurs="0" name="SAP_DIR" type="xs:string" />
+              <xs:element minOccurs="0" name="SAP_AFD" type="xs:string" />
+              <xs:element minOccurs="0" name="SAP_SECT" type="xs:string" />
+              <xs:element minOccurs="0" name="DT_UIT_DNS" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="SCF_TY_IND" type="xs:string" />
+              <xs:element minOccurs="0" name="NR_TEL_SID" type="xs:string" />
+              <xs:element minOccurs="0" name="SCF_FIE" type="xs:string" />
+              <xs:element minOccurs="0" name="BST_ACTIVE" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="TDSIndividuenKey1">
+      <xs:selector xpath=".//mstns:BBIND" />
+      <xs:field xpath="mstns:ID_IND" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

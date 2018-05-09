@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TDSTrimesterDiefstal" targetNamespace="http://tempuri.org/TDSTrimesterDiefstal.xsd" xmlns:mstns="http://tempuri.org/TDSTrimesterDiefstal.xsd" xmlns="http://tempuri.org/TDSTrimesterDiefstal.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TDSTrimesterDiefstal" msdata:IsDataSet="true" msdata:Locale="en-US" msprop:Generator_DataSetName="TDSTrimesterDiefstal" msprop:Generator_UserDSName="TDSTrimesterDiefstal">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DiefstalTrimester" msprop:Generator_TableClassName="DiefstalTrimesterDataTable" msprop:Generator_TableVarName="tableDiefstalTrimester" msprop:Generator_TablePropName="DiefstalTrimester" msprop:Generator_RowDeletingName="DiefstalTrimesterRowDeleting" msprop:Generator_UserTableName="DiefstalTrimester" msprop:Generator_RowChangingName="DiefstalTrimesterRowChanging" msprop:Generator_RowEvHandlerName="DiefstalTrimesterRowChangeEventHandler" msprop:Generator_RowDeletedName="DiefstalTrimesterRowDeleted" msprop:Generator_RowEvArgName="DiefstalTrimesterRowChangeEvent" msprop:Generator_RowChangedName="DiefstalTrimesterRowChanged" msprop:Generator_RowClassName="DiefstalTrimesterRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="JR_REG" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnJR_REG" msprop:Generator_ColumnPropNameInRow="JR_REG" msprop:Generator_ColumnPropNameInTable="JR_REGColumn" msprop:Generator_UserColumnName="JR_REG" type="xs:int" minOccurs="0" />
+              <xs:element name="Trimester" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTrimester" msprop:Generator_ColumnPropNameInRow="Trimester" msprop:Generator_ColumnPropNameInTable="TrimesterColumn" msprop:Generator_UserColumnName="Trimester" type="xs:int" minOccurs="0" />
+              <xs:element name="ID_REG" msprop:Generator_ColumnVarNameInTable="columnID_REG" msprop:Generator_ColumnPropNameInRow="ID_REG" msprop:Generator_ColumnPropNameInTable="ID_REGColumn" msprop:Generator_UserColumnName="ID_REG" type="xs:int" minOccurs="0" />
+              <xs:element name="VLG_REG_JR_BPL" msprop:Generator_ColumnVarNameInTable="columnVLG_REG_JR_BPL" msprop:Generator_ColumnPropNameInRow="VLG_REG_JR_BPL" msprop:Generator_ColumnPropNameInTable="VLG_REG_JR_BPLColumn" msprop:Generator_UserColumnName="VLG_REG_JR_BPL" type="xs:int" minOccurs="0" />
+              <xs:element name="TMS_INC" msprop:Generator_ColumnVarNameInTable="columnTMS_INC" msprop:Generator_ColumnPropNameInRow="TMS_INC" msprop:Generator_ColumnPropNameInTable="TMS_INCColumn" msprop:Generator_UserColumnName="TMS_INC" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PLA_INC" msprop:Generator_ColumnVarNameInTable="columnPLA_INC" msprop:Generator_ColumnPropNameInRow="PLA_INC" msprop:Generator_ColumnPropNameInTable="PLA_INCColumn" msprop:Generator_UserColumnName="PLA_INC" type="xs:string" minOccurs="0" />
+              <xs:element name="SCF_REG" msprop:Generator_ColumnVarNameInTable="columnSCF_REG" msprop:Generator_ColumnPropNameInRow="SCF_REG" msprop:Generator_ColumnPropNameInTable="SCF_REGColumn" msprop:Generator_UserColumnName="SCF_REG" type="xs:string" minOccurs="0" />
+              <xs:element name="STA_MAT" msprop:Generator_ColumnVarNameInTable="columnSTA_MAT" msprop:Generator_ColumnPropNameInRow="STA_MAT" msprop:Generator_ColumnPropNameInTable="STA_MATColumn" msprop:Generator_UserColumnName="STA_MAT" type="xs:string" minOccurs="0" />
+              <xs:element name="WD_MAT" msprop:Generator_ColumnVarNameInTable="columnWD_MAT" msprop:Generator_ColumnPropNameInRow="WD_MAT" msprop:Generator_ColumnPropNameInTable="WD_MATColumn" msprop:Generator_UserColumnName="WD_MAT" type="xs:double" minOccurs="0" />
+              <xs:element name="SCF_LNG_DIEF" msprop:Generator_ColumnVarNameInTable="columnSCF_LNG_DIEF" msprop:Generator_ColumnPropNameInRow="SCF_LNG_DIEF" msprop:Generator_ColumnPropNameInTable="SCF_LNG_DIEFColumn" msprop:Generator_UserColumnName="SCF_LNG_DIEF" type="xs:string" minOccurs="0" />
+              <xs:element name="SCF_MAT_STLN" msprop:Generator_ColumnVarNameInTable="columnSCF_MAT_STLN" msprop:Generator_ColumnPropNameInRow="SCF_MAT_STLN" msprop:Generator_ColumnPropNameInTable="SCF_MAT_STLNColumn" msprop:Generator_UserColumnName="SCF_MAT_STLN" type="xs:string" minOccurs="0" />
+              <xs:element name="DT_VZ_RAP_NW" msprop:Generator_ColumnVarNameInTable="columnDT_VZ_RAP_NW" msprop:Generator_ColumnPropNameInRow="DT_VZ_RAP_NW" msprop:Generator_ColumnPropNameInTable="DT_VZ_RAP_NWColumn" msprop:Generator_UserColumnName="DT_VZ_RAP_NW" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DT_OK" msprop:Generator_ColumnVarNameInTable="columnDT_OK" msprop:Generator_ColumnPropNameInRow="DT_OK" msprop:Generator_ColumnPropNameInTable="DT_OKColumn" msprop:Generator_UserColumnName="DT_OK" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DT_VZ_BST" msprop:Generator_ColumnVarNameInTable="columnDT_VZ_BST" msprop:Generator_ColumnPropNameInRow="DT_VZ_BST" msprop:Generator_ColumnPropNameInTable="DT_VZ_BSTColumn" msprop:Generator_UserColumnName="DT_VZ_BST" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MinValue" msprop:Generator_ColumnVarNameInTable="columnMinValue" msprop:Generator_ColumnPropNameInRow="MinValue" msprop:Generator_ColumnPropNameInTable="MinValueColumn" msprop:Generator_UserColumnName="MinValue" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MinMaxValue" msprop:Generator_ColumnVarNameInTable="columnMinMaxValue" msprop:Generator_ColumnPropNameInRow="MinMaxValue" msprop:Generator_ColumnPropNameInTable="MinMaxValueColumn" msprop:Generator_UserColumnName="MinMaxValue" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MaxValue" msprop:Generator_ColumnVarNameInTable="columnMaxValue" msprop:Generator_ColumnPropNameInRow="MaxValue" msprop:Generator_ColumnPropNameInTable="MaxValueColumn" msprop:Generator_UserColumnName="MaxValue" type="xs:boolean" minOccurs="0" />
+              <xs:element name="PolitieGevraagdDoorAfdYN" msprop:Generator_ColumnVarNameInTable="columnPolitieGevraagdDoorAfdYN" msprop:Generator_ColumnPropNameInRow="PolitieGevraagdDoorAfdYN" msprop:Generator_ColumnPropNameInTable="PolitieGevraagdDoorAfdYNColumn" msprop:Generator_UserColumnName="PolitieGevraagdDoorAfdYN" type="xs:boolean" minOccurs="0" />
+              <xs:element name="PolitieLangsgeweestYN" msprop:Generator_ColumnVarNameInTable="columnPolitieLangsgeweestYN" msprop:Generator_ColumnPropNameInRow="PolitieLangsgeweestYN" msprop:Generator_ColumnPropNameInTable="PolitieLangsgeweestYNColumn" msprop:Generator_UserColumnName="PolitieLangsgeweestYN" type="xs:boolean" minOccurs="0" />
+              <xs:element name="PolitiePVnummer" msprop:Generator_ColumnVarNameInTable="columnPolitiePVnummer" msprop:Generator_ColumnPropNameInRow="PolitiePVnummer" msprop:Generator_ColumnPropNameInTable="PolitiePVnummerColumn" msprop:Generator_UserColumnName="PolitiePVnummer" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

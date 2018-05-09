@@ -1,0 +1,15 @@
+C:\Sources\BBW\Development\Code\Shared\Inspect.Mobile.Framework.Xamarin\bin\Debug\netstandard2.0\Inspect.Mobile.Framework.Xamarin.deps.json
+C:\Sources\BBW\Development\Code\Shared\Inspect.Mobile.Framework.Xamarin\bin\Debug\netstandard2.0\Inspect.Mobile.Framework.Xamarin.dll
+C:\Sources\BBW\Development\Code\Shared\Inspect.Mobile.Framework.Xamarin\bin\Debug\netstandard2.0\Inspect.Mobile.Framework.Xamarin.pdb
+C:\Sources\BBW\Development\Code\Shared\Inspect.Mobile.Framework.Xamarin\bin\Debug\netstandard2.0\AutoMapper.dll
+C:\Sources\BBW\Development\Code\Shared\Inspect.Mobile.Framework.Xamarin\bin\Debug\netstandard2.0\Inspect.Framework.Hypermedia.dll
+C:\Sources\BBW\Development\Code\Shared\Inspect.Mobile.Framework.Xamarin\bin\Debug\netstandard2.0\Newtonsoft.Json.dll
+C:\Sources\BBW\Development\Code\Shared\Inspect.Mobile.Framework.Xamarin\bin\Debug\netstandard2.0\Inspect.Framework.Hypermedia.pdb
+C:\Sources\BBW\Development\Code\Shared\Inspect.Mobile.Framework.Xamarin\bin\Debug\netstandard2.0\AutoMapper.xml
+C:\Sources\BBW\Development\Code\Shared\Inspect.Mobile.Framework.Xamarin\bin\Debug\netstandard2.0\Newtonsoft.Json.xml
+C:\Sources\BBW\Development\Code\Shared\Inspect.Mobile.Framework.Xamarin\obj\Debug\netstandard2.0\Inspect.Mobile.Framework.Xamarin.csprojResolveAssemblyReference.cache
+C:\Sources\BBW\Development\Code\Shared\Inspect.Mobile.Framework.Xamarin\obj\Debug\netstandard2.0\Inspect.Mobile.Framework.Xamarin.csproj.CoreCompileInputs.cache
+C:\Sources\BBW\Development\Code\Shared\Inspect.Mobile.Framework.Xamarin\obj\Debug\netstandard2.0\Inspect.Mobile.Framework.Xamarin.AssemblyInfoInputs.cache
+C:\Sources\BBW\Development\Code\Shared\Inspect.Mobile.Framework.Xamarin\obj\Debug\netstandard2.0\Inspect.Mobile.Framework.Xamarin.AssemblyInfo.cs
+C:\Sources\BBW\Development\Code\Shared\Inspect.Mobile.Framework.Xamarin\obj\Debug\netstandard2.0\Inspect.Mobile.Framework.Xamarin.dll
+C:\Sources\BBW\Development\Code\Shared\Inspect.Mobile.Framework.Xamarin\obj\Debug\netstandard2.0\Inspect.Mobile.Framework.Xamarin.pdb

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/TDSTrimesterDiefstal.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/TDSTrimesterDiefstal.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/TDSTrimesterDiefstal.xsd" id="TDSTrimesterDiefstal" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:Locale="en-US" name="TDSTrimesterDiefstal">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DiefstalTrimester">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="JR_REG" type="xs:int" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="Trimester" type="xs:int" />
+              <xs:element minOccurs="0" name="ID_REG" type="xs:int" />
+              <xs:element minOccurs="0" name="VLG_REG_JR_BPL" type="xs:int" />
+              <xs:element minOccurs="0" name="TMS_INC" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="PLA_INC" type="xs:string" />
+              <xs:element minOccurs="0" name="SCF_REG" type="xs:string" />
+              <xs:element minOccurs="0" name="STA_MAT" type="xs:string" />
+              <xs:element minOccurs="0" name="WD_MAT" type="xs:double" />
+              <xs:element minOccurs="0" name="SCF_LNG_DIEF" type="xs:string" />
+              <xs:element minOccurs="0" name="SCF_MAT_STLN" type="xs:string" />
+              <xs:element minOccurs="0" name="DT_VZ_RAP_NW" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DT_OK" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DT_VZ_BST" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="MinValue" type="xs:boolean" />
+              <xs:element minOccurs="0" name="MinMaxValue" type="xs:boolean" />
+              <xs:element minOccurs="0" name="MaxValue" type="xs:boolean" />
+              <xs:element minOccurs="0" name="PolitieGevraagdDoorAfdYN" type="xs:boolean" />
+              <xs:element minOccurs="0" name="PolitieLangsgeweestYN" type="xs:boolean" />
+              <xs:element minOccurs="0" name="PolitiePVnummer" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
